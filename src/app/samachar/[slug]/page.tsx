@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -9,7 +10,6 @@ import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 import { buildNewsArticleSchema, jsonLdScript } from "@/lib/utils/structuredData";
 import { siteConfig } from "@/lib/siteConfig";
 
-export const dynamic = "force-dynamic";
 
 type Params = { params: { slug: string } };
 

@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 import { getAllArticleSlugs } from "@/lib/api/articles";

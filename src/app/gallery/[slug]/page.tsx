@@ -1,9 +1,9 @@
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getGalleryBySlug } from "@/lib/api/gallery";
 
-export const dynamic = "force-dynamic";
 
 type Params = { params: { slug: string } };
 

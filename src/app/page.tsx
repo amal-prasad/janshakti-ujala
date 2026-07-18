@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getArticles, getFeaturedArticles, getTrendingArticles } from "@/lib/api/articles";
 import { buildOrganizationSchema, buildWebSiteSchema, jsonLdScript } from "@/lib/utils/structuredData";
 import { getRashifalTeaser } from "@/lib/api/rashifal";

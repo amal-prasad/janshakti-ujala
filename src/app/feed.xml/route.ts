@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { siteConfig } from "@/lib/siteConfig";
 import { getRecentPublishedArticles } from "@/lib/api/articles";
 
