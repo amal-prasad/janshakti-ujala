@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getArticleBySlug } from "@/lib/api/articles";
+import { getArticleBySlug, DEFAULT_CITY } from "@/lib/api/articles";
 import { RelatedArticles } from "@/components/news/RelatedArticles";
 import { ArticleBody } from "@/components/news/ArticleBody";
 import { CategoryBadge } from "@/components/ui/Badge";
@@ -61,6 +61,8 @@ export default async function ArticlePage({ params }: Params) {
           <p className="mt-3 text-lg text-muted">{article.dek}</p>
         )}
         <div className="mt-4 flex flex-wrap items-center gap-2 border-y border-border py-3 text-sm text-muted">
+          <span className="font-semibold text-text">{article.city ?? DEFAULT_CITY}</span>
+          <span aria-hidden>•</span>
           <span>{article.author}</span>
           <span aria-hidden>•</span>
           <time dateTime={article.published_at}>

@@ -37,6 +37,8 @@ export function ArticleCardSmall({
           </Link>
         </h3>
         <span className="mt-1 block text-xs text-muted">
+          <span className="font-semibold text-text">{article.city}</span>
+          {" • "}
           {readingTimeLabel(article.reading_minutes)}
         </span>
       </div>

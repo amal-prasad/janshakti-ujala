@@ -5,6 +5,7 @@ import type { Rashifal } from "@/lib/supabase/types";
 import type { Video } from "@/lib/supabase/types";
 import { ArticleCardSmall } from "@/components/news/ArticleCardSmall";
 import { NewsletterForm } from "@/components/news/NewsletterForm";
+import { HolidaysWidget } from "@/components/news/HolidaysWidget";
 import { PanchangWidget } from "@/components/news/PanchangWidget";
 import { AdSlot } from "@/components/AdSlot";
 import { getZodiac } from "@/lib/zodiacSigns";
@@ -52,6 +53,7 @@ export function Sidebar({
         </section>
       )}
 
+      <HolidaysWidget />
       <PanchangWidget />
 
       <section className="bg-surface p-5">

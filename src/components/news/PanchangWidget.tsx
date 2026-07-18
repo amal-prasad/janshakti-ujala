@@ -1,17 +1,12 @@
-import { getTodayPanchang } from "@/lib/panchang";
+import { getDailyPanchang } from "@/lib/api/prokerala";
 
-// Server component — computed locally, no client JS, no API call.
 export async function PanchangWidget() {
-  const p = await getTodayPanchang();
+  const p = await getDailyPanchang();
   if (!p) return null;
 
   const rows: [string, string][] = [
     ["तिथि", p.tithi],
-    ["पक्ष", p.paksha],
     ["नक्षत्र", p.nakshatra],
-    ["योग", p.yoga],
-    ["करण", p.karana],
-    ["मास", p.masa],
     ["सूर्योदय", p.sunrise],
     ["सूर्यास्त", p.sunset],
   ];
@@ -19,7 +14,6 @@ export async function PanchangWidget() {
   return (
     <section>
       <h2 className="section-header">आज का पंचांग</h2>
-      <p className="mt-2 text-sm text-muted">{p.dateLabel}</p>
       <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
         {rows.map(([label, value]) => (
           <div key={label}>
@@ -28,6 +22,7 @@ export async function PanchangWidget() {
           </div>
         ))}
       </div>
+      <p className="mt-2 text-xs text-muted text-right italic">स्थान: इंदौर</p>
     </section>
   );
 }

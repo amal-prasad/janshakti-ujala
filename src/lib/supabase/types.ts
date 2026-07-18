@@ -11,6 +11,9 @@ export type Article = {
   tags: string[];
   cover_image_url: string | null;
   author: string;
+  // Dateline city (013). Optional because a hosted DB that hasn't run the
+  // migration yet returns rows without it — readers fall back to इंदौर.
+  city?: string;
   reading_minutes: number;
   is_breaking: boolean;
   is_featured: boolean;

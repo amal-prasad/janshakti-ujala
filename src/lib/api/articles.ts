@@ -1,9 +1,16 @@
 import { createServerClient } from "@/lib/supabase/server";
 import type { Article } from "@/lib/supabase/types";
 
+// Dateline default — the paper's home city. Rows from a hosted DB that hasn't
+// applied migrations/013_article_city.sql yet have no `city`; the fallback
+// keeps every card rendering a dateline either way.
+export const DEFAULT_CITY = "इंदौर";
+
 // Columns needed by list cards — never fetch `body` for lists.
 const CARD_COLS =
-  "id,slug,title,dek,category,tags,cover_image_url,author,reading_minutes,is_breaking,is_featured,published_at,view_count";
+  "id,slug,title,dek,category,tags,cover_image_url,author,city,reading_minutes,is_breaking,is_featured,published_at,view_count";
+// Pre-013 hosted DBs reject `city` with PostgREST 42703 (undefined column).
+const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "");
 
 export type ArticleCard = Pick<
   Article,
@@ -20,12 +27,26 @@ export type ArticleCard = Pick<
   | "is_featured"
   | "published_at"
   | "view_count"
->;
+> & { city: string };
 
 export type ArticlePage = {
   items: ArticleCard[];
   nextCursor: string | null;
 };
+
+type CardRow = Omit<ArticleCard, "city"> & { city?: string | null };
+type CardResult = PromiseLike<{ data: unknown; error: { code?: string } | null }>;
+
+// Runs a card select; on 42703 (pre-013 DB, no `city` column) retries without
+// it and stamps the default city, so lists work before and after the migration.
+async function selectCards(
+  run: (cols: string) => CardResult,
+): Promise<ArticleCard[] | null> {
+  let { data, error } = await run(CARD_COLS);
+  if (error?.code === "42703") ({ data, error } = await run(CARD_COLS_PRE_013));
+  if (error) return null;
+  return ((data ?? []) as CardRow[]).map((r) => ({ ...r, city: r.city ?? DEFAULT_CITY }));
+}
 
 type ListOpts = {
   category?: string;
@@ -40,20 +61,19 @@ export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
   try {
     const { category, tag, cursor, limit = 12 } = opts;
     const supabase = createServerClient();
-    let q = supabase
-      .from("articles")
-      .select(CARD_COLS)
-      .order("published_at", { ascending: false })
-      .limit(limit + 1);
+    const rows = await selectCards((cols) => {
+      let q = supabase
+        .from("articles")
+        .select(cols)
+        .order("published_at", { ascending: false })
+        .limit(limit + 1);
+      if (category) q = q.eq("category", category);
+      if (tag) q = q.contains("tags", [tag]);
+      if (cursor) q = q.lt("published_at", cursor);
+      return q;
+    });
+    if (!rows) return { items: [], nextCursor: null };
 
-    if (category) q = q.eq("category", category);
-    if (tag) q = q.contains("tags", [tag]);
-    if (cursor) q = q.lt("published_at", cursor);
-
-    const { data, error } = await q;
-    if (error) return { items: [], nextCursor: null };
-
-    const rows = (data ?? []) as ArticleCard[];
     const hasMore = rows.length > limit;
     const items = hasMore ? rows.slice(0, limit) : rows;
     return {
@@ -87,15 +107,16 @@ export async function getRelatedArticles(
 ): Promise<ArticleCard[]> {
   try {
     const supabase = createServerClient();
-    const { data, error } = await supabase
-      .from("articles")
-      .select(CARD_COLS)
-      .eq("category", article.category)
-      .neq("id", article.id)
-      .order("published_at", { ascending: false })
-      .limit(limit);
-    if (error) return [];
-    return (data ?? []) as ArticleCard[];
+    const rows = await selectCards((cols) =>
+      supabase
+        .from("articles")
+        .select(cols)
+        .eq("category", article.category)
+        .neq("id", article.id)
+        .order("published_at", { ascending: false })
+        .limit(limit),
+    );
+    return rows ?? [];
   } catch {
     return [];
   }
@@ -105,14 +126,15 @@ export async function getRelatedArticles(
 export async function getFeaturedArticles(limit = 5): Promise<ArticleCard[]> {
   try {
     const supabase = createServerClient();
-    const { data, error } = await supabase
-      .from("articles")
-      .select(CARD_COLS)
-      .eq("is_featured", true)
-      .order("published_at", { ascending: false })
-      .limit(limit);
-    if (error) return [];
-    return (data ?? []) as ArticleCard[];
+    const rows = await selectCards((cols) =>
+      supabase
+        .from("articles")
+        .select(cols)
+        .eq("is_featured", true)
+        .order("published_at", { ascending: false })
+        .limit(limit),
+    );
+    return rows ?? [];
   } catch {
     return [];
   }
@@ -121,33 +143,36 @@ export async function getFeaturedArticles(limit = 5): Promise<ArticleCard[]> {
 export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
   try {
     const supabase = createServerClient();
-    const { data, error } = await supabase
-      .from("articles")
-      .select(CARD_COLS)
-      .order("view_count", { ascending: false })
-      .limit(limit);
-    if (error) return [];
-    return (data ?? []) as ArticleCard[];
+    const rows = await selectCards((cols) =>
+      supabase
+        .from("articles")
+        .select(cols)
+        .order("view_count", { ascending: false })
+        .limit(limit),
+    );
+    return rows ?? [];
   } catch {
     return [];
   }
 }
 
-// Header search form (`/search?q=`). ILIKE scan is fine at this scale; add Postgres
-// full-text search only if the article corpus grows large enough to need it.
 export async function searchArticles(query: string, limit = 20): Promise<ArticleCard[]> {
-  const q = query.trim();
+  // PostgREST filter-injection guard: the .or() string is parsed by PostgREST,
+  // so commas/parens/colons/quotes/backslashes in user input could smuggle
+  // extra filter clauses. Replace them with spaces before interpolating.
+  const q = query.trim().replace(/[,()\\":]/g, " ").replace(/\s+/g, " ").trim();
   if (!q) return [];
   try {
     const supabase = createServerClient();
-    const { data, error } = await supabase
-      .from("articles")
-      .select(CARD_COLS)
-      .or(`title.ilike.%${q}%,dek.ilike.%${q}%`)
-      .order("published_at", { ascending: false })
-      .limit(limit);
-    if (error) return [];
-    return (data ?? []) as ArticleCard[];
+    const rows = await selectCards((cols) =>
+      supabase
+        .from("articles")
+        .select(cols)
+        .or(`title.ilike.%${q}%,dek.ilike.%${q}%`)
+        .order("published_at", { ascending: false })
+        .limit(limit),
+    );
+    return rows ?? [];
   } catch {
     return [];
   }

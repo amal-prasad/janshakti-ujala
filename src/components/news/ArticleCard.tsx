@@ -37,6 +37,8 @@ export function ArticleCard({ article }: { article: ArticleCardData }) {
         <p className="line-clamp-2 text-sm text-muted">{article.dek}</p>
       )}
       <div className="mt-auto flex items-center gap-2 text-xs text-muted">
+        <span className="font-semibold text-text">{article.city}</span>
+        <span aria-hidden>•</span>
         <time dateTime={article.published_at}>{formatDate(article.published_at)}</time>
         <span aria-hidden>•</span>
         <span>{readingTimeLabel(article.reading_minutes)}</span>

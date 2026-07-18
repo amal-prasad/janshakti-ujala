@@ -32,7 +32,12 @@ async function ensureUser({ email, password, role, display_name }) {
     console.log(`user ${email} exists`);
   }
   const { error: pErr } = await db.from("profiles").upsert({ id: user.id, role, display_name });
-  if (pErr) throw pErr;
+  // Hosted DB without migration 011 has no profiles table yet (PGRST205) —
+  // warn and continue so article seeding still works.
+  if (pErr) {
+    if (pErr.code !== "PGRST205") throw pErr;
+    console.warn(`profiles table missing — skipped profile for ${email} (apply supabase/PENDING_HOSTED.sql)`);
+  }
   return user.id;
 }
 
@@ -62,6 +67,10 @@ async function main() {
     { slug: "demo-share-bazar", title: "शेयर बाज़ार में उछाल, सेंसेक्स नई ऊँचाई पर", category: "vyapar", is_featured: true, is_breaking: false },
     { slug: "demo-ai-takneek", title: "स्वदेशी एआई तकनीक से बदलेगी शिक्षा की तस्वीर", category: "praudyogiki", is_featured: true, is_breaking: false },
     { slug: "demo-swasthya-abhiyan", title: "ज़िले में स्वास्थ्य जाँच अभियान, हज़ारों ने कराई निःशुल्क जाँच", category: "swasthya", is_featured: true, is_breaking: false },
+    { slug: "demo-indore-metro", title: "इंदौर मेट्रो के नए रूट को मंज़ूरी, शहर के यातायात को मिलेगी रफ़्तार", category: "indore", is_featured: false, is_breaking: false },
+    { slug: "demo-indore-swachhta", title: "स्वच्छता सर्वेक्षण की तैयारी में जुटा इंदौर, वार्डों में विशेष अभियान", category: "indore", is_featured: false, is_breaking: false },
+    { slug: "demo-indore-rajwada", title: "राजवाड़ा परिसर के जीर्णोद्धार का काम अंतिम चरण में, जल्द खुलेगा पर्यटकों के लिए", category: "indore", is_featured: false, is_breaking: false },
+    { slug: "demo-indore-sarafa", title: "सराफा चौपाटी के लिए नई व्यवस्था लागू, दुकानदारों में उत्साह", category: "indore", is_featured: false, is_breaking: false },
   ].map((a, i) => ({
     ...a,
     dek: "डेमो लेख — न्यूज़रूम परीक्षण के लिए।",
@@ -84,11 +93,22 @@ async function main() {
     author: "डेमो संवाददाता",
     author_id: reporterId,
     is_published: false,
+    is_featured: false,
+    is_breaking: false,
+    // Hosted schema has published_at NOT NULL; value is inert while unpublished.
+    published_at: new Date(Date.now() - (10 + i) * 3600_000).toISOString(),
   }));
 
-  const { error } = await db
-    .from("articles")
-    .upsert([...published, ...drafts], { onConflict: "slug", ignoreDuplicates: true });
+  const rows = [...published, ...drafts];
+  const upsert = (list) =>
+    db.from("articles").upsert(list, { onConflict: "slug", ignoreDuplicates: true });
+  let { error } = await upsert(rows);
+  // Hosted DB without migration 011 lacks articles.author_id (PGRST204) —
+  // retry without it so demo content still lands.
+  if (error && error.code === "PGRST204") {
+    console.warn("articles.author_id missing — retrying without it (apply supabase/PENDING_HOSTED.sql)");
+    ({ error } = await upsert(rows.map(({ author_id: _drop, ...rest }) => rest)));
+  }
   if (error) throw error;
   console.log(`seeded ${published.length} published + ${drafts.length} draft articles (existing slugs skipped)`);
 }

@@ -31,6 +31,7 @@ export function ArticleForm({
   const [slug, setSlug] = useState(article?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
   const [coverUrl, setCoverUrl] = useState(article?.cover_image_url ?? null);
+  const [city, setCity] = useState(article?.city ?? "इंदौर");
   const [published, setPublished] = useState(article?.is_published ?? false);
   const [status, setStatus] = useState<"idle" | "saving" | "uploading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -70,6 +71,7 @@ export function ArticleForm({
       body,
       slug: slug || slugify(title) || `lekh-${Date.now()}`,
       cover_image_url: coverUrl,
+      city: city.trim() || "इंदौर",
       author: profile.display_name,
       ...(isEditor
         ? {
@@ -82,11 +84,21 @@ export function ArticleForm({
         : {}),
     };
 
-    const { error } = article
-      ? await supabase.from("articles").update(fields).eq("id", article.id)
-      : await supabase
-          .from("articles")
-          .insert({ ...fields, author_id: profile.id, is_published: isEditor && published });
+    const save = (f: Partial<Article>) =>
+      article
+        ? supabase.from("articles").update(f).eq("id", article.id)
+        : supabase
+            .from("articles")
+            .insert({ ...f, author_id: profile.id, is_published: isEditor && published });
+
+    let { error } = await save(fields);
+    // Hosted DB without migration 013 has no `city` column yet — PostgREST
+    // rejects the write (PGRST204/42703). Retry without it so saving still works.
+    if (error && (error.code === "PGRST204" || error.code === "42703")) {
+      const rest: Partial<Article> = { ...fields };
+      delete rest.city;
+      ({ error } = await save(rest));
+    }
 
     if (error) {
       setErrorMsg(
@@ -130,6 +142,16 @@ export function ArticleForm({
                 </option>
               ))}
             </select>
+          </label>
+
+          <label className="flex flex-col gap-1 text-sm font-semibold">
+            शहर (डेटलाइन)
+            <input
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              placeholder="इंदौर"
+              className={inputCls}
+            />
           </label>
 
           <label className="flex flex-col gap-1 text-sm font-semibold">
