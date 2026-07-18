@@ -50,6 +50,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
         }}
       >
         {hasCover && (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={article!.cover_image_url!}
             alt=""

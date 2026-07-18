@@ -92,8 +92,8 @@ export async function getUpcomingHolidays(limit = 6): Promise<Holiday[]> {
     const year = now.getFullYear();
     const todayIso = now.toISOString().slice(0, 10);
 
-    let raw = await fetchYear(key, year);
-    let filtered = raw.filter((h) => h.type.some((t) => KEEP_TYPES.includes(t)));
+    const raw = await fetchYear(key, year);
+    const filtered = raw.filter((h) => h.type.some((t) => KEEP_TYPES.includes(t)));
     let upcoming = filtered.filter((h) => h.date.iso >= todayIso);
 
     if (upcoming.length < limit) {
