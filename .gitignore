@@ -34,3 +34,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI tool generated / local caches
+graphify-out/
+.agents/
+.claude/
+.codex/
+.impeccable/
+.tokensave/
+skills-lock.json
+CLAUDE.md
+PROGRESS.md
+PRODUCT.md
+fable-orchestration.md
+
+# Source design assets (binary, not needed in repo)
+"Adobe Express - file.png"

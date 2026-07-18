@@ -1,101 +1,83 @@
-import Image from "next/image";
+import { getArticles, getFeaturedArticles, getTrendingArticles } from "@/lib/api/articles";
+import { buildOrganizationSchema, buildWebSiteSchema, jsonLdScript } from "@/lib/utils/structuredData";
+import { getRashifalTeaser } from "@/lib/api/rashifal";
+import { getLatestVideos } from "@/lib/api/videos";
+import { HeroCard } from "@/components/news/HeroCard";
+import { ArticleCard } from "@/components/news/ArticleCard";
+import { ArticleCardSmall } from "@/components/news/ArticleCardSmall";
+import { CategorySection } from "@/components/news/CategorySection";
+import { Sidebar } from "@/components/news/Sidebar";
+import { HolidaysWidget } from "@/components/news/HolidaysWidget";
+import { AdSlot } from "@/components/AdSlot";
 
-export default function Home() {
+export default async function Home() {
+  const [featured, rashtriya, rajneeti, latest, trending, rashifal, videos] = await Promise.all([
+    getFeaturedArticles(6),
+    getArticles({ category: "rashtriya", limit: 4 }),
+    getArticles({ category: "rajneeti", limit: 4 }),
+    getArticles({ limit: 6 }),
+    getTrendingArticles(5),
+    getRashifalTeaser(),
+    getLatestVideos(4),
+  ]);
+
+  const [hero, ...rest] = featured;
+  const gridFour = rest.slice(0, 4);
+
+  if (!hero) {
+    return (
+      <div className="container-x py-20 text-center text-muted">
+        अभी कोई समाचार प्रकाशित नहीं है।
+      </div>
+    );
+  }
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container-x grid grid-cols-1 gap-12 py-8 lg:grid-cols-12 lg:gap-x-12">
+      {/* eslint-disable-next-line react/no-danger */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(buildOrganizationSchema()) }}
+      />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(buildWebSiteSchema()) }}
+      />
+      <div className="flex flex-col gap-12 lg:col-span-8">
+        <HeroCard article={hero} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {gridFour.length > 0 && (
+          <div className="grid grid-cols-2 gap-x-5 gap-y-8 md:grid-cols-4">
+            {gridFour.map((a) => (
+              <ArticleCard key={a.id} article={a} />
+            ))}
+          </div>
+        )}
+
+        <CategorySection category="rashtriya" articles={rashtriya.items} />
+
+        <AdSlot slot="infeed" />
+
+        <section>
+          <h2 className="section-header">अन्य खबरें</h2>
+          <div className="mt-4 flex flex-col gap-5">
+            {latest.items.map((a) => (
+              <div key={a.id} className="border-b border-border pb-5 last:border-0 last:pb-0">
+                <ArticleCardSmall article={a} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <CategorySection category="rajneeti" articles={rajneeti.items} />
+
+        <HolidaysWidget />
+      </div>
+
+      <div className="lg:col-span-4">
+        <Sidebar trending={trending} rashifal={rashifal} videos={videos} />
+      </div>
     </div>
   );
 }
