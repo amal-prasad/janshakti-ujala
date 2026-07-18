@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 "use client";
 import { useNewsroomProfile } from "@/components/newsroom/useNewsroomProfile";
 import { ArticleForm } from "@/components/newsroom/ArticleForm";
