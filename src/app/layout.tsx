@@ -43,12 +43,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Runs before paint: applies persisted dark mode + reader font-size so there is
-// no flash. Kept as a raw string so it is inlined in <head>.
+// Runs before paint: applies persisted reader font-size so there is no flash.
+// Kept as a raw string so it is inlined in <head>.
 const noFlashScript = `(function(){try{
-  var t=localStorage.getItem('ju_theme');
-  var dark = t==='dark' || (t==='system'||!t) && matchMedia('(prefers-color-scheme: dark)').matches;
-  if(dark) document.documentElement.classList.add('dark');
   var f=localStorage.getItem('ju_font_size');
   if(f && f!=='normal') document.documentElement.setAttribute('data-font-size', f);
 }catch(e){}})();`;

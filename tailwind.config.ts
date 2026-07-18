@@ -1,9 +1,8 @@
 import type { Config } from "tailwindcss";
 
-// Design tokens map to CSS variables (see globals.css) so dark mode is a single
-// `.dark` class flip and font-size scaling is a `[data-font-size]` attribute.
+// Design tokens map to CSS variables (see globals.css). Font-size scaling uses
+// the `[data-font-size]` attribute on <html>.
 const config: Config = {
-  darkMode: "class",
   content: ["./src/**/*.{ts,tsx,mdx}"],
   theme: {
     extend: {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
+
 
 // Masthead. Centered logo image carries the authority — no text title, no profile
 // icon (public read-only site, no auth).
@@ -31,9 +31,7 @@ export function Header() {
           />
         </Link>
 
-        <div className="flex items-center justify-end gap-1">
-          <ThemeToggle />
-        </div>
+
       </div>
     </header>
   );

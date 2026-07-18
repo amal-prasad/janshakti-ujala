@@ -37,39 +37,47 @@ type ListOpts = {
 // Keyset pagination on published_at (indexed). Returns one extra row to decide if
 // there is a next page. RLS already restricts to published rows.
 export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
-  const { category, tag, cursor, limit = 12 } = opts;
-  const supabase = createServerClient();
-  let q = supabase
-    .from("articles")
-    .select(CARD_COLS)
-    .order("published_at", { ascending: false })
-    .limit(limit + 1);
+  try {
+    const { category, tag, cursor, limit = 12 } = opts;
+    const supabase = createServerClient();
+    let q = supabase
+      .from("articles")
+      .select(CARD_COLS)
+      .order("published_at", { ascending: false })
+      .limit(limit + 1);
 
-  if (category) q = q.eq("category", category);
-  if (tag) q = q.contains("tags", [tag]);
-  if (cursor) q = q.lt("published_at", cursor);
+    if (category) q = q.eq("category", category);
+    if (tag) q = q.contains("tags", [tag]);
+    if (cursor) q = q.lt("published_at", cursor);
 
-  const { data, error } = await q;
-  if (error) throw error;
+    const { data, error } = await q;
+    if (error) return { items: [], nextCursor: null };
 
-  const rows = (data ?? []) as ArticleCard[];
-  const hasMore = rows.length > limit;
-  const items = hasMore ? rows.slice(0, limit) : rows;
-  return {
-    items,
-    nextCursor: hasMore ? items[items.length - 1].published_at : null,
-  };
+    const rows = (data ?? []) as ArticleCard[];
+    const hasMore = rows.length > limit;
+    const items = hasMore ? rows.slice(0, limit) : rows;
+    return {
+      items,
+      nextCursor: hasMore ? items[items.length - 1].published_at : null,
+    };
+  } catch {
+    return { items: [], nextCursor: null };
+  }
 }
 
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("slug", slug)
-    .maybeSingle();
-  if (error) throw error;
-  return (data as Article | null) ?? null;
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select("*")
+      .eq("slug", slug)
+      .maybeSingle();
+    if (error) return null;
+    return (data as Article | null) ?? null;
+  } catch {
+    return null;
+  }
 }
 
 // Same category, newest first, excluding the current article.
@@ -77,40 +85,52 @@ export async function getRelatedArticles(
   article: Pick<Article, "id" | "category">,
   limit = 4,
 ): Promise<ArticleCard[]> {
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select(CARD_COLS)
-    .eq("category", article.category)
-    .neq("id", article.id)
-    .order("published_at", { ascending: false })
-    .limit(limit);
-  if (error) throw error;
-  return (data ?? []) as ArticleCard[];
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select(CARD_COLS)
+      .eq("category", article.category)
+      .neq("id", article.id)
+      .order("published_at", { ascending: false })
+      .limit(limit);
+    if (error) return [];
+    return (data ?? []) as ArticleCard[];
+  } catch {
+    return [];
+  }
 }
 
 // Hero + the "featured" rail just below it. `is_featured` is set in Studio.
 export async function getFeaturedArticles(limit = 5): Promise<ArticleCard[]> {
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select(CARD_COLS)
-    .eq("is_featured", true)
-    .order("published_at", { ascending: false })
-    .limit(limit);
-  if (error) throw error;
-  return (data ?? []) as ArticleCard[];
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select(CARD_COLS)
+      .eq("is_featured", true)
+      .order("published_at", { ascending: false })
+      .limit(limit);
+    if (error) return [];
+    return (data ?? []) as ArticleCard[];
+  } catch {
+    return [];
+  }
 }
 
 export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select(CARD_COLS)
-    .order("view_count", { ascending: false })
-    .limit(limit);
-  if (error) throw error;
-  return (data ?? []) as ArticleCard[];
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select(CARD_COLS)
+      .order("view_count", { ascending: false })
+      .limit(limit);
+    if (error) return [];
+    return (data ?? []) as ArticleCard[];
+  } catch {
+    return [];
+  }
 }
 
 // Header search form (`/search?q=`). ILIKE scan is fine at this scale; add Postgres
@@ -118,15 +138,19 @@ export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
 export async function searchArticles(query: string, limit = 20): Promise<ArticleCard[]> {
   const q = query.trim();
   if (!q) return [];
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select(CARD_COLS)
-    .or(`title.ilike.%${q}%,dek.ilike.%${q}%`)
-    .order("published_at", { ascending: false })
-    .limit(limit);
-  if (error) throw error;
-  return (data ?? []) as ArticleCard[];
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select(CARD_COLS)
+      .or(`title.ilike.%${q}%,dek.ilike.%${q}%`)
+      .order("published_at", { ascending: false })
+      .limit(limit);
+    if (error) return [];
+    return (data ?? []) as ArticleCard[];
+  } catch {
+    return [];
+  }
 }
 
 // Latest published articles with feed metadata — shared by /feed.xml and
@@ -141,32 +165,40 @@ export async function getRecentPublishedArticles(limit = 20): Promise<
     updated_at: string;
   }[]
 > {
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select("slug,title,dek,category,published_at,updated_at")
-    .order("published_at", { ascending: false })
-    .limit(limit);
-  if (error) throw error;
-  return (data ?? []) as {
-    slug: string;
-    title: string;
-    dek: string | null;
-    category: string;
-    published_at: string;
-    updated_at: string;
-  }[];
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select("slug,title,dek,category,published_at,updated_at")
+      .order("published_at", { ascending: false })
+      .limit(limit);
+    if (error) return [];
+    return (data ?? []) as {
+      slug: string;
+      title: string;
+      dek: string | null;
+      category: string;
+      published_at: string;
+      updated_at: string;
+    }[];
+  } catch {
+    return [];
+  }
 }
 
 // All published slugs — for sitemap / static params (P7).
 export async function getAllArticleSlugs(): Promise<
   { slug: string; updated_at: string }[]
 > {
-  const supabase = createServerClient();
-  const { data, error } = await supabase
-    .from("articles")
-    .select("slug,updated_at")
-    .order("published_at", { ascending: false });
-  if (error) throw error;
-  return (data ?? []) as { slug: string; updated_at: string }[];
+  try {
+    const supabase = createServerClient();
+    const { data, error } = await supabase
+      .from("articles")
+      .select("slug,updated_at")
+      .order("published_at", { ascending: false });
+    if (error) return [];
+    return (data ?? []) as { slug: string; updated_at: string }[];
+  } catch {
+    return [];
+  }
 }
