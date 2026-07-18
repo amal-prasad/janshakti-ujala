@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import type { Metadata, Viewport } from "next";
 import { Tiro_Devanagari_Hindi, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
