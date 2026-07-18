@@ -2,32 +2,27 @@
 // The package's built-in `name` field is Odia script and `name_en_IN` is
 // English/IAST — neither is Hindi Devanagari, so we map the (small, fixed)
 // index sets to Hindi ourselves.
-// ponytail: package ships no TS types — declare the shape we actually use.
-declare module "mhah-panchang" {
-  export class MhahPanchang {
-    calendar(
-      dt: Date,
-      lat: number,
-      lng: number,
-      height?: number
-    ): {
-      Tithi: { ino: number };
-      Paksha: { ino: number };
-      Nakshatra: { ino: number };
-      Yoga: { ino: number };
-      Karna: { ino: number };
-      MoonMasa: { ino: number };
-    };
-    sunTimer(
-      date: Date,
-      lat: number,
-      lng: number,
-      height?: number
-    ): { sunRise: Date; sunSet: Date };
-  }
+
+// mhah-panchang ships no TS types — describe the shape we use inline.
+interface PanchangCalendar {
+  Tithi: { ino: number };
+  Paksha: { ino: number };
+  Nakshatra: { ino: number };
+  Yoga: { ino: number };
+  Karna: { ino: number };
+  MoonMasa: { ino: number };
+}
+interface PanchangSun {
+  sunRise: Date;
+  sunSet: Date;
+}
+interface MhahPanchangInstance {
+  calendar(dt: Date, lat: number, lng: number, height?: number): PanchangCalendar;
+  sunTimer(date: Date, lat: number, lng: number, height?: number): PanchangSun;
 }
 
-import { MhahPanchang } from "mhah-panchang";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const MhahPanchang = require("mhah-panchang").MhahPanchang as new () => MhahPanchangInstance;
 
 // Lucknow, UP — fixed reference point for the whole site (no user geolocation).
 const LAT = 26.85;
