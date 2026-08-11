@@ -57,6 +57,14 @@ export default function NewsroomListPage() {
           >
             नया लेख
           </Link>
+          {profile.role === "editor" && (
+            <Link
+              href="/newsroom/epaper"
+              className="bg-primary px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              ई-पेपर
+            </Link>
+          )}
           <button
             type="button"
             onClick={async () => {

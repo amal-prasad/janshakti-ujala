@@ -16,7 +16,12 @@ export const categories: Category[] = [
   { slug: "manoranjan", name: "मनोरंजन" },
   { slug: "praudyogiki", name: "प्रौद्योगिकी" },
   { slug: "swasthya", name: "स्वास्थ्य" },
+  // Fact-check desk. Articles here carry a `verdict` (सच / झूठ / भ्रामक).
+  { slug: "fact-check", name: "सच या झूठ" },
 ];
+
+// Fact-check desk: articles in this category get a verdict badge.
+export const FACT_CHECK_SLUG = "fact-check";
 
 const bySlug = new Map(categories.map((c) => [c.slug, c]));
 

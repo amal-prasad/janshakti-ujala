@@ -1,8 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { ArticleCard as ArticleCardData } from "@/lib/api/articles";
 import type { Rashifal } from "@/lib/supabase/types";
-import type { Video } from "@/lib/supabase/types";
 import { ArticleCardSmall } from "@/components/news/ArticleCardSmall";
 import { NewsletterForm } from "@/components/news/NewsletterForm";
 import { HolidaysWidget } from "@/components/news/HolidaysWidget";
@@ -16,11 +14,9 @@ import { truncate } from "@/lib/utils/format";
 export function Sidebar({
   trending,
   rashifal,
-  videos,
 }: {
   trending: ArticleCardData[];
   rashifal: Rashifal | null;
-  videos: Video[];
 }) {
   return (
     <aside className="flex flex-col gap-8 lg:sticky lg:top-16 lg:self-start">
@@ -63,51 +59,6 @@ export function Sidebar({
           <NewsletterForm />
         </div>
       </section>
-
-      {videos.length > 0 && (
-        <section>
-          <div className="flex items-baseline justify-between">
-            <h2 className="section-header">वीडियो</h2>
-            <Link href="/video" className="text-sm font-semibold text-primary hover:underline">
-              सभी देखें
-            </Link>
-          </div>
-          <div className="mt-4 flex flex-col gap-4">
-            {videos.map((v) => (
-              <a
-                key={v.id}
-                href={`https://youtube.com/watch?v=${v.youtube_id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3"
-              >
-                <span className="relative block aspect-[4/3] w-20 shrink-0 overflow-hidden bg-surface">
-                  <Image
-                    src={`https://i.ytimg.com/vi/${v.youtube_id}/hqdefault.jpg`}
-                    alt={v.title}
-                    fill
-                    sizes="80px"
-                    className="object-cover"
-                  />
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                    fill="white"
-                    className="absolute inset-0 m-auto drop-shadow"
-                    aria-hidden
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-                <span className="line-clamp-2 font-display text-sm font-bold leading-snug hover:text-primary">
-                  {v.title}
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
     </aside>
   );
 }

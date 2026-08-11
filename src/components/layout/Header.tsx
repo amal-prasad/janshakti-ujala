@@ -20,7 +20,10 @@ export function Header() {
           />
         </form>
 
-        <Link href="/" className="text-center">
+        {/* col-start-2 pins the logo to the centre column even on mobile, where
+            the search form is display:none and would otherwise let auto-placement
+            slide the logo into column 1. */}
+        <Link href="/" className="col-start-2 text-center">
           <Image
             src="/logo.png"
             alt="जनशक्ति उजाला"

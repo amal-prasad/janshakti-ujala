@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getArticleBySlug, DEFAULT_CITY } from "@/lib/api/articles";
 import { RelatedArticles } from "@/components/news/RelatedArticles";
 import { ArticleBody } from "@/components/news/ArticleBody";
-import { CategoryBadge } from "@/components/ui/Badge";
+import { CategoryBadge, VerdictBadge } from "@/components/ui/Badge";
 import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 import { buildNewsArticleSchema, jsonLdScript } from "@/lib/utils/structuredData";
 import { siteConfig } from "@/lib/siteConfig";
@@ -53,7 +53,10 @@ export default async function ArticlePage({ params }: Params) {
         dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
       />
       <article className="mx-auto max-w-3xl">
-        <CategoryBadge slug={article.category} />
+        <div className="flex flex-wrap items-center gap-3">
+          <CategoryBadge slug={article.category} />
+          {article.verdict && <VerdictBadge verdict={article.verdict} />}
+        </div>
         <h1 className="mt-2 font-display text-3xl font-bold leading-tight md:text-4xl">
           {article.title}
         </h1>

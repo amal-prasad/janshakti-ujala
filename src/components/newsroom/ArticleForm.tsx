@@ -3,12 +3,38 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getNewsroomClient } from "@/lib/supabase/newsroom";
 import { Markdown } from "@/components/news/Markdown";
-import { categories } from "@/lib/categories";
+import { categories, FACT_CHECK_SLUG } from "@/lib/categories";
 import { slugify } from "@/lib/utils/format";
-import type { Article, Profile } from "@/lib/supabase/types";
+import {
+  FACT_CHECK_VERDICTS,
+  verdictLabels,
+  type Article,
+  type FactCheckVerdict,
+  type Profile,
+} from "@/lib/supabase/types";
 
 const inputCls =
   "w-full border border-border bg-bg px-3 py-2 text-sm text-text outline-none placeholder:text-muted focus:border-primary";
+
+const MAX_DIM = 1600;
+const JPEG_QUALITY = 0.8;
+
+// ponytail: canvas resize covers it, no image-compression library needed.
+async function compressImage(file: File): Promise<Blob> {
+  if (!file.type.startsWith("image/") || file.type === "image/svg+xml") return file;
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, MAX_DIM / Math.max(bitmap.width, bitmap.height));
+  const w = Math.round(bitmap.width * scale);
+  const h = Math.round(bitmap.height * scale);
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  canvas.getContext("2d")!.drawImage(bitmap, 0, 0, w, h);
+  const blob = await new Promise<Blob | null>((resolve) =>
+    canvas.toBlob(resolve, "image/jpeg", JPEG_QUALITY),
+  );
+  return blob && blob.size < file.size ? blob : file;
+}
 
 // Shared by /newsroom/new (article = null) and /newsroom/edit/[id].
 // Slug auto-follows the title until touched by hand; locked after first publish.
@@ -32,6 +58,7 @@ export function ArticleForm({
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
   const [coverUrl, setCoverUrl] = useState(article?.cover_image_url ?? null);
   const [city, setCity] = useState(article?.city ?? "इंदौर");
+  const [verdict, setVerdict] = useState<FactCheckVerdict | null>(article?.verdict ?? null);
   const [published, setPublished] = useState(article?.is_published ?? false);
   const [status, setStatus] = useState<"idle" | "saving" | "uploading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -46,9 +73,11 @@ export function ArticleForm({
     if (!file) return;
     setStatus("uploading");
     const supabase = getNewsroomClient();
-    const ext = file.name.split(".").pop() ?? "jpg";
+    const compressed = await compressImage(file);
+    const compressedToJpeg = compressed !== file;
+    const ext = compressedToJpeg ? "jpg" : file.name.split(".").pop() ?? "jpg";
     const path = `${Date.now()}-${slugify(title) || "image"}.${ext}`;
-    const { error } = await supabase.storage.from("article-images").upload(path, file);
+    const { error } = await supabase.storage.from("article-images").upload(path, compressed);
     if (error) {
       setErrorMsg("इमेज अपलोड नहीं हो सकी।");
       setStatus("error");
@@ -72,6 +101,7 @@ export function ArticleForm({
       slug: slug || slugify(title) || `lekh-${Date.now()}`,
       cover_image_url: coverUrl,
       city: city.trim() || "इंदौर",
+      verdict: category === FACT_CHECK_SLUG ? verdict : null,
       author: profile.display_name,
       ...(isEditor
         ? {
@@ -92,11 +122,13 @@ export function ArticleForm({
             .insert({ ...f, author_id: profile.id, is_published: isEditor && published });
 
     let { error } = await save(fields);
-    // Hosted DB without migration 013 has no `city` column yet — PostgREST
-    // rejects the write (PGRST204/42703). Retry without it so saving still works.
+    // Hosted DB without migration 013/014 has no `city`/`verdict` column yet —
+    // PostgREST rejects the write (PGRST204/42703). Retry without both so saving
+    // still works. Which one was missing isn't reported, so strip them together.
     if (error && (error.code === "PGRST204" || error.code === "42703")) {
       const rest: Partial<Article> = { ...fields };
       delete rest.city;
+      delete rest.verdict;
       ({ error } = await save(rest));
     }
 
@@ -153,6 +185,26 @@ export function ArticleForm({
               className={inputCls}
             />
           </label>
+
+          {category === FACT_CHECK_SLUG && (
+            <label className="flex flex-col gap-1 text-sm font-semibold">
+              निर्णय
+              <select
+                value={verdict ?? ""}
+                onChange={(e) =>
+                  setVerdict((e.target.value || null) as FactCheckVerdict | null)
+                }
+                className={inputCls}
+              >
+                <option value="">—</option>
+                {FACT_CHECK_VERDICTS.map((v) => (
+                  <option key={v} value={v}>
+                    {verdictLabels[v]}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
 
           <label className="flex flex-col gap-1 text-sm font-semibold">
             स्लग {slugLocked && <span className="font-normal text-muted">(प्रकाशित — लॉक)</span>}

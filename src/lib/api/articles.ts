@@ -8,9 +8,10 @@ export const DEFAULT_CITY = "इंदौर";
 
 // Columns needed by list cards — never fetch `body` for lists.
 const CARD_COLS =
-  "id,slug,title,dek,category,tags,cover_image_url,author,city,reading_minutes,is_breaking,is_featured,published_at,view_count";
-// Pre-013 hosted DBs reject `city` with PostgREST 42703 (undefined column).
-const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "");
+  "id,slug,title,dek,category,tags,cover_image_url,author,city,verdict,reading_minutes,is_breaking,is_featured,published_at,view_count";
+// Pre-013/014 hosted DBs reject `city`/`verdict` with PostgREST 42703 (undefined
+// column). The error doesn't say which, so the fallback drops both.
+const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "").replace(",verdict", "");
 
 export type ArticleCard = Pick<
   Article,
@@ -27,6 +28,7 @@ export type ArticleCard = Pick<
   | "is_featured"
   | "published_at"
   | "view_count"
+  | "verdict"
 > & { city: string };
 
 export type ArticlePage = {

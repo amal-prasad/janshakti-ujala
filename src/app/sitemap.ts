@@ -17,7 +17,6 @@ const STATIC_ROUTES: {
   { path: "/samachar", changeFrequency: "hourly", priority: 0.9 },
   { path: "/rashifal", changeFrequency: "daily", priority: 0.8 },
   { path: "/epaper", changeFrequency: "daily", priority: 0.8 },
-  { path: "/video", changeFrequency: "daily", priority: 0.7 },
   { path: "/gallery", changeFrequency: "daily", priority: 0.7 },
   { path: "/polls", changeFrequency: "weekly", priority: 0.5 },
   { path: "/newsletter", changeFrequency: "monthly", priority: 0.4 },

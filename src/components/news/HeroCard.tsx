@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ArticleCard as ArticleCardData } from "@/lib/api/articles";
-import { CategoryBadge, Badge } from "@/components/ui/Badge";
+import { CategoryBadge, Badge, VerdictBadge } from "@/components/ui/Badge";
 import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 
 // The lead story. Full-bleed image, commanding headline — the one place size
@@ -29,7 +29,10 @@ export function HeroCard({ article }: { article: ArticleCardData }) {
         </div>
       </Link>
       <div className="mt-4 max-w-3xl">
-        <CategoryBadge slug={article.category} />
+        <div className="flex items-center gap-2">
+          <CategoryBadge slug={article.category} />
+          {article.verdict && <VerdictBadge verdict={article.verdict} />}
+        </div>
         <h1 className="mt-2 font-display text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-balance">
           <Link href={`/samachar/${article.slug}`} className="hover:text-primary">
             {article.title}

@@ -1,6 +1,17 @@
 // Hand-written DB types (no generated file — avoids a CLI round-trip against a live
 // project). Keep in sync with supabase/migrations/*.
 
+// Fact-check verdicts, stored as text (see migration 014's CHECK constraint).
+export const FACT_CHECK_VERDICTS = ["true", "false", "misleading"] as const;
+export type FactCheckVerdict = (typeof FACT_CHECK_VERDICTS)[number];
+
+// Hindi labels for the verdict badge / newsroom select.
+export const verdictLabels: Record<FactCheckVerdict, string> = {
+  true: "सच",
+  false: "झूठ",
+  misleading: "भ्रामक",
+};
+
 export type Article = {
   id: string;
   slug: string;
@@ -14,6 +25,9 @@ export type Article = {
   // Dateline city (013). Optional because a hosted DB that hasn't run the
   // migration yet returns rows without it — readers fall back to इंदौर.
   city?: string;
+  // Fact-check verdict (014). Only set for category "fact-check"; null elsewhere.
+  // Optional for the same reason as `city` — a DB without the migration omits it.
+  verdict?: FactCheckVerdict | null;
   reading_minutes: number;
   is_breaking: boolean;
   is_featured: boolean;
@@ -89,16 +103,6 @@ export type Gallery = {
   created_at: string;
 };
 
-export type Video = {
-  id: string;
-  title: string;
-  youtube_id: string;
-  description: string | null;
-  category: string | null;
-  published_at: string;
-  created_at: string;
-};
-
 export type NewsletterSubscriber = {
   id: string;
   email: string;
@@ -134,7 +138,6 @@ export type Database = {
       polls: TableFor<Poll>;
       poll_options: TableFor<PollOption>;
       gallery: TableFor<Gallery>;
-      videos: TableFor<Video>;
       newsletter_subscribers: TableFor<NewsletterSubscriber>;
       ads: TableFor<Ad>;
     };
