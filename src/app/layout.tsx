@@ -8,7 +8,7 @@ import { Topbar } from "@/components/layout/Topbar";
 import { Header } from "@/components/layout/Header";
 import { Navbar } from "@/components/layout/Navbar";
 import { BreakingNewsTicker } from "@/components/layout/BreakingNewsTicker";
-import { Footer } from "@/components/layout/footer";
+import { Footer } from "@/components/layout/Footer";
 import { AdSlot } from "@/components/AdSlot";
 
 // Display = headlines; Body = running text. Both Devanagari-first.
