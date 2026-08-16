@@ -27,10 +27,10 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="जनशक्ति उजाला"
-            width={400}
-            height={100}
+            width={569}
+            height={439}
             priority
-            className="h-auto w-auto max-h-20 md:max-h-28 object-contain"
+            className="h-auto w-56 object-contain md:w-80 lg:w-[26rem]"
           />
         </Link>
 

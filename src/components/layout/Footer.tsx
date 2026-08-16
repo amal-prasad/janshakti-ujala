@@ -11,9 +11,9 @@ export function Footer() {
           <Image
             src="/logo.png"
             alt={siteConfig.name}
-            width={400}
-            height={100}
-            className="h-auto w-auto max-h-16 object-contain md:max-h-20"
+            width={569}
+            height={439}
+            className="h-auto w-48 object-contain md:w-72 lg:w-96"
           />
         </Link>
       </div>
@@ -32,6 +32,8 @@ export function Footer() {
         </nav>
 
         <div className="flex flex-col gap-2 text-sm">
+          <Link href="/hamare-bare-mein" className="text-text hover:text-primary">हमारे बारे में</Link>
+          <Link href="/rajya" className="text-text hover:text-primary">राज्य</Link>
           <Link href="/epaper" className="text-text hover:text-primary">ई-पेपर</Link>
           <Link href="/rashifal" className="text-text hover:text-primary">राशिफल</Link>
           <Link href="/gallery" className="text-text hover:text-primary">गैलरी</Link>
@@ -39,10 +41,13 @@ export function Footer() {
           <a href={`mailto:${siteConfig.contactEmail}`} className="text-muted hover:text-primary">
             {siteConfig.contactEmail}
           </a>
+          <a href={`tel:${siteConfig.contactPhone}`} className="text-muted hover:text-primary">
+            {siteConfig.contactPhone}
+          </a>
         </div>
       </div>
-      <div className="container-x border-t border-border py-4 text-xs text-muted">
-        © {new Date().getFullYear()} {siteConfig.name}. सर्वाधिकार सुरक्षित।
+      <div className="container-x border-t border-border py-4 text-xs text-muted" spellCheck={false}>
+        © {new Date().getFullYear()} जनशक्ति उजाला. सर्वाधिकार सुरक्षित।
       </div>
     </footer>
   );

@@ -8,7 +8,7 @@ import { Topbar } from "@/components/layout/Topbar";
 import { Header } from "@/components/layout/Header";
 import { Navbar } from "@/components/layout/Navbar";
 import { BreakingNewsTicker } from "@/components/layout/BreakingNewsTicker";
-import { Footer } from "@/components/layout/Footer";
+import { Footer } from "@/components/layout/footer";
 import { AdSlot } from "@/components/AdSlot";
 
 // Display = headlines; Body = running text. Both Devanagari-first.
@@ -52,6 +52,10 @@ const noFlashScript = `(function(){try{
 
 const swScript = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}`;
 
+// Blocks right-click "save image" / drag-out on <img> tags site-wide (deterrent
+// only — see globals.css comment on the same rule; devtools can still get bytes).
+const noImageSaveScript = `document.addEventListener('contextmenu',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault();});document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault();});`;
+
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColor,
   width: "device-width",
@@ -79,6 +83,7 @@ export default async function RootLayout({
         </div>
         <Footer />
         <script dangerouslySetInnerHTML={{ __html: swScript }} />
+        <script dangerouslySetInnerHTML={{ __html: noImageSaveScript }} />
       </body>
     </html>
   );
