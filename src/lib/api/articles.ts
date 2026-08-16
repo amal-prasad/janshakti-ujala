@@ -8,10 +8,10 @@ export const DEFAULT_CITY = "इंदौर";
 
 // Columns needed by list cards — never fetch `body` for lists.
 const CARD_COLS =
-  "id,slug,title,dek,category,tags,cover_image_url,author,city,verdict,reading_minutes,is_breaking,is_featured,published_at,view_count";
-// Pre-013/014 hosted DBs reject `city`/`verdict` with PostgREST 42703 (undefined
-// column). The error doesn't say which, so the fallback drops both.
-const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "").replace(",verdict", "");
+  "id,slug,title,dek,category,tags,cover_image_url,author,city,state,reading_minutes,is_breaking,is_featured,published_at,view_count";
+// Pre-013/016 hosted DBs reject `city`/`state` with PostgREST
+// 42703 (undefined column). The error doesn't say which, so the fallback drops both.
+const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "").replace(",state", "");
 
 export type ArticleCard = Pick<
   Article,
@@ -28,31 +28,38 @@ export type ArticleCard = Pick<
   | "is_featured"
   | "published_at"
   | "view_count"
-  | "verdict"
-> & { city: string };
+> & { city: string; state: string | null };
 
 export type ArticlePage = {
   items: ArticleCard[];
   nextCursor: string | null;
 };
 
-type CardRow = Omit<ArticleCard, "city"> & { city?: string | null };
+type CardRow = Omit<ArticleCard, "city" | "state"> & {
+  city?: string | null;
+  state?: string | null;
+};
 type CardResult = PromiseLike<{ data: unknown; error: { code?: string } | null }>;
 
-// Runs a card select; on 42703 (pre-013 DB, no `city` column) retries without
-// it and stamps the default city, so lists work before and after the migration.
+// Runs a card select; on 42703 (pre-013/016 DB, missing `city`/`state`) retries
+// without them and stamps defaults, so lists work before and after the migration.
 async function selectCards(
   run: (cols: string) => CardResult,
 ): Promise<ArticleCard[] | null> {
   let { data, error } = await run(CARD_COLS);
   if (error?.code === "42703") ({ data, error } = await run(CARD_COLS_PRE_013));
   if (error) return null;
-  return ((data ?? []) as CardRow[]).map((r) => ({ ...r, city: r.city ?? DEFAULT_CITY }));
+  return ((data ?? []) as CardRow[]).map((r) => ({
+    ...r,
+    city: r.city ?? DEFAULT_CITY,
+    state: r.state ?? null,
+  }));
 }
 
 type ListOpts = {
   category?: string;
   tag?: string;
+  state?: string;
   cursor?: string | null; // published_at of the last item from the previous page
   limit?: number;
 };
@@ -61,7 +68,7 @@ type ListOpts = {
 // there is a next page. RLS already restricts to published rows.
 export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
   try {
-    const { category, tag, cursor, limit = 12 } = opts;
+    const { category, tag, state, cursor, limit = 12 } = opts;
     const supabase = createServerClient();
     const rows = await selectCards((cols) => {
       let q = supabase
@@ -71,6 +78,7 @@ export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
         .limit(limit + 1);
       if (category) q = q.eq("category", category);
       if (tag) q = q.contains("tags", [tag]);
+      if (state) q = q.eq("state", state);
       if (cursor) q = q.lt("published_at", cursor);
       return q;
     });

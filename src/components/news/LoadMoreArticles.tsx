@@ -8,10 +8,12 @@ export function LoadMoreArticles({
   initial,
   category,
   tag,
+  state,
 }: {
   initial: ArticlePage;
   category?: string;
   tag?: string;
+  state?: string;
 }) {
   const [items, setItems] = useState<ArticleCardData[]>(initial.items);
   const [cursor, setCursor] = useState<string | null>(initial.nextCursor);
@@ -24,6 +26,7 @@ export function LoadMoreArticles({
       const params = new URLSearchParams();
       if (category) params.set("category", category);
       if (tag) params.set("tag", tag);
+      if (state) params.set("state", state);
       params.set("cursor", cursor);
       const res = await fetch(`/api/articles?${params}`);
       const page: ArticlePage = await res.json();

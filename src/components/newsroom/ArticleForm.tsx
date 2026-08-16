@@ -3,15 +3,10 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getNewsroomClient } from "@/lib/supabase/newsroom";
 import { Markdown } from "@/components/news/Markdown";
-import { categories, FACT_CHECK_SLUG } from "@/lib/categories";
+import { categories } from "@/lib/categories";
+import { states } from "@/lib/states";
 import { slugify } from "@/lib/utils/format";
-import {
-  FACT_CHECK_VERDICTS,
-  verdictLabels,
-  type Article,
-  type FactCheckVerdict,
-  type Profile,
-} from "@/lib/supabase/types";
+import { type Article, type Profile } from "@/lib/supabase/types";
 
 const inputCls =
   "w-full border border-border bg-bg px-3 py-2 text-sm text-text outline-none placeholder:text-muted focus:border-primary";
@@ -58,7 +53,7 @@ export function ArticleForm({
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
   const [coverUrl, setCoverUrl] = useState(article?.cover_image_url ?? null);
   const [city, setCity] = useState(article?.city ?? "इंदौर");
-  const [verdict, setVerdict] = useState<FactCheckVerdict | null>(article?.verdict ?? null);
+  const [state, setState] = useState(article?.state ?? "");
   const [published, setPublished] = useState(article?.is_published ?? false);
   const [status, setStatus] = useState<"idle" | "saving" | "uploading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -101,7 +96,7 @@ export function ArticleForm({
       slug: slug || slugify(title) || `lekh-${Date.now()}`,
       cover_image_url: coverUrl,
       city: city.trim() || "इंदौर",
-      verdict: category === FACT_CHECK_SLUG ? verdict : null,
+      state: state || null,
       author: profile.display_name,
       ...(isEditor
         ? {
@@ -122,13 +117,13 @@ export function ArticleForm({
             .insert({ ...f, author_id: profile.id, is_published: isEditor && published });
 
     let { error } = await save(fields);
-    // Hosted DB without migration 013/014 has no `city`/`verdict` column yet —
+    // Hosted DB without migration 013/016 has no `city`/`state` column yet —
     // PostgREST rejects the write (PGRST204/42703). Retry without both so saving
     // still works. Which one was missing isn't reported, so strip them together.
     if (error && (error.code === "PGRST204" || error.code === "42703")) {
       const rest: Partial<Article> = { ...fields };
       delete rest.city;
-      delete rest.verdict;
+      delete rest.state;
       ({ error } = await save(rest));
     }
 
@@ -186,25 +181,21 @@ export function ArticleForm({
             />
           </label>
 
-          {category === FACT_CHECK_SLUG && (
-            <label className="flex flex-col gap-1 text-sm font-semibold">
-              निर्णय
-              <select
-                value={verdict ?? ""}
-                onChange={(e) =>
-                  setVerdict((e.target.value || null) as FactCheckVerdict | null)
-                }
-                className={inputCls}
-              >
-                <option value="">—</option>
-                {FACT_CHECK_VERDICTS.map((v) => (
-                  <option key={v} value={v}>
-                    {verdictLabels[v]}
-                  </option>
-                ))}
-              </select>
-            </label>
-          )}
+          <label className="flex flex-col gap-1 text-sm font-semibold">
+            राज्य
+            <select
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+              className={inputCls}
+            >
+              <option value="">—</option>
+              {states.map((s) => (
+                <option key={s.slug} value={s.name}>
+                  {s.name}
+                </option>
+              ))}
+            </select>
+          </label>
 
           <label className="flex flex-col gap-1 text-sm font-semibold">
             स्लग {slugLocked && <span className="font-normal text-muted">(प्रकाशित — लॉक)</span>}

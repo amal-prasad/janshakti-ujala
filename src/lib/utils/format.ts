@@ -6,6 +6,7 @@ const dateFmt = new Intl.DateTimeFormat("hi-IN", {
   day: "numeric",
   month: "long",
   year: "numeric",
+  timeZone: "Asia/Kolkata",
 });
 
 export function formatDate(input: string | Date): string {

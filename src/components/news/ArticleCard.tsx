@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ArticleCard as ArticleCardData } from "@/lib/api/articles";
-import { CategoryBadge, Badge, VerdictBadge } from "@/components/ui/Badge";
+import { CategoryBadge, Badge } from "@/components/ui/Badge";
 import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 
 // Default card: cover image, category, title, dek, reading time + date.
@@ -29,7 +29,6 @@ export function ArticleCard({ article }: { article: ArticleCardData }) {
       </Link>
       <div className="flex items-center gap-2">
         <CategoryBadge slug={article.category} />
-        {article.verdict && <VerdictBadge verdict={article.verdict} />}
       </div>
       <h3 className="font-display text-lg font-bold leading-snug">
         <Link href={`/samachar/${article.slug}`} className="hover:text-primary">

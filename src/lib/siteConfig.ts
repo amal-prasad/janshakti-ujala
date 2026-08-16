@@ -13,7 +13,10 @@ export const siteConfig = {
     facebook: "https://facebook.com/janshaktiujala",
     youtube: "https://youtube.com/@janshaktiujala",
   },
-  contactEmail: "sampark@janshaktiujala.in",
+  contactEmail: "janshaktiujala@gmail.com",
+  contactPhone: "9009699993",
+  // Channel invite links have a member cap — swap this when the channel fills up.
+  whatsappChannel: "https://whatsapp.com/channel/REPLACE_ME",
 } as const;
 
 export type SiteConfig = typeof siteConfig;

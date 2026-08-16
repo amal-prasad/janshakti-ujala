@@ -1,0 +1,495 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - time [ref=e4]: 17 अगस्त 2026
+    - generic [ref=e5]:
+      - link "हमारे व्हाट्सएप चैनल से जुड़ें" [ref=e6] [cursor=pointer]:
+        - /url: https://whatsapp.com/channel/REPLACE_ME
+      - link "ई-पेपर" [ref=e7] [cursor=pointer]:
+        - /url: /epaper
+      - generic [ref=e8]:
+        - link "Facebook" [ref=e9] [cursor=pointer]:
+          - /url: https://facebook.com/janshaktiujala
+        - link "YouTube" [ref=e10] [cursor=pointer]:
+          - /url: https://youtube.com/@janshaktiujala
+  - banner [ref=e11]:
+    - generic [ref=e12]:
+      - searchbox "खबर खोजें" [ref=e14]
+      - link [ref=e15] [cursor=pointer]:
+        - /url: /
+        - img "जनशक्ति उजाला" [ref=e16]
+  - navigation [ref=e19]:
+    - link "इंदौर" [ref=e20] [cursor=pointer]:
+      - /url: /shreni/indore
+    - link "राष्ट्रीय" [ref=e21] [cursor=pointer]:
+      - /url: /shreni/rashtriya
+    - link "अंतरराष्ट्रीय" [ref=e22] [cursor=pointer]:
+      - /url: /shreni/antarrashtriya
+    - link "राजनीति" [ref=e23] [cursor=pointer]:
+      - /url: /shreni/rajneeti
+    - link "व्यापार" [ref=e24] [cursor=pointer]:
+      - /url: /shreni/vyapar
+    - link "खेल" [ref=e25] [cursor=pointer]:
+      - /url: /shreni/khel
+    - link "मनोरंजन" [ref=e26] [cursor=pointer]:
+      - /url: /shreni/manoranjan
+    - link "प्रौद्योगिकी" [ref=e27] [cursor=pointer]:
+      - /url: /shreni/praudyogiki
+    - link "स्वास्थ्य" [ref=e28] [cursor=pointer]:
+      - /url: /shreni/swasthya
+    - link "राशिफल" [ref=e29] [cursor=pointer]:
+      - /url: /rashifal
+  - generic [ref=e30]:
+    - generic [ref=e31]: लाइव
+    - generic [ref=e34]:
+      - link "● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया— समाचार एजेंसी" [ref=e35] [cursor=pointer]:
+        - /url: https://example.com/news/1
+        - text: ● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया
+        - generic [ref=e36]: — समाचार एजेंसी
+      - link "● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट— समाचार एजेंसी" [ref=e37] [cursor=pointer]:
+        - /url: https://example.com/news/2
+        - text: ● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट
+        - generic [ref=e38]: — समाचार एजेंसी
+      - link "● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की— समाचार एजेंसी" [ref=e39] [cursor=pointer]:
+        - /url: https://example.com/news/3
+        - text: ● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की
+        - generic [ref=e40]: — समाचार एजेंसी
+      - link "● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी— समाचार एजेंसी" [ref=e41] [cursor=pointer]:
+        - /url: https://example.com/news/4
+        - text: ● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी
+        - generic [ref=e42]: — समाचार एजेंसी
+      - link "● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में— समाचार एजेंसी" [ref=e43] [cursor=pointer]:
+        - /url: https://example.com/news/5
+        - text: ● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में
+        - generic [ref=e44]: — समाचार एजेंसी
+      - link "● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया— समाचार एजेंसी" [ref=e45] [cursor=pointer]:
+        - /url: https://example.com/news/1
+        - text: ● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया
+        - generic [ref=e46]: — समाचार एजेंसी
+      - link "● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट— समाचार एजेंसी" [ref=e47] [cursor=pointer]:
+        - /url: https://example.com/news/2
+        - text: ● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट
+        - generic [ref=e48]: — समाचार एजेंसी
+      - link "● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की— समाचार एजेंसी" [ref=e49] [cursor=pointer]:
+        - /url: https://example.com/news/3
+        - text: ● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की
+        - generic [ref=e50]: — समाचार एजेंसी
+      - link "● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी— समाचार एजेंसी" [ref=e51] [cursor=pointer]:
+        - /url: https://example.com/news/4
+        - text: ● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी
+        - generic [ref=e52]: — समाचार एजेंसी
+      - link "● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में— समाचार एजेंसी" [ref=e53] [cursor=pointer]:
+        - /url: https://example.com/news/5
+        - text: ● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में
+        - generic [ref=e54]: — समाचार एजेंसी
+  - main [ref=e55]:
+    - region "आज का पंचांग" [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]: आज का पंचांग
+        - generic [ref=e59]: सोमवार, 17 अगस्त 2026
+        - generic [ref=e60]:
+          - generic [ref=e61]: "तिथि:"
+          - text: पंचमी
+        - generic [ref=e62]:
+          - generic [ref=e63]: "पक्ष:"
+          - text: शुक्ल पक्ष
+        - generic [ref=e64]:
+          - generic [ref=e65]: "नक्षत्र:"
+          - text: चित्रा
+        - generic [ref=e66]:
+          - generic [ref=e67]: "योग:"
+          - text: शुभ
+        - generic [ref=e68]:
+          - generic [ref=e69]: "करण:"
+          - text: बव
+        - generic [ref=e70]:
+          - generic [ref=e71]: "मास:"
+          - text: भाद्रपद
+        - generic [ref=e72]:
+          - generic [ref=e73]: "सूर्योदय:"
+          - text: 05:39
+        - generic [ref=e74]:
+          - generic [ref=e75]: "सूर्यास्त:"
+          - text: 18:43
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - article [ref=e78]:
+          - link "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा ताज़ा" [ref=e79] [cursor=pointer]:
+            - /url: /samachar/sansad-shiksha-vidheyak-charcha
+            - generic [ref=e80]:
+              - img "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा" [ref=e81]
+              - generic [ref=e82]: ताज़ा
+          - generic [ref=e84]:
+            - link "राष्ट्रीय" [ref=e86] [cursor=pointer]:
+              - /url: /shreni/rashtriya
+            - heading [level=1] [ref=e87]:
+              - link "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा" [ref=e88] [cursor=pointer]:
+                - /url: /samachar/sansad-shiksha-vidheyak-charcha
+            - paragraph [ref=e89]: विधेयक में स्कूली पाठ्यक्रम और शिक्षक भर्ती को लेकर बड़े बदलावों का प्रस्ताव।
+            - generic [ref=e90]:
+              - generic [ref=e91]: इंदौर
+              - generic [ref=e92]: •
+              - time [ref=e93]: 24 जून 2026
+              - generic [ref=e94]: •
+              - generic [ref=e95]: 1 मिनट पढ़ें
+        - generic [ref=e96]:
+          - article [ref=e97]:
+            - link [ref=e98] [cursor=pointer]:
+              - /url: /samachar/bharat-cricket-shrinkhla-badhat
+              - img "भारतीय क्रिकेट टीम ने श्रृंखला में बनाई बढ़त" [ref=e100]
+            - link "खेल" [ref=e102] [cursor=pointer]:
+              - /url: /shreni/khel
+            - heading [level=3] [ref=e103]:
+              - link "भारतीय क्रिकेट टीम ने श्रृंखला में बनाई बढ़त" [ref=e104] [cursor=pointer]:
+                - /url: /samachar/bharat-cricket-shrinkhla-badhat
+            - paragraph [ref=e106]: दूसरे मुकाबले में शानदार गेंदबाज़ी के दम पर मिली जीत।
+            - generic [ref=e107]:
+              - generic [ref=e108]: इंदौर
+              - generic [ref=e109]: •
+              - time [ref=e110]: 24 जून 2026
+              - generic [ref=e111]: •
+              - generic [ref=e112]: 1 मिनट पढ़ें
+          - article [ref=e113]:
+            - link [ref=e114] [cursor=pointer]:
+              - /url: /samachar/share-bazaar-record
+              - img "शेयर बाजार ने तोड़े पिछले सभी रिकॉर्ड" [ref=e116]
+            - link "व्यापार" [ref=e118] [cursor=pointer]:
+              - /url: /shreni/vyapar
+            - heading [level=3] [ref=e119]:
+              - link "शेयर बाजार ने तोड़े पिछले सभी रिकॉर्ड" [ref=e120] [cursor=pointer]:
+                - /url: /samachar/share-bazaar-record
+            - paragraph [ref=e122]: सेंसेक्स और निफ्टी दोनों नई ऊँचाई पर बंद हुए।
+            - generic [ref=e123]:
+              - generic [ref=e124]: इंदौर
+              - generic [ref=e125]: •
+              - time [ref=e126]: 24 जून 2026
+              - generic [ref=e127]: •
+              - generic [ref=e128]: 1 मिनट पढ़ें
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - heading "इंदौर" [level=2] [ref=e131]
+            - link "सभी देखें" [ref=e132] [cursor=pointer]:
+              - /url: /shreni/indore
+          - generic [ref=e133]:
+            - article [ref=e134]:
+              - link [ref=e135] [cursor=pointer]:
+                - /url: /samachar/demo-indore-metro
+                - img "इंदौर मेट्रो के नए रूट को मंज़ूरी, शहर के यातायात को मिलेगी रफ़्तार" [ref=e137]
+              - link "इंदौर" [ref=e139] [cursor=pointer]:
+                - /url: /shreni/indore
+              - heading [level=3] [ref=e140]:
+                - link "इंदौर मेट्रो के नए रूट को मंज़ूरी, शहर के यातायात को मिलेगी रफ़्तार" [ref=e141] [cursor=pointer]:
+                  - /url: /samachar/demo-indore-metro
+              - paragraph [ref=e143]: डेमो लेख — न्यूज़रूम परीक्षण के लिए।
+              - generic [ref=e144]:
+                - generic [ref=e145]: इंदौर
+                - generic [ref=e146]: •
+                - time [ref=e147]: 18 जुलाई 2026
+                - generic [ref=e148]: •
+                - generic [ref=e149]: 1 मिनट पढ़ें
+            - article [ref=e150]:
+              - link [ref=e151] [cursor=pointer]:
+                - /url: /samachar/demo-indore-swachhta
+                - img "स्वच्छता सर्वेक्षण की तैयारी में जुटा इंदौर, वार्डों में विशेष अभियान" [ref=e153]
+              - link "इंदौर" [ref=e155] [cursor=pointer]:
+                - /url: /shreni/indore
+              - heading [level=3] [ref=e156]:
+                - link "स्वच्छता सर्वेक्षण की तैयारी में जुटा इंदौर, वार्डों में विशेष अभियान" [ref=e157] [cursor=pointer]:
+                  - /url: /samachar/demo-indore-swachhta
+              - paragraph [ref=e159]: डेमो लेख — न्यूज़रूम परीक्षण के लिए।
+              - generic [ref=e160]:
+                - generic [ref=e161]: इंदौर
+                - generic [ref=e162]: •
+                - time [ref=e163]: 18 जुलाई 2026
+                - generic [ref=e164]: •
+                - generic [ref=e165]: 1 मिनट पढ़ें
+            - article [ref=e166]:
+              - link [ref=e167] [cursor=pointer]:
+                - /url: /samachar/demo-indore-rajwada
+                - img "राजवाड़ा परिसर के जीर्णोद्धार का काम अंतिम चरण में, जल्द खुलेगा पर्यटकों के लिए" [ref=e169]
+              - link "इंदौर" [ref=e171] [cursor=pointer]:
+                - /url: /shreni/indore
+              - heading [level=3] [ref=e172]:
+                - link "राजवाड़ा परिसर के जीर्णोद्धार का काम अंतिम चरण में, जल्द खुलेगा पर्यटकों के लिए" [ref=e173] [cursor=pointer]:
+                  - /url: /samachar/demo-indore-rajwada
+              - paragraph [ref=e175]: डेमो लेख — न्यूज़रूम परीक्षण के लिए।
+              - generic [ref=e176]:
+                - generic [ref=e177]: इंदौर
+                - generic [ref=e178]: •
+                - time [ref=e179]: 18 जुलाई 2026
+                - generic [ref=e180]: •
+                - generic [ref=e181]: 1 मिनट पढ़ें
+            - article [ref=e182]:
+              - link [ref=e183] [cursor=pointer]:
+                - /url: /samachar/demo-indore-sarafa
+                - img "सराफा चौपाटी के लिए नई व्यवस्था लागू, दुकानदारों में उत्साह" [ref=e185]
+              - link "इंदौर" [ref=e187] [cursor=pointer]:
+                - /url: /shreni/indore
+              - heading [level=3] [ref=e188]:
+                - link "सराफा चौपाटी के लिए नई व्यवस्था लागू, दुकानदारों में उत्साह" [ref=e189] [cursor=pointer]:
+                  - /url: /samachar/demo-indore-sarafa
+              - paragraph [ref=e191]: डेमो लेख — न्यूज़रूम परीक्षण के लिए।
+              - generic [ref=e192]:
+                - generic [ref=e193]: इंदौर
+                - generic [ref=e194]: •
+                - time [ref=e195]: 18 जुलाई 2026
+                - generic [ref=e196]: •
+                - generic [ref=e197]: 1 मिनट पढ़ें
+        - generic [ref=e198]:
+          - generic [ref=e199]:
+            - heading "राष्ट्रीय" [level=2] [ref=e200]
+            - link "सभी देखें" [ref=e201] [cursor=pointer]:
+              - /url: /shreni/rashtriya
+          - generic [ref=e202]:
+            - article [ref=e203]:
+              - link "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा ताज़ा" [ref=e204] [cursor=pointer]:
+                - /url: /samachar/sansad-shiksha-vidheyak-charcha
+                - generic [ref=e205]:
+                  - img "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा" [ref=e206]
+                  - generic [ref=e207]: ताज़ा
+              - link "राष्ट्रीय" [ref=e210] [cursor=pointer]:
+                - /url: /shreni/rashtriya
+              - heading [level=3] [ref=e211]:
+                - link "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा" [ref=e212] [cursor=pointer]:
+                  - /url: /samachar/sansad-shiksha-vidheyak-charcha
+              - paragraph [ref=e214]: विधेयक में स्कूली पाठ्यक्रम और शिक्षक भर्ती को लेकर बड़े बदलावों का प्रस्ताव।
+              - generic [ref=e215]:
+                - generic [ref=e216]: इंदौर
+                - generic [ref=e217]: •
+                - time [ref=e218]: 24 जून 2026
+                - generic [ref=e219]: •
+                - generic [ref=e220]: 1 मिनट पढ़ें
+            - article [ref=e221]:
+              - link "किसानों के लिए नई सिंचाई योजना की घोषणा ताज़ा" [ref=e222] [cursor=pointer]:
+                - /url: /samachar/kisan-sinchai-yojana
+                - generic [ref=e223]:
+                  - img "किसानों के लिए नई सिंचाई योजना की घोषणा" [ref=e224]
+                  - generic [ref=e225]: ताज़ा
+              - link "राष्ट्रीय" [ref=e228] [cursor=pointer]:
+                - /url: /shreni/rashtriya
+              - heading [level=3] [ref=e229]:
+                - link "किसानों के लिए नई सिंचाई योजना की घोषणा" [ref=e230] [cursor=pointer]:
+                  - /url: /samachar/kisan-sinchai-yojana
+              - paragraph [ref=e232]: सूक्ष्म सिंचाई पर अनुदान और जल संरक्षण पर ज़ोर।
+              - generic [ref=e233]:
+                - generic [ref=e234]: इंदौर
+                - generic [ref=e235]: •
+                - time [ref=e236]: 24 जून 2026
+                - generic [ref=e237]: •
+                - generic [ref=e238]: 1 मिनट पढ़ें
+        - generic [ref=e239]: विज्ञापन स्थान — infeed
+        - generic [ref=e240]:
+          - heading "अन्य खबरें" [level=2] [ref=e241]
+          - generic [ref=e242]:
+            - article [ref=e244]:
+              - link [ref=e245] [cursor=pointer]:
+                - /url: /samachar/sansad-shiksha-vidheyak-charcha
+                - img "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा" [ref=e246]
+              - generic [ref=e247]:
+                - heading [level=3] [ref=e248]:
+                  - link "संसद के मानसून सत्र में नए शिक्षा विधेयक पर चर्चा" [ref=e249] [cursor=pointer]:
+                    - /url: /samachar/sansad-shiksha-vidheyak-charcha
+                - generic [ref=e251]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e253]:
+              - link [ref=e254] [cursor=pointer]:
+                - /url: /samachar/bharat-cricket-shrinkhla-badhat
+                - img "भारतीय क्रिकेट टीम ने श्रृंखला में बनाई बढ़त" [ref=e255]
+              - generic [ref=e256]:
+                - heading [level=3] [ref=e257]:
+                  - link "भारतीय क्रिकेट टीम ने श्रृंखला में बनाई बढ़त" [ref=e258] [cursor=pointer]:
+                    - /url: /samachar/bharat-cricket-shrinkhla-badhat
+                - generic [ref=e260]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e262]:
+              - link [ref=e263] [cursor=pointer]:
+                - /url: /samachar/jalvayu-sammelan-bharat-bhumika
+                - img "वैश्विक जलवायु सम्मेलन में भारत की अहम भूमिका" [ref=e264]
+              - generic [ref=e265]:
+                - heading [level=3] [ref=e266]:
+                  - link "वैश्विक जलवायु सम्मेलन में भारत की अहम भूमिका" [ref=e267] [cursor=pointer]:
+                    - /url: /samachar/jalvayu-sammelan-bharat-bhumika
+                - generic [ref=e269]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e271]:
+              - link [ref=e272] [cursor=pointer]:
+                - /url: /samachar/share-bazaar-record
+                - img "शेयर बाजार ने तोड़े पिछले सभी रिकॉर्ड" [ref=e273]
+              - generic [ref=e274]:
+                - heading [level=3] [ref=e275]:
+                  - link "शेयर बाजार ने तोड़े पिछले सभी रिकॉर्ड" [ref=e276] [cursor=pointer]:
+                    - /url: /samachar/share-bazaar-record
+                - generic [ref=e278]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e280]:
+              - link [ref=e281] [cursor=pointer]:
+                - /url: /samachar/nai-film-sau-crore
+                - img "नई फिल्म ने पहले सप्ताह में कमाए सौ करोड़" [ref=e282]
+              - generic [ref=e283]:
+                - heading [level=3] [ref=e284]:
+                  - link "नई फिल्म ने पहले सप्ताह में कमाए सौ करोड़" [ref=e285] [cursor=pointer]:
+                    - /url: /samachar/nai-film-sau-crore
+                - generic [ref=e287]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e289]:
+              - link [ref=e290] [cursor=pointer]:
+                - /url: /samachar/paanch-takniki-kendra
+                - img "देश में पांच नए तकनीकी केंद्र स्थापित होंगे" [ref=e291]
+              - generic [ref=e292]:
+                - heading [level=3] [ref=e293]:
+                  - link "देश में पांच नए तकनीकी केंद्र स्थापित होंगे" [ref=e294] [cursor=pointer]:
+                    - /url: /samachar/paanch-takniki-kendra
+                - generic [ref=e296]: इंदौर • 1 मिनट पढ़ें
+        - generic [ref=e297]:
+          - generic [ref=e298]:
+            - heading "राजनीति" [level=2] [ref=e299]
+            - link "सभी देखें" [ref=e300] [cursor=pointer]:
+              - /url: /shreni/rajneeti
+          - article [ref=e302]:
+            - link [ref=e303] [cursor=pointer]:
+              - /url: /samachar/rajya-chunav-gathbandhan-ranniti
+              - img "राज्य चुनाव से पहले गठबंधन की नई रणनीति" [ref=e305]
+            - link "राजनीति" [ref=e307] [cursor=pointer]:
+              - /url: /shreni/rajneeti
+            - heading [level=3] [ref=e308]:
+              - link "राज्य चुनाव से पहले गठबंधन की नई रणनीति" [ref=e309] [cursor=pointer]:
+                - /url: /samachar/rajya-chunav-gathbandhan-ranniti
+            - paragraph [ref=e311]: सीट बंटवारे को लेकर सहयोगी दलों के बीच बैठकों का दौर तेज़।
+            - generic [ref=e312]:
+              - generic [ref=e313]: इंदौर
+              - generic [ref=e314]: •
+              - time [ref=e315]: 24 जून 2026
+              - generic [ref=e316]: •
+              - generic [ref=e317]: 1 मिनट पढ़ें
+      - complementary [ref=e319]:
+        - generic [ref=e320]: विज्ञापन स्थान — sidebar
+        - generic [ref=e321]:
+          - heading "ट्रेंडिंग" [level=2] [ref=e322]
+          - generic [ref=e323]:
+            - article [ref=e324]:
+              - generic [ref=e325]: "01"
+              - link [ref=e326] [cursor=pointer]:
+                - /url: /samachar/rajya-chunav-gathbandhan-ranniti
+                - img "राज्य चुनाव से पहले गठबंधन की नई रणनीति" [ref=e327]
+              - generic [ref=e328]:
+                - heading [level=3] [ref=e329]:
+                  - link "राज्य चुनाव से पहले गठबंधन की नई रणनीति" [ref=e330] [cursor=pointer]:
+                    - /url: /samachar/rajya-chunav-gathbandhan-ranniti
+                - generic [ref=e332]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e333]:
+              - generic [ref=e334]: "02"
+              - link [ref=e335] [cursor=pointer]:
+                - /url: /samachar/jalvayu-sammelan-bharat-bhumika
+                - img "वैश्विक जलवायु सम्मेलन में भारत की अहम भूमिका" [ref=e336]
+              - generic [ref=e337]:
+                - heading [level=3] [ref=e338]:
+                  - link "वैश्विक जलवायु सम्मेलन में भारत की अहम भूमिका" [ref=e339] [cursor=pointer]:
+                    - /url: /samachar/jalvayu-sammelan-bharat-bhumika
+                - generic [ref=e341]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e342]:
+              - generic [ref=e343]: "03"
+              - link [ref=e344] [cursor=pointer]:
+                - /url: /samachar/share-bazaar-record
+                - img "शेयर बाजार ने तोड़े पिछले सभी रिकॉर्ड" [ref=e345]
+              - generic [ref=e346]:
+                - heading [level=3] [ref=e347]:
+                  - link "शेयर बाजार ने तोड़े पिछले सभी रिकॉर्ड" [ref=e348] [cursor=pointer]:
+                    - /url: /samachar/share-bazaar-record
+                - generic [ref=e350]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e351]:
+              - generic [ref=e352]: "04"
+              - link [ref=e353] [cursor=pointer]:
+                - /url: /samachar/nai-film-sau-crore
+                - img "नई फिल्म ने पहले सप्ताह में कमाए सौ करोड़" [ref=e354]
+              - generic [ref=e355]:
+                - heading [level=3] [ref=e356]:
+                  - link "नई फिल्म ने पहले सप्ताह में कमाए सौ करोड़" [ref=e357] [cursor=pointer]:
+                    - /url: /samachar/nai-film-sau-crore
+                - generic [ref=e359]: इंदौर • 1 मिनट पढ़ें
+            - article [ref=e360]:
+              - generic [ref=e361]: "05"
+              - link [ref=e362] [cursor=pointer]:
+                - /url: /samachar/bharat-cricket-shrinkhla-badhat
+                - img "भारतीय क्रिकेट टीम ने श्रृंखला में बनाई बढ़त" [ref=e363]
+              - generic [ref=e364]:
+                - heading [level=3] [ref=e365]:
+                  - link "भारतीय क्रिकेट टीम ने श्रृंखला में बनाई बढ़त" [ref=e366] [cursor=pointer]:
+                    - /url: /samachar/bharat-cricket-shrinkhla-badhat
+                - generic [ref=e368]: इंदौर • 1 मिनट पढ़ें
+        - generic [ref=e369]:
+          - heading "आज का राशिफल" [level=2] [ref=e370]
+          - link "♈ मेष आज का दिन नई शुरुआत के लिए शुभ है। कार्यक्षेत्र में मेहनत रंग लाएगी। सभी राशियाँ देखें →" [ref=e371] [cursor=pointer]:
+            - /url: /rashifal
+            - text: ♈
+            - paragraph [ref=e372]: मेष
+            - paragraph [ref=e373]: आज का दिन नई शुरुआत के लिए शुभ है। कार्यक्षेत्र में मेहनत रंग लाएगी।
+            - generic [ref=e374]: सभी राशियाँ देखें →
+        - generic [ref=e375]:
+          - generic [ref=e376]:
+            - heading "आगामी अवकाश एवं त्योहार" [level=2] [ref=e377]
+            - paragraph [ref=e378]: आज 17 अगस्त है
+          - generic [ref=e379]:
+            - button "28 अगस्त रक्षा बंधन धार्मिक" [ref=e380] [cursor=pointer]:
+              - generic [ref=e381]: 28 अगस्त
+              - generic [ref=e382]: रक्षा बंधन
+              - generic [ref=e383]: धार्मिक
+            - button "4 सितंबर जन्माष्टमी धार्मिक" [ref=e384] [cursor=pointer]:
+              - generic [ref=e385]: 4 सितंबर
+              - generic [ref=e386]: जन्माष्टमी
+              - generic [ref=e387]: धार्मिक
+            - button "14 सितंबर गणेश चतुर्थी धार्मिक" [ref=e388] [cursor=pointer]:
+              - generic [ref=e389]: 14 सितंबर
+              - generic [ref=e390]: गणेश चतुर्थी
+              - generic [ref=e391]: धार्मिक
+            - button "2 अक्टूबर गांधी जयंती राष्ट्रीय अवकाश" [ref=e392] [cursor=pointer]:
+              - generic [ref=e393]: 2 अक्टूबर
+              - generic [ref=e394]: गांधी जयंती
+              - generic [ref=e395]: राष्ट्रीय अवकाश
+            - button "20 अक्टूबर दशहरा धार्मिक" [ref=e396] [cursor=pointer]:
+              - generic [ref=e397]: 20 अक्टूबर
+              - generic [ref=e398]: दशहरा
+              - generic [ref=e399]: धार्मिक
+            - button "8 नवंबर दीपावली धार्मिक" [ref=e400] [cursor=pointer]:
+              - generic [ref=e401]: 8 नवंबर
+              - generic [ref=e402]: दीपावली
+              - generic [ref=e403]: धार्मिक
+        - generic [ref=e404]:
+          - heading "न्यूज़लेटर सब्सक्राइब करें" [level=2] [ref=e405]
+          - paragraph [ref=e406]: रोज़ की मुख्य खबरें सीधे आपके ईमेल पर।
+          - generic [ref=e408]:
+            - textbox "ईमेल" [ref=e409]:
+              - /placeholder: आपका ईमेल
+            - button "सब्सक्राइब करें" [ref=e410] [cursor=pointer]
+  - generic [ref=e411]: विज्ञापन स्थान — footer
+  - contentinfo [ref=e413]:
+    - link [ref=e415] [cursor=pointer]:
+      - /url: /
+      - img "जनशक्ति उजाला" [ref=e416]
+    - generic [ref=e417]:
+      - paragraph [ref=e419]: जनशक्ति उजाला — ताज़ा समाचार, राजनीति, खेल, मनोरंजन, व्यापार, राशिफल और ई-पेपर। निष्पक्ष और विश्वसनीय हिंदी समाचार।
+      - navigation [ref=e420]:
+        - link "इंदौर" [ref=e421] [cursor=pointer]:
+          - /url: /shreni/indore
+        - link "राष्ट्रीय" [ref=e422] [cursor=pointer]:
+          - /url: /shreni/rashtriya
+        - link "अंतरराष्ट्रीय" [ref=e423] [cursor=pointer]:
+          - /url: /shreni/antarrashtriya
+        - link "राजनीति" [ref=e424] [cursor=pointer]:
+          - /url: /shreni/rajneeti
+        - link "व्यापार" [ref=e425] [cursor=pointer]:
+          - /url: /shreni/vyapar
+        - link "खेल" [ref=e426] [cursor=pointer]:
+          - /url: /shreni/khel
+      - generic [ref=e427]:
+        - link "हमारे बारे में" [ref=e428] [cursor=pointer]:
+          - /url: /hamare-bare-mein
+        - link "राज्य" [ref=e429] [cursor=pointer]:
+          - /url: /rajya
+        - link "ई-पेपर" [ref=e430] [cursor=pointer]:
+          - /url: /epaper
+        - link "राशिफल" [ref=e431] [cursor=pointer]:
+          - /url: /rashifal
+        - link "गैलरी" [ref=e432] [cursor=pointer]:
+          - /url: /gallery
+        - link "संपर्क करें" [ref=e433] [cursor=pointer]:
+          - /url: /contact
+        - link "janshaktiujala@gmail.com" [ref=e434] [cursor=pointer]:
+          - /url: mailto:janshaktiujala@gmail.com
+        - link "9009699993" [ref=e435] [cursor=pointer]:
+          - /url: tel:9009699993
+    - generic [ref=e436]: © 2026 जनशक्ति उजाला. सर्वाधिकार सुरक्षित।
+  - alert [ref=e437]

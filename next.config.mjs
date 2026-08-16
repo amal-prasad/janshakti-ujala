@@ -8,6 +8,9 @@ const nextConfig = {
       { protocol: "https", hostname: "*.supabase.co" },
       // YouTube thumbnails for the video section.
       { protocol: "https", hostname: "i.ytimg.com" },
+      // /rajya state landmark photos, hotlinked from Wikimedia Commons.
+      { protocol: "https", hostname: "commons.wikimedia.org" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
     ],
   },
 };

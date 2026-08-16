@@ -1,0 +1,344 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e3]:
+    - time [ref=f6e4]: 17 अगस्त 2026
+    - generic [ref=f6e5]:
+      - link "हमारे व्हाट्सएप चैनल से जुड़ें" [ref=f6e6] [cursor=pointer]:
+        - /url: https://whatsapp.com/channel/REPLACE_ME
+      - link "ई-पेपर" [ref=f6e7] [cursor=pointer]:
+        - /url: /epaper
+      - generic [ref=f6e8]:
+        - link "Facebook" [ref=f6e9] [cursor=pointer]:
+          - /url: https://facebook.com/janshaktiujala
+        - link "YouTube" [ref=f6e10] [cursor=pointer]:
+          - /url: https://youtube.com/@janshaktiujala
+  - banner [ref=f6e11]:
+    - generic [ref=f6e12]:
+      - searchbox "खबर खोजें" [ref=f6e14]
+      - link [ref=f6e15] [cursor=pointer]:
+        - /url: /
+        - img "जनशक्ति उजाला" [ref=f6e16]
+  - navigation [ref=f6e19]:
+    - link "इंदौर" [ref=f6e20] [cursor=pointer]:
+      - /url: /shreni/indore
+    - link "राष्ट्रीय" [ref=f6e21] [cursor=pointer]:
+      - /url: /shreni/rashtriya
+    - link "अंतरराष्ट्रीय" [ref=f6e22] [cursor=pointer]:
+      - /url: /shreni/antarrashtriya
+    - link "राजनीति" [ref=f6e23] [cursor=pointer]:
+      - /url: /shreni/rajneeti
+    - link "व्यापार" [ref=f6e24] [cursor=pointer]:
+      - /url: /shreni/vyapar
+    - link "खेल" [ref=f6e25] [cursor=pointer]:
+      - /url: /shreni/khel
+    - link "मनोरंजन" [ref=f6e26] [cursor=pointer]:
+      - /url: /shreni/manoranjan
+    - link "प्रौद्योगिकी" [ref=f6e27] [cursor=pointer]:
+      - /url: /shreni/praudyogiki
+    - link "स्वास्थ्य" [ref=f6e28] [cursor=pointer]:
+      - /url: /shreni/swasthya
+    - link "राशिफल" [ref=f6e29] [cursor=pointer]:
+      - /url: /rashifal
+  - generic [ref=f6e30]:
+    - generic [ref=f6e31]: लाइव
+    - generic [ref=f6e34]:
+      - link "● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया— समाचार एजेंसी" [ref=f6e35] [cursor=pointer]:
+        - /url: https://example.com/news/1
+        - text: ● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया
+        - generic [ref=f6e36]: — समाचार एजेंसी
+      - link "● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट— समाचार एजेंसी" [ref=f6e37] [cursor=pointer]:
+        - /url: https://example.com/news/2
+        - text: ● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट
+        - generic [ref=f6e38]: — समाचार एजेंसी
+      - link "● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की— समाचार एजेंसी" [ref=f6e39] [cursor=pointer]:
+        - /url: https://example.com/news/3
+        - text: ● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की
+        - generic [ref=f6e40]: — समाचार एजेंसी
+      - link "● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी— समाचार एजेंसी" [ref=f6e41] [cursor=pointer]:
+        - /url: https://example.com/news/4
+        - text: ● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी
+        - generic [ref=f6e42]: — समाचार एजेंसी
+      - link "● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में— समाचार एजेंसी" [ref=f6e43] [cursor=pointer]:
+        - /url: https://example.com/news/5
+        - text: ● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में
+        - generic [ref=f6e44]: — समाचार एजेंसी
+      - link "● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया— समाचार एजेंसी" [ref=f6e45] [cursor=pointer]:
+        - /url: https://example.com/news/1
+        - text: ● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया
+        - generic [ref=f6e46]: — समाचार एजेंसी
+      - link "● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट— समाचार एजेंसी" [ref=f6e47] [cursor=pointer]:
+        - /url: https://example.com/news/2
+        - text: ● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट
+        - generic [ref=f6e48]: — समाचार एजेंसी
+      - link "● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की— समाचार एजेंसी" [ref=f6e49] [cursor=pointer]:
+        - /url: https://example.com/news/3
+        - text: ● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की
+        - generic [ref=f6e50]: — समाचार एजेंसी
+      - link "● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी— समाचार एजेंसी" [ref=f6e51] [cursor=pointer]:
+        - /url: https://example.com/news/4
+        - text: ● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी
+        - generic [ref=f6e52]: — समाचार एजेंसी
+      - link "● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में— समाचार एजेंसी" [ref=f6e53] [cursor=pointer]:
+        - /url: https://example.com/news/5
+        - text: ● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में
+        - generic [ref=f6e54]: — समाचार एजेंसी
+  - main [ref=f6e55]:
+    - generic [ref=f6e56]:
+      - heading "राज्य" [level=1] [ref=f6e57]
+      - heading "प्रमुख राज्य" [level=2] [ref=f6e58]
+      - generic [ref=f6e59]:
+        - link [ref=f6e60] [cursor=pointer]:
+          - /url: /rajya/madhya-pradesh
+          - img "साँची स्तूप" [ref=f6e62]
+          - generic [ref=f6e63]:
+            - heading "मध्य प्रदेश" [level=3] [ref=f6e64]
+            - paragraph [ref=f6e65]: इंदौर, भोपाल, ग्वालियर
+        - link [ref=f6e66] [cursor=pointer]:
+          - /url: /rajya/uttar-pradesh
+          - img "ताज महल" [ref=f6e68]
+          - generic [ref=f6e69]:
+            - heading "उत्तर प्रदेश" [level=3] [ref=f6e70]
+            - paragraph [ref=f6e71]: लखनऊ, कानपुर, वाराणसी
+        - link [ref=f6e72] [cursor=pointer]:
+          - /url: /rajya/maharashtra
+          - img "गेटवे ऑफ इंडिया" [ref=f6e74]
+          - generic [ref=f6e75]:
+            - heading "महाराष्ट्र" [level=3] [ref=f6e76]
+            - paragraph [ref=f6e77]: मुंबई, पुणे, नागपुर
+        - link [ref=f6e78] [cursor=pointer]:
+          - /url: /rajya/bihar
+          - img "महाबोधि मंदिर" [ref=f6e80]
+          - generic [ref=f6e81]:
+            - heading "बिहार" [level=3] [ref=f6e82]
+            - paragraph [ref=f6e83]: पटना, गया, भागलपुर
+        - link [ref=f6e84] [cursor=pointer]:
+          - /url: /rajya/west-bengal
+          - img "विक्टोरिया मेमोरियल" [ref=f6e86]
+          - generic [ref=f6e87]:
+            - heading "पश्चिम बंगाल" [level=3] [ref=f6e88]
+            - paragraph [ref=f6e89]: कोलकाता, हावड़ा, सिलीगुड़ी
+        - link [ref=f6e90] [cursor=pointer]:
+          - /url: /rajya/rajasthan
+          - img "हवा महल" [ref=f6e92]
+          - generic [ref=f6e93]:
+            - heading "राजस्थान" [level=3] [ref=f6e94]
+            - paragraph [ref=f6e95]: जयपुर, जोधपुर, उदयपुर
+        - link [ref=f6e96] [cursor=pointer]:
+          - /url: /rajya/tamil-nadu
+          - img "मीनाक्षी मंदिर" [ref=f6e98]
+          - generic [ref=f6e99]:
+            - heading "तमिलनाडु" [level=3] [ref=f6e100]
+            - paragraph [ref=f6e101]: चेन्नई, कोयंबटूर, मदुरै
+        - link [ref=f6e102] [cursor=pointer]:
+          - /url: /rajya/karnataka
+          - img "मैसूर पैलेस" [ref=f6e104]
+          - generic [ref=f6e105]:
+            - heading "कर्नाटक" [level=3] [ref=f6e106]
+            - paragraph [ref=f6e107]: बेंगलुरु, मैसूर, हुबली
+        - link [ref=f6e108] [cursor=pointer]:
+          - /url: /rajya/gujarat
+          - img "स्टैच्यू ऑफ यूनिटी" [ref=f6e110]
+          - generic [ref=f6e111]:
+            - heading "गुजरात" [level=3] [ref=f6e112]
+            - paragraph [ref=f6e113]: अहमदाबाद, सूरत, वडोदरा
+        - link [ref=f6e114] [cursor=pointer]:
+          - /url: /rajya/andhra-pradesh
+          - img "तिरुपति बालाजी मंदिर" [ref=f6e116]
+          - generic [ref=f6e117]:
+            - heading "आंध्र प्रदेश" [level=3] [ref=f6e118]
+            - paragraph [ref=f6e119]: विशाखापत्तनम, विजयवाड़ा, गुंटूर
+        - link [ref=f6e120] [cursor=pointer]:
+          - /url: /rajya/telangana
+          - img "चारमीनार" [ref=f6e122]
+          - generic [ref=f6e123]:
+            - heading "तेलंगाना" [level=3] [ref=f6e124]
+            - paragraph [ref=f6e125]: हैदराबाद, वारंगल, निजामाबाद
+        - link [ref=f6e126] [cursor=pointer]:
+          - /url: /rajya/kerala
+          - img "केरल बैकवाटर्स" [ref=f6e128]
+          - generic [ref=f6e129]:
+            - heading "केरल" [level=3] [ref=f6e130]
+            - paragraph [ref=f6e131]: तिरुवनंतपुरम, कोच्चि, कोझिकोड
+        - link [ref=f6e132] [cursor=pointer]:
+          - /url: /rajya/odisha
+          - img "कोणार्क सूर्य मंदिर" [ref=f6e134]
+          - generic [ref=f6e135]:
+            - heading "ओडिशा" [level=3] [ref=f6e136]
+            - paragraph [ref=f6e137]: भुवनेश्वर, कटक, पुरी
+        - link [ref=f6e138] [cursor=pointer]:
+          - /url: /rajya/delhi
+          - img "लाल किला" [ref=f6e140]
+          - generic [ref=f6e141]:
+            - heading "दिल्ली" [level=3] [ref=f6e142]
+            - paragraph [ref=f6e143]: नई दिल्ली, द्वारका, रोहिणी
+      - heading "अन्य राज्य व केंद्र शासित प्रदेश" [level=2] [ref=f6e144]
+      - generic [ref=f6e145]:
+        - link [ref=f6e146] [cursor=pointer]:
+          - /url: /rajya/jharkhand
+          - img "जगन्नाथ मंदिर, राँची" [ref=f6e148]
+          - generic [ref=f6e149]:
+            - heading "झारखंड" [level=3] [ref=f6e150]
+            - paragraph [ref=f6e151]: राँची, जमशेदपुर, धनबाद
+        - link [ref=f6e152] [cursor=pointer]:
+          - /url: /rajya/assam
+          - img "कामाख्या मंदिर" [ref=f6e154]
+          - generic [ref=f6e155]:
+            - heading "असम" [level=3] [ref=f6e156]
+            - paragraph [ref=f6e157]: गुवाहाटी, डिब्रूगढ़, सिलचर
+        - link [ref=f6e158] [cursor=pointer]:
+          - /url: /rajya/punjab
+          - img "स्वर्ण मंदिर" [ref=f6e160]
+          - generic [ref=f6e161]:
+            - heading "पंजाब" [level=3] [ref=f6e162]
+            - paragraph [ref=f6e163]: अमृतसर, लुधियाना, जालंधर
+        - link [ref=f6e164] [cursor=pointer]:
+          - /url: /rajya/chhattisgarh
+          - img "चित्रकोट जलप्रपात" [ref=f6e166]
+          - generic [ref=f6e167]:
+            - heading "छत्तीसगढ़" [level=3] [ref=f6e168]
+            - paragraph [ref=f6e169]: रायपुर, बिलासपुर, दुर्ग
+        - link [ref=f6e170] [cursor=pointer]:
+          - /url: /rajya/haryana
+          - img "ब्रह्म सरोवर, कुरुक्षेत्र" [ref=f6e172]
+          - generic [ref=f6e173]:
+            - heading "हरियाणा" [level=3] [ref=f6e174]
+            - paragraph [ref=f6e175]: गुरुग्राम, फरीदाबाद, कुरुक्षेत्र
+        - link [ref=f6e176] [cursor=pointer]:
+          - /url: /rajya/uttarakhand
+          - img "केदारनाथ मंदिर" [ref=f6e178]
+          - generic [ref=f6e179]:
+            - heading "उत्तराखंड" [level=3] [ref=f6e180]
+            - paragraph [ref=f6e181]: देहरादून, हरिद्वार, नैनीताल
+        - link [ref=f6e182] [cursor=pointer]:
+          - /url: /rajya/himachal-pradesh
+          - img "हिडिम्बा देवी मंदिर" [ref=f6e184]
+          - generic [ref=f6e185]:
+            - heading "हिमाचल प्रदेश" [level=3] [ref=f6e186]
+            - paragraph [ref=f6e187]: शिमला, मनाली, धर्मशाला
+        - link [ref=f6e188] [cursor=pointer]:
+          - /url: /rajya/tripura
+          - img "उज्जयंता पैलेस" [ref=f6e190]
+          - generic [ref=f6e191]:
+            - heading "त्रिपुरा" [level=3] [ref=f6e192]
+            - paragraph [ref=f6e193]: अगरतला, उदयपुर, धर्मनगर
+        - link [ref=f6e194] [cursor=pointer]:
+          - /url: /rajya/meghalaya
+          - img "उमियम झील" [ref=f6e196]
+          - generic [ref=f6e197]:
+            - heading "मेघालय" [level=3] [ref=f6e198]
+            - paragraph [ref=f6e199]: शिलांग, चेरापूंजी, तुरा
+        - link [ref=f6e200] [cursor=pointer]:
+          - /url: /rajya/manipur
+          - img "लोकतक झील" [ref=f6e202]
+          - generic [ref=f6e203]:
+            - heading "मणिपुर" [level=3] [ref=f6e204]
+            - paragraph [ref=f6e205]: इंफाल, थौबल, चुराचांदपुर
+        - link [ref=f6e206] [cursor=pointer]:
+          - /url: /rajya/nagaland
+          - img "कोहिमा युद्ध कब्रिस्तान" [ref=f6e208]
+          - generic [ref=f6e209]:
+            - heading "नागालैंड" [level=3] [ref=f6e210]
+            - paragraph [ref=f6e211]: कोहिमा, दीमापुर, मोकोकचुंग
+        - link [ref=f6e212] [cursor=pointer]:
+          - /url: /rajya/goa
+          - img "बॉम जीसस बेसिलिका" [ref=f6e214]
+          - generic [ref=f6e215]:
+            - heading "गोवा" [level=3] [ref=f6e216]
+            - paragraph [ref=f6e217]: पणजी, मडगांव, वास्को द गामा
+        - link [ref=f6e218] [cursor=pointer]:
+          - /url: /rajya/arunachal-pradesh
+          - img "तवांग मठ" [ref=f6e220]
+          - generic [ref=f6e221]:
+            - heading "अरुणाचल प्रदेश" [level=3] [ref=f6e222]
+            - paragraph [ref=f6e223]: ईटानगर, तवांग, पासीघाट
+        - link [ref=f6e224] [cursor=pointer]:
+          - /url: /rajya/mizoram
+          - img "आइज़ोल शहर" [ref=f6e226]
+          - generic [ref=f6e227]:
+            - heading "मिजोरम" [level=3] [ref=f6e228]
+            - paragraph [ref=f6e229]: आइज़ोल, लुंगलेई, चम्फाई
+        - link [ref=f6e230] [cursor=pointer]:
+          - /url: /rajya/sikkim
+          - img "रुमटेक मठ" [ref=f6e232]
+          - generic [ref=f6e233]:
+            - heading "सिक्किम" [level=3] [ref=f6e234]
+            - paragraph [ref=f6e235]: गंगटोक, नामची, गेज़िंग
+        - link [ref=f6e236] [cursor=pointer]:
+          - /url: /rajya/jammu-and-kashmir
+          - img "डल झील" [ref=f6e238]
+          - generic [ref=f6e239]:
+            - heading "जम्मू और कश्मीर" [level=3] [ref=f6e240]
+            - paragraph [ref=f6e241]: श्रीनगर, जम्मू, अनंतनाग
+        - link [ref=f6e242] [cursor=pointer]:
+          - /url: /rajya/ladakh
+          - img "पैंगोंग झील" [ref=f6e244]
+          - generic [ref=f6e245]:
+            - heading "लद्दाख" [level=3] [ref=f6e246]
+            - paragraph [ref=f6e247]: लेह, करगिल, नुब्रा
+        - link [ref=f6e248] [cursor=pointer]:
+          - /url: /rajya/puducherry
+          - img "पुदुचेरी समुद्र तट" [ref=f6e250]
+          - generic [ref=f6e251]:
+            - heading "पुदुचेरी" [level=3] [ref=f6e252]
+            - paragraph [ref=f6e253]: पुदुचेरी, कराईकल, यनम
+        - link [ref=f6e254] [cursor=pointer]:
+          - /url: /rajya/chandigarh
+          - img "रॉक गार्डन" [ref=f6e256]
+          - generic [ref=f6e257]:
+            - heading "चंडीगढ़" [level=3] [ref=f6e258]
+            - paragraph [ref=f6e259]: चंडीगढ़
+        - link [ref=f6e260] [cursor=pointer]:
+          - /url: /rajya/andaman-and-nicobar-islands
+          - img "सेल्युलर जेल" [ref=f6e262]
+          - generic [ref=f6e263]:
+            - heading "अंडमान और निकोबार द्वीप समूह" [level=3] [ref=f6e264]
+            - paragraph [ref=f6e265]: पोर्ट ब्लेयर, हैवलॉक द्वीप, कार निकोबार
+        - link [ref=f6e266] [cursor=pointer]:
+          - /url: /rajya/dadra-and-nagar-haveli-and-daman-and-diu
+          - img "दीव किला" [ref=f6e268]
+          - generic [ref=f6e269]:
+            - heading "दादरा और नगर हवेली तथा दमन और दीव" [level=3] [ref=f6e270]
+            - paragraph [ref=f6e271]: दमन, दीव, सिलवासा
+        - link [ref=f6e272] [cursor=pointer]:
+          - /url: /rajya/lakshadweep
+          - img "लक्षद्वीप लैगून" [ref=f6e274]
+          - generic [ref=f6e275]:
+            - heading "लक्षद्वीप" [level=3] [ref=f6e276]
+            - paragraph [ref=f6e277]: कवरत्ती, अगत्ती, मिनिकॉय
+  - generic [ref=f6e278]: विज्ञापन स्थान — footer
+  - contentinfo [ref=f6e280]:
+    - link [ref=f6e282] [cursor=pointer]:
+      - /url: /
+      - img "जनशक्ति उजाला" [ref=f6e283]
+    - generic [ref=f6e284]:
+      - paragraph [ref=f6e286]: जनशक्ति उजाला — ताज़ा समाचार, राजनीति, खेल, मनोरंजन, व्यापार, राशिफल और ई-पेपर। निष्पक्ष और विश्वसनीय हिंदी समाचार।
+      - navigation [ref=f6e287]:
+        - link "इंदौर" [ref=f6e288] [cursor=pointer]:
+          - /url: /shreni/indore
+        - link "राष्ट्रीय" [ref=f6e289] [cursor=pointer]:
+          - /url: /shreni/rashtriya
+        - link "अंतरराष्ट्रीय" [ref=f6e290] [cursor=pointer]:
+          - /url: /shreni/antarrashtriya
+        - link "राजनीति" [ref=f6e291] [cursor=pointer]:
+          - /url: /shreni/rajneeti
+        - link "व्यापार" [ref=f6e292] [cursor=pointer]:
+          - /url: /shreni/vyapar
+        - link "खेल" [ref=f6e293] [cursor=pointer]:
+          - /url: /shreni/khel
+      - generic [ref=f6e294]:
+        - link "हमारे बारे में" [ref=f6e295] [cursor=pointer]:
+          - /url: /hamare-bare-mein
+        - link "राज्य" [ref=f6e296] [cursor=pointer]:
+          - /url: /rajya
+        - link "ई-पेपर" [ref=f6e297] [cursor=pointer]:
+          - /url: /epaper
+        - link "राशिफल" [ref=f6e298] [cursor=pointer]:
+          - /url: /rashifal
+        - link "गैलरी" [ref=f6e299] [cursor=pointer]:
+          - /url: /gallery
+        - link "संपर्क करें" [ref=f6e300] [cursor=pointer]:
+          - /url: /contact
+        - link "janshaktiujala@gmail.com" [ref=f6e301] [cursor=pointer]:
+          - /url: mailto:janshaktiujala@gmail.com
+        - link "9009699993" [ref=f6e302] [cursor=pointer]:
+          - /url: tel:9009699993
+    - generic [ref=f6e303]: © 2026 जनशक्ति उजाला. सर्वाधिकार सुरक्षित।

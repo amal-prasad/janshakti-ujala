@@ -11,13 +11,12 @@ import { Sidebar } from "@/components/news/Sidebar";
 import { AdSlot } from "@/components/AdSlot";
 
 export default async function Home() {
-  const [featured, indore, rashtriya, rajneeti, factCheck, latest, trending, rashifal] =
+  const [featured, indore, rashtriya, rajneeti, latest, trending, rashifal] =
     await Promise.all([
       getFeaturedArticles(6),
       getArticles({ category: "indore", limit: 4 }),
       getArticles({ category: "rashtriya", limit: 4 }),
       getArticles({ category: "rajneeti", limit: 4 }),
-      getArticles({ category: "fact-check", limit: 4 }),
       getArticles({ limit: 6 }),
       getTrendingArticles(5),
       getRashifalTeaser(),
@@ -81,8 +80,6 @@ export default async function Home() {
           </section>
 
           <CategorySection category="rajneeti" articles={rajneeti.items} />
-
-          <CategorySection category="fact-check" articles={factCheck.items} />
         </div>
 
         <div className="lg:col-span-4">

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ponytail: deterrent only, not real DRM — a browser must fetch image bytes to
+   paint them, so devtools/view-source/screenshot always work around this.
+   Blocks the casual right-click-save / drag-out path site-wide, logo included. */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
 /*
   Color system. Primary is the masthead red #B5291D. Saffron is reserved for the
   ePaper strip ONLY (design rule). Banned tokens (#C0392B, #E67E22, #FDFCF9,

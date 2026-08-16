@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ArticleCard as ArticleCardData } from "@/lib/api/articles";
-import { VerdictBadge } from "@/components/ui/Badge";
 import { readingTimeLabel } from "@/lib/utils/format";
 
 // Compact row: small thumbnail + headline + reading time. Used in the sidebar
@@ -32,11 +31,6 @@ export function ArticleCardSmall({
         </Link>
       )}
       <div className="min-w-0 flex-1">
-        {article.verdict && (
-          <span className="mb-1 block">
-            <VerdictBadge verdict={article.verdict} />
-          </span>
-        )}
         <h3 className="font-display text-sm font-bold leading-snug">
           <Link href={`/samachar/${article.slug}`} className="hover:text-primary">
             <span className="line-clamp-2">{article.title}</span>

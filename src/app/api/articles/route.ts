@@ -9,6 +9,7 @@ export async function GET(req: NextRequest) {
     const page = await getArticles({
       category: sp.get("category") ?? undefined,
       tag: sp.get("tag") ?? undefined,
+      state: sp.get("state") ?? undefined,
       cursor: sp.get("cursor"),
       limit: Number(sp.get("limit")) || 12,
     });

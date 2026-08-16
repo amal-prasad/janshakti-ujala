@@ -10,6 +10,14 @@ export function Topbar() {
       <div className="container-x flex h-9 items-center justify-between">
         <time dateTime={new Date().toISOString()}>{formatDate(new Date())}</time>
         <div className="flex items-center gap-4">
+          <a
+            href={siteConfig.whatsappChannel}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-primary hover:underline"
+          >
+            हमारे व्हाट्सएप चैनल से जुड़ें
+          </a>
           <Link href="/epaper" className="font-semibold text-primary hover:underline">
             ई-पेपर
           </Link>

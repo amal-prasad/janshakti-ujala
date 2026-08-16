@@ -1,0 +1,137 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e3]:
+    - time [ref=f4e4]: 17 अगस्त 2026
+    - generic [ref=f4e5]:
+      - link "हमारे व्हाट्सएप चैनल से जुड़ें" [ref=f4e6] [cursor=pointer]:
+        - /url: https://whatsapp.com/channel/REPLACE_ME
+      - link "ई-पेपर" [ref=f4e7] [cursor=pointer]:
+        - /url: /epaper
+      - generic [ref=f4e8]:
+        - link "Facebook" [ref=f4e9] [cursor=pointer]:
+          - /url: https://facebook.com/janshaktiujala
+        - link "YouTube" [ref=f4e10] [cursor=pointer]:
+          - /url: https://youtube.com/@janshaktiujala
+  - banner [ref=f4e11]:
+    - generic [ref=f4e12]:
+      - searchbox "खबर खोजें" [ref=f4e14]
+      - link [ref=f4e15] [cursor=pointer]:
+        - /url: /
+        - img "जनशक्ति उजाला" [ref=f4e16]
+  - navigation [ref=f4e19]:
+    - link "इंदौर" [ref=f4e20] [cursor=pointer]:
+      - /url: /shreni/indore
+    - link "राष्ट्रीय" [ref=f4e21] [cursor=pointer]:
+      - /url: /shreni/rashtriya
+    - link "अंतरराष्ट्रीय" [ref=f4e22] [cursor=pointer]:
+      - /url: /shreni/antarrashtriya
+    - link "राजनीति" [ref=f4e23] [cursor=pointer]:
+      - /url: /shreni/rajneeti
+    - link "व्यापार" [ref=f4e24] [cursor=pointer]:
+      - /url: /shreni/vyapar
+    - link "खेल" [ref=f4e25] [cursor=pointer]:
+      - /url: /shreni/khel
+    - link "मनोरंजन" [ref=f4e26] [cursor=pointer]:
+      - /url: /shreni/manoranjan
+    - link "प्रौद्योगिकी" [ref=f4e27] [cursor=pointer]:
+      - /url: /shreni/praudyogiki
+    - link "स्वास्थ्य" [ref=f4e28] [cursor=pointer]:
+      - /url: /shreni/swasthya
+    - link "राशिफल" [ref=f4e29] [cursor=pointer]:
+      - /url: /rashifal
+  - generic [ref=f4e30]:
+    - generic [ref=f4e31]: लाइव
+    - generic [ref=f4e34]:
+      - link "● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया— समाचार एजेंसी" [ref=f4e35] [cursor=pointer]:
+        - /url: https://example.com/news/1
+        - text: ● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया
+        - generic [ref=f4e36]: — समाचार एजेंसी
+      - link "● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट— समाचार एजेंसी" [ref=f4e37] [cursor=pointer]:
+        - /url: https://example.com/news/2
+        - text: ● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट
+        - generic [ref=f4e38]: — समाचार एजेंसी
+      - link "● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की— समाचार एजेंसी" [ref=f4e39] [cursor=pointer]:
+        - /url: https://example.com/news/3
+        - text: ● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की
+        - generic [ref=f4e40]: — समाचार एजेंसी
+      - link "● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी— समाचार एजेंसी" [ref=f4e41] [cursor=pointer]:
+        - /url: https://example.com/news/4
+        - text: ● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी
+        - generic [ref=f4e42]: — समाचार एजेंसी
+      - link "● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में— समाचार एजेंसी" [ref=f4e43] [cursor=pointer]:
+        - /url: https://example.com/news/5
+        - text: ● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में
+        - generic [ref=f4e44]: — समाचार एजेंसी
+      - link "● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया— समाचार एजेंसी" [ref=f4e45] [cursor=pointer]:
+        - /url: https://example.com/news/1
+        - text: ● मौसम विभाग ने कई राज्यों में भारी बारिश का अलर्ट जारी किया
+        - generic [ref=f4e46]: — समाचार एजेंसी
+      - link "● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट— समाचार एजेंसी" [ref=f4e47] [cursor=pointer]:
+        - /url: https://example.com/news/2
+        - text: ● अंतरराष्ट्रीय बाज़ार में कच्चे तेल की कीमतों में गिरावट
+        - generic [ref=f4e48]: — समाचार एजेंसी
+      - link "● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की— समाचार एजेंसी" [ref=f4e49] [cursor=pointer]:
+        - /url: https://example.com/news/3
+        - text: ● रेलवे ने त्योहारों के लिए विशेष ट्रेनों की घोषणा की
+        - generic [ref=f4e50]: — समाचार एजेंसी
+      - link "● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी— समाचार एजेंसी" [ref=f4e51] [cursor=pointer]:
+        - /url: https://example.com/news/4
+        - text: ● प्रमुख शहरों में मेट्रो विस्तार परियोजना को मंजूरी
+        - generic [ref=f4e52]: — समाचार एजेंसी
+      - link "● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में— समाचार एजेंसी" [ref=f4e53] [cursor=pointer]:
+        - /url: https://example.com/news/5
+        - text: ● राष्ट्रीय खेल आयोजन की तैयारियाँ अंतिम चरण में
+        - generic [ref=f4e54]: — समाचार एजेंसी
+  - main [ref=f4e55]:
+    - generic [ref=f4e56]:
+      - heading "संपर्क करें" [level=1] [ref=f4e57]
+      - generic [ref=f4e58]:
+        - paragraph [ref=f4e59]: आपकी राय और सुझाव हमारे लिए महत्वपूर्ण हैं।
+        - link "janshaktiujala@gmail.com" [ref=f4e60] [cursor=pointer]:
+          - /url: mailto:janshaktiujala@gmail.com
+        - link "9009699993" [ref=f4e61] [cursor=pointer]:
+          - /url: tel:9009699993
+        - generic [ref=f4e62]:
+          - link "ट्विटर" [ref=f4e63] [cursor=pointer]:
+            - /url: https://twitter.com/janshaktiujala
+          - link "फेसबुक" [ref=f4e64] [cursor=pointer]:
+            - /url: https://facebook.com/janshaktiujala
+          - link "यूट्यूब" [ref=f4e65] [cursor=pointer]:
+            - /url: https://youtube.com/@janshaktiujala
+  - generic [ref=f4e66]: विज्ञापन स्थान — footer
+  - contentinfo [ref=f4e68]:
+    - link [ref=f4e70] [cursor=pointer]:
+      - /url: /
+      - img "जनशक्ति उजाला" [ref=f4e71]
+    - generic [ref=f4e72]:
+      - paragraph [ref=f4e74]: जनशक्ति उजाला — ताज़ा समाचार, राजनीति, खेल, मनोरंजन, व्यापार, राशिफल और ई-पेपर। निष्पक्ष और विश्वसनीय हिंदी समाचार।
+      - navigation [ref=f4e75]:
+        - link "इंदौर" [ref=f4e76] [cursor=pointer]:
+          - /url: /shreni/indore
+        - link "राष्ट्रीय" [ref=f4e77] [cursor=pointer]:
+          - /url: /shreni/rashtriya
+        - link "अंतरराष्ट्रीय" [ref=f4e78] [cursor=pointer]:
+          - /url: /shreni/antarrashtriya
+        - link "राजनीति" [ref=f4e79] [cursor=pointer]:
+          - /url: /shreni/rajneeti
+        - link "व्यापार" [ref=f4e80] [cursor=pointer]:
+          - /url: /shreni/vyapar
+        - link "खेल" [ref=f4e81] [cursor=pointer]:
+          - /url: /shreni/khel
+      - generic [ref=f4e82]:
+        - link "हमारे बारे में" [ref=f4e83] [cursor=pointer]:
+          - /url: /hamare-bare-mein
+        - link "राज्य" [ref=f4e84] [cursor=pointer]:
+          - /url: /rajya
+        - link "ई-पेपर" [ref=f4e85] [cursor=pointer]:
+          - /url: /epaper
+        - link "राशिफल" [ref=f4e86] [cursor=pointer]:
+          - /url: /rashifal
+        - link "गैलरी" [ref=f4e87] [cursor=pointer]:
+          - /url: /gallery
+        - link "संपर्क करें" [ref=f4e88] [cursor=pointer]:
+          - /url: /contact
+        - link "janshaktiujala@gmail.com" [ref=f4e89] [cursor=pointer]:
+          - /url: mailto:janshaktiujala@gmail.com
+        - link "9009699993" [ref=f4e90] [cursor=pointer]:
+          - /url: tel:9009699993
+    - generic [ref=f4e91]: © 2026 जनशक्ति उजाला. सर्वाधिकार सुरक्षित।

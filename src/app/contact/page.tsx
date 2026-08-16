@@ -20,6 +20,13 @@ export default function ContactPage() {
           {siteConfig.contactEmail}
         </a>
 
+        <a
+          href={`tel:${siteConfig.contactPhone}`}
+          className="mt-2 block font-semibold text-primary hover:underline"
+        >
+          {siteConfig.contactPhone}
+        </a>
+
         <div className="mt-6 flex gap-4 text-sm">
           <a
             href={siteConfig.social.twitter.startsWith("http") ? siteConfig.social.twitter : `https://twitter.com/${siteConfig.social.twitter.replace("@", "")}`}
