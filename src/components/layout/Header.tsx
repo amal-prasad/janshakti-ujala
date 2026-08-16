@@ -23,14 +23,14 @@ export function Header() {
         {/* col-start-2 pins the logo to the centre column even on mobile, where
             the search form is display:none and would otherwise let auto-placement
             slide the logo into column 1. */}
-        <Link href="/" className="col-start-2 text-center">
+        <Link href="/" className="col-start-2 text-center flex justify-center">
           <Image
             src="/logo.png"
             alt="जनशक्ति उजाला"
             width={569}
             height={439}
             priority
-            className="h-auto w-56 object-contain md:w-80 lg:w-[26rem]"
+            className="h-auto w-56 object-contain md:w-80 lg:w-[26rem] -my-6 md:-my-12 lg:-my-16"
           />
         </Link>
 

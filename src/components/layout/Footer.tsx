@@ -7,13 +7,13 @@ export function Footer() {
   return (
     <footer className="mt-12 border-t border-border bg-surface">
       <div className="container-x flex justify-center pt-10">
-        <Link href="/">
+        <Link href="/" className="flex justify-center">
           <Image
             src="/logo.png"
             alt={siteConfig.name}
             width={569}
             height={439}
-            className="h-auto w-48 object-contain md:w-72 lg:w-96"
+            className="h-auto w-48 object-contain md:w-72 lg:w-96 -my-4 md:-my-10 lg:-my-14"
           />
         </Link>
       </div>
