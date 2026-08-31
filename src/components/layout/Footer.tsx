@@ -20,7 +20,9 @@ export function Footer() {
 
       <div className="container-x grid gap-10 py-10 md:grid-cols-[2fr_1fr_1fr]">
         <div>
-          <p className="max-w-sm text-sm text-muted">{siteConfig.description}</p>
+          <p className="max-w-sm text-sm text-muted">
+            <span className="font-hind">जनशक्ति उजाला</span> — ताज़ा समाचार, राजनीति, खेल, मनोरंजन, व्यापार, राशिफल और ई-पेपर। निष्पक्ष और विश्वसनीय हिंदी समाचार।
+          </p>
         </div>
 
         <nav className="flex flex-col gap-2 text-sm">
@@ -47,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container-x border-t border-border py-4 text-xs text-muted" spellCheck={false}>
-        © {new Date().getFullYear()} जनशक्ति उजाला. सर्वाधिकार सुरक्षित।
+        © {new Date().getFullYear()} <span className="font-hind">जनशक्ति उजाला</span>. सर्वाधिकार सुरक्षित।
       </div>
     </footer>
   );

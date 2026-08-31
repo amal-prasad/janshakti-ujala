@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 import type { Metadata, Viewport } from "next";
-import { Tiro_Devanagari_Hindi, Noto_Sans_Devanagari } from "next/font/google";
+import { Tiro_Devanagari_Hindi, Noto_Sans_Devanagari, Hind } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/siteConfig";
 import { getLiveNews } from "@/lib/api/liveNews";
@@ -22,6 +22,12 @@ const body = Noto_Sans_Devanagari({
   subsets: ["devanagari", "latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-body",
+  display: "swap",
+});
+const hind = Hind({
+  subsets: ["devanagari"],
+  weight: ["400", "700"],
+  variable: "--font-hind",
   display: "swap",
 });
 
@@ -68,7 +74,7 @@ export default async function RootLayout({
   const liveNews = await getLiveNews();
 
   return (
-    <html lang="hi" className={`${display.variable} ${body.variable}`}>
+    <html lang="hi" className={`${display.variable} ${body.variable} ${hind.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: noFlashScript }} />
       </head>
