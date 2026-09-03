@@ -9,7 +9,18 @@ import type { Article } from "@/lib/supabase/types";
 
 type Row = Pick<
   Article,
-  "id" | "slug" | "title" | "category" | "is_published" | "author_id" | "published_at" | "created_at"
+  | "id"
+  | "slug"
+  | "title"
+  | "category"
+  | "is_published"
+  | "author_id"
+  | "published_at"
+  | "created_at"
+  | "is_hero"
+  | "is_featured"
+  | "is_breaking"
+  | "is_trending"
 >;
 
 type Filter = "all" | "draft" | "published";
@@ -24,7 +35,9 @@ export default function NewsroomListPage() {
     if (!profile) return;
     getNewsroomClient()
       .from("articles")
-      .select("id,slug,title,category,is_published,author_id,published_at,created_at")
+      .select(
+        "id,slug,title,category,is_published,author_id,published_at,created_at,is_hero,is_featured,is_breaking,is_trending",
+      )
       .order("created_at", { ascending: false })
       .then(({ data }) => setRows((data as Row[]) ?? []));
   }, [profile]);
@@ -111,6 +124,14 @@ export default function NewsroomListPage() {
                 <p className="text-sm text-muted">
                   {categoryName(r.category)} • {formatDate(r.created_at)}
                 </p>
+                {(r.is_hero || r.is_featured || r.is_breaking || r.is_trending) && (
+                  <p className="mt-1 flex flex-wrap gap-2 text-xs font-semibold text-primary">
+                    {r.is_hero && <span>हीरो</span>}
+                    {r.is_featured && <span>फीचर्ड</span>}
+                    {r.is_breaking && <span>ब्रेकिंग</span>}
+                    {r.is_trending && <span>ट्रेंडिंग</span>}
+                  </p>
+                )}
               </div>
               <span
                 className={

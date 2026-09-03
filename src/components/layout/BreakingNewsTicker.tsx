@@ -1,8 +1,10 @@
-import type { LiveNews } from "@/lib/supabase/types";
+import Link from "next/link";
+
+type LiveNewsItem = { headline: string; href: string; published_at: string };
 
 // GNews leads-only ticker: links out to source, never copies bodies (CLAUDE.md
 // hard rule). Track is duplicated so the marquee loops seamlessly.
-export function BreakingNewsTicker({ items }: { items: LiveNews[] }) {
+export function BreakingNewsTicker({ items }: { items: LiveNewsItem[] }) {
   if (items.length === 0) return null;
 
   return (
@@ -16,20 +18,27 @@ export function BreakingNewsTicker({ items }: { items: LiveNews[] }) {
       {/* Scroll area fills the rest of the row */}
       <div className="min-w-0 flex-1 overflow-hidden">
         <div className="ticker-track flex gap-16 whitespace-nowrap text-sm">
-          {[...items, ...items].map((item, i) => (
-            <a
-              key={`${item.id}-${i}`}
-              href={item.source_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 hover:underline"
-            >
-              ● &nbsp;{item.headline}
-              {item.source_name && (
-                <span className="ml-2 text-white/70">— {item.source_name}</span>
-              )}
-            </a>
-          ))}
+          {[...items, ...items].map((item, i) =>
+            item.href.startsWith("/") ? (
+              <Link
+                key={`${item.href}-${i}`}
+                href={item.href}
+                className="shrink-0 hover:underline"
+              >
+                ● &nbsp;{item.headline}
+              </Link>
+            ) : (
+              <a
+                key={`${item.href}-${i}`}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 hover:underline"
+              >
+                ● &nbsp;{item.headline}
+              </a>
+            ),
+          )}
         </div>
       </div>
     </div>

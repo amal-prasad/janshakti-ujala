@@ -8,10 +8,14 @@ export const DEFAULT_CITY = "इंदौर";
 
 // Columns needed by list cards — never fetch `body` for lists.
 const CARD_COLS =
-  "id,slug,title,dek,category,tags,cover_image_url,author,city,state,reading_minutes,is_breaking,is_featured,published_at,view_count";
-// Pre-013/016 hosted DBs reject `city`/`state` with PostgREST
-// 42703 (undefined column). The error doesn't say which, so the fallback drops both.
-const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "").replace(",state", "");
+  "id,slug,title,dek,category,tags,cover_image_url,author,city,state,reading_minutes,is_breaking,is_featured,is_hero,is_trending,published_at,view_count";
+// Pre-013/016/017 hosted DBs reject `city`/`state`/`is_hero`/`is_trending` with
+// PostgREST 42703 (undefined column). The error doesn't say which, so the fallback
+// drops all of them.
+const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "")
+  .replace(",state", "")
+  .replace(",is_hero", "")
+  .replace(",is_trending", "");
 
 export type ArticleCard = Pick<
   Article,
@@ -28,16 +32,18 @@ export type ArticleCard = Pick<
   | "is_featured"
   | "published_at"
   | "view_count"
-> & { city: string; state: string | null };
+> & { city: string; state: string | null; is_hero: boolean; is_trending: boolean };
 
 export type ArticlePage = {
   items: ArticleCard[];
   nextCursor: string | null;
 };
 
-type CardRow = Omit<ArticleCard, "city" | "state"> & {
+type CardRow = Omit<ArticleCard, "city" | "state" | "is_hero" | "is_trending"> & {
   city?: string | null;
   state?: string | null;
+  is_hero?: boolean;
+  is_trending?: boolean;
 };
 type CardResult = PromiseLike<{ data: unknown; error: { code?: string } | null }>;
 
@@ -53,6 +59,8 @@ async function selectCards(
     ...r,
     city: r.city ?? DEFAULT_CITY,
     state: r.state ?? null,
+    is_hero: r.is_hero ?? false,
+    is_trending: r.is_trending ?? false,
   }));
 }
 
@@ -132,7 +140,7 @@ export async function getRelatedArticles(
   }
 }
 
-// Hero + the "featured" rail just below it. `is_featured` is set in Studio.
+// The "featured" rail (4-up grid). `is_featured` is set in the newsroom editor UI.
 export async function getFeaturedArticles(limit = 5): Promise<ArticleCard[]> {
   try {
     const supabase = createServerClient();
@@ -150,17 +158,93 @@ export async function getFeaturedArticles(limit = 5): Promise<ArticleCard[]> {
   }
 }
 
-export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
+// The one big hero card. Editor-picked via `is_hero`; falls back to the newest
+// featured article, then the newest article overall, so the hero is never empty.
+export async function getHeroArticle(): Promise<ArticleCard | null> {
   try {
     const supabase = createServerClient();
     const rows = await selectCards((cols) =>
       supabase
         .from("articles")
         .select(cols)
-        .order("view_count", { ascending: false })
+        .eq("is_hero", true)
+        .order("published_at", { ascending: false })
+        .limit(1),
+    );
+    if (rows?.[0]) return rows[0];
+
+    // No explicit pick (or a pre-017 DB): newest featured, else newest article.
+    const featured = await getFeaturedArticles(1);
+    if (featured[0]) return featured[0];
+
+    const { items } = await getArticles({ limit: 1 });
+    return items[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+// Pinned (`is_trending`, published_at desc) first, then filled by view_count desc.
+export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
+  try {
+    const supabase = createServerClient();
+    const pinned =
+      (await selectCards((cols) =>
+        supabase
+          .from("articles")
+          .select(cols)
+          .eq("is_trending", true)
+          .order("published_at", { ascending: false })
+          .limit(limit),
+      )) ?? [];
+    if (pinned.length >= limit) return pinned.slice(0, limit);
+
+    const filler =
+      (await selectCards((cols) =>
+        supabase
+          .from("articles")
+          .select(cols)
+          .order("view_count", { ascending: false })
+          .limit(limit + pinned.length),
+      )) ?? [];
+
+    return dedupeById([...pinned, ...filler]).slice(0, limit);
+  } catch {
+    return [];
+  }
+}
+
+function dedupeById<T extends { id: string }>(rows: T[]): T[] {
+  const seen = new Set<string>();
+  const out: T[] = [];
+  for (const row of rows) {
+    if (seen.has(row.id)) continue;
+    seen.add(row.id);
+    out.push(row);
+  }
+  return out;
+}
+
+export type BreakingItem = { headline: string; href: string; published_at: string };
+
+// Ticker items sourced from `is_breaking` articles. Merged with `live_news` rows
+// by src/lib/api/liveNews.ts.
+export async function getBreakingArticles(limit = 6): Promise<BreakingItem[]> {
+  try {
+    const supabase = createServerClient();
+    const rows = await selectCards((cols) =>
+      supabase
+        .from("articles")
+        .select(cols)
+        .eq("is_breaking", true)
+        .order("published_at", { ascending: false })
         .limit(limit),
     );
-    return rows ?? [];
+    return (rows ?? []).map((r) => ({
+      headline: r.title,
+      href: `/samachar/${r.slug}`,
+      published_at: r.published_at,
+    }));
   } catch {
     return [];
   }

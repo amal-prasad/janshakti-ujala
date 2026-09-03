@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
-import { getArticles, getFeaturedArticles, getTrendingArticles } from "@/lib/api/articles";
+import { getArticles, getFeaturedArticles, getHeroArticle, getTrendingArticles } from "@/lib/api/articles";
 import { buildOrganizationSchema, buildWebSiteSchema, jsonLdScript } from "@/lib/utils/structuredData";
 import { getRashifalTeaser } from "@/lib/api/rashifal";
 import { HeroCard } from "@/components/news/HeroCard";
@@ -11,8 +11,9 @@ import { Sidebar } from "@/components/news/Sidebar";
 import { AdSlot } from "@/components/AdSlot";
 
 export default async function Home() {
-  const [featured, indore, rashtriya, rajneeti, latest, trending, rashifal] =
+  const [hero, featured, indore, rashtriya, rajneeti, latest, trending, rashifal] =
     await Promise.all([
+      getHeroArticle(),
       getFeaturedArticles(6),
       getArticles({ category: "indore", limit: 4 }),
       getArticles({ category: "rashtriya", limit: 4 }),
@@ -22,8 +23,7 @@ export default async function Home() {
       getRashifalTeaser(),
     ]);
 
-  const [hero, ...rest] = featured;
-  const gridFour = rest.slice(0, 4);
+  const gridFour = featured.filter((a) => a.id !== hero?.id).slice(0, 4);
 
   if (!hero) {
     return (

@@ -55,6 +55,10 @@ export function ArticleForm({
   const [city, setCity] = useState(article?.city ?? "इंदौर");
   const [state, setState] = useState(article?.state ?? "");
   const [published, setPublished] = useState(article?.is_published ?? false);
+  const [isHero, setIsHero] = useState(article?.is_hero ?? false);
+  const [isFeatured, setIsFeatured] = useState(article?.is_featured ?? false);
+  const [isBreaking, setIsBreaking] = useState(article?.is_breaking ?? false);
+  const [isTrending, setIsTrending] = useState(article?.is_trending ?? false);
   const [status, setStatus] = useState<"idle" | "saving" | "uploading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -105,9 +109,18 @@ export function ArticleForm({
             ...(published && !article?.is_published
               ? { published_at: new Date().toISOString() }
               : {}),
+            is_hero: isHero,
+            is_featured: isFeatured,
+            is_breaking: isBreaking,
+            is_trending: isTrending,
           }
         : {}),
     };
+
+    if (isEditor && isHero) {
+      // ponytail: clear-then-set instead of a partial unique index; a failed second write leaves zero heroes, which getHeroArticle()'s fallback already covers.
+      await supabase.from("articles").update({ is_hero: false }).eq("is_hero", true);
+    }
 
     const save = (f: Partial<Article>) =>
       article
@@ -124,6 +137,10 @@ export function ArticleForm({
       const rest: Partial<Article> = { ...fields };
       delete rest.city;
       delete rest.state;
+      delete rest.is_hero;
+      delete rest.is_featured;
+      delete rest.is_breaking;
+      delete rest.is_trending;
       ({ error } = await save(rest));
     }
 
@@ -232,6 +249,44 @@ export function ArticleForm({
             className={`${inputCls} font-mono`}
           />
         </label>
+
+        {isEditor && (
+          <fieldset className="flex flex-col gap-2 border border-border p-3">
+            <legend className="px-1 text-sm font-semibold">होमपेज पर स्थान</legend>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="checkbox"
+                checked={isHero}
+                onChange={(e) => setIsHero(e.target.checked)}
+              />
+              मुख्य समाचार (हीरो)
+            </label>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="checkbox"
+                checked={isFeatured}
+                onChange={(e) => setIsFeatured(e.target.checked)}
+              />
+              फीचर्ड ग्रिड
+            </label>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="checkbox"
+                checked={isBreaking}
+                onChange={(e) => setIsBreaking(e.target.checked)}
+              />
+              ब्रेकिंग (टिकर)
+            </label>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="checkbox"
+                checked={isTrending}
+                onChange={(e) => setIsTrending(e.target.checked)}
+              />
+              ट्रेंडिंग में पिन करें
+            </label>
+          </fieldset>
+        )}
 
         {isEditor ? (
           <label className="flex items-center gap-2 text-sm font-semibold">

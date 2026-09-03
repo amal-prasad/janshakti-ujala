@@ -20,6 +20,9 @@ export type Article = {
   reading_minutes: number;
   is_breaking: boolean;
   is_featured: boolean;
+  // Homepage placement (017): hero slot pick, trending-rail pin.
+  is_hero: boolean;
+  is_trending: boolean;
   is_published: boolean;
   view_count: number;
   author_id: string | null;
