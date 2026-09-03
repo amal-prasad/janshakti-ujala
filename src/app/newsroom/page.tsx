@@ -17,11 +17,16 @@ type Row = Pick<
   | "author_id"
   | "published_at"
   | "created_at"
-  | "is_hero"
   | "is_featured"
   | "is_breaking"
-  | "is_trending"
->;
+> &
+  Partial<Pick<Article, "is_hero" | "is_trending">>;
+
+const LIST_COLS =
+  "id,slug,title,category,is_published,author_id,published_at,created_at,is_featured,is_breaking,is_hero,is_trending";
+// Pre-017 hosted DB has no `is_hero`/`is_trending`; PostgREST rejects the whole
+// select with 42703. Retry without them so the list still renders.
+const LIST_COLS_PRE_017 = LIST_COLS.replace(",is_hero", "").replace(",is_trending", "");
 
 type Filter = "all" | "draft" | "published";
 
@@ -30,16 +35,21 @@ export default function NewsroomListPage() {
   const { profile, loading } = useNewsroomProfile();
   const [rows, setRows] = useState<Row[]>([]);
   const [filter, setFilter] = useState<Filter>("all");
+  const [loadError, setLoadError] = useState("");
 
   useEffect(() => {
     if (!profile) return;
-    getNewsroomClient()
-      .from("articles")
-      .select(
-        "id,slug,title,category,is_published,author_id,published_at,created_at,is_hero,is_featured,is_breaking,is_trending",
-      )
-      .order("created_at", { ascending: false })
-      .then(({ data }) => setRows((data as Row[]) ?? []));
+    const supabase = getNewsroomClient();
+    const run = (cols: string) =>
+      supabase.from("articles").select(cols).order("created_at", { ascending: false });
+
+    (async () => {
+      let { data, error } = await run(LIST_COLS);
+      if (error?.code === "42703") ({ data, error } = await run(LIST_COLS_PRE_017));
+      // Never fail silently — an empty list and a broken query look identical.
+      setLoadError(error ? "लेख लोड नहीं हो सके।" : "");
+      setRows((data as unknown as Row[]) ?? []);
+    })();
   }, [profile]);
 
   if (loading || !profile) {
@@ -108,7 +118,9 @@ export default function NewsroomListPage() {
         ))}
       </div>
 
-      {visible.length === 0 ? (
+      {loadError ? (
+        <p className="mt-8 text-primary">{loadError}</p>
+      ) : visible.length === 0 ? (
         <p className="mt-8 text-muted">कोई लेख नहीं मिला।</p>
       ) : (
         <ul className="mt-4 divide-y divide-border">
