@@ -10,6 +10,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { BreakingNewsTicker } from "@/components/layout/BreakingNewsTicker";
 import { Footer } from "@/components/layout/Footer";
 import { AdSlot } from "@/components/AdSlot";
+import { headers } from "next/headers";
 
 // Display = headlines; Body = running text. Both Devanagari-first.
 const display = Tiro_Devanagari_Hindi({
@@ -71,7 +72,10 @@ export const viewport: Viewport = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const liveNews = await getLiveNews();
+  // Set by middleware when the under-construction gate is on — render the page bare,
+  // without nav/ticker/footer, so no article surface leaks through.
+  const maintenance = headers().get("x-maintenance") === "1";
+  const liveNews = maintenance ? [] : await getLiveNews();
 
   return (
     <html lang="hi" className={`${display.variable} ${body.variable} ${hind.variable}`}>
@@ -79,15 +83,21 @@ export default async function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: noFlashScript }} />
       </head>
       <body>
-        <Topbar />
-        <Header />
-        <Navbar />
-        <BreakingNewsTicker items={liveNews} />
-        <main>{children}</main>
-        <div className="container-x py-6">
-          <AdSlot slot="footer" />
-        </div>
-        <Footer />
+        {maintenance ? (
+          <main>{children}</main>
+        ) : (
+          <>
+            <Topbar />
+            <Header />
+            <Navbar />
+            <BreakingNewsTicker items={liveNews} />
+            <main>{children}</main>
+            <div className="container-x py-6">
+              <AdSlot slot="footer" />
+            </div>
+            <Footer />
+          </>
+        )}
         <script dangerouslySetInnerHTML={{ __html: swScript }} />
         <script dangerouslySetInnerHTML={{ __html: noImageSaveScript }} />
       </body>
