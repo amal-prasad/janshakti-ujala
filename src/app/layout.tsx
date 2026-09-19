@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 import type { Metadata, Viewport } from "next";
-import { Tiro_Devanagari_Hindi, Noto_Sans_Devanagari, Hind } from "next/font/google";
+import { Halant } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/siteConfig";
 import { getLiveNews } from "@/lib/api/liveNews";
@@ -13,22 +13,22 @@ import { AdSlot } from "@/components/AdSlot";
 import { RefreshOnRestore } from "@/components/RefreshOnRestore";
 import { headers } from "next/headers";
 
-// Display = headlines; Body = running text. Both Devanagari-first.
-const display = Tiro_Devanagari_Hindi({
+// Halant site-wide: display, body and hind vars all resolve to the same family.
+const display = Halant({
   subsets: ["devanagari", "latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 });
-const body = Noto_Sans_Devanagari({
+const body = Halant({
   subsets: ["devanagari", "latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-body",
   display: "swap",
 });
-const hind = Hind({
-  subsets: ["devanagari"],
-  weight: ["400", "700"],
+const hind = Halant({
+  subsets: ["devanagari", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-hind",
   display: "swap",
 });

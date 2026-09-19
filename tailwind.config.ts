@@ -20,8 +20,8 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],
-        body: ["var(--font-body)", "system-ui", "sans-serif"],
-        hind: ["var(--font-hind)", "sans-serif"],
+        body: ["var(--font-body)", "serif"],
+        hind: ["var(--font-hind)", "serif"],
       },
       maxWidth: {
         container: "1200px",
