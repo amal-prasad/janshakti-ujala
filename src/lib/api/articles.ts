@@ -9,13 +9,6 @@ export const DEFAULT_CITY = "इंदौर";
 // Columns needed by list cards — never fetch `body` for lists.
 const CARD_COLS =
   "id,slug,title,dek,category,tags,cover_image_url,author,city,state,reading_minutes,is_breaking,is_featured,is_hero,is_trending,published_at,view_count";
-// Pre-013/016/017 hosted DBs reject `city`/`state`/`is_hero`/`is_trending` with
-// PostgREST 42703 (undefined column). The error doesn't say which, so the fallback
-// drops all of them.
-const CARD_COLS_PRE_013 = CARD_COLS.replace(",city", "")
-  .replace(",state", "")
-  .replace(",is_hero", "")
-  .replace(",is_trending", "");
 
 export type ArticleCard = Pick<
   Article,
@@ -32,35 +25,31 @@ export type ArticleCard = Pick<
   | "is_featured"
   | "published_at"
   | "view_count"
-> & { city: string; state: string | null; is_hero: boolean; is_trending: boolean };
+  | "is_hero"
+  | "is_trending"
+> & { city: string; state: string | null };
 
 export type ArticlePage = {
   items: ArticleCard[];
   nextCursor: string | null;
 };
 
-type CardRow = Omit<ArticleCard, "city" | "state" | "is_hero" | "is_trending"> & {
+type CardRow = Omit<ArticleCard, "city" | "state"> & {
   city?: string | null;
   state?: string | null;
-  is_hero?: boolean;
-  is_trending?: boolean;
 };
 type CardResult = PromiseLike<{ data: unknown; error: { code?: string } | null }>;
 
-// Runs a card select; on 42703 (pre-013/016 DB, missing `city`/`state`) retries
-// without them and stamps defaults, so lists work before and after the migration.
+// Runs a card select and stamps the dateline default for rows with no `city`.
 async function selectCards(
   run: (cols: string) => CardResult,
 ): Promise<ArticleCard[] | null> {
-  let { data, error } = await run(CARD_COLS);
-  if (error?.code === "42703") ({ data, error } = await run(CARD_COLS_PRE_013));
+  const { data, error } = await run(CARD_COLS);
   if (error) return null;
   return ((data ?? []) as CardRow[]).map((r) => ({
     ...r,
     city: r.city ?? DEFAULT_CITY,
     state: r.state ?? null,
-    is_hero: r.is_hero ?? false,
-    is_trending: r.is_trending ?? false,
   }));
 }
 

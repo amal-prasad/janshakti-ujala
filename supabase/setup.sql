@@ -21,6 +21,10 @@ create table if not exists public.articles (
   is_featured     boolean not null default false, -- eligible for the hero carousel
   is_published    boolean not null default true,
   view_count      integer not null default 0,
+  city            text not null default 'इंदौर', -- dateline city (013)
+  state           text,                          -- /rajya classification, optional (016)
+  is_hero         boolean not null default false, -- homepage hero slot (017)
+  is_trending     boolean not null default false, -- homepage trending pin (017)
   published_at    timestamptz not null default now(),
   created_at      timestamptz not null default now(),
   updated_at      timestamptz not null default now()
@@ -33,6 +37,13 @@ create index if not exists articles_published_idx
 create index if not exists articles_featured_idx
   on public.articles (published_at desc) where is_published and is_featured;
 create index if not exists articles_tags_idx on public.articles using gin (tags);
+create index if not exists articles_state_idx on public.articles (state) where state is not null;
+create index if not exists articles_hero_idx
+  on public.articles (published_at desc) where is_published and is_hero;
+create index if not exists articles_trending_idx
+  on public.articles (published_at desc) where is_published and is_trending;
+create index if not exists articles_breaking_idx
+  on public.articles (published_at desc) where is_published and is_breaking;
 
 -- Estimate reading time from Hindi word count (~200 wpm) so Studio editors never
 -- have to set it by hand. ponytail: naive whitespace split; fine for prose.
@@ -212,6 +223,203 @@ create policy "gallery public read" on public.gallery
 create policy "videos public read" on public.videos
   for select using (true);
 -- newsletter_subscribers: intentionally no policy → readable/writable only by service role.
+
+
+-- ===== 010_poll_votes.sql =====
+-- Atomic vote counter. SECURITY DEFINER so it can write under RLS — poll_options has
+-- no anon write policy, so votes must go through the service-role /api/polls/vote route.
+create or replace function public.increment_poll_vote(option_id uuid)
+returns void language sql security definer set search_path = public as $$
+  update public.poll_options set vote_count = vote_count + 1 where id = option_id;
+$$;
+
+
+-- ===== 011_newsroom.sql =====
+-- /newsroom write path (see CLAUDE.md decision log, 2026-07-03).
+-- profiles (reporter|editor) + articles.author_id + RLS for the authenticated role.
+-- Accounts are provisioned manually in Studio: create auth user, then a profiles row.
+
+-- Shim for plain-Postgres db:verify (embedded, no Supabase). Real Supabase already
+-- has auth.users / auth.uid() / the authenticated role, so this block is a no-op there.
+do $$
+begin
+  if not exists (select 1 from pg_namespace where nspname = 'auth') then
+    create schema auth;
+    create table auth.users (id uuid primary key default gen_random_uuid());
+    create function auth.uid() returns uuid language sql stable as 'select null::uuid';
+  end if;
+  if not exists (select 1 from pg_roles where rolname = 'authenticated') then
+    create role authenticated nologin;
+  end if;
+end $$;
+
+create table if not exists public.profiles (
+  id           uuid primary key references auth.users (id) on delete cascade,
+  role         text not null check (role in ('reporter', 'editor')),
+  display_name text not null,
+  created_at   timestamptz not null default now()
+);
+
+alter table public.articles
+  add column if not exists author_id uuid references public.profiles (id);
+
+-- SECURITY DEFINER so policies can check the caller's role without a recursive
+-- RLS lookup on profiles (mirrors the increment_poll_vote pattern in 010).
+create or replace function public.is_editor()
+returns boolean language sql stable security definer set search_path = public as $$
+  select exists (
+    select 1 from profiles where id = auth.uid() and role = 'editor'
+  );
+$$;
+
+alter table public.profiles enable row level security;
+
+-- Staff can see all profiles (byline names in the newsroom list).
+drop policy if exists "profiles staff read" on public.profiles;
+create policy "profiles staff read" on public.profiles
+  for select to authenticated using (true);
+
+-- Reporters: own rows only, and only while unpublished. Editors: everything,
+-- including the is_published flip. Public anon read policy (009) is untouched.
+drop policy if exists "articles staff read" on public.articles;
+create policy "articles staff read" on public.articles
+  for select to authenticated
+  using (author_id = auth.uid() or is_editor());
+
+drop policy if exists "articles staff insert" on public.articles;
+create policy "articles staff insert" on public.articles
+  for insert to authenticated
+  with check ((author_id = auth.uid() and not is_published) or is_editor());
+
+drop policy if exists "articles staff update" on public.articles;
+create policy "articles staff update" on public.articles
+  for update to authenticated
+  using ((author_id = auth.uid() and not is_published) or is_editor())
+  with check ((author_id = auth.uid() and not is_published) or is_editor());
+
+-- Storage bucket for article images (skipped on plain Postgres — no storage schema).
+do $$
+begin
+  if exists (select 1 from pg_namespace where nspname = 'storage') then
+    insert into storage.buckets (id, name, public)
+    values ('article-images', 'article-images', true)
+    on conflict (id) do nothing;
+
+    drop policy if exists "article images public read" on storage.objects;
+    create policy "article images public read" on storage.objects
+      for select using (bucket_id = 'article-images');
+    drop policy if exists "article images staff upload" on storage.objects;
+    create policy "article images staff upload" on storage.objects
+      for insert to authenticated
+      with check (bucket_id = 'article-images');
+  end if;
+end $$;
+
+
+-- ===== 012_ads.sql =====
+-- Ads managed in Supabase Studio only (no admin UI, per project rule). Public
+-- read is restricted to active rows within their date window; all writes go
+-- through the service role in Studio, same pattern as every other table.
+create table if not exists public.ads (
+  id uuid primary key default gen_random_uuid(),
+  slot text not null check (slot in ('sidebar','infeed','footer')),
+  image_url text not null,
+  link_url text not null,
+  alt_text text not null default 'विज्ञापन',
+  is_active boolean not null default false,
+  starts_at date,
+  ends_at date,
+  created_at timestamptz not null default now()
+);
+
+alter table public.ads enable row level security;
+
+drop policy if exists "ads public read" on public.ads;
+create policy "ads public read" on public.ads for select using (
+  is_active
+  and (starts_at is null or starts_at <= current_date)
+  and (ends_at is null or ends_at >= current_date)
+);
+
+create index if not exists ads_slot_active_idx on public.ads (slot) where is_active;
+
+
+-- ===== 013_article_city.sql =====
+-- Dateline city for every article. Regional paper — default is the home city.
+-- Existing rows get the default; the newsroom form lets reporters override it.
+-- (Column already present in the articles table definition above; kept here
+-- only as a no-op safeguard for hand-run partial applies.)
+alter table public.articles
+  add column if not exists city text not null default 'इंदौर';
+
+
+-- ===== 015_epaper_storage.sql =====
+-- ePaper upload path: public-read `epaper-pdfs` bucket + editor-only writes on
+-- storage objects and public.epaper_editions (see CLAUDE.md 2026-07-03/05).
+-- Reuses is_editor() from 011 — do not redefine it here.
+-- (014_fact_check_verdict.sql is intentionally omitted — that feature was
+-- removed from the codebase.)
+
+drop policy if exists "epaper editor insert" on public.epaper_editions;
+create policy "epaper editor insert" on public.epaper_editions
+  for insert to authenticated
+  with check (public.is_editor());
+
+drop policy if exists "epaper editor update" on public.epaper_editions;
+create policy "epaper editor update" on public.epaper_editions
+  for update to authenticated
+  using (public.is_editor())
+  with check (public.is_editor());
+
+drop policy if exists "epaper editor delete" on public.epaper_editions;
+create policy "epaper editor delete" on public.epaper_editions
+  for delete to authenticated
+  using (public.is_editor());
+
+-- Storage bucket for edition PDFs (skipped on plain Postgres — no storage schema).
+do $$
+begin
+  if exists (select 1 from pg_namespace where nspname = 'storage') then
+    insert into storage.buckets (id, name, public, allowed_mime_types, file_size_limit)
+    values ('epaper-pdfs', 'epaper-pdfs', true, array['application/pdf'], 26214400)
+    on conflict (id) do nothing;
+
+    drop policy if exists "epaper pdfs public read" on storage.objects;
+    create policy "epaper pdfs public read" on storage.objects
+      for select using (bucket_id = 'epaper-pdfs');
+
+    drop policy if exists "epaper pdfs editor upload" on storage.objects;
+    create policy "epaper pdfs editor upload" on storage.objects
+      for insert to authenticated
+      with check (bucket_id = 'epaper-pdfs' and public.is_editor());
+
+    drop policy if exists "epaper pdfs editor update" on storage.objects;
+    create policy "epaper pdfs editor update" on storage.objects
+      for update to authenticated
+      using (bucket_id = 'epaper-pdfs' and public.is_editor())
+      with check (bucket_id = 'epaper-pdfs' and public.is_editor());
+
+    drop policy if exists "epaper pdfs editor delete" on storage.objects;
+    create policy "epaper pdfs editor delete" on storage.objects
+      for delete to authenticated
+      using (bucket_id = 'epaper-pdfs' and public.is_editor());
+  end if;
+end $$;
+
+
+-- ===== 016_article_state.sql =====
+-- State classification for the /rajya (states of India) page. Nullable —
+-- most articles won't tag a state; editors set it only when relevant.
+-- (Column + index already present above; kept here as a no-op safeguard.)
+alter table public.articles
+  add column if not exists state text;
+
+
+-- ===== 017_home_placement.sql =====
+-- Homepage placement controls, editor-set from /newsroom (see decision log).
+-- (Columns + indexes already present above; kept here as a no-op safeguard.)
+alter table public.articles add column if not exists is_hero boolean not null default false;
+alter table public.articles add column if not exists is_trending boolean not null default false;
 
 
 -- ===== seed.sql =====

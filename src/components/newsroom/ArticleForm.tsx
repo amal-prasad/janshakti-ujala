@@ -129,20 +129,7 @@ export function ArticleForm({
             .from("articles")
             .insert({ ...f, author_id: profile.id, is_published: isEditor && published });
 
-    let { error } = await save(fields);
-    // Hosted DB without migration 013/016 has no `city`/`state` column yet —
-    // PostgREST rejects the write (PGRST204/42703). Retry without both so saving
-    // still works. Which one was missing isn't reported, so strip them together.
-    if (error && (error.code === "PGRST204" || error.code === "42703")) {
-      const rest: Partial<Article> = { ...fields };
-      delete rest.city;
-      delete rest.state;
-      delete rest.is_hero;
-      delete rest.is_featured;
-      delete rest.is_breaking;
-      delete rest.is_trending;
-      ({ error } = await save(rest));
-    }
+    const { error } = await save(fields);
 
     if (error) {
       setErrorMsg(

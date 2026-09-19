@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { getEpaperEditions } from "@/lib/api/epaper";
 import { formatDate } from "@/lib/utils/format";
 
@@ -27,13 +28,7 @@ export default async function EpaperPage() {
       ) : (
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {editions.map((e) => (
-            <a
-              key={e.id}
-              href={e.pdf_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
+            <Link key={e.id} href={`/epaper/${e.id}`} className="block">
               <span className="relative block aspect-[3/4] w-full overflow-hidden bg-surface">
                 {e.thumbnail_url ? (
                   <Image
@@ -53,7 +48,7 @@ export default async function EpaperPage() {
               <p className="mt-1 text-xs text-muted">
                 {e.city} · {formatDate(e.edition_date)}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
       )}

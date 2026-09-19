@@ -12,3 +12,15 @@ export async function getEpaperEditions(limit = 30): Promise<EpaperEdition[]> {
   if (error) throw error;
   return data ?? [];
 }
+
+// Single edition for the reader page. Returns null when missing (caller should 404).
+export async function getEpaperEdition(id: string): Promise<EpaperEdition | null> {
+  const supabase = createServerClient();
+  const { data, error } = await supabase
+    .from("epaper_editions")
+    .select("*")
+    .eq("id", id)
+    .single();
+  if (error || !data) return null;
+  return data;
+}

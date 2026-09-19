@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 // Site-wide "under construction" gate. Flip to false to bring the public site back.
 // ponytail: a const, not an env var — restoring needs a deploy anyway.
-export const MAINTENANCE = true;
+export const MAINTENANCE = false;
 
 // /newsroom stays open so the desk can keep writing while the public site is down.
 const OPEN_PREFIXES = ["/newsroom", "/api", "/_next", "/logo.png", "/favicon.ico"];

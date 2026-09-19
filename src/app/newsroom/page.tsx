@@ -19,14 +19,12 @@ type Row = Pick<
   | "created_at"
   | "is_featured"
   | "is_breaking"
-> &
-  Partial<Pick<Article, "is_hero" | "is_trending">>;
+  | "is_hero"
+  | "is_trending"
+>;
 
 const LIST_COLS =
   "id,slug,title,category,is_published,author_id,published_at,created_at,is_featured,is_breaking,is_hero,is_trending";
-// Pre-017 hosted DB has no `is_hero`/`is_trending`; PostgREST rejects the whole
-// select with 42703. Retry without them so the list still renders.
-const LIST_COLS_PRE_017 = LIST_COLS.replace(",is_hero", "").replace(",is_trending", "");
 
 type Filter = "all" | "draft" | "published";
 
@@ -44,8 +42,7 @@ export default function NewsroomListPage() {
       supabase.from("articles").select(cols).order("created_at", { ascending: false });
 
     (async () => {
-      let { data, error } = await run(LIST_COLS);
-      if (error?.code === "42703") ({ data, error } = await run(LIST_COLS_PRE_017));
+      const { data, error } = await run(LIST_COLS);
       // Never fail silently — an empty list and a broken query look identical.
       setLoadError(error ? "लेख लोड नहीं हो सके।" : "");
       setRows((data as unknown as Row[]) ?? []);

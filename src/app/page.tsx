@@ -3,6 +3,7 @@ import { getArticles, getFeaturedArticles, getHeroArticle, getTrendingArticles }
 import { buildOrganizationSchema, buildWebSiteSchema, jsonLdScript } from "@/lib/utils/structuredData";
 import { getRashifalTeaser } from "@/lib/api/rashifal";
 import { HeroCard } from "@/components/news/HeroCard";
+import { EpaperStrip } from "@/components/home/EpaperStrip";
 import { ArticleCard } from "@/components/news/ArticleCard";
 import { ArticleCardSmall } from "@/components/news/ArticleCardSmall";
 import { CategorySection } from "@/components/news/CategorySection";
@@ -51,6 +52,8 @@ export default async function Home() {
           dangerouslySetInnerHTML={{ __html: jsonLdScript(buildWebSiteSchema()) }}
         />
         <div className="flex flex-col gap-12 lg:col-span-8">
+          <EpaperStrip />
+
           <HeroCard article={hero} />
 
           {gridFour.length > 0 && (
