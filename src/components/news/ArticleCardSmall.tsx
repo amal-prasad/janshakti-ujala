@@ -31,7 +31,7 @@ export function ArticleCardSmall({
         </Link>
       )}
       <div className="min-w-0 flex-1">
-        <h3 className="font-display text-sm font-bold leading-snug">
+        <h3 className="font-display text-sm font-bold leading-[1.45]">
           <Link href={`/samachar/${article.slug}`} className="hover:text-primary">
             <span className="line-clamp-2">{article.title}</span>
           </Link>

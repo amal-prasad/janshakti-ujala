@@ -32,7 +32,7 @@ export function HeroCard({ article }: { article: ArticleCardData }) {
         <div className="flex items-center gap-2">
           <CategoryBadge slug={article.category} />
         </div>
-        <h1 className="mt-2 font-display text-[clamp(1.75rem,4vw,3rem)] font-bold leading-[1.05] tracking-[-0.02em] text-balance">
+        <h1 className="mt-2 font-display text-[clamp(1.5rem,3.4vw,2.5rem)] font-bold leading-[1.25] tracking-[-0.02em] text-balance">
           <Link href={`/samachar/${article.slug}`} className="hover:text-primary">
             {article.title}
           </Link>

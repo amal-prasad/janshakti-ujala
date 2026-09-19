@@ -30,7 +30,7 @@ export function ArticleCard({ article }: { article: ArticleCardData }) {
       <div className="flex items-center gap-2">
         <CategoryBadge slug={article.category} />
       </div>
-      <h3 className="font-display text-lg font-bold leading-snug">
+      <h3 className="font-display text-base font-bold leading-[1.45]">
         <Link href={`/samachar/${article.slug}`} className="hover:text-primary">
           <span className="line-clamp-2">{article.title}</span>
         </Link>
