@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Client-side Router Cache. Next 14.2 keeps a visited page's RSC payload for
+  // 30s, so navigating back to "/" from an article served a stale homepage
+  // (a reload was the only way to see a just-published article). A news front
+  // page must never be stale — 0 makes every <Link> navigation refetch.
+  experimental: {
+    staleTimes: { dynamic: 0, static: 0 },
+  },
   images: {
     remotePatterns: [
       // Dev seed imagery.

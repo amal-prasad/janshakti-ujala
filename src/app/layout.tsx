@@ -10,6 +10,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { BreakingNewsTicker } from "@/components/layout/BreakingNewsTicker";
 import { Footer } from "@/components/layout/Footer";
 import { AdSlot } from "@/components/AdSlot";
+import { RefreshOnRestore } from "@/components/RefreshOnRestore";
 import { headers } from "next/headers";
 
 // Display = headlines; Body = running text. Both Devanagari-first.
@@ -87,6 +88,7 @@ export default async function RootLayout({
           <main>{children}</main>
         ) : (
           <>
+            <RefreshOnRestore />
             <Topbar />
             <Header />
             <Navbar />
