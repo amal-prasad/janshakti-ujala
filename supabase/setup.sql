@@ -19,7 +19,7 @@ create table if not exists public.articles (
   reading_minutes integer not null default 1,   -- auto-filled by trigger below
   is_breaking     boolean not null default false,
   is_featured     boolean not null default false, -- eligible for the hero carousel
-  is_published    boolean not null default true,
+  is_published    boolean not null default false,   -- draft by default (018)
   view_count      integer not null default 0,
   city            text not null default 'इंदौर', -- dateline city (013)
   state           text,                          -- /rajya classification, optional (016)
@@ -422,6 +422,21 @@ alter table public.articles add column if not exists is_hero boolean not null de
 alter table public.articles add column if not exists is_trending boolean not null default false;
 
 
+-- ===== 018_article_publish_default_off.sql =====
+-- Draft by default. The old `default true` is why seed/demo rows were publicly
+-- visible: RLS gates reads on is_published correctly (009), but a row inserted
+-- without the flag was born published. Existing rows untouched.
+alter table public.articles alter column is_published set default false;
+
+
+-- ===== 019_article_delete.sql =====
+-- Mirrors "articles staff update": reporters delete own drafts, editors anything.
+drop policy if exists "articles staff delete" on public.articles;
+create policy "articles staff delete" on public.articles
+  for delete to authenticated
+  using ((author_id = auth.uid() and not is_published) or is_editor());
+
+
 -- ===== seed.sql =====
 -- Realistic Hindi seed data. Idempotent-ish: clears content tables first so it can
 -- be re-run during development. Image URLs use picsum.photos for dev only.
@@ -430,6 +445,11 @@ truncate table public.poll_options, public.polls, public.rashifal,
   public.articles restart identity cascade;
 
 -- ── Articles ──────────────────────────────────────────────────────────────────
+-- The seed insert omits is_published, which after 018 means "draft". Restore the
+-- old default just for this block so a fresh dev DB renders a populated site, then
+-- put it back. Scoped to the insert: no existing row's flag is touched.
+alter table public.articles alter column is_published set default true;
+
 insert into public.articles
   (slug, title, dek, body, category, tags, cover_image_url, is_breaking, is_featured)
 values
@@ -516,6 +536,8 @@ values
  E'शहर में आयोजित तीन दिवसीय संगीत समारोह में देशभर के कलाकारों ने हिस्सा लिया। शास्त्रीय और लोक संगीत की प्रस्तुतियों ने दर्शकों का मन मोह लिया।\n\nआयोजकों ने कहा कि इस तरह के आयोजन हमारी सांस्कृतिक विरासत को संजोने में मदद करते हैं। समारोह का समापन सामूहिक प्रस्तुति के साथ हुआ।',
  'manoranjan', array['संगीत','संस्कृति'],
  'https://picsum.photos/seed/sangeet/800/450', false, false);
+
+alter table public.articles alter column is_published set default false;
 
 -- ── Live news (ticker leads) ────────────────────────────────────────────────────
 insert into public.live_news (headline, source_name, source_url) values

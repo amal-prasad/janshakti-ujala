@@ -1,8 +1,7 @@
-export const dynamic = "force-dynamic";
 import type { Metadata, Viewport } from "next";
 import { Halant } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/lib/siteConfig";
+import { siteConfig, MAINTENANCE } from "@/lib/siteConfig";
 import { getLiveNews } from "@/lib/api/liveNews";
 import { Topbar } from "@/components/layout/Topbar";
 import { Header } from "@/components/layout/Header";
@@ -13,23 +12,17 @@ import { AdSlot } from "@/components/AdSlot";
 import { RefreshOnRestore } from "@/components/RefreshOnRestore";
 import { headers } from "next/headers";
 
-// Halant site-wide: display, body and hind vars all resolve to the same family.
-const display = Halant({
+// Halant site-wide: display, body and hind Tailwind families all resolve to this one
+// family, so it is declared ONCE. Three identical next/font calls used to emit three
+// CSS variables for the same face; Tailwind now points all three at --font-display.
+// Weights are limited to the three the codebase actually uses — font-normal (400),
+// font-semibold (600) and font-bold (700). Loading 300 and 500 as well meant ten
+// preloaded woff2 files (~235 kB) on every page, and Devanagari faces are ~39 kB each
+// (SEO audit, issue F37).
+const halant = Halant({
   subsets: ["devanagari", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   variable: "--font-display",
-  display: "swap",
-});
-const body = Halant({
-  subsets: ["devanagari", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-body",
-  display: "swap",
-});
-const hind = Halant({
-  subsets: ["devanagari", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-hind",
   display: "swap",
 });
 
@@ -75,11 +68,14 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   // Set by middleware when the under-construction gate is on — render the page bare,
   // without nav/ticker/footer, so no article surface leaks through.
-  const maintenance = headers().get("x-maintenance") === "1";
+  // MAINTENANCE is checked FIRST and short-circuits: calling headers() opts the whole
+  // app out of static rendering, which is why every route was served no-store with a
+  // ~2.8s TTFB (SEO audit, issue F36). With the gate off, headers() is never reached.
+  const maintenance = MAINTENANCE && headers().get("x-maintenance") === "1";
   const liveNews = maintenance ? [] : await getLiveNews();
 
   return (
-    <html lang="hi" className={`${display.variable} ${body.variable} ${hind.variable}`}>
+    <html lang="hi" className={`${halant.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: noFlashScript }} />
       </head>

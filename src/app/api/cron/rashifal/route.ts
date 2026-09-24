@@ -52,6 +52,38 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  // Sanity checks before auto-publishing (CLAUDE.md hard rule). Individual
+  // predictions are already validated non-empty by fetchProkeralaRashifal; what
+  // is checked here is the batch: all 12 signs present, and not a byte-for-byte
+  // repeat of yesterday (which means the upstream API is serving a cached or
+  // demo day). A failed check rejects the WHOLE batch — a partial day of
+  // horoscopes is worse than yesterday's still showing (SEO audit, issue F32).
+  if (todayRows.length !== zodiacSigns.length) {
+    return NextResponse.json(
+      { error: `expected ${zodiacSigns.length} signs, got ${todayRows.length}` },
+      { status: 502 },
+    );
+  }
+
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const { data: prev } = await supabase
+    .from("rashifal")
+    .select("sign,prediction")
+    .eq("date", yesterday);
+
+  if (prev && prev.length === todayRows.length) {
+    const prevBySign = new Map(prev.map((r) => [r.sign, r.prediction]));
+    const allIdentical = todayRows.every(
+      (r) => prevBySign.get(r.sign) === r.prediction,
+    );
+    if (allIdentical) {
+      return NextResponse.json(
+        { error: "every sign is identical to yesterday; batch rejected" },
+        { status: 502 },
+      );
+    }
+  }
+
   const { error } = await supabase.from("rashifal").upsert(
     todayRows,
     { onConflict: "sign,date" },

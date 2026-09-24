@@ -5,7 +5,7 @@ import { getNewsroomClient } from "@/lib/supabase/newsroom";
 import { Markdown } from "@/components/news/Markdown";
 import { categories } from "@/lib/categories";
 import { states } from "@/lib/states";
-import { slugify } from "@/lib/utils/format";
+import { slugify, isValidSlug } from "@/lib/utils/format";
 import { type Article, type Profile } from "@/lib/supabase/types";
 
 const inputCls =
@@ -52,7 +52,9 @@ export function ArticleForm({
   const [slug, setSlug] = useState(article?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
   const [coverUrl, setCoverUrl] = useState(article?.cover_image_url ?? null);
-  const [city, setCity] = useState(article?.city ?? "इंदौर");
+  // Dateline must be typed per story. It used to default to इंदौर, which stamped
+  // every non-Indore report with the wrong dateline (SEO audit, issue 11).
+  const [city, setCity] = useState(article?.city ?? "");
   const [state, setState] = useState(article?.state ?? "");
   const [published, setPublished] = useState(article?.is_published ?? false);
   const [isHero, setIsHero] = useState(article?.is_hero ?? false);
@@ -89,17 +91,30 @@ export function ArticleForm({
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStatus("saving");
     setErrorMsg("");
+
+    const finalSlug = slug || slugify(title) || `lekh-${Date.now()}`;
+    if (!isValidSlug(finalSlug)) {
+      setErrorMsg("स्लग अमान्य है — केवल छोटे अंग्रेज़ी अक्षर, अंक और हाइफ़न, 3 से 80 अक्षरों में।");
+      setStatus("error");
+      return;
+    }
+    if (dek.trim().length < 40 || dek.trim().length > 200) {
+      setErrorMsg("डेक 40 से 200 अक्षरों के बीच होना चाहिए।");
+      setStatus("error");
+      return;
+    }
+
+    setStatus("saving");
     const supabase = getNewsroomClient();
     const fields = {
       title,
-      dek: dek || null,
+      dek: dek.trim(),
       category,
       body,
-      slug: slug || slugify(title) || `lekh-${Date.now()}`,
+      slug: finalSlug,
       cover_image_url: coverUrl,
-      city: city.trim() || "इंदौर",
+      city: city.trim(),
       state: state || null,
       author: profile.display_name,
       ...(isEditor
@@ -156,7 +171,12 @@ export function ArticleForm({
 
         <label className="flex flex-col gap-1 text-sm font-semibold">
           उपशीर्षक (डेक)
-          <input value={dek} onChange={(e) => setDek(e.target.value)} className={inputCls} />
+          <input
+            required
+            value={dek}
+            onChange={(e) => setDek(e.target.value)}
+            className={inputCls}
+          />
         </label>
 
         <div className="grid grid-cols-2 gap-4">
@@ -180,7 +200,8 @@ export function ArticleForm({
             <input
               value={city}
               onChange={(e) => setCity(e.target.value)}
-              placeholder="इंदौर"
+              placeholder="खबर कहाँ से है?"
+              required
               className={inputCls}
             />
           </label>

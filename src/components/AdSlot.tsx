@@ -19,8 +19,18 @@ export async function AdSlot({ slot }: { slot: AdSlotName }) {
     <div>
       <span className="text-[10px] uppercase tracking-wider text-muted">विज्ञापन</span>
       <a href={ad.link_url} target="_blank" rel="noopener noreferrer sponsored">
-        {/* eslint-disable-next-line @next/next/no-img-element -- arbitrary external ad domains, plain img keeps it simple */}
-        <img src={ad.image_url} alt={ad.alt_text} className="w-full border border-border" loading="lazy" />
+        {/* Reserved box: the img has no intrinsic dimensions until it loads, and an ad
+            that pops in above the fold shifts the article under it. The aspect ratio
+            holds the space (SEO audit, issue F38). */}
+        <div className="relative aspect-[8/1] w-full overflow-hidden border border-border bg-surface">
+          {/* eslint-disable-next-line @next/next/no-img-element -- arbitrary external ad domains, plain img keeps it simple */}
+          <img
+            src={ad.image_url}
+            alt={ad.alt_text}
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </a>
     </div>
   );

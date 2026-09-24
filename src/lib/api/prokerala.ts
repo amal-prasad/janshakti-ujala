@@ -56,79 +56,31 @@ export async function fetchProkeralaRashifal(sign: string, date: string, isRetry
 
   if (!response.ok) {
     const errorText = await response.text();
+    // Sandbox plans only serve a fixed demo date. Retrying against 2026-01-01 and
+    // storing the result as TODAY's horoscope publishes content for the wrong day,
+    // so that path is now opt-in and must never be enabled in production
+    // (SEO audit, issue F32).
     if (!isRetry && errorText.includes("sandbox mode")) {
+      if (process.env.PROKERALA_SANDBOX !== "1") {
+        throw new Error(
+          `Prokerala account is in sandbox mode; refusing to publish demo-dated ` +
+            `rashifal as today's. Upgrade the plan, or set PROKERALA_SANDBOX=1 ` +
+            `in a non-production environment to accept demo data.`,
+        );
+      }
       return fetchProkeralaRashifal(sign, date, true);
     }
     throw new Error(`Failed to fetch rashifal for ${sign}: ${errorText}`);
   }
 
   const data = await response.json();
-  return data.data?.daily_horoscope?.horoscope || "राशिफल उपलब्ध नहीं है।";
-}
-
-export type PanchangData = {
-  tithi: string;
-  nakshatra: string;
-  sunrise: string;
-  sunset: string;
-};
-
-export async function getDailyPanchang(isRetry = false): Promise<PanchangData | null> {
-  try {
-    const token = await getProkeralaToken();
-    const datetime = isRetry ? "2026-01-01T00:00:00Z" : new Date().toISOString();
-    
-    // Coordinates for Indore
-    const coordinates = "22.7196,75.8577";
-
-    const url = new URL("https://api.prokerala.com/v2/astrology/panchang");
-    url.searchParams.append("datetime", datetime);
-    url.searchParams.append("coordinates", coordinates);
-    url.searchParams.append("la", "hi");
-    url.searchParams.append("ayanamsa", "1");
-
-    const response = await fetch(url.toString(), {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      next: { revalidate: 21600 }, // Cache for 6 hours
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      if (!isRetry && errorText.includes("sandbox mode")) {
-        return getDailyPanchang(true);
-      }
-      console.error("Prokerala Panchang API error", errorText);
-      return null;
-    }
-
-    const json = await response.json();
-    const data = json.data;
-
-    const tithi = data?.panchang?.tithi?.[0]?.name ?? "उपलब्ध नहीं";
-    const nakshatra = data?.panchang?.nakshatra?.[0]?.name ?? "उपलब्ध नहीं";
-    
-    const formatTime = (isoString: string) => {
-      if (!isoString) return "";
-      return new Date(isoString).toLocaleTimeString("hi-IN", {
-        hour: "2-digit",
-        minute: "2-digit",
-        timeZone: "Asia/Kolkata",
-      });
-    };
-
-    const sunrise = formatTime(data?.panchang?.sunrise);
-    const sunset = formatTime(data?.panchang?.sunset);
-
-    return {
-      tithi,
-      nakshatra,
-      sunrise,
-      sunset,
-    };
-  } catch (error) {
-    console.error("Failed to fetch Panchang:", error);
-    return null;
+  const horoscope = data.data?.daily_horoscope?.horoscope;
+  // An empty response used to fall through to a placeholder string, which the cron
+  // then published as that sign's prediction. Throw instead: the cron rejects the
+  // whole batch rather than shipping "राशिफल उपलब्ध नहीं है।" as editorial content.
+  if (typeof horoscope !== "string" || horoscope.trim().length < 20) {
+    throw new Error(`Empty or too-short rashifal for ${sign}`);
   }
+  return horoscope;
 }
+

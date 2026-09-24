@@ -1,4 +1,5 @@
-export const dynamic = "force-dynamic";
+// ISR — static prose, no live data. See the note on the homepage.
+export const revalidate = 3600;
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 

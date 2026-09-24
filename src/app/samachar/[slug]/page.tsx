@@ -1,4 +1,8 @@
-export const dynamic = "force-dynamic";
+// ISR, not per-request SSR. Every public route used to be force-dynamic, so Vercel
+// served no-store on every hit and TTFB was ~2.8s on mobile — 80% of a 3.5s LCP
+// (SEO audit, issue F36). 60s gives a CDN hit for almost every reader; a newly
+// published article appears within a minute.
+export const revalidate = 60;
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -7,8 +11,13 @@ import { RelatedArticles } from "@/components/news/RelatedArticles";
 import { ArticleBody } from "@/components/news/ArticleBody";
 import { CategoryBadge } from "@/components/ui/Badge";
 import { formatDate, readingTimeLabel } from "@/lib/utils/format";
-import { buildNewsArticleSchema, jsonLdScript } from "@/lib/utils/structuredData";
+import {
+  buildNewsArticleSchema,
+  buildBreadcrumbSchema,
+  jsonLdScript,
+} from "@/lib/utils/structuredData";
 import { siteConfig } from "@/lib/siteConfig";
+import { categories } from "@/lib/categories";
 
 
 type Params = { params: { slug: string } };
@@ -45,12 +54,30 @@ export default async function ArticlePage({ params }: Params) {
   const url = `${siteConfig.url}/samachar/${article.slug}`;
   const schema = buildNewsArticleSchema(article, url);
 
+  // Breadcrumb trail: home › section › this headline. The section name falls back to
+  // the raw slug only if the article carries a category that categories.ts no longer
+  // lists — better a Roman slug in the trail than a missing crumb (SEO audit, F64).
+  const section = categories.find((c) => c.slug === article.category);
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "होम", url: "/" },
+    {
+      name: section?.name ?? article.category,
+      url: `/shreni/${article.category}`,
+    },
+    { name: article.title },
+  ]);
+
   return (
     <div className="container-x py-8">
       {/* eslint-disable-next-line react/no-danger */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
+      />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(breadcrumbSchema) }}
       />
       <article className="mx-auto max-w-3xl">
         <div className="flex flex-wrap items-center gap-3">
@@ -91,14 +118,18 @@ export default async function ArticlePage({ params }: Params) {
 
         {article.tags.length > 0 && (
           <div className="mt-8 flex flex-wrap gap-2">
+            {/* Labels, not links. These used to point at /vishay/<tag>, a route that
+                has never existed — so every tag on every article was a guaranteed 404
+                for readers and crawlers alike (SEO audit, issue F62). A tag archive is
+                worth building when there is enough published work to fill one; until
+                then a dead link is worse than no link. */}
             {article.tags.map((t) => (
-              <a
+              <span
                 key={t}
-                href={`/vishay/${encodeURIComponent(t)}`}
-                className="border border-border px-3 py-1 text-sm text-muted hover:border-primary hover:text-primary"
+                className="border border-border px-3 py-1 text-sm text-muted"
               >
                 #{t}
-              </a>
+              </span>
             ))}
           </div>
         )}

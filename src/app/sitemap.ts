@@ -1,8 +1,9 @@
-export const dynamic = "force-dynamic";
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 import { getAllArticleSlugs } from "@/lib/api/articles";
 import { getGalleries } from "@/lib/api/gallery";
+import { categories } from "@/lib/categories";
+import { states } from "@/lib/states";
 
 export const revalidate = 3600;
 
@@ -21,6 +22,11 @@ const STATIC_ROUTES: {
   { path: "/polls", changeFrequency: "weekly", priority: 0.5 },
   { path: "/newsletter", changeFrequency: "monthly", priority: 0.4 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.3 },
+  // Trust surface — rarely changes, but must be discoverable for a news publisher.
+  { path: "/hamare-bare-mein", changeFrequency: "monthly", priority: 0.4 },
+  { path: "/sampadakiya-niti", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/sanshodhan-niti", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/prakashak", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -45,6 +51,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${siteConfig.url}/gallery/${slug}`,
       lastModified: new Date(published_at),
       changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    ...categories.map(({ slug }) => ({
+      url: `${siteConfig.url}/shreni/${slug}`,
+      changeFrequency: "hourly" as const,
+      priority: 0.6,
+    })),
+    ...states.map(({ slug }) => ({
+      url: `${siteConfig.url}/rajya/${slug}`,
+      changeFrequency: "daily" as const,
       priority: 0.5,
     })),
   ];

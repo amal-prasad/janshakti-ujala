@@ -34,15 +34,29 @@ export function readingTimeLabel(minutes: number): string {
   return `${Math.max(1, minutes)} मिनट पढ़ें`;
 }
 
+const SLUG_MAX = 80;
+
 // Hindi→Roman URL slug. Appends a short suffix when given an id to guarantee
-// uniqueness (titles can repeat).
+// uniqueness (titles can repeat). Capped at SLUG_MAX, truncated on a "-"
+// boundary so words aren't cut mid-way; the suffix is appended after the cap
+// so it always survives.
 export function slugify(title: string, suffix?: string): string {
   const base = romanize(title, { lowercase: true, separator: "-" })
     .replace(/[^a-z0-9-]/g, "")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
-  const safe = base || "lekh";
+  let safe = base || "lekh";
+  const cap = suffix ? SLUG_MAX - suffix.length - 1 : SLUG_MAX;
+  if (safe.length > cap) {
+    safe = safe.slice(0, Math.max(cap, 0)).replace(/-+$/, "") || "lekh";
+  }
   return suffix ? `${safe}-${suffix}` : safe;
+}
+
+// Validation for slugs typed/edited by hand in the newsroom form (auto-derived
+// slugs already satisfy this, but a hand-edited slug can be anything).
+export function isValidSlug(s: string): boolean {
+  return s.length >= 3 && s.length <= SLUG_MAX && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(s);
 }
 
 export function truncate(text: string, max = 160): string {

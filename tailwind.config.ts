@@ -19,9 +19,12 @@ const config: Config = {
         saffron: "var(--saffron)",
       },
       fontFamily: {
+        // All three resolve to the one Halant face declared in layout.tsx. Kept as
+        // three names so existing font-display / font-body / font-hind classes still
+        // read as intent; they no longer cost three font declarations.
         display: ["var(--font-display)", "serif"],
-        body: ["var(--font-body)", "serif"],
-        hind: ["var(--font-hind)", "serif"],
+        body: ["var(--font-display)", "serif"],
+        hind: ["var(--font-display)", "serif"],
       },
       maxWidth: {
         container: "1200px",

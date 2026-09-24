@@ -40,6 +40,9 @@ export function Footer() {
           <Link href="/rashifal" className="text-text hover:text-primary">राशिफल</Link>
           <Link href="/gallery" className="text-text hover:text-primary">गैलरी</Link>
           <Link href="/contact" className="text-text hover:text-primary">संपर्क करें</Link>
+          <Link href="/sampadakiya-niti" className="text-text hover:text-primary">संपादकीय नीति</Link>
+          <Link href="/sanshodhan-niti" className="text-text hover:text-primary">संशोधन नीति</Link>
+          <Link href="/prakashak" className="text-text hover:text-primary">प्रकाशक और स्वामित्व</Link>
           <a href={`mailto:${siteConfig.contactEmail}`} className="text-muted hover:text-primary">
             {siteConfig.contactEmail}
           </a>

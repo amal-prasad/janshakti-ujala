@@ -46,7 +46,8 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-body), serif;
+  /* One Halant face site-wide — see layout.tsx. --font-body no longer exists. */
+  font-family: var(--font-display), serif;
   -webkit-font-smoothing: antialiased;
 }
 

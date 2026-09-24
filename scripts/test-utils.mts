@@ -3,6 +3,7 @@
 import assert from "node:assert/strict";
 import {
   slugify,
+  isValidSlug,
   truncate,
   firstParagraph,
   readingTimeLabel,
@@ -27,6 +28,22 @@ assert.ok(t.endsWith("…") && t.length <= 12);
 
 // firstParagraph returns text before the first blank line.
 assert.equal(firstParagraph("पहला\n\nदूसरा"), "पहला");
+
+// slugify caps length at 80 and the suffix still survives the cap.
+const longTitle =
+  "महिला एशिया कप फाइनल में श्रीलंका को रौंदकर रिकॉर्ड आठवीं बार चैंपियन बना भारत चमकीं शेफाली विवाद के चलते बेटियों ने 72 रनों की धमाकेदार जीत के साथ बिना ट्रॉफी के मनाया जश्न";
+const long = slugify(longTitle);
+assert.ok(long.length <= 80, "slug must not exceed 80 chars");
+assert.ok(!long.endsWith("-"), "capped slug must not end with a dash");
+const longWithSuffix = slugify(longTitle, "ab12");
+assert.ok(longWithSuffix.length <= 80, "slug+suffix must not exceed 80 chars");
+assert.ok(longWithSuffix.endsWith("-ab12"), "suffix must survive the cap");
+
+// isValidSlug: length + kebab-case rules.
+assert.ok(isValidSlug("ab-cd"));
+assert.ok(!isValidSlug("ap"), "too short");
+assert.ok(!isValidSlug("a".repeat(81)), "too long");
+assert.ok(!isValidSlug("Janshakti Ujala"), "no spaces/uppercase");
 
 assert.equal(readingTimeLabel(0), "1 मिनट पढ़ें");
 assert.equal(readingTimeLabel(4), "4 मिनट पढ़ें");

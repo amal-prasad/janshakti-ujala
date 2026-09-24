@@ -5,7 +5,8 @@ import { getEpaperEditions } from "@/lib/api/epaper";
 import { formatDate } from "@/lib/utils/format";
 
 // Reads live data per request (Supabase-backed).
-export const dynamic = "force-dynamic";
+// ISR — see the note on the homepage. Editions and galleries change rarely.
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "ई-पेपर",

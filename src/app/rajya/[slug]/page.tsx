@@ -1,4 +1,8 @@
-export const dynamic = "force-dynamic";
+// ISR, not per-request SSR. Every public route used to be force-dynamic, so Vercel
+// served no-store on every hit and TTFB was ~2.8s on mobile — 80% of a 3.5s LCP
+// (SEO audit, issue F36). 60s gives a CDN hit for almost every reader; a newly
+// published article appears within a minute.
+export const revalidate = 60;
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getArticles } from "@/lib/api/articles";

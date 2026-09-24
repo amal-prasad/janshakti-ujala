@@ -24,9 +24,11 @@ interface MhahPanchangInstance {
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const MhahPanchang = require("mhah-panchang").MhahPanchang as new () => MhahPanchangInstance;
 
-// Lucknow, UP — fixed reference point for the whole site (no user geolocation).
-const LAT = 26.85;
-const LNG = 80.95;
+// Indore, MP — fixed reference point for the whole site (no user geolocation).
+// This is the paper's home city; it was Lucknow (26.85, 80.95), which put
+// sunrise/sunset ~20 minutes off for every reader (SEO audit, issue F29).
+const LAT = 22.7196;
+const LNG = 75.8577;
 
 const TITHI_HI = [
   "प्रतिपदा", "द्वितीया", "तृतीया", "चतुर्थी", "पंचमी", "षष्ठी", "सप्तमी",

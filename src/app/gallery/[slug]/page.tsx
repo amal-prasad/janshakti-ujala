@@ -1,4 +1,5 @@
-export const dynamic = "force-dynamic";
+// ISR — see the note on the homepage. Editions and galleries change rarely.
+export const revalidate = 300;
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";

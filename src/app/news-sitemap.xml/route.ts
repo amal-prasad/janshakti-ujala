@@ -1,9 +1,13 @@
-export const dynamic = "force-dynamic";
 import { siteConfig } from "@/lib/siteConfig";
 import { getRecentPublishedArticles } from "@/lib/api/articles";
 
-// Google News only considers articles from the last 48h; refresh every 15 min.
-export const revalidate = 900;
+// Google News only considers articles from the last 48h.
+// 5 minutes, not 15: this is the surface that decides how fast a breaking story
+// reaches Google News, so staleness here costs indexation time directly. The number
+// used to be dead anyway — `export const dynamic = "force-dynamic"` sat above it and
+// takes precedence over `revalidate`, so every crawler hit re-queried Supabase
+// (SEO audit, issue F47).
+export const revalidate = 300;
 
 function escapeXml(s: string): string {
   return s
