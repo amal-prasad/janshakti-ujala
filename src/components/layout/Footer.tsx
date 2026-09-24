@@ -43,12 +43,6 @@ export function Footer() {
           <Link href="/sampadakiya-niti" className="text-text hover:text-primary">संपादकीय नीति</Link>
           <Link href="/sanshodhan-niti" className="text-text hover:text-primary">संशोधन नीति</Link>
           <Link href="/prakashak" className="text-text hover:text-primary">प्रकाशक और स्वामित्व</Link>
-          <a href={`mailto:${siteConfig.contactEmail}`} className="text-muted hover:text-primary">
-            {siteConfig.contactEmail}
-          </a>
-          <a href={`tel:${siteConfig.contactPhone}`} className="text-muted hover:text-primary">
-            {siteConfig.contactPhone}
-          </a>
         </div>
       </div>
       <div className="container-x border-t border-border py-4 text-xs text-muted" spellCheck={false}>
