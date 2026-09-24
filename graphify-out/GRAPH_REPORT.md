@@ -1,16 +1,16 @@
 # Graph Report - Janshakti ujala  (2026-09-24)
 
 ## Corpus Check
-- 128 files · ~414,419 words
+- 128 files · ~414,407 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 542 nodes · 675 edges · 117 communities (23 shown, 94 thin omitted)
+- 542 nodes · 673 edges · 117 communities (23 shown, 94 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f7ef302d`
+- Built from commit: `6f80606d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -131,7 +131,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `createServerClient()` - 25 edges
-2. `SiteConfig` - 22 edges
+2. `SiteConfig` - 21 edges
 3. `formatDate()` - 18 edges
 4. `compilerOptions` - 15 edges
 5. `आपके लिए काम की सूची — TODO (owner actions)` - 11 edges
@@ -187,8 +187,8 @@ Cohesion: 0.33
 Nodes (4): db, ensureUser(), main(), USERS
 
 ### Community 88 - ".agents/skills"
-Cohesion: 0.05
-Nodes (21): size, metadata, escapeXml(), GET(), metadata, size, halant, metadata (+13 more)
+Cohesion: 0.06
+Nodes (17): size, metadata, escapeXml(), GET(), metadata, size, metadata, Image() (+9 more)
 
 ### Community 89 - ".agents/skills"
 Cohesion: 0.29
@@ -203,8 +203,8 @@ Cohesion: 0.50
 Nodes (3): Deploy on Vercel, Getting Started, Learn More
 
 ### Community 98 - ".agents/skills"
-Cohesion: 0.17
-Nodes (16): Home(), metadata, RashifalPage(), ArticlePage(), Params, AdSlot(), Sidebar(), getAllRashifalToday() (+8 more)
+Cohesion: 0.12
+Nodes (20): halant, metadata, viewport, Home(), metadata, RashifalPage(), ArticlePage(), Params (+12 more)
 
 ### Community 99 - ".agents/skills"
 Cohesion: 0.07

@@ -40,13 +40,17 @@ export function Footer() {
           <Link href="/rashifal" className="text-text hover:text-primary">राशिफल</Link>
           <Link href="/gallery" className="text-text hover:text-primary">गैलरी</Link>
           <Link href="/contact" className="text-text hover:text-primary">संपर्क करें</Link>
-          <Link href="/sampadakiya-niti" className="text-text hover:text-primary">संपादकीय नीति</Link>
-          <Link href="/sanshodhan-niti" className="text-text hover:text-primary">संशोधन नीति</Link>
-          <Link href="/prakashak" className="text-text hover:text-primary">प्रकाशक और स्वामित्व</Link>
         </div>
       </div>
-      <div className="container-x border-t border-border py-4 text-xs text-muted" spellCheck={false}>
-        © {new Date().getFullYear()} <span className="font-hind">जनशक्ति उजाला</span>. सर्वाधिकार सुरक्षित।
+      <div className="container-x border-t border-border py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-muted" spellCheck={false}>
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm">
+          <Link href="/sampadakiya-niti" className="hover:text-primary">संपादकीय नीति</Link>
+          <Link href="/sanshodhan-niti" className="hover:text-primary">संशोधन नीति</Link>
+          <Link href="/prakashak" className="hover:text-primary">प्रकाशक और स्वामित्व</Link>
+        </div>
+        <div className="text-xs">
+          © {new Date().getFullYear()} <span className="font-hind">जनशक्ति उजाला</span>. सर्वाधिकार सुरक्षित।
+        </div>
       </div>
     </footer>
   );
