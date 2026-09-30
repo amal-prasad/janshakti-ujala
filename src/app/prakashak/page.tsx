@@ -23,7 +23,7 @@ const rows: [string, string][] = ([
 ] as [string, string][]).filter(([, v]) => v !== "");
 
 const addressParts = [p.addressLine, p.city, p.state, p.postalCode, p.country].filter(
-  (v) => v !== "",
+  Boolean,
 );
 
 export default function PublisherPage() {

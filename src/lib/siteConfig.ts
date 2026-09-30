@@ -19,7 +19,7 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   name: "जनशक्ति उजाला",
   nameRoman: "Janshakti Ujala",
-  tagline: "सच्ची खबर, जन की आवाज़",
+  tagline: "जनता की आवाज़, सत्य का उजाला",
   description:
     "जनशक्ति उजाला — ताज़ा समाचार, राजनीति, खेल, मनोरंजन, व्यापार, राशिफल और ई-पेपर। निष्पक्ष और विश्वसनीय हिंदी समाचार।",
   // Canonical origin. Feeds every canonical, og:url, sitemap, robots.txt and JSON-LD.
@@ -47,16 +47,16 @@ export const siteConfig = {
   // placeholder; a fake address on a news site is worse than a missing one.
   publisher: {
     legalName: "", // e.g. "जनशक्ति उजाला मीडिया"  — registered/trading name
-    editorInChief: "", // प्रधान संपादक — the named person responsible for content
-    grievanceOfficer: "", // शिकायत निवारण अधिकारी (IT Rules 2021 requires one)
-    grievanceEmail: "", // falls back to contactEmail if empty
-    addressLine: "", // street / building
+    editorInChief: "नारायण माखीजा", // प्रधान संपादक — the named person responsible for content
+    grievanceOfficer: "नारायण माखीजा", // शिकायत निवारण अधिकारी (IT Rules 2021 requires one)
+    grievanceEmail: "janshaktiujala@gmail.com", // falls back to contactEmail if empty
+    addressLine: "104, ROYAL APARTMENT, BLOCK B, 377, KHATIWALA TANK , INDORE, MADHYA PRADESH", // street / building
     city: "इंदौर",
     state: "मध्य प्रदेश",
-    postalCode: "",
+    postalCode: "452001",
     country: "भारत",
-    rniNumber: "", // RNI registration number, if the print edition is registered
-    foundingYear: "", // e.g. "2024"
+    rniNumber: "MPHIN/26/A3434", // RNI registration number, if the print edition is registered
+    foundingYear: "2026", // e.g. "2024"
   },
 } as const;
 

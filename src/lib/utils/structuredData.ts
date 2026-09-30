@@ -46,7 +46,7 @@ export function buildOrganizationSchema() {
   const p = siteConfig.publisher;
   // Only emit identity fields the owner has actually supplied. An invented
   // address or editor name in schema is a worse trust signal than an absent one.
-  const address = [p.addressLine, p.postalCode].some((v) => v !== "")
+  const address = [p.addressLine, p.postalCode].some(Boolean)
     ? {
         "@type": "PostalAddress",
         streetAddress: p.addressLine || undefined,

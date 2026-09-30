@@ -57,6 +57,8 @@ export default function EditArticlePage() {
       setDeleteError("लेख हटाया नहीं जा सका।");
       return;
     }
+    // Purge the ISR cache so the article leaves the public site now, not after 60s.
+    await fetch("/api/revalidate", { method: "POST" }).catch(() => {});
     window.location.href = "/newsroom";
   }
 

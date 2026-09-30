@@ -153,6 +153,8 @@ export function ArticleForm({
       setStatus("error");
       return;
     }
+    // Purge the ISR cache so edits/publishes show on the public site now.
+    await fetch("/api/revalidate", { method: "POST" }).catch(() => {});
     router.push("/newsroom");
   }
 
