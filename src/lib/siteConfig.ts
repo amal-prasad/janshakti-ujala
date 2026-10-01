@@ -50,7 +50,7 @@ export const siteConfig = {
     editorInChief: "नारायण माखीजा", // प्रधान संपादक — the named person responsible for content
     grievanceOfficer: "नारायण माखीजा", // शिकायत निवारण अधिकारी (IT Rules 2021 requires one)
     grievanceEmail: "janshaktiujala@gmail.com", // falls back to contactEmail if empty
-    addressLine: "104, ROYAL APARTMENT, BLOCK B, 377, KHATIWALA TANK , INDORE, MADHYA PRADESH", // street / building
+    addressLine: "104, ROYAL APARTMENT, BLOCK B, 377, KHATIWALA TANK, INDORE, MADHYA PRADESH", // street / building
     city: "इंदौर",
     state: "मध्य प्रदेश",
     postalCode: "452001",

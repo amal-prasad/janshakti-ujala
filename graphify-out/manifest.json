@@ -400,8 +400,8 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1790075620.6066842,
-    "ast_hash": "151cea633745ae021845e709438ff84b",
+    "mtime": 1790854698.2698157,
+    "ast_hash": "0a9d946bd26dbf051d81cec711d0f77d",
     "semantic_hash": ""
   },
   "src/app/samachar/[slug]/page.tsx": {
@@ -415,13 +415,13 @@
     "semantic_hash": ""
   },
   "src/components/layout/BreakingNewsTicker.tsx": {
-    "mtime": 1788419860.7180958,
-    "ast_hash": "3e4fdd4230f9f7d130973d00c45e924f",
+    "mtime": 1790854558.4130177,
+    "ast_hash": "8efffc90fa03720d29561d324a172ee4",
     "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
-    "mtime": 1790322751.5185914,
-    "ast_hash": "165d063cde864daa359e56c664fb2be0",
+    "mtime": 1790855131.938743,
+    "ast_hash": "8f1dc83cfd4d8ab2edb201a20041a224",
     "semantic_hash": ""
   },
   "src/components/layout/Header.tsx": {
@@ -505,13 +505,13 @@
     "semantic_hash": ""
   },
   "src/lib/categories.ts": {
-    "mtime": 1786906115.3855367,
-    "ast_hash": "6cdcb4be100d33aaf497cbb36390c2c9",
+    "mtime": 1790854551.75536,
+    "ast_hash": "588acf2c2f9092fc48cd64de717168d6",
     "semantic_hash": ""
   },
   "src/lib/siteConfig.ts": {
-    "mtime": 1790129745.4376068,
-    "ast_hash": "16e3d86750ade0cdc557c2621d2a493f",
+    "mtime": 1790854886.2910352,
+    "ast_hash": "2651e5e5c373acd0466556f8dce2d711",
     "semantic_hash": ""
   },
   "src/lib/supabase/client.ts": {
@@ -540,8 +540,8 @@
     "semantic_hash": "8037940f1abdb383f318efd31f5791be"
   },
   "src/lib/utils/structuredData.ts": {
-    "mtime": 1790077404.86868,
-    "ast_hash": "cf2319d874d0c58f2aa268c264695f7f",
+    "mtime": 1790765997.1675653,
+    "ast_hash": "9bac1b6db792e3153f459992e3823c7b",
     "semantic_hash": ""
   },
   "src/lib/zodiacSigns.ts": {
@@ -860,8 +860,8 @@
     "semantic_hash": ""
   },
   "src/app/newsroom/edit/[id]/page.tsx": {
-    "mtime": 1790242086.1163166,
-    "ast_hash": "b052d2aecfc026ee5d8d57b40dcae5f2",
+    "mtime": 1790765936.2875743,
+    "ast_hash": "a1855c5aa32d055d874951e78a41b335",
     "semantic_hash": ""
   },
   "src/app/newsroom/login/page.tsx": {
@@ -910,8 +910,8 @@
     "semantic_hash": "e579896cb46e7be2f3b9a078689b1db1"
   },
   "src/app/sitemap.ts": {
-    "mtime": 1790077023.841604,
-    "ast_hash": "0bb734361f292e7c8e98660c15ce2791",
+    "mtime": 1790855121.5718763,
+    "ast_hash": "0b015bc5745e68fc0fd804a754aec91e",
     "semantic_hash": ""
   },
   "src/components/news/ArticleBody.tsx": {
@@ -930,8 +930,8 @@
     "semantic_hash": "4f86c5a1a4705f66b5933185f6ed084f"
   },
   "src/components/newsroom/ArticleForm.tsx": {
-    "mtime": 1790059363.7667315,
-    "ast_hash": "86122ed04ef7f5a0ed0547db5b5a43a9",
+    "mtime": 1790765939.0340865,
+    "ast_hash": "1db3ceab615255ba7ba959e22d5835cc",
     "semantic_hash": ""
   },
   "src/components/newsroom/useNewsroomProfile.ts": {
@@ -1010,8 +1010,8 @@
     "semantic_hash": ""
   },
   "src/app/hamare-bare-mein/page.tsx": {
-    "mtime": 1790075620.6096861,
-    "ast_hash": "8bdc7a5247b6f169601433764e5133d3",
+    "mtime": 1790854880.7596033,
+    "ast_hash": "7bc2da5795eb5d72910d160ed786fea0",
     "semantic_hash": ""
   },
   "src/app/icon.tsx": {
@@ -1030,8 +1030,8 @@
     "semantic_hash": ""
   },
   "src/app/prakashak/page.tsx": {
-    "mtime": 1790059386.9585543,
-    "ast_hash": "616cfac2b95781a16fb833098d335e65",
+    "mtime": 1790765995.0456579,
+    "ast_hash": "69d0276a7c32685142e3413b6a4aaa09",
     "semantic_hash": ""
   },
   "src/app/rajya/[slug]/page.tsx": {
@@ -1297,6 +1297,31 @@
   "20260816-1938-36.5328374.mp4": {
     "mtime": 1786909125.6780796,
     "ast_hash": "7798d6db2672bd76b80813a034a092e8",
+    "semantic_hash": ""
+  },
+  "src/app/api/revalidate/route.ts": {
+    "mtime": 1790765932.4054606,
+    "ast_hash": "6ef333c774872ba2dbaee312d49b7a82",
+    "semantic_hash": ""
+  },
+  "src/app/cookie-niti/page.tsx": {
+    "mtime": 1790854978.4830172,
+    "ast_hash": "cb789c11d5fcece2ea0255e7e8dec595",
+    "semantic_hash": ""
+  },
+  "src/app/gopniyata-niti/page.tsx": {
+    "mtime": 1790854958.0208464,
+    "ast_hash": "2261cbf57be2e6dd34b27955d3b37d73",
+    "semantic_hash": ""
+  },
+  "src/app/niyam-evam-sharten/page.tsx": {
+    "mtime": 1790854924.9713817,
+    "ast_hash": "e7a5932611f339498ae58a2e6fd423ba",
+    "semantic_hash": ""
+  },
+  "src/app/site-map/page.tsx": {
+    "mtime": 1790855071.0945244,
+    "ast_hash": "f49c7772a42e390d0886d6075cc64d1d",
     "semantic_hash": ""
   }
 }

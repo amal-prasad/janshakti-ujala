@@ -10,9 +10,13 @@ export function BreakingNewsTicker({ items }: { items: LiveNewsItem[] }) {
   return (
     <div className="relative flex h-10 items-center overflow-hidden border-b border-border bg-primary text-white">
       {/* Fixed "LIVE" badge — sits above the scroll layer */}
-      <span className="relative z-10 flex shrink-0 items-center gap-1.5 bg-primary px-4 text-xs font-bold uppercase tracking-wide shadow-[4px_0_8px_0_rgba(0,0,0,0.25)]">
+      <span
+        className="relative z-10 flex shrink-0 items-center gap-1.5 bg-primary px-4 text-xs font-bold uppercase tracking-wide shadow-[4px_0_8px_0_rgba(0,0,0,0.25)]"
+        aria-label="जनशक्ति उजाला ब्रेकिंग"
+      >
         <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse-dot" aria-hidden />
-        लाइव
+        <span className="sm:hidden">ब्रेकिंग</span>
+        <span className="hidden sm:inline">जनशक्ति उजाला ब्रेकिंग</span>
       </span>
 
       {/* Scroll area fills the rest of the row */}

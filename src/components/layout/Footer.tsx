@@ -42,8 +42,17 @@ export function Footer() {
           <Link href="/contact" className="text-text hover:text-primary">संपर्क करें</Link>
         </div>
       </div>
-      <div className="container-x border-t border-border py-4 text-xs text-muted" spellCheck={false}>
-        © {new Date().getFullYear()} <span className="font-hind">जनशक्ति उजाला</span>. सर्वाधिकार सुरक्षित।
+      <div className="container-x border-t border-border py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-muted" spellCheck={false}>
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm">
+          <Link href="/hamare-bare-mein" className="hover:text-primary">हमारे बारे में</Link>
+          <Link href="/niyam-evam-sharten" className="hover:text-primary">नियम एवं शर्तें</Link>
+          <Link href="/gopniyata-niti" className="hover:text-primary">गोपनीयता नीति</Link>
+          <Link href="/cookie-niti" className="hover:text-primary">कुकी नीति</Link>
+          <Link href="/site-map" className="hover:text-primary">साइट मानचित्र</Link>
+        </div>
+        <div className="text-xs">
+          © {new Date().getFullYear()} <span className="font-hind">जनशक्ति उजाला</span>. सर्वाधिकार सुरक्षित।
+        </div>
       </div>
     </footer>
   );

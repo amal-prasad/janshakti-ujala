@@ -16,6 +16,7 @@ export const categories: Category[] = [
   { slug: "manoranjan", name: "मनोरंजन" },
   { slug: "praudyogiki", name: "प्रौद्योगिकी" },
   { slug: "swasthya", name: "स्वास्थ्य" },
+  { slug: "shiksha-career", name: "शिक्षा और करियर" },
 ];
 
 const bySlug = new Map(categories.map((c) => [c.slug, c]));

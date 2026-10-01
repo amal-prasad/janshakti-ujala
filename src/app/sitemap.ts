@@ -27,6 +27,10 @@ const STATIC_ROUTES: {
   { path: "/sampadakiya-niti", changeFrequency: "yearly", priority: 0.3 },
   { path: "/sanshodhan-niti", changeFrequency: "yearly", priority: 0.3 },
   { path: "/prakashak", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/niyam-evam-sharten", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/gopniyata-niti", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/cookie-niti", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/site-map", changeFrequency: "monthly", priority: 0.3 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
