@@ -46,7 +46,7 @@ export const siteConfig = {
   // NewsMediaOrganization schema skip empty fields rather than printing a
   // placeholder; a fake address on a news site is worse than a missing one.
   publisher: {
-    legalName: "", // e.g. "जनशक्ति उजाला मीडिया"  — registered/trading name
+    legalName: "जनशक्ति उजाला", // e.g. "जनशक्ति उजाला मीडिया"  — registered/trading name
     editorInChief: "नारायण माखीजा", // प्रधान संपादक — the named person responsible for content
     grievanceOfficer: "नारायण माखीजा", // शिकायत निवारण अधिकारी (IT Rules 2021 requires one)
     grievanceEmail: "janshaktiujala@gmail.com", // falls back to contactEmail if empty

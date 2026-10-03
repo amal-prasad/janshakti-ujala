@@ -99,27 +99,17 @@ Send me these and I will fill them in, or edit the file yourself:
 
 ---
 
-## 🔴 4. Supply two brand icon files
+## 🟢 4. Brand icon files & tab icon (Done)
 
-Create these two PNGs from your masthead and drop them in `public/`:
+Brand icons and tab icons have been generated and configured:
 
-| File | Size | Notes |
-|---|---|---|
-| `public/icon-192.png` | 192×192 px | Square. Normal icon. |
-| `public/icon-512.png` | 512×512 px | Square. Also used as the **maskable** icon — keep the logo inside the centre ~80% of the canvas (about 40 px clear on every side), because Android crops maskable icons into circles, squircles and rounded squares depending on the phone. |
-
-**Why you and not me:** these are brand assets. Squeezing a wide masthead wordmark into
-a 192 px square is a design decision with a visible wrong answer, and guessing the
-maskable safe zone would ship a logo with its edges sliced off on half of Android.
-
-**What is broken until you do:** the Android "Add to Home Screen" install prompt is
-degraded, and the publisher logo in your Google rich results / Google News listing has
-no image. Both files currently 404 in production.
-
-**Already handled, needs nothing from you:** the browser tab favicon and the iOS
-home-screen icon are now generated in code (`src/app/icon.tsx`, `src/app/apple-icon.tsx`)
-from the masthead red and a white "उ", so those two surfaces are no longer broken.
-Replace them later if you want the real logo there too.
+| File | Size | Notes | Status |
+|---|---|---|---|
+| `public/icon-192.png` | 192×192 px | Square brand icon for PWA & Android. | ✅ Shipped |
+| `public/icon-512.png` | 512×512 px | High-res & maskable safe-zone icon for Android and Google publisher card. | ✅ Shipped |
+| `src/app/icon.png` | 32×32 px | Browser tab favicon using the Rising Sun emblem. | ✅ Shipped |
+| `src/app/apple-icon.png` | 180×180 px | iOS home-screen icon using the Rising Sun emblem. | ✅ Shipped |
+| `src/app/favicon.ico` | 32×32 px | Root favicon for direct browser/crawler requests. | ✅ Shipped |
 
 ---
 
