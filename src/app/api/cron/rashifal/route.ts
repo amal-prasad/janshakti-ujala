@@ -5,6 +5,8 @@ import { fetchProkeralaRashifal } from "@/lib/api/prokerala";
 import { translateToHindi } from "@/lib/api/translate";
 
 export const dynamic = "force-dynamic";
+// Prokerala free plan: 5 requests / 60 s. 12 signs at 12.5 s apart ≈ 140 s.
+export const maxDuration = 300;
 
 function authorized(req: NextRequest): boolean {
   const secret = process.env.CRON_SECRET;
@@ -43,8 +45,7 @@ export async function GET(req: NextRequest) {
     const english: string[] = [];
     for (const z of zodiacSigns) {
       english.push(await fetchProkeralaRashifal(z.slug, today));
-      // sleep a little bit to avoid rate limits on free tier (5/sec)
-      await new Promise(r => setTimeout(r, 250));
+      await new Promise(r => setTimeout(r, 12_500)); // free tier: 5 req / 60 s
     }
     const hindi = await translateToHindi(english);
     zodiacSigns.forEach((z, i) =>
