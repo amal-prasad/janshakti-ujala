@@ -55,6 +55,8 @@ export function ArticleForm({
   // Dateline must be typed per story. It used to default to इंदौर, which stamped
   // every non-Indore report with the wrong dateline (SEO audit, issue 11).
   const [city, setCity] = useState(article?.city ?? "");
+  // Byline. Defaults to the logged-in staffer; editable for agency/guest/desk bylines.
+  const [author, setAuthor] = useState(article?.author ?? profile.display_name ?? "");
   const [state, setState] = useState(article?.state ?? "");
   const [published, setPublished] = useState(article?.is_published ?? false);
   const [isHero, setIsHero] = useState(article?.is_hero ?? false);
@@ -116,7 +118,7 @@ export function ArticleForm({
       cover_image_url: coverUrl,
       city: city.trim(),
       state: state || null,
-      author: profile.display_name,
+      author: author.trim(),
       ...(isEditor
         ? {
             is_published: published,
@@ -177,6 +179,17 @@ export function ArticleForm({
             required
             value={dek}
             onChange={(e) => setDek(e.target.value)}
+            className={inputCls}
+          />
+        </label>
+
+        <label className="flex flex-col gap-1 text-sm font-semibold">
+          लेखक
+          <input
+            required
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+            placeholder="लेखक का नाम"
             className={inputCls}
           />
         </label>

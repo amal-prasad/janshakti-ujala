@@ -405,8 +405,8 @@
     "semantic_hash": ""
   },
   "src/app/samachar/[slug]/page.tsx": {
-    "mtime": 1790077460.0461118,
-    "ast_hash": "f991510eca379f6ee6d7765c230fd399",
+    "mtime": 1791702930.9290137,
+    "ast_hash": "75c62d0597762011ee3a4a5b029ec9a4",
     "semantic_hash": ""
   },
   "src/app/samachar/page.tsx": {
@@ -445,13 +445,13 @@
     "semantic_hash": ""
   },
   "src/components/news/ArticleCard.tsx": {
-    "mtime": 1789824318.5796697,
-    "ast_hash": "0c938ee2829dea6182b75d174ff26455",
+    "mtime": 1791702930.9290137,
+    "ast_hash": "30056fe1574576a21384f6839fc10539",
     "semantic_hash": ""
   },
   "src/components/news/ArticleCardSmall.tsx": {
-    "mtime": 1789824318.6370876,
-    "ast_hash": "0741f7ccb0dc0d2c820e96ae1da18424",
+    "mtime": 1791702930.9290137,
+    "ast_hash": "e5bfb55bf601c196d4b89670fdd2149e",
     "semantic_hash": ""
   },
   "src/components/news/CategorySection.tsx": {
@@ -460,8 +460,8 @@
     "semantic_hash": "7054af73321d21aabc7d58f6f30ff61e"
   },
   "src/components/news/HeroCard.tsx": {
-    "mtime": 1789824318.690822,
-    "ast_hash": "4c984a07c93b5365da544b018a784ea8",
+    "mtime": 1791702930.9290137,
+    "ast_hash": "36d8a5beddcd96194edcbf72f4c680c3",
     "semantic_hash": ""
   },
   "src/components/news/LoadMoreArticles.tsx": {
@@ -535,9 +535,9 @@
     "semantic_hash": ""
   },
   "src/lib/utils/share.ts": {
-    "mtime": 1782302714.5000556,
-    "ast_hash": "8037940f1abdb383f318efd31f5791be",
-    "semantic_hash": "8037940f1abdb383f318efd31f5791be"
+    "mtime": 1791702891.535392,
+    "ast_hash": "48deafeb07360987f4edbc02f5f56eb3",
+    "semantic_hash": ""
   },
   "src/lib/utils/structuredData.ts": {
     "mtime": 1790765997.1675653,
@@ -1337,6 +1337,11 @@
   "src/lib/api/translate.ts": {
     "mtime": 1791699049.2163825,
     "ast_hash": "55154730b179d0674462729b81a09555",
+    "semantic_hash": ""
+  },
+  "src/components/news/ShareButtons.tsx": {
+    "mtime": 1791702904.6388469,
+    "ast_hash": "1e558c9a363ead6f66704a6de676fdb1",
     "semantic_hash": ""
   }
 }
