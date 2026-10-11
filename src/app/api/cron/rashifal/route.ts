@@ -58,6 +58,7 @@ export async function GET(req: NextRequest) {
       }),
     );
   } catch (e) {
+    console.error("rashifal cron failed:", e);
     return NextResponse.json(
       { error: `Rashifal fetch/translate failed: ${e instanceof Error ? e.message : String(e)}` },
       { status: 502 },
