@@ -1,16 +1,16 @@
 # Graph Report - Janshakti ujala  (2026-10-11)
 
 ## Corpus Check
-- 133 files · ~421,589 words
+- 133 files · ~421,628 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 562 nodes · 753 edges · 120 communities (27 shown, 93 thin omitted)
+- 562 nodes · 739 edges · 121 communities (29 shown, 92 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3665fdaa`
+- Built from commit: `d8e28905`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -128,6 +128,7 @@
 - [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_page.tsx|page.tsx]]
+- [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_.agentsskills|.agents/skills]]
 - [[_COMMUNITY_share.ts|share.ts]]
 
@@ -141,7 +142,7 @@
 7. `useNewsroomProfile()` - 9 edges
 8. `categoryName()` - 8 edges
 9. `selectCards()` - 8 edges
-10. `Article` - 8 edges
+10. `SEO Overhaul — progress log` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `CategorySection()` --calls--> `categoryName()`  [EXTRACTED]
@@ -158,7 +159,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (120 total, 93 thin omitted)
+## Communities (121 total, 92 thin omitted)
 
 ### Community 0 - ".agents/skills"
 Cohesion: 0.11
@@ -173,12 +174,12 @@ Cohesion: 0.06
 Nodes (32): dependencies, headroom-ai, mhah-panchang, next, react, react-dom, react-markdown, resend (+24 more)
 
 ### Community 84 - ".agents/skills"
-Cohesion: 0.09
-Nodes (38): GET(), POST(), generateMetadata(), Params, StatePage(), metadata, SamacharPage(), metadata (+30 more)
+Cohesion: 0.08
+Nodes (40): GET(), authorized(), GET(), POST(), POST(), POST(), metadata, SamacharPage() (+32 more)
 
 ### Community 85 - ".agents/skills"
-Cohesion: 0.29
-Nodes (4): metadata, bySlug, StateInfo, states
+Cohesion: 0.21
+Nodes (8): metadata, generateMetadata(), Params, StatePage(), bySlug, getState(), StateInfo, states
 
 ### Community 86 - ".agents/skills"
 Cohesion: 0.14
@@ -193,8 +194,8 @@ Cohesion: 0.29
 Nodes (6): client, dataDir, migrationsDir, pg, projectRoot, seedFile
 
 ### Community 90 - ".agents/skills"
-Cohesion: 0.17
-Nodes (14): EpaperEditionPage(), generateMetadata(), EpaperPage(), metadata, EpaperStrip(), Topbar(), getEpaperEdition(), getEpaperEditions() (+6 more)
+Cohesion: 0.18
+Nodes (11): EpaperEditionPage(), generateMetadata(), EpaperPage(), metadata, EpaperStrip(), Topbar(), getEpaperEdition(), getEpaperEditions() (+3 more)
 
 ### Community 92 - ".agents/skills"
 Cohesion: 0.50
@@ -205,20 +206,20 @@ Cohesion: 0.27
 Nodes (8): GalleryPage(), metadata, GalleryDetailPage(), generateMetadata(), Params, getGalleries(), getGalleryBySlug(), Gallery
 
 ### Community 98 - ".agents/skills"
-Cohesion: 0.13
-Nodes (15): metadata, metadata, RashifalPage(), ArticleCardSmall(), NewsletterForm(), Sidebar(), getAllRashifalToday(), getRashifalTeaser() (+7 more)
+Cohesion: 0.11
+Nodes (19): metadata, metadata, RashifalPage(), AdSlot(), ArticleCardSmall(), NewsletterForm(), Sidebar(), AdSlotName (+11 more)
 
 ### Community 99 - ".agents/skills"
-Cohesion: 0.14
-Nodes (13): authorized(), GET(), POST(), POST(), AdSlot(), AdSlotName, getAd(), createAdminClient() (+5 more)
+Cohesion: 0.40
+Nodes (3): config, GONE_ARTICLES, OPEN_PREFIXES
 
 ### Community 102 - "holidays.ts"
 Cohesion: 0.18
 Nodes (11): HolidaysClientWidget(), TYPE_LABEL, HolidaysWidget(), CalendarificHoliday, FALLBACK_HOLIDAYS, fallbackUpcoming(), fetchYear(), getUpcomingHolidays() (+3 more)
 
 ### Community 103 - "middleware.ts"
-Cohesion: 0.08
-Nodes (26): EditArticlePage(), NewsroomEpaperPage(), NewArticlePage(), Filter, NewsroomListPage(), Row, metadata, PollsPage() (+18 more)
+Cohesion: 0.10
+Nodes (23): EditArticlePage(), NewsroomEpaperPage(), NewArticlePage(), Filter, NewsroomListPage(), Row, metadata, PollsPage() (+15 more)
 
 ### Community 104 - "prokerala.ts"
 Cohesion: 0.67
@@ -227,6 +228,10 @@ Nodes (3): API_SIGN, fetchProkeralaRashifal(), getProkeralaToken()
 ### Community 106 - "route.ts"
 Cohesion: 0.43
 Nodes (4): escapeXml(), GET(), GET(), getRecentPublishedArticles()
+
+### Community 107 - "opengraph-image.tsx"
+Cohesion: 0.21
+Nodes (3): metadata, metadata, SiteConfig
 
 ### Community 108 - "page.tsx"
 Cohesion: 0.40
@@ -240,6 +245,10 @@ Nodes (3): Image(), loadDevanagariFonts(), size
 Cohesion: 0.07
 Nodes (24): halant, metadata, RootLayout(), viewport, Image(), loadDevanagariFonts(), size, MAIN_PAGES (+16 more)
 
+### Community 115 - "page.tsx"
+Cohesion: 0.29
+Nodes (4): FONT_LABEL, FONT_ORDER, FontSize, Markdown()
+
 ### Community 119 - ".agents/skills"
 Cohesion: 0.14
 Nodes (15): PanchangStrip(), formatIstTime(), getTodayPanchang(), istToday(), KARANA_HI, MASA_HI, MhahPanchang, MhahPanchangInstance (+7 more)
@@ -251,17 +260,17 @@ Nodes (5): Params, ICONS, NAMES, ShareButtons(), shareLinks()
 ## Knowledge Gaps
 - **189 isolated node(s):** `Params`, `ICONS`, `NAMES`, `API_SIGN`, `🔴 1. Set `NEXT_PUBLIC_SITE_URL` in Vercel — 2 minutes` (+184 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **93 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **92 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `SiteConfig` connect `opengraph-image.tsx` to `.agents/skills`, `page.tsx`, `route.ts`, `page.tsx`, `page.tsx`, `page.tsx`, `opengraph-image.tsx`, `.agents/skills`, `page.tsx`, `page.tsx`, `page.tsx`, `.agents/skills`, `.agents/skills`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
-- **Why does `createServerClient()` connect `.agents/skills` to `.agents/skills`, `.agents/skills`, `middleware.ts`, `route.ts`, `.agents/skills`, `.agents/skills`, `page.tsx`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `Article` connect `middleware.ts` to `.agents/skills`, `page.tsx`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Why does `createServerClient()` connect `.agents/skills` to `.agents/skills`, `middleware.ts`, `route.ts`, `.agents/skills`, `.agents/skills`, `page.tsx`?**
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `Article` connect `middleware.ts` to `page.tsx`, `.agents/skills`, `page.tsx`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `Params`, `ICONS`, `NAMES` to the rest of the system?**
   _189 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.agents/skills` be split into smaller, more focused modules?**

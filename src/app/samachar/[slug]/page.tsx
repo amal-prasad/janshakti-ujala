@@ -107,16 +107,17 @@ export default async function ArticlePage({ params }: Params) {
         </div>
 
         {article.cover_image_url && (
-          <div className="relative my-6 aspect-[16/9] w-full overflow-hidden bg-surface">
-            <Image
-              src={article.cover_image_url}
-              alt={article.title}
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 768px"
-              className="object-cover"
-            />
-          </div>
+          // Natural aspect ratio, never cropped. Dimensions aren't stored, so the
+          // image sizes itself on load (small CLS cost accepted for no cropping).
+          <Image
+            src={article.cover_image_url}
+            alt={article.title}
+            width={0}
+            height={0}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="my-6 h-auto w-full bg-surface"
+          />
         )}
 
         <div className="mt-4">

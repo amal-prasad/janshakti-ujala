@@ -930,8 +930,8 @@
     "semantic_hash": "4f86c5a1a4705f66b5933185f6ed084f"
   },
   "src/components/newsroom/ArticleForm.tsx": {
-    "mtime": 1790765939.0340865,
-    "ast_hash": "1db3ceab615255ba7ba959e22d5835cc",
+    "mtime": 1791703192.9246287,
+    "ast_hash": "25bef78d7e8a97e01083500dff3bab79",
     "semantic_hash": ""
   },
   "src/components/newsroom/useNewsroomProfile.ts": {

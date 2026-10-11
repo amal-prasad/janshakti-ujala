@@ -4,14 +4,44 @@
   "graph": {},
   "nodes": [
     {
+      "label": "ArticleForm.tsx",
+      "file_type": "code",
+      "source_file": "src/components/newsroom/ArticleForm.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_newsroom_articleform",
+      "community": 103,
+      "norm_label": "articleform.tsx"
+    },
+    {
+      "label": "compressImage()",
+      "file_type": "code",
+      "source_file": "src/components/newsroom/ArticleForm.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_components_newsroom_articleform_compressimage",
+      "community": 103,
+      "norm_label": "compressimage()"
+    },
+    {
+      "label": "ArticleForm()",
+      "file_type": "code",
+      "source_file": "src/components/newsroom/ArticleForm.tsx",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "src_components_newsroom_articleform_articleform",
+      "community": 103,
+      "norm_label": "articleform()"
+    },
+    {
       "label": "page.tsx",
       "file_type": "code",
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_samachar_slug_page",
       "community": 182,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "src_app_samachar_slug_page"
     },
     {
       "label": "Params",
@@ -19,9 +49,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "src_app_samachar_slug_page_params",
       "community": 182,
-      "norm_label": "params"
+      "norm_label": "params",
+      "id": "src_app_samachar_slug_page_params"
     },
     {
       "label": "generateMetadata()",
@@ -29,9 +59,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "src_app_samachar_slug_page_generatemetadata",
       "community": 182,
-      "norm_label": "generatemetadata()"
+      "norm_label": "generatemetadata()",
+      "id": "src_app_samachar_slug_page_generatemetadata"
     },
     {
       "label": "ArticlePage()",
@@ -39,9 +69,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L51",
       "_origin": "ast",
-      "id": "src_app_samachar_slug_page_articlepage",
       "community": 182,
-      "norm_label": "articlepage()"
+      "norm_label": "articlepage()",
+      "id": "src_app_samachar_slug_page_articlepage"
     },
     {
       "label": "ArticleCard.tsx",
@@ -49,9 +79,9 @@
       "source_file": "src/components/news/ArticleCard.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_news_articlecard",
       "community": 84,
-      "norm_label": "articlecard.tsx"
+      "norm_label": "articlecard.tsx",
+      "id": "src_components_news_articlecard"
     },
     {
       "label": "ArticleCard()",
@@ -59,9 +89,9 @@
       "source_file": "src/components/news/ArticleCard.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "src_components_news_articlecard_articlecard",
       "community": 84,
-      "norm_label": "articlecard()"
+      "norm_label": "articlecard()",
+      "id": "src_components_news_articlecard_articlecard"
     },
     {
       "label": "ArticleCardSmall.tsx",
@@ -69,9 +99,9 @@
       "source_file": "src/components/news/ArticleCardSmall.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_news_articlecardsmall",
       "community": 98,
-      "norm_label": "articlecardsmall.tsx"
+      "norm_label": "articlecardsmall.tsx",
+      "id": "src_components_news_articlecardsmall"
     },
     {
       "label": "ArticleCardSmall()",
@@ -79,9 +109,9 @@
       "source_file": "src/components/news/ArticleCardSmall.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_components_news_articlecardsmall_articlecardsmall",
       "community": 98,
-      "norm_label": "articlecardsmall()"
+      "norm_label": "articlecardsmall()",
+      "id": "src_components_news_articlecardsmall_articlecardsmall"
     },
     {
       "label": "HeroCard.tsx",
@@ -89,9 +119,9 @@
       "source_file": "src/components/news/HeroCard.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_news_herocard",
       "community": 117,
-      "norm_label": "herocard.tsx"
+      "norm_label": "herocard.tsx",
+      "id": "src_components_news_herocard"
     },
     {
       "label": "HeroCard()",
@@ -99,9 +129,9 @@
       "source_file": "src/components/news/HeroCard.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "src_components_news_herocard_herocard",
       "community": 117,
-      "norm_label": "herocard()"
+      "norm_label": "herocard()",
+      "id": "src_components_news_herocard_herocard"
     },
     {
       "label": "ShareButtons.tsx",
@@ -109,9 +139,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_news_sharebuttons",
       "community": 182,
-      "norm_label": "sharebuttons.tsx"
+      "norm_label": "sharebuttons.tsx",
+      "id": "src_components_news_sharebuttons"
     },
     {
       "label": "ICONS",
@@ -119,9 +149,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "src_components_news_sharebuttons_icons",
       "community": 182,
-      "norm_label": "icons"
+      "norm_label": "icons",
+      "id": "src_components_news_sharebuttons_icons"
     },
     {
       "label": "NAMES",
@@ -129,9 +159,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "src_components_news_sharebuttons_names",
       "community": 182,
-      "norm_label": "names"
+      "norm_label": "names",
+      "id": "src_components_news_sharebuttons_names"
     },
     {
       "label": "Glyph()",
@@ -139,9 +169,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "src_components_news_sharebuttons_glyph",
       "community": 182,
-      "norm_label": "glyph()"
+      "norm_label": "glyph()",
+      "id": "src_components_news_sharebuttons_glyph"
     },
     {
       "label": "ShareButtons()",
@@ -149,9 +179,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "src_components_news_sharebuttons_sharebuttons",
       "community": 182,
-      "norm_label": "sharebuttons()"
+      "norm_label": "sharebuttons()",
+      "id": "src_components_news_sharebuttons_sharebuttons"
     },
     {
       "label": "share.ts",
@@ -159,9 +189,9 @@
       "source_file": "src/lib/utils/share.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_utils_share",
       "community": 182,
-      "norm_label": "share.ts"
+      "norm_label": "share.ts",
+      "id": "src_lib_utils_share"
     },
     {
       "label": "shareLinks()",
@@ -169,9 +199,9 @@
       "source_file": "src/lib/utils/share.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "src_lib_utils_share_sharelinks",
       "community": 182,
-      "norm_label": "sharelinks()"
+      "norm_label": "sharelinks()",
+      "id": "src_lib_utils_share_sharelinks"
     },
     {
       "label": "vercel.json",
@@ -189,7 +219,7 @@
       "source_file": "src/app/api/cron/rashifal/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "route.ts",
       "id": "src_app_api_cron_rashifal_route"
     },
@@ -199,7 +229,7 @@
       "source_file": "src/app/api/cron/rashifal/route.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "authorized()",
       "id": "src_app_api_cron_rashifal_route_authorized"
     },
@@ -209,7 +239,7 @@
       "source_file": "src/app/api/cron/rashifal/route.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "get()",
       "id": "src_app_api_cron_rashifal_route_get"
     },
@@ -419,7 +449,7 @@
       "source_file": "src/lib/siteConfig.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 88,
+      "community": 107,
       "norm_label": "siteconfig.ts",
       "id": "src_lib_siteconfig"
     },
@@ -429,7 +459,7 @@
       "source_file": "src/lib/siteConfig.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 88,
+      "community": 107,
       "norm_label": "resolvesiteurl()",
       "id": "src_lib_siteconfig_resolvesiteurl"
     },
@@ -479,7 +509,7 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 115,
+      "community": 107,
       "norm_label": "page.tsx",
       "id": "src_app_gopniyata_niti_page"
     },
@@ -489,7 +519,7 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 115,
+      "community": 107,
       "norm_label": "metadata",
       "id": "src_app_gopniyata_niti_page_metadata"
     },
@@ -499,7 +529,7 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 115,
+      "community": 107,
       "norm_label": "privacypolicypage()",
       "id": "src_app_gopniyata_niti_page_privacypolicypage"
     },
@@ -1469,7 +1499,7 @@
       "source_file": "src/app/api/newsletter/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "route.ts",
       "id": "src_app_api_newsletter_route"
     },
@@ -1479,7 +1509,7 @@
       "source_file": "src/app/api/newsletter/route.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "post()",
       "id": "src_app_api_newsletter_route_post"
     },
@@ -1489,7 +1519,7 @@
       "source_file": "src/app/api/polls/vote/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "route.ts",
       "id": "src_app_api_polls_vote_route"
     },
@@ -1499,7 +1529,7 @@
       "source_file": "src/app/api/polls/vote/route.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "post()",
       "id": "src_app_api_polls_vote_route_post"
     },
@@ -1969,7 +1999,7 @@
       "source_file": "src/app/nirmanadhin/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 88,
+      "community": 118,
       "norm_label": "page.tsx",
       "id": "src_app_nirmanadhin_page"
     },
@@ -1979,7 +2009,7 @@
       "source_file": "src/app/nirmanadhin/page.tsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 88,
+      "community": 118,
       "norm_label": "metadata",
       "id": "src_app_nirmanadhin_page_metadata"
     },
@@ -1989,7 +2019,7 @@
       "source_file": "src/app/nirmanadhin/page.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 88,
+      "community": 118,
       "norm_label": "underconstructionpage()",
       "id": "src_app_nirmanadhin_page_underconstructionpage"
     },
@@ -2119,7 +2149,7 @@
       "source_file": "src/app/rajya/[slug]/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "page.tsx",
       "id": "src_app_rajya_slug_page"
     },
@@ -2129,7 +2159,7 @@
       "source_file": "src/app/rajya/[slug]/page.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "params",
       "id": "src_app_rajya_slug_page_params"
     },
@@ -2139,7 +2169,7 @@
       "source_file": "src/app/rajya/[slug]/page.tsx",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "generatemetadata()",
       "id": "src_app_rajya_slug_page_generatemetadata"
     },
@@ -2149,7 +2179,7 @@
       "source_file": "src/app/rajya/[slug]/page.tsx",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "statepage()",
       "id": "src_app_rajya_slug_page_statepage"
     },
@@ -2459,7 +2489,7 @@
       "source_file": "src/components/AdSlot.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 99,
+      "community": 98,
       "norm_label": "adslot.tsx",
       "id": "src_components_adslot"
     },
@@ -2469,7 +2499,7 @@
       "source_file": "src/components/AdSlot.tsx",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 99,
+      "community": 98,
       "norm_label": "adslot()",
       "id": "src_components_adslot_adslot"
     },
@@ -2599,7 +2629,7 @@
       "source_file": "src/components/news/ArticleBody.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "articlebody.tsx",
       "id": "src_components_news_articlebody"
     },
@@ -2609,7 +2639,7 @@
       "source_file": "src/components/news/ArticleBody.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "fontsize",
       "id": "src_components_news_articlebody_fontsize"
     },
@@ -2619,7 +2649,7 @@
       "source_file": "src/components/news/ArticleBody.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "font_order",
       "id": "src_components_news_articlebody_font_order"
     },
@@ -2629,7 +2659,7 @@
       "source_file": "src/components/news/ArticleBody.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "font_label",
       "id": "src_components_news_articlebody_font_label"
     },
@@ -2639,7 +2669,7 @@
       "source_file": "src/components/news/ArticleBody.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "readbookmarks()",
       "id": "src_components_news_articlebody_readbookmarks"
     },
@@ -2649,7 +2679,7 @@
       "source_file": "src/components/news/ArticleBody.tsx",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "articlebody()",
       "id": "src_components_news_articlebody_articlebody"
     },
@@ -2749,7 +2779,7 @@
       "source_file": "src/components/news/Markdown.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "markdown.tsx",
       "id": "src_components_news_markdown"
     },
@@ -2759,7 +2789,7 @@
       "source_file": "src/components/news/Markdown.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 103,
+      "community": 115,
       "norm_label": "markdown()",
       "id": "src_components_news_markdown_markdown"
     },
@@ -2874,36 +2904,6 @@
       "id": "src_components_news_sidebar_sidebar"
     },
     {
-      "label": "ArticleForm.tsx",
-      "file_type": "code",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 103,
-      "norm_label": "articleform.tsx",
-      "id": "src_components_newsroom_articleform"
-    },
-    {
-      "label": "compressImage()",
-      "file_type": "code",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L18",
-      "_origin": "ast",
-      "community": 103,
-      "norm_label": "compressimage()",
-      "id": "src_components_newsroom_articleform_compressimage"
-    },
-    {
-      "label": "ArticleForm()",
-      "file_type": "code",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L37",
-      "_origin": "ast",
-      "community": 103,
-      "norm_label": "articleform()",
-      "id": "src_components_newsroom_articleform_articleform"
-    },
-    {
       "label": "useNewsroomProfile.ts",
       "file_type": "code",
       "source_file": "src/components/newsroom/useNewsroomProfile.ts",
@@ -2959,7 +2959,7 @@
       "source_file": "src/lib/api/ads.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 99,
+      "community": 98,
       "norm_label": "ads.ts",
       "id": "src_lib_api_ads"
     },
@@ -2969,7 +2969,7 @@
       "source_file": "src/lib/api/ads.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 99,
+      "community": 98,
       "norm_label": "adslotname",
       "id": "src_lib_api_ads_adslotname"
     },
@@ -2979,7 +2979,7 @@
       "source_file": "src/lib/api/ads.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 99,
+      "community": 98,
       "norm_label": "getad()",
       "id": "src_lib_api_ads_getad"
     },
@@ -3649,7 +3649,7 @@
       "source_file": "src/lib/states.ts",
       "source_location": "L321",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "getstate()",
       "id": "src_lib_states_getstate"
     },
@@ -3699,7 +3699,7 @@
       "source_file": "src/lib/supabase/server.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "server.ts",
       "id": "src_lib_supabase_server"
     },
@@ -3709,7 +3709,7 @@
       "source_file": "src/lib/supabase/server.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "getenv()",
       "id": "src_lib_supabase_server_getenv"
     },
@@ -3729,7 +3729,7 @@
       "source_file": "src/lib/supabase/server.ts",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 99,
+      "community": 84,
       "norm_label": "createadminclient()",
       "id": "src_lib_supabase_server_createadminclient"
     },
@@ -3779,7 +3779,7 @@
       "source_file": "src/lib/supabase/types.ts",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "epaperedition",
       "id": "src_lib_supabase_types_epaperedition"
     },
@@ -3849,7 +3849,7 @@
       "source_file": "src/lib/supabase/types.ts",
       "source_location": "L105",
       "_origin": "ast",
-      "community": 99,
+      "community": 98,
       "norm_label": "ad",
       "id": "src_lib_supabase_types_ad"
     },
@@ -5629,14 +5629,78 @@
   ],
   "links": [
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/newsroom/edit/[id]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_newsroom_edit_id_page",
+      "target": "src_components_newsroom_articleform"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/newsroom/new/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_newsroom_new_page",
+      "target": "src_components_newsroom_articleform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/newsroom/ArticleForm.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "src_components_newsroom_articleform",
+      "target": "src_components_newsroom_articleform_articleform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/newsroom/ArticleForm.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_components_newsroom_articleform",
+      "target": "src_components_newsroom_articleform_compressimage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/newsroom/edit/[id]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_newsroom_edit_id_page",
+      "target": "src_components_newsroom_articleform_articleform"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/newsroom/new/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_newsroom_new_page",
+      "target": "src_components_newsroom_articleform_articleform"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_samachar_slug_page",
-      "target": "src_app_samachar_slug_page_articlepage",
-      "confidence_score": 1.0
+      "target": "src_app_samachar_slug_page_articlepage"
     },
     {
       "relation": "contains",
@@ -5644,9 +5708,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_samachar_slug_page",
-      "target": "src_app_samachar_slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "src_app_samachar_slug_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -5654,9 +5718,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_samachar_slug_page",
-      "target": "src_app_samachar_slug_page_params",
-      "confidence_score": 1.0
+      "target": "src_app_samachar_slug_page_params"
     },
     {
       "relation": "imports_from",
@@ -5665,9 +5729,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_samachar_slug_page",
-      "target": "src_components_news_sharebuttons",
-      "confidence_score": 1.0
+      "target": "src_components_news_sharebuttons"
     },
     {
       "relation": "imports",
@@ -5676,9 +5740,9 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_samachar_slug_page",
-      "target": "src_components_news_sharebuttons_sharebuttons",
-      "confidence_score": 1.0
+      "target": "src_components_news_sharebuttons_sharebuttons"
     },
     {
       "relation": "imports_from",
@@ -5697,9 +5761,9 @@
       "source_file": "src/components/news/ArticleCard.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_articlecard",
-      "target": "src_components_news_articlecard_articlecard",
-      "confidence_score": 1.0
+      "target": "src_components_news_articlecard_articlecard"
     },
     {
       "relation": "imports_from",
@@ -5784,9 +5848,9 @@
       "source_file": "src/components/news/ArticleCardSmall.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_articlecardsmall",
-      "target": "src_components_news_articlecardsmall_articlecardsmall",
-      "confidence_score": 1.0
+      "target": "src_components_news_articlecardsmall_articlecardsmall"
     },
     {
       "relation": "imports_from",
@@ -5816,9 +5880,9 @@
       "source_file": "src/components/news/HeroCard.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_herocard",
-      "target": "src_components_news_herocard_herocard",
-      "confidence_score": 1.0
+      "target": "src_components_news_herocard_herocard"
     },
     {
       "relation": "contains",
@@ -5826,9 +5890,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_sharebuttons",
-      "target": "src_components_news_sharebuttons_glyph",
-      "confidence_score": 1.0
+      "target": "src_components_news_sharebuttons_glyph"
     },
     {
       "relation": "contains",
@@ -5836,9 +5900,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_sharebuttons",
-      "target": "src_components_news_sharebuttons_icons",
-      "confidence_score": 1.0
+      "target": "src_components_news_sharebuttons_icons"
     },
     {
       "relation": "contains",
@@ -5846,9 +5910,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_sharebuttons",
-      "target": "src_components_news_sharebuttons_names",
-      "confidence_score": 1.0
+      "target": "src_components_news_sharebuttons_names"
     },
     {
       "relation": "contains",
@@ -5856,9 +5920,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_sharebuttons",
-      "target": "src_components_news_sharebuttons_sharebuttons",
-      "confidence_score": 1.0
+      "target": "src_components_news_sharebuttons_sharebuttons"
     },
     {
       "relation": "imports_from",
@@ -5867,9 +5931,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_sharebuttons",
-      "target": "src_lib_utils_share",
-      "confidence_score": 1.0
+      "target": "src_lib_utils_share"
     },
     {
       "relation": "imports",
@@ -5878,9 +5942,9 @@
       "source_file": "src/components/news/ShareButtons.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_news_sharebuttons",
-      "target": "src_lib_utils_share_sharelinks",
-      "confidence_score": 1.0
+      "target": "src_lib_utils_share_sharelinks"
     },
     {
       "relation": "calls",
@@ -5899,9 +5963,9 @@
       "source_file": "src/lib/utils/share.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_lib_utils_share",
-      "target": "src_lib_utils_share_sharelinks",
-      "confidence_score": 1.0
+      "target": "src_lib_utils_share_sharelinks"
     },
     {
       "relation": "contains",
@@ -7031,17 +7095,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_categories"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/ui/Badge.tsx",
       "source_location": "L2",
       "weight": 1.0,
@@ -7119,17 +7172,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_layout_navbar",
-      "target": "src_lib_categories_categories"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
       "target": "src_lib_categories_categories"
     },
     {
@@ -8672,28 +8714,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/app/newsroom/edit/[id]/page.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_newsroom_edit_id_page",
-      "target": "src_components_newsroom_articleform"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/newsroom/edit/[id]/page.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_newsroom_edit_id_page",
-      "target": "src_components_newsroom_articleform_articleform"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/newsroom/edit/[id]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -8916,28 +8936,6 @@
       "confidence_score": 1.0,
       "source": "src_app_newsroom_new_page",
       "target": "src_app_newsroom_new_page_newarticlepage"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/newsroom/new/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_newsroom_new_page",
-      "target": "src_components_newsroom_articleform"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/newsroom/new/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_newsroom_new_page",
-      "target": "src_components_newsroom_articleform_articleform"
     },
     {
       "relation": "imports_from",
@@ -10446,28 +10444,6 @@
       "target": "src_components_news_markdown_markdown"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_components_news_markdown"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_components_news_markdown_markdown"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/news/NewsletterForm.tsx",
@@ -10779,136 +10755,6 @@
       "weight": 1.0,
       "source": "src_components_news_sidebar_sidebar",
       "target": "src_lib_zodiacsigns_getzodiac"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_components_newsroom_articleform_articleform"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_components_newsroom_articleform_compressimage"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_states"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_states_states"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_supabase_newsroom"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_supabase_newsroom_getnewsroomclient"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_supabase_types"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_supabase_types_article"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_supabase_types_profile"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_utils_format"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_utils_format_isvalidslug"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/newsroom/ArticleForm.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_newsroom_articleform",
-      "target": "src_lib_utils_format_slugify"
     },
     {
       "relation": "contains",
@@ -13537,5 +13383,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3665fdaaa309354ae1a33819baf1ceac9dee3a9c"
+  "built_at_commit": "d8e2890540141bd2554a3d5cfa5f37162556b996"
 }

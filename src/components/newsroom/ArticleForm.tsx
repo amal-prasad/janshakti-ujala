@@ -101,8 +101,8 @@ export function ArticleForm({
       setStatus("error");
       return;
     }
-    if (dek.trim().length < 40 || dek.trim().length > 200) {
-      setErrorMsg("डेक 40 से 200 अक्षरों के बीच होना चाहिए।");
+    if (dek.trim().length < 10 || dek.trim().length > 200) {
+      setErrorMsg("डेक 10 से 200 अक्षरों के बीच होना चाहिए।");
       setStatus("error");
       return;
     }

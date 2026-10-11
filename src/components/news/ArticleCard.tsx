@@ -17,7 +17,7 @@ export function ArticleCard({ article }: { article: ArticleCardData }) {
               alt={article.title}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover"
+              className="object-contain"
             />
           )}
           {article.is_breaking && (

@@ -2,11 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Halant } from "next/font/google";
 import "./globals.css";
 import { siteConfig, MAINTENANCE } from "@/lib/siteConfig";
-import { getLiveNews } from "@/lib/api/liveNews";
 import { Topbar } from "@/components/layout/Topbar";
 import { Header } from "@/components/layout/Header";
 import { Navbar } from "@/components/layout/Navbar";
-import { BreakingNewsTicker } from "@/components/layout/BreakingNewsTicker";
 import { Footer } from "@/components/layout/Footer";
 import { AdSlot } from "@/components/AdSlot";
 import { RefreshOnRestore } from "@/components/RefreshOnRestore";
@@ -72,7 +70,6 @@ export default async function RootLayout({
   // app out of static rendering, which is why every route was served no-store with a
   // ~2.8s TTFB (SEO audit, issue F36). With the gate off, headers() is never reached.
   const maintenance = MAINTENANCE && headers().get("x-maintenance") === "1";
-  const liveNews = maintenance ? [] : await getLiveNews();
 
   return (
     <html lang="hi" className={`${halant.variable}`}>
@@ -88,7 +85,6 @@ export default async function RootLayout({
             <Topbar />
             <Header />
             <Navbar />
-            <BreakingNewsTicker items={liveNews} />
             <main>{children}</main>
             <div className="container-x py-6">
               <AdSlot slot="footer" />
