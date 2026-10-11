@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ArticleCard as ArticleCardData } from "@/lib/api/articles";
-import { readingTimeLabel } from "@/lib/utils/format";
+import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 
 // Compact row: small thumbnail + headline + reading time. Used in the sidebar
 // trending rail and the text-heavy headline rows in the main column.
@@ -37,7 +37,11 @@ export function ArticleCardSmall({
           </Link>
         </h3>
         <span className="mt-1 block text-xs text-muted">
-          <span className="font-semibold text-text">{article.city}</span>
+          <span className="font-semibold text-text">{article.author}</span>
+          {" • "}
+          {article.city}
+          {" • "}
+          {formatDate(article.published_at)}
           {" • "}
           {readingTimeLabel(article.reading_minutes)}
         </span>

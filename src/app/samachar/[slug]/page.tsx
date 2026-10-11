@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import { getArticleBySlug, DEFAULT_CITY } from "@/lib/api/articles";
 import { RelatedArticles } from "@/components/news/RelatedArticles";
 import { ArticleBody } from "@/components/news/ArticleBody";
+import { ShareButtons } from "@/components/news/ShareButtons";
 import { CategoryBadge } from "@/components/ui/Badge";
 import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 import {
@@ -90,9 +91,13 @@ export default async function ArticlePage({ params }: Params) {
           <p className="mt-3 text-lg text-muted">{article.dek}</p>
         )}
         <div className="mt-4 flex flex-wrap items-center gap-2 border-y border-border py-3 text-sm text-muted">
-          <span className="font-semibold text-text">{article.city ?? DEFAULT_CITY}</span>
+          <span>
+            लेखक: <span className="font-semibold text-text">{article.author}</span>
+          </span>
           <span aria-hidden>•</span>
-          <span>{article.author}</span>
+          <span>
+            स्थान: <span className="font-semibold text-text">{article.city ?? DEFAULT_CITY}</span>
+          </span>
           <span aria-hidden>•</span>
           <time dateTime={article.published_at}>
             {formatDate(article.published_at)}
@@ -114,7 +119,15 @@ export default async function ArticlePage({ params }: Params) {
           </div>
         )}
 
+        <div className="mt-4">
+          <ShareButtons url={`${siteConfig.url}/samachar/${article.slug}`} title={article.title} />
+        </div>
+
         <ArticleBody article={article} />
+
+        <div className="mt-8 border-t border-border pt-4">
+          <ShareButtons url={`${siteConfig.url}/samachar/${article.slug}`} title={article.title} />
+        </div>
 
         {article.tags.length > 0 && (
           <div className="mt-8 flex flex-wrap gap-2">

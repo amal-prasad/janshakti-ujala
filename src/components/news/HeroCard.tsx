@@ -40,8 +40,10 @@ export function HeroCard({ article }: { article: ArticleCardData }) {
         {article.dek && (
           <p className="mt-3 text-balance text-lg text-muted">{article.dek}</p>
         )}
-        <div className="mt-3 flex items-center gap-2 text-sm text-muted">
-          <span className="font-semibold text-text">{article.city}</span>
+        <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
+          <span className="font-semibold text-text">{article.author}</span>
+          <span aria-hidden>•</span>
+          <span>{article.city}</span>
           <span aria-hidden>•</span>
           <time dateTime={article.published_at}>{formatDate(article.published_at)}</time>
           <span aria-hidden>•</span>
