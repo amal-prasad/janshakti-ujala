@@ -4,364 +4,244 @@
   "graph": {},
   "nodes": [
     {
-      "label": "page.tsx",
+      "label": "vercel.json",
       "file_type": "code",
-      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_file": "vercel.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_cookie_niti_page",
-      "community": 108,
-      "norm_label": "page.tsx"
+      "id": "vercel",
+      "community": 4,
+      "norm_label": "vercel.json"
     },
     {
-      "label": "metadata",
+      "label": "route.ts",
       "file_type": "code",
-      "source_file": "src/app/cookie-niti/page.tsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_app_cookie_niti_page_metadata",
-      "community": 108,
-      "norm_label": "metadata"
-    },
-    {
-      "label": "CookiePolicyPage()",
-      "file_type": "code",
-      "source_file": "src/app/cookie-niti/page.tsx",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_app_cookie_niti_page_cookiepolicypage",
-      "community": 108,
-      "norm_label": "cookiepolicypage()"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/gopniyata-niti/page.tsx",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_gopniyata_niti_page",
-      "community": 109,
-      "norm_label": "page.tsx"
+      "community": 99,
+      "norm_label": "route.ts",
+      "id": "src_app_api_cron_rashifal_route"
     },
     {
-      "label": "metadata",
+      "label": "authorized()",
       "file_type": "code",
-      "source_file": "src/app/gopniyata-niti/page.tsx",
-      "source_location": "L7",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "src_app_gopniyata_niti_page_metadata",
-      "community": 109,
-      "norm_label": "metadata"
+      "community": 99,
+      "norm_label": "authorized()",
+      "id": "src_app_api_cron_rashifal_route_authorized"
     },
     {
-      "label": "PrivacyPolicyPage()",
+      "label": "GET()",
       "file_type": "code",
-      "source_file": "src/app/gopniyata-niti/page.tsx",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_app_gopniyata_niti_page_privacypolicypage",
-      "community": 109,
-      "norm_label": "privacypolicypage()"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/hamare-bare-mein/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_hamare_bare_mein_page",
-      "community": 105,
-      "norm_label": "page.tsx"
-    },
-    {
-      "label": "metadata",
-      "file_type": "code",
-      "source_file": "src/app/hamare-bare-mein/page.tsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_app_hamare_bare_mein_page_metadata",
-      "community": 105,
-      "norm_label": "metadata"
-    },
-    {
-      "label": "siteHost",
-      "file_type": "code",
-      "source_file": "src/app/hamare-bare-mein/page.tsx",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "src_app_hamare_bare_mein_page_sitehost",
-      "community": 105,
-      "norm_label": "sitehost"
-    },
-    {
-      "label": "AboutPage()",
-      "file_type": "code",
-      "source_file": "src/app/hamare-bare-mein/page.tsx",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "src_app_hamare_bare_mein_page_aboutpage",
-      "community": 105,
-      "norm_label": "aboutpage()"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/niyam-evam-sharten/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_niyam_evam_sharten_page",
-      "community": 106,
-      "norm_label": "page.tsx"
-    },
-    {
-      "label": "metadata",
-      "file_type": "code",
-      "source_file": "src/app/niyam-evam-sharten/page.tsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_app_niyam_evam_sharten_page_metadata",
-      "community": 106,
-      "norm_label": "metadata"
-    },
-    {
-      "label": "siteHost",
-      "file_type": "code",
-      "source_file": "src/app/niyam-evam-sharten/page.tsx",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_app_niyam_evam_sharten_page_sitehost",
-      "community": 106,
-      "norm_label": "sitehost"
-    },
-    {
-      "label": "TermsPage()",
-      "file_type": "code",
-      "source_file": "src/app/niyam-evam-sharten/page.tsx",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_app_niyam_evam_sharten_page_termspage",
-      "community": 106,
-      "norm_label": "termspage()"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_page",
-      "community": 112,
-      "norm_label": "page.tsx"
-    },
-    {
-      "label": "Home()",
-      "file_type": "code",
-      "source_file": "src/app/page.tsx",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "src_app_page_home",
-      "community": 112,
-      "norm_label": "home()"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_site_map_page",
-      "community": 113,
-      "norm_label": "page.tsx"
-    },
-    {
-      "label": "metadata",
-      "file_type": "code",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_app_site_map_page_metadata",
-      "community": 113,
-      "norm_label": "metadata"
-    },
-    {
-      "label": "MAIN_PAGES",
-      "file_type": "code",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_app_site_map_page_main_pages",
-      "community": 113,
-      "norm_label": "main_pages"
-    },
-    {
-      "label": "POLICY_PAGES",
-      "file_type": "code",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "src_app_site_map_page_policy_pages",
-      "community": 113,
-      "norm_label": "policy_pages"
-    },
-    {
-      "label": "LinkList()",
-      "file_type": "code",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "src_app_site_map_page_linklist",
-      "community": 113,
-      "norm_label": "linklist()"
-    },
-    {
-      "label": "SiteMapPage()",
-      "file_type": "code",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "src_app_site_map_page_sitemappage",
-      "community": 113,
-      "norm_label": "sitemappage()"
-    },
-    {
-      "label": "sitemap.ts",
-      "file_type": "code",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_app_sitemap",
-      "community": 113,
-      "norm_label": "sitemap.ts"
-    },
-    {
-      "label": "STATIC_ROUTES",
-      "file_type": "code",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_app_sitemap_static_routes",
-      "community": 113,
-      "norm_label": "static_routes"
-    },
-    {
-      "label": "sitemap()",
-      "file_type": "code",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "src_app_sitemap_sitemap",
-      "community": 113,
-      "norm_label": "sitemap()"
-    },
-    {
-      "label": "BreakingNewsTicker.tsx",
-      "file_type": "code",
-      "source_file": "src/components/layout/BreakingNewsTicker.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_layout_breakingnewsticker",
-      "community": 113,
-      "norm_label": "breakingnewsticker.tsx"
-    },
-    {
-      "label": "LiveNewsItem",
-      "file_type": "code",
-      "source_file": "src/components/layout/BreakingNewsTicker.tsx",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_components_layout_breakingnewsticker_livenewsitem",
-      "community": 113,
-      "norm_label": "livenewsitem"
-    },
-    {
-      "label": "BreakingNewsTicker()",
-      "file_type": "code",
-      "source_file": "src/components/layout/BreakingNewsTicker.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_components_layout_breakingnewsticker_breakingnewsticker",
-      "community": 113,
-      "norm_label": "breakingnewsticker()"
-    },
-    {
-      "label": "Footer.tsx",
-      "file_type": "code",
-      "source_file": "src/components/layout/Footer.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_layout_footer",
-      "community": 113,
-      "norm_label": "footer.tsx"
-    },
-    {
-      "label": "Footer()",
-      "file_type": "code",
-      "source_file": "src/components/layout/Footer.tsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_components_layout_footer_footer",
-      "community": 113,
-      "norm_label": "footer()"
-    },
-    {
-      "label": "categories.ts",
-      "file_type": "code",
-      "source_file": "src/lib/categories.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_categories",
-      "community": 113,
-      "norm_label": "categories.ts"
-    },
-    {
-      "label": "Category",
-      "file_type": "code",
-      "source_file": "src/lib/categories.ts",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "src_lib_categories_category",
-      "community": 113,
-      "norm_label": "category"
-    },
-    {
-      "label": "categories",
-      "file_type": "code",
-      "source_file": "src/lib/categories.ts",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_lib_categories_categories",
-      "community": 113,
-      "norm_label": "categories"
-    },
-    {
-      "label": "bySlug",
-      "file_type": "code",
-      "source_file": "src/lib/categories.ts",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "src_lib_categories_byslug",
-      "community": 113,
-      "norm_label": "byslug"
+      "community": 99,
+      "norm_label": "get()",
+      "id": "src_app_api_cron_rashifal_route_get"
     },
     {
-      "label": "getCategory()",
+      "label": "prokerala.ts",
       "file_type": "code",
-      "source_file": "src/lib/categories.ts",
-      "source_location": "L24",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_categories_getcategory",
-      "community": 84,
-      "norm_label": "getcategory()"
+      "community": 104,
+      "norm_label": "prokerala.ts",
+      "id": "src_lib_api_prokerala"
     },
     {
-      "label": "categoryName()",
+      "label": "getProkeralaToken()",
       "file_type": "code",
-      "source_file": "src/lib/categories.ts",
-      "source_location": "L28",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "src_lib_categories_categoryname",
-      "community": 90,
-      "norm_label": "categoryname()"
+      "community": 104,
+      "norm_label": "getprokeralatoken()",
+      "id": "src_lib_api_prokerala_getprokeralatoken"
+    },
+    {
+      "label": "API_SIGN",
+      "file_type": "code",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L42",
+      "_origin": "ast",
+      "community": 104,
+      "norm_label": "api_sign",
+      "id": "src_lib_api_prokerala_api_sign"
+    },
+    {
+      "label": "fetchProkeralaRashifal()",
+      "file_type": "code",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 104,
+      "norm_label": "fetchprokeralarashifal()",
+      "id": "src_lib_api_prokerala_fetchprokeralarashifal"
+    },
+    {
+      "label": "translate.ts",
+      "file_type": "code",
+      "source_file": "src/lib/api/translate.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 105,
+      "norm_label": "translate.ts",
+      "id": "src_lib_api_translate"
+    },
+    {
+      "label": "translateToHindi()",
+      "file_type": "code",
+      "source_file": "src/lib/api/translate.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 105,
+      "norm_label": "translatetohindi()",
+      "id": "src_lib_api_translate_translatetohindi"
+    },
+    {
+      "label": "TODO-OWNER.md",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "todo-owner.md",
+      "id": "todo_owner"
+    },
+    {
+      "label": "\u0906\u092a\u0915\u0947 \u0932\u093f\u090f \u0915\u093e\u092e \u0915\u0940 \u0938\u0942\u091a\u0940 \u2014 TODO (owner actions)",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\u0906\u092a\u0915\u0947 \u0932\u093f\u090f \u0915\u093e\u092e \u0915\u0940 \u0938\u0942\u091a\u0940 \u2014 todo (owner actions)",
+      "id": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions"
+    },
+    {
+      "label": "\ud83d\udd34 1. Set `NEXT_PUBLIC_SITE_URL` in Vercel \u2014 2 minutes",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udd34 1. set `next_public_site_url` in vercel \u2014 2 minutes",
+      "id": "todo_owner_1_set_next_public_site_url_in_vercel_2_minutes"
+    },
+    {
+      "label": "\ud83d\udd34 2. Apply the two pending SQL files to the hosted database",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udd34 2. apply the two pending sql files to the hosted database",
+      "id": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database"
+    },
+    {
+      "label": "2a. `supabase/migrations/018_article_publish_default_off.sql`",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "2a. `supabase/migrations/018_article_publish_default_off.sql`",
+      "id": "todo_owner_2a_supabase_migrations_018_article_publish_default_off_sql"
+    },
+    {
+      "label": "2b. `supabase/SEO_PHASE2.sql`",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "2b. `supabase/seo_phase2.sql`",
+      "id": "todo_owner_2b_supabase_seo_phase2_sql"
+    },
+    {
+      "label": "\ud83d\udd34 3. Fill in the publisher identity block",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udd34 3. fill in the publisher identity block",
+      "id": "todo_owner_3_fill_in_the_publisher_identity_block"
+    },
+    {
+      "label": "\ud83d\udfe2 4. Brand icon files & tab icon (Done)",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udfe2 4. brand icon files & tab icon (done)",
+      "id": "todo_owner_4_brand_icon_files_tab_icon_done"
+    },
+    {
+      "label": "\ud83d\udfe1 5. Answer three questions I still need",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L116",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udfe1 5. answer three questions i still need",
+      "id": "todo_owner_5_answer_three_questions_i_still_need"
+    },
+    {
+      "label": "\ud83d\udfe1 6. Two performance decisions (reversible, one line each)",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L132",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udfe1 6. two performance decisions (reversible, one line each)",
+      "id": "todo_owner_6_two_performance_decisions_reversible_one_line_each"
+    },
+    {
+      "label": "\ud83d\udfe1 7. Five discovery decisions (from Phase 6)",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L149",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udfe1 7. five discovery decisions (from phase 6)",
+      "id": "todo_owner_7_five_discovery_decisions_from_phase_6"
+    },
+    {
+      "label": "\ud83d\udfe2 8. Editorial, not technical",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L176",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "\ud83d\udfe2 8. editorial, not technical",
+      "id": "todo_owner_8_editorial_not_technical"
+    },
+    {
+      "label": "Post-deploy checklist",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L189",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "post-deploy checklist",
+      "id": "todo_owner_post_deploy_checklist"
+    },
+    {
+      "label": "What I have NOT done",
+      "file_type": "document",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L215",
+      "_origin": "ast",
+      "community": 86,
+      "norm_label": "what i have not done",
+      "id": "todo_owner_what_i_have_not_done"
     },
     {
       "label": "siteConfig.ts",
@@ -369,9 +249,9 @@
       "source_file": "src/lib/siteConfig.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_siteconfig",
       "community": 88,
-      "norm_label": "siteconfig.ts"
+      "norm_label": "siteconfig.ts",
+      "id": "src_lib_siteconfig"
     },
     {
       "label": "resolveSiteUrl()",
@@ -379,9 +259,9 @@
       "source_file": "src/lib/siteConfig.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "src_lib_siteconfig_resolvesiteurl",
       "community": 88,
-      "norm_label": "resolvesiteurl()"
+      "norm_label": "resolvesiteurl()",
+      "id": "src_lib_siteconfig_resolvesiteurl"
     },
     {
       "label": "SiteConfig",
@@ -389,9 +269,369 @@
       "source_file": "src/lib/siteConfig.ts",
       "source_location": "L63",
       "_origin": "ast",
-      "id": "src_lib_siteconfig_siteconfig",
       "community": 88,
-      "norm_label": "siteconfig"
+      "norm_label": "siteconfig",
+      "id": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 114,
+      "norm_label": "page.tsx",
+      "id": "src_app_cookie_niti_page"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 114,
+      "norm_label": "metadata",
+      "id": "src_app_cookie_niti_page_metadata"
+    },
+    {
+      "label": "CookiePolicyPage()",
+      "file_type": "code",
+      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 114,
+      "norm_label": "cookiepolicypage()",
+      "id": "src_app_cookie_niti_page_cookiepolicypage"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/gopniyata-niti/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 88,
+      "norm_label": "page.tsx",
+      "id": "src_app_gopniyata_niti_page"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/gopniyata-niti/page.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 88,
+      "norm_label": "metadata",
+      "id": "src_app_gopniyata_niti_page_metadata"
+    },
+    {
+      "label": "PrivacyPolicyPage()",
+      "file_type": "code",
+      "source_file": "src/app/gopniyata-niti/page.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 88,
+      "norm_label": "privacypolicypage()",
+      "id": "src_app_gopniyata_niti_page_privacypolicypage"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/hamare-bare-mein/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 109,
+      "norm_label": "page.tsx",
+      "id": "src_app_hamare_bare_mein_page"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/hamare-bare-mein/page.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 109,
+      "norm_label": "metadata",
+      "id": "src_app_hamare_bare_mein_page_metadata"
+    },
+    {
+      "label": "siteHost",
+      "file_type": "code",
+      "source_file": "src/app/hamare-bare-mein/page.tsx",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 109,
+      "norm_label": "sitehost",
+      "id": "src_app_hamare_bare_mein_page_sitehost"
+    },
+    {
+      "label": "AboutPage()",
+      "file_type": "code",
+      "source_file": "src/app/hamare-bare-mein/page.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 109,
+      "norm_label": "aboutpage()",
+      "id": "src_app_hamare_bare_mein_page_aboutpage"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/niyam-evam-sharten/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 110,
+      "norm_label": "page.tsx",
+      "id": "src_app_niyam_evam_sharten_page"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/niyam-evam-sharten/page.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 110,
+      "norm_label": "metadata",
+      "id": "src_app_niyam_evam_sharten_page_metadata"
+    },
+    {
+      "label": "siteHost",
+      "file_type": "code",
+      "source_file": "src/app/niyam-evam-sharten/page.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 110,
+      "norm_label": "sitehost",
+      "id": "src_app_niyam_evam_sharten_page_sitehost"
+    },
+    {
+      "label": "TermsPage()",
+      "file_type": "code",
+      "source_file": "src/app/niyam-evam-sharten/page.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 110,
+      "norm_label": "termspage()",
+      "id": "src_app_niyam_evam_sharten_page_termspage"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 112,
+      "norm_label": "page.tsx",
+      "id": "src_app_page"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 112,
+      "norm_label": "home()",
+      "id": "src_app_page_home"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "page.tsx",
+      "id": "src_app_site_map_page"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "metadata",
+      "id": "src_app_site_map_page_metadata"
+    },
+    {
+      "label": "MAIN_PAGES",
+      "file_type": "code",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "main_pages",
+      "id": "src_app_site_map_page_main_pages"
+    },
+    {
+      "label": "POLICY_PAGES",
+      "file_type": "code",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "policy_pages",
+      "id": "src_app_site_map_page_policy_pages"
+    },
+    {
+      "label": "LinkList()",
+      "file_type": "code",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "linklist()",
+      "id": "src_app_site_map_page_linklist"
+    },
+    {
+      "label": "SiteMapPage()",
+      "file_type": "code",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "sitemappage()",
+      "id": "src_app_site_map_page_sitemappage"
+    },
+    {
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "sitemap.ts",
+      "id": "src_app_sitemap"
+    },
+    {
+      "label": "STATIC_ROUTES",
+      "file_type": "code",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "static_routes",
+      "id": "src_app_sitemap_static_routes"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "sitemap()",
+      "id": "src_app_sitemap_sitemap"
+    },
+    {
+      "label": "BreakingNewsTicker.tsx",
+      "file_type": "code",
+      "source_file": "src/components/layout/BreakingNewsTicker.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "breakingnewsticker.tsx",
+      "id": "src_components_layout_breakingnewsticker"
+    },
+    {
+      "label": "LiveNewsItem",
+      "file_type": "code",
+      "source_file": "src/components/layout/BreakingNewsTicker.tsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "livenewsitem",
+      "id": "src_components_layout_breakingnewsticker_livenewsitem"
+    },
+    {
+      "label": "BreakingNewsTicker()",
+      "file_type": "code",
+      "source_file": "src/components/layout/BreakingNewsTicker.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "breakingnewsticker()",
+      "id": "src_components_layout_breakingnewsticker_breakingnewsticker"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "footer.tsx",
+      "id": "src_components_layout_footer"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "footer()",
+      "id": "src_components_layout_footer_footer"
+    },
+    {
+      "label": "categories.ts",
+      "file_type": "code",
+      "source_file": "src/lib/categories.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "categories.ts",
+      "id": "src_lib_categories"
+    },
+    {
+      "label": "Category",
+      "file_type": "code",
+      "source_file": "src/lib/categories.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "category",
+      "id": "src_lib_categories_category"
+    },
+    {
+      "label": "categories",
+      "file_type": "code",
+      "source_file": "src/lib/categories.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "categories",
+      "id": "src_lib_categories_categories"
+    },
+    {
+      "label": "bySlug",
+      "file_type": "code",
+      "source_file": "src/lib/categories.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 113,
+      "norm_label": "byslug",
+      "id": "src_lib_categories_byslug"
+    },
+    {
+      "label": "getCategory()",
+      "file_type": "code",
+      "source_file": "src/lib/categories.ts",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 84,
+      "norm_label": "getcategory()",
+      "id": "src_lib_categories_getcategory"
+    },
+    {
+      "label": "categoryName()",
+      "file_type": "code",
+      "source_file": "src/lib/categories.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 90,
+      "norm_label": "categoryname()",
+      "id": "src_lib_categories_categoryname"
     },
     {
       "label": ".eslintrc.json",
@@ -1056,36 +1296,6 @@
     {
       "label": "route.ts",
       "file_type": "code",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 99,
-      "norm_label": "route.ts",
-      "id": "src_app_api_cron_rashifal_route"
-    },
-    {
-      "label": "authorized()",
-      "file_type": "code",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 99,
-      "norm_label": "authorized()",
-      "id": "src_app_api_cron_rashifal_route_authorized"
-    },
-    {
-      "label": "GET()",
-      "file_type": "code",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 99,
-      "norm_label": "get()",
-      "id": "src_app_api_cron_rashifal_route_get"
-    },
-    {
-      "label": "route.ts",
-      "file_type": "code",
       "source_file": "src/app/api/newsletter/route.ts",
       "source_location": "L1",
       "_origin": "ast",
@@ -1129,7 +1339,7 @@
       "source_file": "src/app/api/revalidate/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "route.ts",
       "id": "src_app_api_revalidate_route"
     },
@@ -1139,39 +1349,9 @@
       "source_file": "src/app/api/revalidate/route.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "post()",
       "id": "src_app_api_revalidate_route_post"
-    },
-    {
-      "label": "apple-icon.tsx",
-      "file_type": "code",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 88,
-      "norm_label": "apple-icon.tsx",
-      "id": "src_app_apple_icon"
-    },
-    {
-      "label": "size",
-      "file_type": "code",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 88,
-      "norm_label": "size",
-      "id": "src_app_apple_icon_size"
-    },
-    {
-      "label": "AppleIcon()",
-      "file_type": "code",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L11",
-      "_origin": "ast",
-      "community": 88,
-      "norm_label": "appleicon()",
-      "id": "src_app_apple_icon_appleicon"
     },
     {
       "label": "page.tsx",
@@ -1269,7 +1449,7 @@
       "source_file": "src/app/feed.xml/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "route.ts",
       "id": "src_app_feed_xml_route"
     },
@@ -1279,7 +1459,7 @@
       "source_file": "src/app/feed.xml/route.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "escapexml()",
       "id": "src_app_feed_xml_route_escapexml"
     },
@@ -1289,7 +1469,7 @@
       "source_file": "src/app/feed.xml/route.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "get()",
       "id": "src_app_feed_xml_route_get"
     },
@@ -1299,7 +1479,7 @@
       "source_file": "src/app/gallery/[slug]/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "page.tsx",
       "id": "src_app_gallery_slug_page"
     },
@@ -1309,7 +1489,7 @@
       "source_file": "src/app/gallery/[slug]/page.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "params",
       "id": "src_app_gallery_slug_page_params"
     },
@@ -1319,7 +1499,7 @@
       "source_file": "src/app/gallery/[slug]/page.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "generatemetadata()",
       "id": "src_app_gallery_slug_page_generatemetadata"
     },
@@ -1329,7 +1509,7 @@
       "source_file": "src/app/gallery/[slug]/page.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "gallerydetailpage()",
       "id": "src_app_gallery_slug_page_gallerydetailpage"
     },
@@ -1339,7 +1519,7 @@
       "source_file": "src/app/gallery/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "page.tsx",
       "id": "src_app_gallery_page"
     },
@@ -1349,7 +1529,7 @@
       "source_file": "src/app/gallery/page.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "metadata",
       "id": "src_app_gallery_page_metadata"
     },
@@ -1359,39 +1539,9 @@
       "source_file": "src/app/gallery/page.tsx",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "gallerypage()",
       "id": "src_app_gallery_page_gallerypage"
-    },
-    {
-      "label": "icon.tsx",
-      "file_type": "code",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 88,
-      "norm_label": "icon.tsx",
-      "id": "src_app_icon"
-    },
-    {
-      "label": "size",
-      "file_type": "code",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "community": 88,
-      "norm_label": "size",
-      "id": "src_app_icon_size"
-    },
-    {
-      "label": "Icon()",
-      "file_type": "code",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L10",
-      "_origin": "ast",
-      "community": 88,
-      "norm_label": "icon()",
-      "id": "src_app_icon_icon"
     },
     {
       "label": "layout.tsx",
@@ -1439,7 +1589,7 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "rootlayout()",
       "id": "src_app_layout_rootlayout"
     },
@@ -1469,7 +1619,7 @@
       "source_file": "src/app/news-sitemap.xml/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "route.ts",
       "id": "src_app_news_sitemap_xml_route"
     },
@@ -1479,7 +1629,7 @@
       "source_file": "src/app/news-sitemap.xml/route.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "escapexml()",
       "id": "src_app_news_sitemap_xml_route_escapexml"
     },
@@ -1489,7 +1639,7 @@
       "source_file": "src/app/news-sitemap.xml/route.ts",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "get()",
       "id": "src_app_news_sitemap_xml_route_get"
     },
@@ -1679,7 +1829,7 @@
       "source_file": "src/app/opengraph-image.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 107,
+      "community": 111,
       "norm_label": "opengraph-image.tsx",
       "id": "src_app_opengraph_image"
     },
@@ -1689,7 +1839,7 @@
       "source_file": "src/app/opengraph-image.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 107,
+      "community": 111,
       "norm_label": "size",
       "id": "src_app_opengraph_image_size"
     },
@@ -1699,7 +1849,7 @@
       "source_file": "src/app/opengraph-image.tsx",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 107,
+      "community": 111,
       "norm_label": "loaddevanagarifonts()",
       "id": "src_app_opengraph_image_loaddevanagarifonts"
     },
@@ -1709,7 +1859,7 @@
       "source_file": "src/app/opengraph-image.tsx",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 107,
+      "community": 111,
       "norm_label": "image()",
       "id": "src_app_opengraph_image_image"
     },
@@ -1749,7 +1899,7 @@
       "source_file": "src/app/prakashak/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 104,
+      "community": 108,
       "norm_label": "page.tsx",
       "id": "src_app_prakashak_page"
     },
@@ -1759,7 +1909,7 @@
       "source_file": "src/app/prakashak/page.tsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 104,
+      "community": 108,
       "norm_label": "metadata",
       "id": "src_app_prakashak_page_metadata"
     },
@@ -1769,7 +1919,7 @@
       "source_file": "src/app/prakashak/page.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 104,
+      "community": 108,
       "norm_label": "rows",
       "id": "src_app_prakashak_page_rows"
     },
@@ -1779,7 +1929,7 @@
       "source_file": "src/app/prakashak/page.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 104,
+      "community": 108,
       "norm_label": "addressparts",
       "id": "src_app_prakashak_page_addressparts"
     },
@@ -1789,7 +1939,7 @@
       "source_file": "src/app/prakashak/page.tsx",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 104,
+      "community": 108,
       "norm_label": "publisherpage()",
       "id": "src_app_prakashak_page_publisherpage"
     },
@@ -1839,7 +1989,7 @@
       "source_file": "src/app/rajya/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "page.tsx",
       "id": "src_app_rajya_page"
     },
@@ -1849,7 +1999,7 @@
       "source_file": "src/app/rajya/page.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "metadata",
       "id": "src_app_rajya_page_metadata"
     },
@@ -1859,7 +2009,7 @@
       "source_file": "src/app/rajya/page.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "rajyapage()",
       "id": "src_app_rajya_page_rajyapage"
     },
@@ -1869,7 +2019,7 @@
       "source_file": "src/app/rajya/page.tsx",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "stategrid()",
       "id": "src_app_rajya_page_stategrid"
     },
@@ -1879,7 +2029,7 @@
       "source_file": "src/app/rashifal/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "page.tsx",
       "id": "src_app_rashifal_page"
     },
@@ -1889,7 +2039,7 @@
       "source_file": "src/app/rashifal/page.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "metadata",
       "id": "src_app_rashifal_page_metadata"
     },
@@ -1899,7 +2049,7 @@
       "source_file": "src/app/rashifal/page.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "rashifalpage()",
       "id": "src_app_rashifal_page_rashifalpage"
     },
@@ -1929,7 +2079,7 @@
       "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 111,
+      "community": 107,
       "norm_label": "opengraph-image.tsx",
       "id": "src_app_samachar_slug_opengraph_image"
     },
@@ -1939,7 +2089,7 @@
       "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 111,
+      "community": 107,
       "norm_label": "size",
       "id": "src_app_samachar_slug_opengraph_image_size"
     },
@@ -1949,7 +2099,7 @@
       "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 111,
+      "community": 107,
       "norm_label": "loaddevanagarifonts()",
       "id": "src_app_samachar_slug_opengraph_image_loaddevanagarifonts"
     },
@@ -1959,7 +2109,7 @@
       "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 111,
+      "community": 107,
       "norm_label": "image()",
       "id": "src_app_samachar_slug_opengraph_image_image"
     },
@@ -1969,7 +2119,7 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "page.tsx",
       "id": "src_app_samachar_slug_page"
     },
@@ -1979,7 +2129,7 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "params",
       "id": "src_app_samachar_slug_page_params"
     },
@@ -1989,7 +2139,7 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 85,
+      "community": 107,
       "norm_label": "generatemetadata()",
       "id": "src_app_samachar_slug_page_generatemetadata"
     },
@@ -1999,7 +2149,7 @@
       "source_file": "src/app/samachar/[slug]/page.tsx",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "articlepage()",
       "id": "src_app_samachar_slug_page_articlepage"
     },
@@ -2039,7 +2189,7 @@
       "source_file": "src/app/sampadakiya-niti/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 110,
+      "community": 88,
       "norm_label": "page.tsx",
       "id": "src_app_sampadakiya_niti_page"
     },
@@ -2049,7 +2199,7 @@
       "source_file": "src/app/sampadakiya-niti/page.tsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 110,
+      "community": 88,
       "norm_label": "metadata",
       "id": "src_app_sampadakiya_niti_page_metadata"
     },
@@ -2059,7 +2209,7 @@
       "source_file": "src/app/sampadakiya-niti/page.tsx",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 110,
+      "community": 88,
       "norm_label": "editorialpolicypage()",
       "id": "src_app_sampadakiya_niti_page_editorialpolicypage"
     },
@@ -2099,7 +2249,7 @@
       "source_file": "src/app/search/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 90,
+      "community": 84,
       "norm_label": "page.tsx",
       "id": "src_app_search_page"
     },
@@ -2109,7 +2259,7 @@
       "source_file": "src/app/search/page.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 90,
+      "community": 84,
       "norm_label": "metadata",
       "id": "src_app_search_page_metadata"
     },
@@ -2119,7 +2269,7 @@
       "source_file": "src/app/search/page.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 90,
+      "community": 84,
       "norm_label": "props",
       "id": "src_app_search_page_props"
     },
@@ -2129,7 +2279,7 @@
       "source_file": "src/app/search/page.tsx",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 90,
+      "community": 84,
       "norm_label": "searchpage()",
       "id": "src_app_search_page_searchpage"
     },
@@ -2179,7 +2329,7 @@
       "source_file": "src/components/AdSlot.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 113,
+      "community": 98,
       "norm_label": "adslot.tsx",
       "id": "src_components_adslot"
     },
@@ -2189,7 +2339,7 @@
       "source_file": "src/components/AdSlot.tsx",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 113,
+      "community": 98,
       "norm_label": "adslot()",
       "id": "src_components_adslot_adslot"
     },
@@ -2459,7 +2609,7 @@
       "source_file": "src/components/news/HolidaysClientWidget.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "holidaysclientwidget.tsx",
       "id": "src_components_news_holidaysclientwidget"
     },
@@ -2469,7 +2619,7 @@
       "source_file": "src/components/news/HolidaysClientWidget.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "type_label",
       "id": "src_components_news_holidaysclientwidget_type_label"
     },
@@ -2479,7 +2629,7 @@
       "source_file": "src/components/news/HolidaysClientWidget.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "holidaysclientwidget()",
       "id": "src_components_news_holidaysclientwidget_holidaysclientwidget"
     },
@@ -2489,7 +2639,7 @@
       "source_file": "src/components/news/HolidaysWidget.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "holidayswidget.tsx",
       "id": "src_components_news_holidayswidget"
     },
@@ -2499,7 +2649,7 @@
       "source_file": "src/components/news/HolidaysWidget.tsx",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "holidayswidget()",
       "id": "src_components_news_holidayswidget_holidayswidget"
     },
@@ -2619,7 +2769,7 @@
       "source_file": "src/components/news/RelatedArticles.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 103,
+      "community": 84,
       "norm_label": "relatedarticles.tsx",
       "id": "src_components_news_relatedarticles"
     },
@@ -2629,7 +2779,7 @@
       "source_file": "src/components/news/RelatedArticles.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 103,
+      "community": 84,
       "norm_label": "relatedarticles()",
       "id": "src_components_news_relatedarticles_relatedarticles"
     },
@@ -2739,7 +2889,7 @@
       "source_file": "src/lib/api/ads.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 113,
+      "community": 98,
       "norm_label": "ads.ts",
       "id": "src_lib_api_ads"
     },
@@ -2749,7 +2899,7 @@
       "source_file": "src/lib/api/ads.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 113,
+      "community": 98,
       "norm_label": "adslotname",
       "id": "src_lib_api_ads_adslotname"
     },
@@ -2759,7 +2909,7 @@
       "source_file": "src/lib/api/ads.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 113,
+      "community": 98,
       "norm_label": "getad()",
       "id": "src_lib_api_ads_getad"
     },
@@ -2849,7 +2999,7 @@
       "source_file": "src/lib/api/articles.ts",
       "source_location": "L95",
       "_origin": "ast",
-      "community": 85,
+      "community": 107,
       "norm_label": "getarticlebyslug()",
       "id": "src_lib_api_articles_getarticlebyslug"
     },
@@ -2909,7 +3059,7 @@
       "source_file": "src/lib/api/articles.ts",
       "source_location": "L217",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "breakingitem",
       "id": "src_lib_api_articles_breakingitem"
     },
@@ -2919,7 +3069,7 @@
       "source_file": "src/lib/api/articles.ts",
       "source_location": "L221",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "getbreakingarticles()",
       "id": "src_lib_api_articles_getbreakingarticles"
     },
@@ -2939,7 +3089,7 @@
       "source_file": "src/lib/api/articles.ts",
       "source_location": "L266",
       "_origin": "ast",
-      "community": 102,
+      "community": 106,
       "norm_label": "getrecentpublishedarticles()",
       "id": "src_lib_api_articles_getrecentpublishedarticles"
     },
@@ -2949,7 +3099,7 @@
       "source_file": "src/lib/api/articles.ts",
       "source_location": "L298",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "getallarticleslugs()",
       "id": "src_lib_api_articles_getallarticleslugs"
     },
@@ -2989,7 +3139,7 @@
       "source_file": "src/lib/api/gallery.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "gallery.ts",
       "id": "src_lib_api_gallery"
     },
@@ -2999,7 +3149,7 @@
       "source_file": "src/lib/api/gallery.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "getgalleries()",
       "id": "src_lib_api_gallery_getgalleries"
     },
@@ -3009,7 +3159,7 @@
       "source_file": "src/lib/api/gallery.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "getgallerybyslug()",
       "id": "src_lib_api_gallery_getgallerybyslug"
     },
@@ -3019,7 +3169,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "holidays.ts",
       "id": "src_lib_api_holidays"
     },
@@ -3029,7 +3179,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "holiday",
       "id": "src_lib_api_holidays_holiday"
     },
@@ -3039,7 +3189,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "calendarificholiday",
       "id": "src_lib_api_holidays_calendarificholiday"
     },
@@ -3049,7 +3199,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "hindi_names",
       "id": "src_lib_api_holidays_hindi_names"
     },
@@ -3059,7 +3209,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "tohindiname()",
       "id": "src_lib_api_holidays_tohindiname"
     },
@@ -3069,7 +3219,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L70",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "toourtype()",
       "id": "src_lib_api_holidays_toourtype"
     },
@@ -3079,7 +3229,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "keep_types",
       "id": "src_lib_api_holidays_keep_types"
     },
@@ -3089,7 +3239,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "fallback_holidays",
       "id": "src_lib_api_holidays_fallback_holidays"
     },
@@ -3099,7 +3249,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L105",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "fallbackupcoming()",
       "id": "src_lib_api_holidays_fallbackupcoming"
     },
@@ -3109,7 +3259,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L113",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "fetchyear()",
       "id": "src_lib_api_holidays_fetchyear"
     },
@@ -3119,7 +3269,7 @@
       "source_file": "src/lib/api/holidays.ts",
       "source_location": "L123",
       "_origin": "ast",
-      "community": 98,
+      "community": 102,
       "norm_label": "getupcomingholidays()",
       "id": "src_lib_api_holidays_getupcomingholidays"
     },
@@ -3129,7 +3279,7 @@
       "source_file": "src/lib/api/liveNews.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "livenews.ts",
       "id": "src_lib_api_livenews"
     },
@@ -3139,7 +3289,7 @@
       "source_file": "src/lib/api/liveNews.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "getlivenewsrows()",
       "id": "src_lib_api_livenews_getlivenewsrows"
     },
@@ -3149,7 +3299,7 @@
       "source_file": "src/lib/api/liveNews.ts",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "getlivenews()",
       "id": "src_lib_api_livenews_getlivenews"
     },
@@ -3174,42 +3324,12 @@
       "id": "src_lib_api_polls_getactivepoll"
     },
     {
-      "label": "prokerala.ts",
-      "file_type": "code",
-      "source_file": "src/lib/api/prokerala.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 99,
-      "norm_label": "prokerala.ts",
-      "id": "src_lib_api_prokerala"
-    },
-    {
-      "label": "getProkeralaToken()",
-      "file_type": "code",
-      "source_file": "src/lib/api/prokerala.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 99,
-      "norm_label": "getprokeralatoken()",
-      "id": "src_lib_api_prokerala_getprokeralatoken"
-    },
-    {
-      "label": "fetchProkeralaRashifal()",
-      "file_type": "code",
-      "source_file": "src/lib/api/prokerala.ts",
-      "source_location": "L41",
-      "_origin": "ast",
-      "community": 99,
-      "norm_label": "fetchprokeralarashifal()",
-      "id": "src_lib_api_prokerala_fetchprokeralarashifal"
-    },
-    {
       "label": "rashifal.ts",
       "file_type": "code",
       "source_file": "src/lib/api/rashifal.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "rashifal.ts",
       "id": "src_lib_api_rashifal"
     },
@@ -3219,7 +3339,7 @@
       "source_file": "src/lib/api/rashifal.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "getrashifalteaser()",
       "id": "src_lib_api_rashifal_getrashifalteaser"
     },
@@ -3229,7 +3349,7 @@
       "source_file": "src/lib/api/rashifal.ts",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "isttoday()",
       "id": "src_lib_api_rashifal_isttoday"
     },
@@ -3239,7 +3359,7 @@
       "source_file": "src/lib/api/rashifal.ts",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 98,
+      "community": 99,
       "norm_label": "getallrashifaltoday()",
       "id": "src_lib_api_rashifal_getallrashifaltoday"
     },
@@ -3419,7 +3539,7 @@
       "source_file": "src/lib/states.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "states.ts",
       "id": "src_lib_states"
     },
@@ -3429,7 +3549,7 @@
       "source_file": "src/lib/states.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "stateinfo",
       "id": "src_lib_states_stateinfo"
     },
@@ -3439,7 +3559,7 @@
       "source_file": "src/lib/states.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "states",
       "id": "src_lib_states_states"
     },
@@ -3449,7 +3569,7 @@
       "source_file": "src/lib/states.ts",
       "source_location": "L319",
       "_origin": "ast",
-      "community": 84,
+      "community": 85,
       "norm_label": "byslug",
       "id": "src_lib_states_byslug"
     },
@@ -3529,7 +3649,7 @@
       "source_file": "src/lib/supabase/server.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 84,
+      "community": 99,
       "norm_label": "createserverclient()",
       "id": "src_lib_supabase_server_createserverclient"
     },
@@ -3589,7 +3709,7 @@
       "source_file": "src/lib/supabase/types.ts",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 103,
+      "community": 90,
       "norm_label": "epaperedition",
       "id": "src_lib_supabase_types_epaperedition"
     },
@@ -3639,7 +3759,7 @@
       "source_file": "src/lib/supabase/types.ts",
       "source_location": "L88",
       "_origin": "ast",
-      "community": 101,
+      "community": 99,
       "norm_label": "gallery",
       "id": "src_lib_supabase_types_gallery"
     },
@@ -3659,7 +3779,7 @@
       "source_file": "src/lib/supabase/types.ts",
       "source_location": "L105",
       "_origin": "ast",
-      "community": 113,
+      "community": 98,
       "norm_label": "ad",
       "id": "src_lib_supabase_types_ad"
     },
@@ -3689,7 +3809,7 @@
       "source_file": "src/lib/utils/format.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "format.ts",
       "id": "src_lib_utils_format"
     },
@@ -3699,7 +3819,7 @@
       "source_file": "src/lib/utils/format.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "datefmt",
       "id": "src_lib_utils_format_datefmt"
     },
@@ -3719,7 +3839,7 @@
       "source_file": "src/lib/utils/format.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "timeago()",
       "id": "src_lib_utils_format_timeago"
     },
@@ -3739,7 +3859,7 @@
       "source_file": "src/lib/utils/format.ts",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "slugify()",
       "id": "src_lib_utils_format_slugify"
     },
@@ -3749,7 +3869,7 @@
       "source_file": "src/lib/utils/format.ts",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "isvalidslug()",
       "id": "src_lib_utils_format_isvalidslug"
     },
@@ -3769,7 +3889,7 @@
       "source_file": "src/lib/utils/format.ts",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 90,
+      "community": 103,
       "norm_label": "firstparagraph()",
       "id": "src_lib_utils_format_firstparagraph"
     },
@@ -3799,7 +3919,7 @@
       "source_file": "src/lib/utils/structuredData.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "structureddata.ts",
       "id": "src_lib_utils_structureddata"
     },
@@ -3809,7 +3929,7 @@
       "source_file": "src/lib/utils/structuredData.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "jsonldscript()",
       "id": "src_lib_utils_structureddata_jsonldscript"
     },
@@ -3819,7 +3939,7 @@
       "source_file": "src/lib/utils/structuredData.ts",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "buildnewsarticleschema()",
       "id": "src_lib_utils_structureddata_buildnewsarticleschema"
     },
@@ -3829,7 +3949,7 @@
       "source_file": "src/lib/utils/structuredData.ts",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "buildorganizationschema()",
       "id": "src_lib_utils_structureddata_buildorganizationschema"
     },
@@ -3839,7 +3959,7 @@
       "source_file": "src/lib/utils/structuredData.ts",
       "source_location": "L87",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "buildwebsiteschema()",
       "id": "src_lib_utils_structureddata_buildwebsiteschema"
     },
@@ -3849,7 +3969,7 @@
       "source_file": "src/lib/utils/structuredData.ts",
       "source_location": "L114",
       "_origin": "ast",
-      "community": 85,
+      "community": 101,
       "norm_label": "buildbreadcrumbschema()",
       "id": "src_lib_utils_structureddata_buildbreadcrumbschema"
     },
@@ -4162,26 +4282,6 @@
       "community": 0,
       "norm_label": "exclude",
       "id": "tsconfig_exclude"
-    },
-    {
-      "label": "vercel.json",
-      "file_type": "code",
-      "source_file": "vercel.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "vercel.json",
-      "id": "vercel"
-    },
-    {
-      "label": "crons",
-      "file_type": "code",
-      "source_file": "vercel.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "crons",
-      "id": "vercel_crons"
     },
     {
       "label": "README.md",
@@ -4682,146 +4782,6 @@
       "community": 1,
       "norm_label": "not yet verified",
       "id": "seo_progress_not_yet_verified_672"
-    },
-    {
-      "label": "TODO-OWNER.md",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "todo-owner.md",
-      "id": "todo_owner"
-    },
-    {
-      "label": "\u0906\u092a\u0915\u0947 \u0932\u093f\u090f \u0915\u093e\u092e \u0915\u0940 \u0938\u0942\u091a\u0940 \u2014 TODO (owner actions)",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\u0906\u092a\u0915\u0947 \u0932\u093f\u090f \u0915\u093e\u092e \u0915\u0940 \u0938\u0942\u091a\u0940 \u2014 todo (owner actions)",
-      "id": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions"
-    },
-    {
-      "label": "\ud83d\udd34 1. Set `NEXT_PUBLIC_SITE_URL` in Vercel \u2014 2 minutes",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L13",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udd34 1. set `next_public_site_url` in vercel \u2014 2 minutes",
-      "id": "todo_owner_1_set_next_public_site_url_in_vercel_2_minutes"
-    },
-    {
-      "label": "\ud83d\udd34 2. Apply the two pending SQL files to the hosted database",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L34",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udd34 2. apply the two pending sql files to the hosted database",
-      "id": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database"
-    },
-    {
-      "label": "2a. `supabase/migrations/018_article_publish_default_off.sql`",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L41",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "2a. `supabase/migrations/018_article_publish_default_off.sql`",
-      "id": "todo_owner_2a_supabase_migrations_018_article_publish_default_off_sql"
-    },
-    {
-      "label": "2b. `supabase/SEO_PHASE2.sql`",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L49",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "2b. `supabase/seo_phase2.sql`",
-      "id": "todo_owner_2b_supabase_seo_phase2_sql"
-    },
-    {
-      "label": "\ud83d\udd34 3. Fill in the publisher identity block",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L73",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udd34 3. fill in the publisher identity block",
-      "id": "todo_owner_3_fill_in_the_publisher_identity_block"
-    },
-    {
-      "label": "\ud83d\udd34 4. Supply two brand icon files",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L102",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udd34 4. supply two brand icon files",
-      "id": "todo_owner_4_supply_two_brand_icon_files"
-    },
-    {
-      "label": "\ud83d\udfe1 5. Answer three questions I still need",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L126",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udfe1 5. answer three questions i still need",
-      "id": "todo_owner_5_answer_three_questions_i_still_need"
-    },
-    {
-      "label": "\ud83d\udfe1 6. Two performance decisions (reversible, one line each)",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L142",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udfe1 6. two performance decisions (reversible, one line each)",
-      "id": "todo_owner_6_two_performance_decisions_reversible_one_line_each"
-    },
-    {
-      "label": "\ud83d\udfe1 7. Five discovery decisions (from Phase 6)",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L159",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udfe1 7. five discovery decisions (from phase 6)",
-      "id": "todo_owner_7_five_discovery_decisions_from_phase_6"
-    },
-    {
-      "label": "\ud83d\udfe2 8. Editorial, not technical",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L186",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "\ud83d\udfe2 8. editorial, not technical",
-      "id": "todo_owner_8_editorial_not_technical"
-    },
-    {
-      "label": "Post-deploy checklist",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L199",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "post-deploy checklist",
-      "id": "todo_owner_post_deploy_checklist"
-    },
-    {
-      "label": "What I have NOT done",
-      "file_type": "document",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L225",
-      "_origin": "ast",
-      "community": 86,
-      "norm_label": "what i have not done",
-      "id": "todo_owner_what_i_have_not_done"
     },
     {
       "label": "Janshakti Ujala",
@@ -5621,22 +5581,236 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/app/cookie-niti/page.tsx",
-      "source_location": "L20",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
+      "source_location": "L11",
       "weight": 1.0,
-      "source": "src_app_cookie_niti_page",
-      "target": "src_app_cookie_niti_page_cookiepolicypage",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "src_app_api_cron_rashifal_route",
+      "target": "src_app_api_cron_rashifal_route_authorized"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_api_cron_rashifal_route",
+      "target": "src_app_api_cron_rashifal_route_get"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_api_cron_rashifal_route",
+      "target": "src_lib_supabase_server"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/cron/rashifal/route.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_api_cron_rashifal_route_get",
+      "target": "src_app_api_cron_rashifal_route_authorized"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_api_prokerala",
+      "target": "src_lib_api_prokerala_api_sign"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_api_prokerala",
+      "target": "src_lib_api_prokerala_fetchprokeralarashifal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_api_prokerala",
+      "target": "src_lib_api_prokerala_getprokeralatoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/api/prokerala.ts",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_api_prokerala_fetchprokeralarashifal",
+      "target": "src_lib_api_prokerala_getprokeralatoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/api/translate.ts",
       "source_location": "L6",
       "weight": 1.0,
-      "source": "src_app_cookie_niti_page",
-      "target": "src_app_cookie_niti_page_metadata",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "src_lib_api_translate",
+      "target": "src_lib_api_translate_translatetohindi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner",
+      "target": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_1_set_next_public_site_url_in_vercel_2_minutes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_3_fill_in_the_publisher_identity_block"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_4_brand_icon_files_tab_icon_done"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_5_answer_three_questions_i_still_need"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_6_two_performance_decisions_reversible_one_line_each"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_7_five_discovery_decisions_from_phase_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_8_editorial_not_technical"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_post_deploy_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L215",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
+      "target": "todo_owner_what_i_have_not_done"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database",
+      "target": "todo_owner_2a_supabase_migrations_018_article_publish_default_off_sql"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TODO-OWNER.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database",
+      "target": "todo_owner_2b_supabase_seo_phase2_sql"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/contact/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_contact_page",
+      "target": "src_lib_siteconfig"
     },
     {
       "relation": "imports_from",
@@ -5645,9 +5819,282 @@
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_cookie_niti_page",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/feed.xml/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_feed_xml_route",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/gopniyata-niti/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_gopniyata_niti_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/hamare-bare-mein/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_hamare_bare_mein_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_layout",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_manifest",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/news-sitemap.xml/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_news_sitemap_xml_route",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/nirmanadhin/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_nirmanadhin_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/niyam-evam-sharten/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_niyam_evam_sharten_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_opengraph_image",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/prakashak/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_prakashak_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rashifal/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_rashifal_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/robots.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_robots",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_samachar_slug_opengraph_image",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/samachar/[slug]/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_samachar_slug_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sampadakiya-niti/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_sampadakiya_niti_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sanshodhan-niti/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_sanshodhan_niti_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_site_map_page",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_sitemap",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_footer",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Topbar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_topbar",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/siteConfig.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_siteconfig",
+      "target": "src_lib_siteconfig_resolvesiteurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/siteConfig.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_siteconfig",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/utils/structuredData.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_utils_structureddata",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/middleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_middleware",
+      "target": "src_lib_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/contact/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_contact_page",
+      "target": "src_lib_siteconfig_siteconfig"
     },
     {
       "relation": "imports",
@@ -5656,9 +6103,260 @@
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_cookie_niti_page",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/feed.xml/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_feed_xml_route",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/gopniyata-niti/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_gopniyata_niti_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/hamare-bare-mein/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_hamare_bare_mein_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_layout",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_manifest",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/news-sitemap.xml/route.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_news_sitemap_xml_route",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/nirmanadhin/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_nirmanadhin_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/niyam-evam-sharten/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_niyam_evam_sharten_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_opengraph_image",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/prakashak/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_prakashak_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rashifal/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_rashifal_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/robots.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_robots",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_samachar_slug_opengraph_image",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/samachar/[slug]/page.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_samachar_slug_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sampadakiya-niti/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_sampadakiya_niti_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sanshodhan-niti/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_sanshodhan_niti_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/site-map/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_site_map_page",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_sitemap",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_footer",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Topbar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_topbar",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/utils/structuredData.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_lib_utils_structureddata",
+      "target": "src_lib_siteconfig_siteconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_cookie_niti_page",
+      "target": "src_app_cookie_niti_page_cookiepolicypage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/cookie-niti/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_cookie_niti_page",
+      "target": "src_app_cookie_niti_page_metadata"
     },
     {
       "relation": "contains",
@@ -5666,9 +6364,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_gopniyata_niti_page",
-      "target": "src_app_gopniyata_niti_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_gopniyata_niti_page_metadata"
     },
     {
       "relation": "contains",
@@ -5676,31 +6374,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_gopniyata_niti_page",
-      "target": "src_app_gopniyata_niti_page_privacypolicypage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/gopniyata-niti/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_app_gopniyata_niti_page",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/gopniyata-niti/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_app_gopniyata_niti_page",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_app_gopniyata_niti_page_privacypolicypage"
     },
     {
       "relation": "contains",
@@ -5708,9 +6384,9 @@
       "source_file": "src/app/hamare-bare-mein/page.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_hamare_bare_mein_page",
-      "target": "src_app_hamare_bare_mein_page_aboutpage",
-      "confidence_score": 1.0
+      "target": "src_app_hamare_bare_mein_page_aboutpage"
     },
     {
       "relation": "contains",
@@ -5718,9 +6394,9 @@
       "source_file": "src/app/hamare-bare-mein/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_hamare_bare_mein_page",
-      "target": "src_app_hamare_bare_mein_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_hamare_bare_mein_page_metadata"
     },
     {
       "relation": "contains",
@@ -5728,31 +6404,9 @@
       "source_file": "src/app/hamare-bare-mein/page.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_hamare_bare_mein_page",
-      "target": "src_app_hamare_bare_mein_page_sitehost",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/hamare-bare-mein/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_app_hamare_bare_mein_page",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/hamare-bare-mein/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_app_hamare_bare_mein_page",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_app_hamare_bare_mein_page_sitehost"
     },
     {
       "relation": "contains",
@@ -5760,9 +6414,9 @@
       "source_file": "src/app/niyam-evam-sharten/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_niyam_evam_sharten_page",
-      "target": "src_app_niyam_evam_sharten_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_niyam_evam_sharten_page_metadata"
     },
     {
       "relation": "contains",
@@ -5770,9 +6424,9 @@
       "source_file": "src/app/niyam-evam-sharten/page.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_niyam_evam_sharten_page",
-      "target": "src_app_niyam_evam_sharten_page_sitehost",
-      "confidence_score": 1.0
+      "target": "src_app_niyam_evam_sharten_page_sitehost"
     },
     {
       "relation": "contains",
@@ -5780,31 +6434,9 @@
       "source_file": "src/app/niyam-evam-sharten/page.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_niyam_evam_sharten_page",
-      "target": "src_app_niyam_evam_sharten_page_termspage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/niyam-evam-sharten/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_app_niyam_evam_sharten_page",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/niyam-evam-sharten/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_app_niyam_evam_sharten_page",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_app_niyam_evam_sharten_page_termspage"
     },
     {
       "relation": "contains",
@@ -5812,9 +6444,9 @@
       "source_file": "src/app/page.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_page",
-      "target": "src_app_page_home",
-      "confidence_score": 1.0
+      "target": "src_app_page_home"
     },
     {
       "relation": "contains",
@@ -5822,9 +6454,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_app_site_map_page_linklist",
-      "confidence_score": 1.0
+      "target": "src_app_site_map_page_linklist"
     },
     {
       "relation": "contains",
@@ -5832,9 +6464,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_app_site_map_page_main_pages",
-      "confidence_score": 1.0
+      "target": "src_app_site_map_page_main_pages"
     },
     {
       "relation": "contains",
@@ -5842,9 +6474,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_app_site_map_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_site_map_page_metadata"
     },
     {
       "relation": "contains",
@@ -5852,9 +6484,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_app_site_map_page_policy_pages",
-      "confidence_score": 1.0
+      "target": "src_app_site_map_page_policy_pages"
     },
     {
       "relation": "contains",
@@ -5862,9 +6494,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_app_site_map_page_sitemappage",
-      "confidence_score": 1.0
+      "target": "src_app_site_map_page_sitemappage"
     },
     {
       "relation": "imports_from",
@@ -5873,9 +6505,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_lib_categories",
-      "confidence_score": 1.0
+      "target": "src_lib_categories"
     },
     {
       "relation": "imports",
@@ -5884,31 +6516,9 @@
       "source_file": "src/app/site-map/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_site_map_page",
-      "target": "src_lib_categories_categories",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_app_site_map_page",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/site-map/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_app_site_map_page",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_categories"
     },
     {
       "relation": "contains",
@@ -5916,9 +6526,9 @@
       "source_file": "src/app/sitemap.ts",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_sitemap",
-      "target": "src_app_sitemap_sitemap",
-      "confidence_score": 1.0
+      "target": "src_app_sitemap_sitemap"
     },
     {
       "relation": "contains",
@@ -5926,9 +6536,9 @@
       "source_file": "src/app/sitemap.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_sitemap",
-      "target": "src_app_sitemap_static_routes",
-      "confidence_score": 1.0
+      "target": "src_app_sitemap_static_routes"
     },
     {
       "relation": "imports_from",
@@ -5937,9 +6547,9 @@
       "source_file": "src/app/sitemap.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_sitemap",
-      "target": "src_lib_categories",
-      "confidence_score": 1.0
+      "target": "src_lib_categories"
     },
     {
       "relation": "imports",
@@ -5948,31 +6558,9 @@
       "source_file": "src/app/sitemap.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_sitemap",
-      "target": "src_lib_categories_categories",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "src_app_sitemap",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "src_app_sitemap",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_categories"
     },
     {
       "relation": "imports_from",
@@ -5991,9 +6579,9 @@
       "source_file": "src/components/layout/BreakingNewsTicker.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_layout_breakingnewsticker",
-      "target": "src_components_layout_breakingnewsticker_breakingnewsticker",
-      "confidence_score": 1.0
+      "target": "src_components_layout_breakingnewsticker_breakingnewsticker"
     },
     {
       "relation": "contains",
@@ -6001,9 +6589,9 @@
       "source_file": "src/components/layout/BreakingNewsTicker.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_layout_breakingnewsticker",
-      "target": "src_components_layout_breakingnewsticker_livenewsitem",
-      "confidence_score": 1.0
+      "target": "src_components_layout_breakingnewsticker_livenewsitem"
     },
     {
       "relation": "imports",
@@ -6033,9 +6621,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_layout_footer",
-      "target": "src_components_layout_footer_footer",
-      "confidence_score": 1.0
+      "target": "src_components_layout_footer_footer"
     },
     {
       "relation": "imports_from",
@@ -6044,9 +6632,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_layout_footer",
-      "target": "src_lib_categories",
-      "confidence_score": 1.0
+      "target": "src_lib_categories"
     },
     {
       "relation": "imports",
@@ -6055,31 +6643,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_layout_footer",
-      "target": "src_lib_categories_categories",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/Footer.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_components_layout_footer",
-      "target": "src_lib_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/Footer.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_components_layout_footer",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_categories"
     },
     {
       "relation": "imports",
@@ -6197,9 +6763,9 @@
       "source_file": "src/lib/categories.ts",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_lib_categories",
-      "target": "src_lib_categories_byslug",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_byslug"
     },
     {
       "relation": "contains",
@@ -6207,9 +6773,9 @@
       "source_file": "src/lib/categories.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_lib_categories",
-      "target": "src_lib_categories_categories",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_categories"
     },
     {
       "relation": "contains",
@@ -6217,9 +6783,9 @@
       "source_file": "src/lib/categories.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_lib_categories",
-      "target": "src_lib_categories_category",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_category"
     },
     {
       "relation": "contains",
@@ -6227,9 +6793,9 @@
       "source_file": "src/lib/categories.ts",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_lib_categories",
-      "target": "src_lib_categories_categoryname",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_categoryname"
     },
     {
       "relation": "contains",
@@ -6237,9 +6803,9 @@
       "source_file": "src/lib/categories.ts",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_lib_categories",
-      "target": "src_lib_categories_getcategory",
-      "confidence_score": 1.0
+      "target": "src_lib_categories_getcategory"
     },
     {
       "relation": "imports",
@@ -6394,433 +6960,6 @@
       "weight": 1.0,
       "source": "src_components_ui_badge_categorybadge",
       "target": "src_lib_categories_categoryname"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_apple_icon",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/contact/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_contact_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/feed.xml/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_feed_xml_route",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_icon",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_layout",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/manifest.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_manifest",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/news-sitemap.xml/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_news_sitemap_xml_route",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/nirmanadhin/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_nirmanadhin_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/opengraph-image.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_opengraph_image",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/prakashak/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_prakashak_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/rashifal/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_rashifal_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/robots.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_robots",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_samachar_slug_opengraph_image",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/samachar/[slug]/page.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_samachar_slug_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/sampadakiya-niti/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_sampadakiya_niti_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/sanshodhan-niti/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_sanshodhan_niti_page",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/Topbar.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_topbar",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/siteConfig.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_lib_siteconfig",
-      "target": "src_lib_siteconfig_resolvesiteurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/siteConfig.ts",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "src_lib_siteconfig",
-      "target": "src_lib_siteconfig_siteconfig",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/utils/structuredData.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_lib_utils_structureddata",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/middleware.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_middleware",
-      "target": "src_lib_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_apple_icon",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/contact/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_contact_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/feed.xml/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_feed_xml_route",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_icon",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_layout",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/manifest.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_manifest",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/news-sitemap.xml/route.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_news_sitemap_xml_route",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/nirmanadhin/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_nirmanadhin_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/opengraph-image.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_opengraph_image",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/prakashak/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_prakashak_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/rashifal/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_rashifal_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/robots.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_robots",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/samachar/[slug]/opengraph-image.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_samachar_slug_opengraph_image",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/samachar/[slug]/page.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_samachar_slug_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/sampadakiya-niti/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_sampadakiya_niti_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/sanshodhan-niti/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_sanshodhan_niti_page",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/Topbar.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_topbar",
-      "target": "src_lib_siteconfig_siteconfig"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/utils/structuredData.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_lib_utils_structureddata",
-      "target": "src_lib_siteconfig_siteconfig"
     },
     {
       "relation": "contains",
@@ -7451,125 +7590,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_app_api_cron_rashifal_route_authorized"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_app_api_cron_rashifal_route_get"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_lib_api_prokerala"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_lib_api_prokerala_fetchprokeralarashifal"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_lib_supabase_server"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_lib_supabase_server_createadminclient"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_lib_zodiacsigns"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route",
-      "target": "src_lib_zodiacsigns_zodiacsigns"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_api_cron_rashifal_route_get",
-      "target": "src_app_api_cron_rashifal_route_authorized"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "src_app_api_cron_rashifal_route_get",
-      "target": "src_lib_api_prokerala_fetchprokeralarashifal"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/api/cron/rashifal/route.ts",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "src_app_api_cron_rashifal_route_get",
-      "target": "src_lib_supabase_server_createadminclient"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/app/api/newsletter/route.ts",
       "source_location": "L6",
       "weight": 1.0,
@@ -7673,26 +7693,6 @@
       "weight": 1.0,
       "source": "src_app_api_revalidate_route_post",
       "target": "src_lib_supabase_server_createserverclient"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_apple_icon",
-      "target": "src_app_apple_icon_appleicon"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/apple-icon.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_apple_icon",
-      "target": "src_app_apple_icon_size"
     },
     {
       "relation": "contains",
@@ -8087,26 +8087,6 @@
       "weight": 1.0,
       "source": "src_app_gallery_page_gallerypage",
       "target": "src_lib_api_gallery_getgalleries"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_icon",
-      "target": "src_app_icon_icon"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/icon.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_icon",
-      "target": "src_app_icon_size"
     },
     {
       "relation": "contains",
@@ -12410,37 +12390,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/lib/api/prokerala.ts",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_lib_api_prokerala",
-      "target": "src_lib_api_prokerala_fetchprokeralarashifal"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/api/prokerala.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_lib_api_prokerala",
-      "target": "src_lib_api_prokerala_getprokeralatoken"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/api/prokerala.ts",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_lib_api_prokerala_fetchprokeralarashifal",
-      "target": "src_lib_api_prokerala_getprokeralatoken"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/lib/api/rashifal.ts",
       "source_location": "L33",
       "weight": 1.0,
@@ -13525,16 +13474,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "vercel.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "vercel",
-      "target": "vercel_crons"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "README.md",
       "source_location": "L32",
       "weight": 1.0,
@@ -14011,138 +13950,8 @@
       "confidence_score": 1.0,
       "source": "seo_progress_phase_6_discovery_surfaces_2026_09_22",
       "target": "seo_progress_what_was_fixed_633"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner",
-      "target": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_1_set_next_public_site_url_in_vercel_2_minutes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L73",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_3_fill_in_the_publisher_identity_block"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L102",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_4_supply_two_brand_icon_files"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L126",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_5_answer_three_questions_i_still_need"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L142",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_6_two_performance_decisions_reversible_one_line_each"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L159",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_7_five_discovery_decisions_from_phase_6"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L186",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_8_editorial_not_technical"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L199",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_post_deploy_checklist"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L225",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_\u0906\u092a\u0915_\u0932_\u090f_\u0915_\u092e_\u0915_\u0938_\u091a_todo_owner_actions",
-      "target": "todo_owner_what_i_have_not_done"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database",
-      "target": "todo_owner_2a_supabase_migrations_018_article_publish_default_off_sql"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TODO-OWNER.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "todo_owner_2_apply_the_two_pending_sql_files_to_the_hosted_database",
-      "target": "todo_owner_2b_supabase_seo_phase2_sql"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "25c168796944e7536e09ab9a528f7f870ce8e669"
+  "built_at_commit": "c7deefb71d73b880529b4d2fa8b4beeea1ad63e9"
 }

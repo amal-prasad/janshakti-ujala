@@ -510,8 +510,8 @@
     "semantic_hash": ""
   },
   "src/lib/siteConfig.ts": {
-    "mtime": 1790854886.2910352,
-    "ast_hash": "2651e5e5c373acd0466556f8dce2d711",
+    "mtime": 1791031493.9192405,
+    "ast_hash": "ca918040bcae2236f2e6e0b051beaac6",
     "semantic_hash": ""
   },
   "src/lib/supabase/client.ts": {
@@ -810,8 +810,8 @@
     "semantic_hash": "d23315cc7f1de180b76a2a6aeb5f7b67"
   },
   "src/app/api/cron/rashifal/route.ts": {
-    "mtime": 1790060572.4384108,
-    "ast_hash": "24cecaf4cfe2507a93bdf402e61757d1",
+    "mtime": 1791701167.2508276,
+    "ast_hash": "1dd3abeb35332bf05c8fcde1dade20e8",
     "semantic_hash": ""
   },
   "src/app/api/polls/vote/route.ts": {
@@ -980,9 +980,9 @@
     "semantic_hash": "913518d2a24dacf06028a5207c74281e"
   },
   "vercel.json": {
-    "mtime": 1783268047.463783,
-    "ast_hash": "49e2b440f49e29a8c2c96aedb3235155",
-    "semantic_hash": "49e2b440f49e29a8c2c96aedb3235155"
+    "mtime": 1791702018.9304307,
+    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
+    "semantic_hash": ""
   },
   "scripts/add-newsroom-users.mjs": {
     "mtime": 1786879123.3344326,
@@ -999,11 +999,6 @@
     "ast_hash": "cf5e08950470f0d8775e8ce319470218",
     "semantic_hash": ""
   },
-  "src/app/apple-icon.tsx": {
-    "mtime": 1790076952.8192227,
-    "ast_hash": "b0862e4c95ad4d19b86c99420513665b",
-    "semantic_hash": ""
-  },
   "src/app/epaper/[id]/page.tsx": {
     "mtime": 1790075620.6096861,
     "ast_hash": "b7c855c3ebbf88f260347dd5a98f9e6a",
@@ -1012,11 +1007,6 @@
   "src/app/hamare-bare-mein/page.tsx": {
     "mtime": 1790854880.7596033,
     "ast_hash": "7bc2da5795eb5d72910d160ed786fea0",
-    "semantic_hash": ""
-  },
-  "src/app/icon.tsx": {
-    "mtime": 1790076938.4460077,
-    "ast_hash": "56d40e5957998c90151dc466a3d0be69",
     "semantic_hash": ""
   },
   "src/app/newsroom/epaper/page.tsx": {
@@ -1100,8 +1090,8 @@
     "semantic_hash": ""
   },
   "src/lib/api/prokerala.ts": {
-    "mtime": 1790060561.7017324,
-    "ast_hash": "221236ad8918d62b4a6d9c2de553bd6d",
+    "mtime": 1791699046.8952062,
+    "ast_hash": "0307f1335ff0f8187a9479d29624885e",
     "semantic_hash": ""
   },
   "src/lib/panchang.ts": {
@@ -1225,8 +1215,8 @@
     "semantic_hash": ""
   },
   "TODO-OWNER.md": {
-    "mtime": 1790077684.377681,
-    "ast_hash": "4295a4683163ca2917616d973a2664d1",
+    "mtime": 1791031781.025973,
+    "ast_hash": "5fbb1e9a1bf6740c4d2c8c9d0484343c",
     "semantic_hash": ""
   },
   "emergent-security-prompts (1).pdf": {
@@ -1322,6 +1312,31 @@
   "src/app/site-map/page.tsx": {
     "mtime": 1790855071.0945244,
     "ast_hash": "f49c7772a42e390d0886d6075cc64d1d",
+    "semantic_hash": ""
+  },
+  "public/icon-192.png": {
+    "mtime": 1791031150.185021,
+    "ast_hash": "c9b75b609ecc91e191abf3268fa78f6b",
+    "semantic_hash": ""
+  },
+  "public/icon-512.png": {
+    "mtime": 1791031150.1722991,
+    "ast_hash": "5c51c2e65d3d8493741133a5f824a150",
+    "semantic_hash": ""
+  },
+  "src/app/apple-icon.png": {
+    "mtime": 1791031613.925014,
+    "ast_hash": "dac4404a58bd2f051a5024d54c2a445d",
+    "semantic_hash": ""
+  },
+  "src/app/icon.png": {
+    "mtime": 1791031613.9167542,
+    "ast_hash": "d82982cd797782d6b226fa33284373eb",
+    "semantic_hash": ""
+  },
+  "src/lib/api/translate.ts": {
+    "mtime": 1791699049.2163825,
+    "ast_hash": "55154730b179d0674462729b81a09555",
     "semantic_hash": ""
   }
 }
