@@ -26,7 +26,7 @@ export function ArticleCardSmall({
             alt={article.title}
             fill
             sizes="80px"
-            className="object-contain"
+            className="object-fill"
           />
         </Link>
       )}

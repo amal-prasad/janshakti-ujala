@@ -18,7 +18,7 @@ export function HeroCard({ article }: { article: ArticleCardData }) {
               fill
               priority
               sizes="(max-width: 768px) 100vw, 66vw"
-              className="object-contain"
+              className="object-fill"
             />
           )}
           {article.is_breaking && (

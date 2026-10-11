@@ -1,16 +1,16 @@
 # Graph Report - Janshakti ujala  (2026-10-11)
 
 ## Corpus Check
-- 133 files · ~421,628 words
+- 133 files · ~421,624 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 562 nodes · 739 edges · 121 communities (29 shown, 92 thin omitted)
+- 562 nodes · 718 edges · 126 communities (32 shown, 94 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d8e28905`
+- Built from commit: `fdbea971`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -130,11 +130,14 @@
 - [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_page.tsx|page.tsx]]
 - [[_COMMUNITY_.agentsskills|.agents/skills]]
+- [[_COMMUNITY_page.tsx|page.tsx]]
+- [[_COMMUNITY_page.tsx|page.tsx]]
+- [[_COMMUNITY_BreakingNewsTicker.tsx|BreakingNewsTicker.tsx]]
 - [[_COMMUNITY_share.ts|share.ts]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `createServerClient()` - 29 edges
-2. `SiteConfig` - 23 edges
+2. `SiteConfig` - 22 edges
 3. `compilerOptions` - 15 edges
 4. `getArticles()` - 12 edges
 5. `formatDate()` - 12 edges
@@ -149,17 +152,17 @@
   src/components/news/CategorySection.tsx → src/lib/categories.ts
 - `POST()` --calls--> `createServerClient()`  [INFERRED]
   src/app/api/revalidate/route.ts → src/lib/supabase/server.ts
-- `RootLayout()` --calls--> `getLiveNews()`  [EXTRACTED]
-  src/app/layout.tsx → src/lib/api/liveNews.ts
 - `CategoryBadge()` --calls--> `categoryName()`  [EXTRACTED]
   src/components/ui/Badge.tsx → src/lib/categories.ts
 - `GET()` --calls--> `getArticles()`  [EXTRACTED]
   src/app/api/articles/route.ts → src/lib/api/articles.ts
+- `POST()` --calls--> `createAdminClient()`  [EXTRACTED]
+  src/app/api/newsletter/route.ts → src/lib/supabase/server.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (121 total, 92 thin omitted)
+## Communities (126 total, 94 thin omitted)
 
 ### Community 0 - ".agents/skills"
 Cohesion: 0.11
@@ -189,6 +192,10 @@ Nodes (13): 🔴 1. Set `NEXT_PUBLIC_SITE_URL` in Vercel — 2 minutes, 🔴 2. 
 Cohesion: 0.33
 Nodes (4): db, ensureUser(), main(), USERS
 
+### Community 88 - ".agents/skills"
+Cohesion: 0.53
+Nodes (4): AdSlot(), AdSlotName, getAd(), Ad
+
 ### Community 89 - ".agents/skills"
 Cohesion: 0.29
 Nodes (6): client, dataDir, migrationsDir, pg, projectRoot, seedFile
@@ -206,16 +213,16 @@ Cohesion: 0.27
 Nodes (8): GalleryPage(), metadata, GalleryDetailPage(), generateMetadata(), Params, getGalleries(), getGalleryBySlug(), Gallery
 
 ### Community 98 - ".agents/skills"
-Cohesion: 0.11
-Nodes (19): metadata, metadata, RashifalPage(), AdSlot(), ArticleCardSmall(), NewsletterForm(), Sidebar(), AdSlotName (+11 more)
+Cohesion: 0.08
+Nodes (26): metadata, metadata, RashifalPage(), ArticleCardSmall(), HolidaysClientWidget(), TYPE_LABEL, HolidaysWidget(), NewsletterForm() (+18 more)
 
 ### Community 99 - ".agents/skills"
 Cohesion: 0.40
 Nodes (3): config, GONE_ARTICLES, OPEN_PREFIXES
 
 ### Community 102 - "holidays.ts"
-Cohesion: 0.18
-Nodes (11): HolidaysClientWidget(), TYPE_LABEL, HolidaysWidget(), CalendarificHoliday, FALLBACK_HOLIDAYS, fallbackUpcoming(), fetchYear(), getUpcomingHolidays() (+3 more)
+Cohesion: 0.40
+Nodes (3): halant, metadata, viewport
 
 ### Community 103 - "middleware.ts"
 Cohesion: 0.10
@@ -230,7 +237,7 @@ Cohesion: 0.43
 Nodes (4): escapeXml(), GET(), GET(), getRecentPublishedArticles()
 
 ### Community 107 - "opengraph-image.tsx"
-Cohesion: 0.21
+Cohesion: 0.18
 Nodes (3): metadata, metadata, SiteConfig
 
 ### Community 108 - "page.tsx"
@@ -242,8 +249,8 @@ Cohesion: 0.67
 Nodes (3): Image(), loadDevanagariFonts(), size
 
 ### Community 113 - ".agents/skills"
-Cohesion: 0.07
-Nodes (24): halant, metadata, RootLayout(), viewport, Image(), loadDevanagariFonts(), size, MAIN_PAGES (+16 more)
+Cohesion: 0.11
+Nodes (14): Image(), loadDevanagariFonts(), size, MAIN_PAGES, metadata, POLICY_PAGES, STATIC_ROUTES, MobileMenu() (+6 more)
 
 ### Community 115 - "page.tsx"
 Cohesion: 0.29
@@ -254,24 +261,24 @@ Cohesion: 0.14
 Nodes (15): PanchangStrip(), formatIstTime(), getTodayPanchang(), istToday(), KARANA_HI, MASA_HI, MhahPanchang, MhahPanchangInstance (+7 more)
 
 ### Community 182 - "share.ts"
-Cohesion: 0.24
-Nodes (5): Params, ICONS, NAMES, ShareButtons(), shareLinks()
+Cohesion: 0.38
+Nodes (4): ICONS, NAMES, ShareButtons(), shareLinks()
 
 ## Knowledge Gaps
-- **189 isolated node(s):** `Params`, `ICONS`, `NAMES`, `API_SIGN`, `🔴 1. Set `NEXT_PUBLIC_SITE_URL` in Vercel — 2 minutes` (+184 more)
+- **189 isolated node(s):** `halant`, `metadata`, `viewport`, `Params`, `ICONS` (+184 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **92 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **94 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SiteConfig` connect `opengraph-image.tsx` to `.agents/skills`, `page.tsx`, `route.ts`, `page.tsx`, `page.tsx`, `page.tsx`, `opengraph-image.tsx`, `.agents/skills`, `page.tsx`, `page.tsx`, `page.tsx`, `.agents/skills`, `.agents/skills`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
-- **Why does `createServerClient()` connect `.agents/skills` to `.agents/skills`, `middleware.ts`, `route.ts`, `.agents/skills`, `.agents/skills`, `page.tsx`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `SiteConfig` connect `opengraph-image.tsx` to `.agents/skills`, `page.tsx`, `route.ts`, `page.tsx`, `page.tsx`, `page.tsx`, `opengraph-image.tsx`, `.agents/skills`, `page.tsx`, `page.tsx`, `page.tsx`, `page.tsx`, `.agents/skills`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `createServerClient()` connect `.agents/skills` to `.agents/skills`, `middleware.ts`, `route.ts`, `.agents/skills`, `.agents/skills`, `.agents/skills`, `page.tsx`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Why does `Article` connect `middleware.ts` to `page.tsx`, `.agents/skills`, `page.tsx`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **What connects `Params`, `ICONS`, `NAMES` to the rest of the system?**
+- **What connects `halant`, `metadata`, `viewport` to the rest of the system?**
   _189 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `.agents/skills` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
