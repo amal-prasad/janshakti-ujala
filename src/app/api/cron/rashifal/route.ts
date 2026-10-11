@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/server";
 import { zodiacSigns } from "@/lib/zodiacSigns";
 import { fetchProkeralaRashifal } from "@/lib/api/prokerala";
+import { translateToHindi } from "@/lib/api/translate";
 
 export const dynamic = "force-dynamic";
 
@@ -29,25 +30,36 @@ export async function GET(req: NextRequest) {
   const today = new Date().toISOString().slice(0, 10);
   const supabase = createAdminClient();
 
-  const todayRows = [];
+  const todayRows: {
+    sign: string;
+    date: string;
+    prediction: string;
+    lucky_number: null;
+    lucky_color: null;
+    is_published: boolean;
+  }[] = [];
 
   try {
+    const english: string[] = [];
     for (const z of zodiacSigns) {
-      const prediction = await fetchProkeralaRashifal(z.slug, today);
-      todayRows.push({
-        sign: z.slug,
-        date: today,
-        prediction: prediction.trim(),
-        lucky_number: null, // Not standard in Prokerala default response
-        lucky_color: null,  // Not standard in Prokerala default response
-        is_published: true,
-      });
+      english.push(await fetchProkeralaRashifal(z.slug, today));
       // sleep a little bit to avoid rate limits on free tier (5/sec)
       await new Promise(r => setTimeout(r, 250));
     }
+    const hindi = await translateToHindi(english);
+    zodiacSigns.forEach((z, i) =>
+      todayRows.push({
+        sign: z.slug,
+        date: today,
+        prediction: hindi[i],
+        lucky_number: null, // Not standard in Prokerala default response
+        lucky_color: null,  // Not standard in Prokerala default response
+        is_published: true,
+      }),
+    );
   } catch (e) {
     return NextResponse.json(
-      { error: `Prokerala failed: ${e instanceof Error ? e.message : String(e)}` },
+      { error: `Rashifal fetch/translate failed: ${e instanceof Error ? e.message : String(e)}` },
       { status: 502 },
     );
   }

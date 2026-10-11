@@ -38,15 +38,21 @@ async function getProkeralaToken(): Promise<string> {
   return data.access_token;
 }
 
+// Prokerala wants English sign names; our slugs are transliterated Hindi.
+const API_SIGN: Record<string, string> = {
+  mesh: "aries", vrishabh: "taurus", mithun: "gemini", kark: "cancer",
+  sinh: "leo", kanya: "virgo", tula: "libra", vrishchik: "scorpio",
+  dhanu: "sagittarius", makar: "capricorn", kumbh: "aquarius", meen: "pisces",
+};
+
 export async function fetchProkeralaRashifal(sign: string, date: string, isRetry = false): Promise<string> {
   const token = await getProkeralaToken();
-  const datetime = isRetry ? "2026-01-01T00:00:00Z" : `${date}T00:00:00Z`;
+  const datetime = isRetry ? "2026-01-01T00:00:00+05:30" : `${date}T00:00:00+05:30`;
 
-  const url = new URL("https://api.prokerala.com/v2/astrology/horoscope/daily");
-  url.searchParams.append("sign", sign);
+  const url = new URL("https://api.prokerala.com/v2/horoscope/daily");
+  url.searchParams.append("sign", API_SIGN[sign] ?? sign);
   url.searchParams.append("datetime", datetime);
-  url.searchParams.append("la", "hi"); // Hindi language
-  url.searchParams.append("ayanamsa", "1"); // 1 = Lahiri
+  url.searchParams.append("type", "general");
 
   const response = await fetch(url.toString(), {
     headers: {
@@ -74,13 +80,14 @@ export async function fetchProkeralaRashifal(sign: string, date: string, isRetry
   }
 
   const data = await response.json();
-  const horoscope = data.data?.daily_horoscope?.horoscope;
+  const horoscope = data.data?.daily_prediction?.prediction;
   // An empty response used to fall through to a placeholder string, which the cron
   // then published as that sign's prediction. Throw instead: the cron rejects the
   // whole batch rather than shipping "राशिफल उपलब्ध नहीं है।" as editorial content.
   if (typeof horoscope !== "string" || horoscope.trim().length < 20) {
     throw new Error(`Empty or too-short rashifal for ${sign}`);
   }
-  return horoscope;
+  // English-only endpoint (`la` is ignored); the cron translates the batch to Hindi.
+  return horoscope.trim();
 }
 
