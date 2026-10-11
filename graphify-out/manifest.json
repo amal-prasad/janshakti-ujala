@@ -445,13 +445,13 @@
     "semantic_hash": ""
   },
   "src/components/news/ArticleCard.tsx": {
-    "mtime": 1791706522.6687303,
-    "ast_hash": "713951bb9f9bdb7d3a7768b0efecd8f9",
+    "mtime": 1791706989.818987,
+    "ast_hash": "a5fc2bce6ee643eb218cc34f326e2a1a",
     "semantic_hash": ""
   },
   "src/components/news/ArticleCardSmall.tsx": {
-    "mtime": 1791706522.8161838,
-    "ast_hash": "68e62064f34df0e251d057fb2ee92ea6",
+    "mtime": 1791706989.861871,
+    "ast_hash": "0895a93336faa57bc372e67668ad5170",
     "semantic_hash": ""
   },
   "src/components/news/CategorySection.tsx": {
@@ -460,8 +460,8 @@
     "semantic_hash": "7054af73321d21aabc7d58f6f30ff61e"
   },
   "src/components/news/HeroCard.tsx": {
-    "mtime": 1791706522.7680783,
-    "ast_hash": "1f99d70cedaac50cb778851aacb78898",
+    "mtime": 1791706989.84316,
+    "ast_hash": "42fa105b0bd0286e19432ed09cde5d9d",
     "semantic_hash": ""
   },
   "src/components/news/LoadMoreArticles.tsx": {

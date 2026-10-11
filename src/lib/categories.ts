@@ -8,6 +8,8 @@ export type Category = {
 
 export const categories: Category[] = [
   { slug: "indore", name: "इंदौर" },
+  // Any city's news, filed under its state (state + city set in the newsroom form).
+  { slug: "pradesh", name: "प्रदेश" },
   { slug: "rashtriya", name: "राष्ट्रीय" },
   { slug: "antarrashtriya", name: "अंतरराष्ट्रीय" },
   { slug: "rajneeti", name: "राजनीति" },

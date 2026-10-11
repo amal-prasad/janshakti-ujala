@@ -216,9 +216,16 @@ export function ArticleForm({
               value={city}
               onChange={(e) => setCity(e.target.value)}
               placeholder="खबर कहाँ से है?"
+              list="city-options"
               required
               className={inputCls}
             />
+            {/* Suggestions only — any city can be typed (e.g. सागर under मध्य प्रदेश). */}
+            <datalist id="city-options">
+              {states
+                .find((s) => s.name === state)
+                ?.cities.map((c) => <option key={c} value={c} />)}
+            </datalist>
           </label>
 
           <label className="flex flex-col gap-1 text-sm font-semibold">
@@ -226,6 +233,7 @@ export function ArticleForm({
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
+              required={category === "pradesh"}
               className={inputCls}
             >
               <option value="">—</option>
