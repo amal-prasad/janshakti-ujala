@@ -1,5 +1,6 @@
 import { createServerClient } from "@/lib/supabase/server";
 import type { Article } from "@/lib/supabase/types";
+import { getCategory } from "@/lib/categories";
 
 // Dateline default — the paper's home city. Rows from a hosted DB that hasn't
 // applied migrations/013_article_city.sql yet have no `city`; the fallback
@@ -66,6 +67,9 @@ type ListOpts = {
 export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
   try {
     const { category, tag, state, cursor, limit = 12 } = opts;
+    // `category` reaches the raw .or() filter string below and arrives from
+    // /api/articles?category=, so only known slugs may be interpolated.
+    if (category && !getCategory(category)) return { items: [], nextCursor: null };
     const supabase = createServerClient();
     const rows = await selectCards((cols) => {
       let q = supabase
