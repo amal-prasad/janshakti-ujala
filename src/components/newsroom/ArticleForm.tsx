@@ -13,6 +13,8 @@ const inputCls =
 
 const MAX_DIM = 1600;
 const JPEG_QUALITY = 0.8;
+// WhatsApp drops link-preview images above ~300 KB; the cover is the share image.
+const SHARE_IMAGE_MAX_BYTES = 300 * 1024;
 
 // ponytail: canvas resize covers it, no image-compression library needed.
 async function compressImage(file: File): Promise<Blob> {
@@ -69,6 +71,7 @@ export function ArticleForm({
   const [isTrending, setIsTrending] = useState(article?.is_trending ?? false);
   const [status, setStatus] = useState<"idle" | "saving" | "uploading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [imageWarning, setImageWarning] = useState("");
 
   function onTitleChange(next: string) {
     setTitle(next);
@@ -92,6 +95,11 @@ export function ArticleForm({
     }
     const { data } = supabase.storage.from("article-images").getPublicUrl(path);
     setCoverUrl(data.publicUrl);
+    setImageWarning(
+      compressed.size > SHARE_IMAGE_MAX_BYTES
+        ? `इमेज बड़ी है (${Math.round(compressed.size / 1024)} KB) — व्हाट्सऐप पर शेयर करने पर फ़ोटो न दिखे। 300 KB से छोटी इमेज लगाएँ।`
+        : "",
+    );
     setStatus("idle");
   }
 
@@ -238,7 +246,7 @@ export function ArticleForm({
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
-              required={category === "madhya-pradesh" || category === "anya-rajya"}
+              required={category === "madhya-pradesh"}
               className={inputCls}
             >
               <option value="">—</option>
@@ -292,6 +300,7 @@ export function ArticleForm({
           कवर इमेज
           <input type="file" accept="image/*" onChange={onImageChange} className="text-sm" />
         </label>
+        {imageWarning && <p className="text-sm font-semibold text-primary">{imageWarning}</p>}
         {coverUrl && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={coverUrl} alt="कवर इमेज" className="max-h-40 w-auto border border-border" />

@@ -9,8 +9,6 @@ export type Category = {
 export const categories: Category[] = [
   { slug: "indore", name: "इंदौर" },
   { slug: "madhya-pradesh", name: "मध्य प्रदेश" },
-  // Every state other than मध्य प्रदेश; the state itself is the `state` field.
-  { slug: "anya-rajya", name: "अन्य राज्य" },
   { slug: "rashtriya", name: "राष्ट्रीय" },
   { slug: "antarrashtriya", name: "अंतरराष्ट्रीय" },
   { slug: "rajneeti", name: "राजनीति" },
@@ -28,6 +26,9 @@ export function getCategory(slug: string): Category | undefined {
   return bySlug.get(slug);
 }
 
+// Retired slugs still on old rows — label them in Hindi, never the raw slug.
+const legacyNames: Record<string, string> = { pradesh: "प्रदेश" };
+
 export function categoryName(slug: string): string {
-  return bySlug.get(slug)?.name ?? slug;
+  return bySlug.get(slug)?.name ?? legacyNames[slug] ?? slug;
 }

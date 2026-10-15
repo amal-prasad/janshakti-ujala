@@ -28,6 +28,24 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!article) return { title: "खबर नहीं मिली" };
   const url = `${siteConfig.url}/samachar/${article.slug}`;
   const description = article.dek ?? undefined;
+  // Link previews: a few-word dek reads as an empty card, so pad it with the
+  // opening of the story. Markdown syntax stripped; ~160 chars fits WhatsApp.
+  const shareDescription =
+    description && description.length >= 60
+      ? description
+      : [description, article.body.replace(/[#*_>`\[\]()!-]/g, " ").replace(/\s+/g, " ").trim()]
+          .filter(Boolean)
+          .join(" — ")
+          .slice(0, 160);
+  // The uploaded cover (already compressed to ~100-250 KB on upload) is the share
+  // image. The old generated opengraph-image PNG was 1-1.3 MB and took 2-3s to
+  // render, so WhatsApp dropped it. No cover → the site-wide default card.
+  const images = [
+    {
+      url: article.cover_image_url ?? `${siteConfig.url}/opengraph-image`,
+      alt: article.title,
+    },
+  ];
   return {
     title: article.title,
     description,
@@ -35,15 +53,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       type: "article",
       title: article.title,
-      description,
+      description: shareDescription,
       url,
+      images,
       publishedTime: article.published_at,
       modifiedTime: article.updated_at,
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
-      description,
+      description: shareDescription,
+      images,
     },
   };
 }
@@ -96,7 +116,10 @@ export default async function ArticlePage({ params }: Params) {
           </span>
           <span aria-hidden>•</span>
           <span>
-            स्थान: <span className="font-semibold text-text">{article.city ?? DEFAULT_CITY}</span>
+            स्थान:{" "}
+            <span className="font-semibold text-text">
+              {[article.city ?? DEFAULT_CITY, article.state].filter(Boolean).join(", ")}
+            </span>
           </span>
           <span aria-hidden>•</span>
           <time dateTime={article.published_at}>

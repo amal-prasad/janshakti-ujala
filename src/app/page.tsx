@@ -16,13 +16,12 @@ import { Sidebar } from "@/components/news/Sidebar";
 import { AdSlot } from "@/components/AdSlot";
 
 export default async function Home() {
-  const [hero, featured, indore, madhyaPradesh, anyaRajya, rashtriya, rajneeti, shikshaCareer, latest, trending, rashifal] =
+  const [hero, featured, indore, madhyaPradesh, rashtriya, rajneeti, shikshaCareer, latest, trending, rashifal] =
     await Promise.all([
       getHeroArticle(),
       getFeaturedArticles(6),
       getArticles({ category: "indore", limit: 4 }),
       getArticles({ category: "madhya-pradesh", limit: 4 }),
-      getArticles({ category: "anya-rajya", limit: 4 }),
       getArticles({ category: "rashtriya", limit: 4 }),
       getArticles({ category: "rajneeti", limit: 4 }),
       getArticles({ category: "shiksha-career", limit: 4 }),
@@ -75,8 +74,6 @@ export default async function Home() {
           <CategorySection category="indore" articles={indore.items} />
 
           <CategorySection category="madhya-pradesh" articles={madhyaPradesh.items} />
-
-          <CategorySection category="anya-rajya" articles={anyaRajya.items} />
 
           <CategorySection category="rashtriya" articles={rashtriya.items} />
 

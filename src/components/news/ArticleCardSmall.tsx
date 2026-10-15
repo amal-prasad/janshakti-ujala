@@ -39,7 +39,9 @@ export function ArticleCardSmall({
         <span className="mt-1 block text-xs text-muted">
           <span className="font-semibold text-text">{article.author}</span>
           {" • "}
-          {article.city}
+          <span className="font-semibold text-text">
+            {[article.city, article.state].filter(Boolean).join(", ")}
+          </span>
           {" • "}
           {formatDate(article.published_at)}
           {" • "}
