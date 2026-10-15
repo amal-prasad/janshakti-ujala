@@ -8,6 +8,8 @@ export type Article = {
   dek: string | null;
   body: string;
   category: string;
+  // Every section the article appears in, primary included (020).
+  categories: string[];
   tags: string[];
   cover_image_url: string | null;
   author: string;

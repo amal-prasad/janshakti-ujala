@@ -73,7 +73,8 @@ export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
         .select(cols)
         .order("published_at", { ascending: false })
         .limit(limit + 1);
-      if (category) q = q.eq("category", category);
+      // Primary section, or listed as an extra section (020).
+      if (category) q = q.or(`category.eq.${category},categories.cs.{${category}}`);
       if (tag) q = q.contains("tags", [tag]);
       if (state) q = q.eq("state", state);
       if (cursor) q = q.lt("published_at", cursor);

@@ -436,6 +436,11 @@ create policy "articles staff delete" on public.articles
   for delete to authenticated
   using ((author_id = auth.uid() and not is_published) or is_editor());
 
+-- ===== 020_article_categories.sql =====
+-- Every section an article appears in (primary `category` included).
+alter table public.articles add column if not exists categories text[] not null default '{}';
+create index if not exists articles_categories_idx on public.articles using gin (categories);
+
 
 -- ===== seed.sql =====
 -- Realistic Hindi seed data. Idempotent-ish: clears content tables first so it can

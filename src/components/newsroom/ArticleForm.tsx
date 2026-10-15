@@ -48,6 +48,10 @@ export function ArticleForm({
   const [title, setTitle] = useState(article?.title ?? "");
   const [dek, setDek] = useState(article?.dek ?? "");
   const [category, setCategory] = useState(article?.category ?? categories[0].slug);
+  // Extra sections the article also appears in (020); primary is added on save.
+  const [extraCategories, setExtraCategories] = useState<string[]>(
+    (article?.categories ?? []).filter((c) => c !== article?.category),
+  );
   const [body, setBody] = useState(article?.body ?? "");
   const [slug, setSlug] = useState(article?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
@@ -113,6 +117,7 @@ export function ArticleForm({
       title,
       dek: dek.trim(),
       category,
+      categories: [category, ...extraCategories.filter((c) => c !== category)],
       body,
       slug: finalSlug,
       cover_image_url: coverUrl,
@@ -233,7 +238,7 @@ export function ArticleForm({
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
-              required={category === "pradesh"}
+              required={category === "madhya-pradesh" || category === "anya-rajya"}
               className={inputCls}
             >
               <option value="">—</option>
@@ -260,6 +265,28 @@ export function ArticleForm({
             />
           </label>
         </div>
+
+        <fieldset className="flex flex-col gap-2 border border-border p-3">
+          <legend className="px-1 text-sm font-semibold">इन सेक्शनों में भी दिखाएँ</legend>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+            {categories
+              .filter((c) => c.slug !== category)
+              .map((c) => (
+                <label key={c.slug} className="flex items-center gap-2 text-sm">
+                  <input
+                    type="checkbox"
+                    checked={extraCategories.includes(c.slug)}
+                    onChange={(e) =>
+                      setExtraCategories((prev) =>
+                        e.target.checked ? [...prev, c.slug] : prev.filter((x) => x !== c.slug),
+                      )
+                    }
+                  />
+                  {c.name}
+                </label>
+              ))}
+          </div>
+        </fieldset>
 
         <label className="flex flex-col gap-1 text-sm font-semibold">
           कवर इमेज
