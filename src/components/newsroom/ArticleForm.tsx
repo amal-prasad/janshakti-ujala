@@ -212,7 +212,13 @@ export function ArticleForm({
             श्रेणी
             <select
               value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              onChange={(e) => {
+                const next = e.target.value;
+                setCategory(next);
+                // Keep राज्य consistent with the state sections.
+                if (next === "madhya-pradesh") setState("मध्य प्रदेश");
+                else if (next === "anya-pradesh" && state === "मध्य प्रदेश") setState("");
+              }}
               className={inputCls}
             >
               {categories.map((c) => (
@@ -246,15 +252,18 @@ export function ArticleForm({
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
-              required={category === "madhya-pradesh"}
+              required={category === "madhya-pradesh" || category === "anya-pradesh"}
               className={inputCls}
             >
               <option value="">—</option>
-              {states.map((s) => (
-                <option key={s.slug} value={s.name}>
-                  {s.name}
-                </option>
-              ))}
+              {/* अन्य प्रदेश = any state except मध्य प्रदेश. */}
+              {states
+                .filter((s) => category !== "anya-pradesh" || s.slug !== "madhya-pradesh")
+                .map((s) => (
+                  <option key={s.slug} value={s.name}>
+                    {s.name}
+                  </option>
+                ))}
             </select>
           </label>
 
