@@ -132,15 +132,22 @@ export default async function ArticlePage({ params }: Params) {
         {article.cover_image_url && (
           // Natural aspect ratio, never cropped. Dimensions aren't stored, so the
           // image sizes itself on load (small CLS cost accepted for no cropping).
-          <Image
-            src={article.cover_image_url}
-            alt={article.title}
-            width={0}
-            height={0}
-            priority
-            sizes="(max-width: 768px) 100vw, 768px"
-            className="my-6 h-auto w-full bg-surface"
-          />
+          <figure className="my-6">
+            <Image
+              src={article.cover_image_url}
+              alt={article.cover_image_caption || article.title}
+              width={0}
+              height={0}
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="h-auto w-full bg-surface"
+            />
+            {article.cover_image_caption && (
+              <figcaption className="mt-2 text-sm italic text-muted">
+                {article.cover_image_caption}
+              </figcaption>
+            )}
+          </figure>
         )}
 
         <div className="mt-4">

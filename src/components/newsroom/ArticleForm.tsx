@@ -58,6 +58,7 @@ export function ArticleForm({
   const [slug, setSlug] = useState(article?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
   const [coverUrl, setCoverUrl] = useState(article?.cover_image_url ?? null);
+  const [caption, setCaption] = useState(article?.cover_image_caption ?? "");
   // Dateline must be typed per story. It used to default to इंदौर, which stamped
   // every non-Indore report with the wrong dateline (SEO audit, issue 11).
   const [city, setCity] = useState(article?.city ?? "");
@@ -129,6 +130,7 @@ export function ArticleForm({
       body,
       slug: finalSlug,
       cover_image_url: coverUrl,
+      cover_image_caption: caption.trim() || null,
       city: city.trim(),
       state: state || null,
       author: author.trim(),
@@ -314,6 +316,16 @@ export function ArticleForm({
           // eslint-disable-next-line @next/next/no-img-element
           <img src={coverUrl} alt="कवर इमेज" className="max-h-40 w-auto border border-border" />
         )}
+
+        <label className="flex flex-col gap-1 text-sm font-semibold">
+          इमेज कैप्शन
+          <input
+            value={caption}
+            onChange={(e) => setCaption(e.target.value)}
+            placeholder="जैसे: इंदौर में आयोजित कार्यक्रम का दृश्य"
+            className={inputCls}
+          />
+        </label>
 
         <label className="flex flex-col gap-1 text-sm font-semibold">
           लेख (Markdown)

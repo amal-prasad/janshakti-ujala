@@ -12,6 +12,8 @@ export type Article = {
   categories: string[];
   tags: string[];
   cover_image_url: string | null;
+  // Shown in italics under the cover photo (021).
+  cover_image_caption?: string | null;
   author: string;
   // Dateline city (013). Optional because a hosted DB that hasn't run the
   // migration yet returns rows without it — readers fall back to इंदौर.

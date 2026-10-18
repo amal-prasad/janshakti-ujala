@@ -441,6 +441,10 @@ create policy "articles staff delete" on public.articles
 alter table public.articles add column if not exists categories text[] not null default '{}';
 create index if not exists articles_categories_idx on public.articles using gin (categories);
 
+-- ===== 021_cover_caption.sql =====
+-- Optional caption under the article cover photo.
+alter table public.articles add column if not exists cover_image_caption text;
+
 
 -- ===== seed.sql =====
 -- Realistic Hindi seed data. Idempotent-ish: clears content tables first so it can
