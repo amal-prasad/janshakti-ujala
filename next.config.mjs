@@ -8,6 +8,11 @@ const nextConfig = {
     staleTimes: { dynamic: 0, static: 0 },
   },
   images: {
+    // Vercel Hobby caps image transformations at 5,000/month; every card,
+    // hero and gallery <Image> was a transformation and blew the cap.
+    // Cover uploads are already canvas-compressed (~100–250 KB JPEG) in the
+    // newsroom, so the optimizer bought little. Serve originals directly.
+    unoptimized: true,
     remotePatterns: [
       // Dev seed imagery.
       { protocol: "https", hostname: "picsum.photos" },
