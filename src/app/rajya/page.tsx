@@ -36,7 +36,7 @@ function StateGrid({ items }: { items: typeof states }) {
         >
           <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface">
             <Image
-              src={s.image}
+              src={`${s.image}?width=640`}
               alt={s.landmark}
               fill
               unoptimized
