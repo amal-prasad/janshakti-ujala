@@ -274,6 +274,7 @@ export async function getRecentPublishedArticles(limit = 20): Promise<
     title: string;
     dek: string | null;
     category: string;
+    cover_image_url: string | null;
     published_at: string;
     updated_at: string;
   }[]
@@ -282,7 +283,7 @@ export async function getRecentPublishedArticles(limit = 20): Promise<
     const supabase = createServerClient();
     const { data, error } = await supabase
       .from("articles")
-      .select("slug,title,dek,category,published_at,updated_at")
+      .select("slug,title,dek,category,cover_image_url,published_at,updated_at")
       .order("published_at", { ascending: false })
       .limit(limit);
     if (error) return [];
@@ -291,6 +292,7 @@ export async function getRecentPublishedArticles(limit = 20): Promise<
       title: string;
       dek: string | null;
       category: string;
+      cover_image_url: string | null;
       published_at: string;
       updated_at: string;
     }[];

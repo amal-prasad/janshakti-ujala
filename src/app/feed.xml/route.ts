@@ -23,7 +23,7 @@ export async function GET() {
       <link>${link}</link>
       <guid>${link}</guid>
       <pubDate>${new Date(a.published_at).toUTCString()}</pubDate>
-${a.dek ? `      <description>${escapeXml(a.dek)}</description>\n` : ""}      <category>${escapeXml(a.category)}</category>
+${a.dek ? `      <description>${escapeXml(a.dek)}</description>\n` : ""}${a.cover_image_url ? `      <enclosure url="${escapeXml(a.cover_image_url)}" type="image/jpeg" length="0"/>\n` : ""}      <category>${escapeXml(a.category)}</category>
     </item>`;
     })
     .join("\n");
