@@ -395,8 +395,8 @@
     "semantic_hash": "b29ad54cc256b174787d2320cf565429"
   },
   "src/app/layout.tsx": {
-    "mtime": 1791706108.034969,
-    "ast_hash": "56fa1abf7d442fcb50270dcfb6457c48",
+    "mtime": 1793025524.533395,
+    "ast_hash": "d647ead90cd189f26a7ec108697156b2",
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
@@ -1290,13 +1290,13 @@
     "semantic_hash": ""
   },
   "src/app/cookie-niti/page.tsx": {
-    "mtime": 1790854978.4830172,
-    "ast_hash": "cb789c11d5fcece2ea0255e7e8dec595",
+    "mtime": 1793025711.507796,
+    "ast_hash": "ce2188c6f566bcfc4a1710f50fbfd579",
     "semantic_hash": ""
   },
   "src/app/gopniyata-niti/page.tsx": {
-    "mtime": 1790854958.0208464,
-    "ast_hash": "2261cbf57be2e6dd34b27955d3b37d73",
+    "mtime": 1793025711.5203018,
+    "ast_hash": "62949e60931f9168b58f71a42f9ec59c",
     "semantic_hash": ""
   },
   "src/app/niyam-evam-sharten/page.tsx": {

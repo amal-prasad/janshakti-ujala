@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { categories } from "@/lib/categories";
 
@@ -7,6 +7,16 @@ import { categories } from "@/lib/categories";
 // needs the dialog/popover escape hatch.
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+
+  // Lock page scroll while open so touch-scroll moves the menu, not the page.
+  useEffect(() => {
+    if (!open) return;
+    const html = document.documentElement;
+    html.style.overflow = "hidden";
+    return () => {
+      html.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <>
@@ -22,7 +32,7 @@ export function MobileMenu() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-modal bg-bg md:hidden">
+        <div className="fixed inset-0 z-modal overflow-y-auto overscroll-contain bg-bg md:hidden">
           <div className="container-x flex h-14 items-center justify-end border-b border-border">
             <button
               type="button"
