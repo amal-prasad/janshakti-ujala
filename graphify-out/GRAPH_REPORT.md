@@ -1,16 +1,16 @@
 # Graph Report - Janshakti ujala  (2026-10-28)
 
 ## Corpus Check
-- 134 files · ~422,231 words
+- 134 files · ~422,271 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 559 nodes · 758 edges · 113 communities (23 shown, 90 thin omitted)
+- 559 nodes · 756 edges · 113 communities (23 shown, 90 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a2d30317`
+- Built from commit: `4613ffa6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -133,9 +133,9 @@
 5. `getArticles()` - 13 edges
 6. `आपके लिए काम की सूची — TODO (owner actions)` - 11 edges
 7. `useNewsroomProfile()` - 9 edges
-8. `categories` - 8 edges
-9. `Article` - 8 edges
-10. `selectCards()` - 8 edges
+8. `Article` - 8 edges
+9. `selectCards()` - 8 edges
+10. `createAdminClient()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `POST()` --calls--> `createServerClient()`  [INFERRED]

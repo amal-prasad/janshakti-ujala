@@ -4,14 +4,34 @@
   "graph": {},
   "nodes": [
     {
+      "label": "MobileMenu.tsx",
+      "file_type": "code",
+      "source_file": "src/components/layout/MobileMenu.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_layout_mobilemenu",
+      "community": 85,
+      "norm_label": "mobilemenu.tsx"
+    },
+    {
+      "label": "MobileMenu()",
+      "file_type": "code",
+      "source_file": "src/components/layout/MobileMenu.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_components_layout_mobilemenu_mobilemenu",
+      "community": 85,
+      "norm_label": "mobilemenu()"
+    },
+    {
       "label": "page.tsx",
       "file_type": "code",
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_cookie_niti_page",
       "community": 110,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "src_app_cookie_niti_page"
     },
     {
       "label": "metadata",
@@ -19,9 +39,9 @@
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "src_app_cookie_niti_page_metadata",
       "community": 110,
-      "norm_label": "metadata"
+      "norm_label": "metadata",
+      "id": "src_app_cookie_niti_page_metadata"
     },
     {
       "label": "CookiePolicyPage()",
@@ -29,9 +49,9 @@
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "src_app_cookie_niti_page_cookiepolicypage",
       "community": 110,
-      "norm_label": "cookiepolicypage()"
+      "norm_label": "cookiepolicypage()",
+      "id": "src_app_cookie_niti_page_cookiepolicypage"
     },
     {
       "label": "page.tsx",
@@ -39,9 +59,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_gopniyata_niti_page",
       "community": 111,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "src_app_gopniyata_niti_page"
     },
     {
       "label": "metadata",
@@ -49,9 +69,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "src_app_gopniyata_niti_page_metadata",
       "community": 111,
-      "norm_label": "metadata"
+      "norm_label": "metadata",
+      "id": "src_app_gopniyata_niti_page_metadata"
     },
     {
       "label": "PrivacyPolicyPage()",
@@ -59,9 +79,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "src_app_gopniyata_niti_page_privacypolicypage",
       "community": 111,
-      "norm_label": "privacypolicypage()"
+      "norm_label": "privacypolicypage()",
+      "id": "src_app_gopniyata_niti_page_privacypolicypage"
     },
     {
       "label": "layout.tsx",
@@ -69,9 +89,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_layout",
       "community": 113,
-      "norm_label": "layout.tsx"
+      "norm_label": "layout.tsx",
+      "id": "src_app_layout"
     },
     {
       "label": "halant",
@@ -79,9 +99,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "src_app_layout_halant",
       "community": 113,
-      "norm_label": "halant"
+      "norm_label": "halant",
+      "id": "src_app_layout_halant"
     },
     {
       "label": "metadata",
@@ -89,9 +109,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "src_app_layout_metadata",
       "community": 113,
-      "norm_label": "metadata"
+      "norm_label": "metadata",
+      "id": "src_app_layout_metadata"
     },
     {
       "label": "viewport",
@@ -99,9 +119,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L63",
       "_origin": "ast",
-      "id": "src_app_layout_viewport",
       "community": 113,
-      "norm_label": "viewport"
+      "norm_label": "viewport",
+      "id": "src_app_layout_viewport"
     },
     {
       "label": "RootLayout()",
@@ -109,9 +129,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L69",
       "_origin": "ast",
-      "id": "src_app_layout_rootlayout",
       "community": 113,
-      "norm_label": "rootlayout()"
+      "norm_label": "rootlayout()",
+      "id": "src_app_layout_rootlayout"
     },
     {
       "label": "page.tsx",
@@ -2302,26 +2322,6 @@
       "community": 93,
       "norm_label": "header()",
       "id": "src_components_layout_header_header"
-    },
-    {
-      "label": "MobileMenu.tsx",
-      "file_type": "code",
-      "source_file": "src/components/layout/MobileMenu.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 85,
-      "norm_label": "mobilemenu.tsx",
-      "id": "src_components_layout_mobilemenu"
-    },
-    {
-      "label": "MobileMenu()",
-      "file_type": "code",
-      "source_file": "src/components/layout/MobileMenu.tsx",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 85,
-      "norm_label": "mobilemenu()",
-      "id": "src_components_layout_mobilemenu_mobilemenu"
     },
     {
       "label": "Navbar.tsx",
@@ -5601,12 +5601,44 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/MobileMenu.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_components_layout_mobilemenu",
+      "target": "src_components_layout_mobilemenu_mobilemenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_navbar",
+      "target": "src_components_layout_mobilemenu"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_layout_navbar",
+      "target": "src_components_layout_mobilemenu_mobilemenu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_cookie_niti_page",
-      "target": "src_app_cookie_niti_page_cookiepolicypage",
-      "confidence_score": 1.0
+      "target": "src_app_cookie_niti_page_cookiepolicypage"
     },
     {
       "relation": "contains",
@@ -5614,9 +5646,9 @@
       "source_file": "src/app/cookie-niti/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_cookie_niti_page",
-      "target": "src_app_cookie_niti_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_cookie_niti_page_metadata"
     },
     {
       "relation": "contains",
@@ -5624,9 +5656,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_gopniyata_niti_page",
-      "target": "src_app_gopniyata_niti_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_gopniyata_niti_page_metadata"
     },
     {
       "relation": "contains",
@@ -5634,9 +5666,9 @@
       "source_file": "src/app/gopniyata-niti/page.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_gopniyata_niti_page",
-      "target": "src_app_gopniyata_niti_page_privacypolicypage",
-      "confidence_score": 1.0
+      "target": "src_app_gopniyata_niti_page_privacypolicypage"
     },
     {
       "relation": "contains",
@@ -5644,9 +5676,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_layout",
-      "target": "src_app_layout_halant",
-      "confidence_score": 1.0
+      "target": "src_app_layout_halant"
     },
     {
       "relation": "contains",
@@ -5654,9 +5686,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_layout",
-      "target": "src_app_layout_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_layout_metadata"
     },
     {
       "relation": "contains",
@@ -5664,9 +5696,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_layout",
-      "target": "src_app_layout_rootlayout",
-      "confidence_score": 1.0
+      "target": "src_app_layout_rootlayout"
     },
     {
       "relation": "contains",
@@ -5674,9 +5706,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_layout",
-      "target": "src_app_layout_viewport",
-      "confidence_score": 1.0
+      "target": "src_app_layout_viewport"
     },
     {
       "relation": "contains",
@@ -5948,17 +5980,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/MobileMenu.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_mobilemenu",
-      "target": "src_lib_categories"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/layout/Navbar.tsx",
       "source_location": "L2",
       "weight": 1.0,
@@ -6090,17 +6111,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_layout_footer",
-      "target": "src_lib_categories_categories"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/MobileMenu.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_mobilemenu",
       "target": "src_lib_categories_categories"
     },
     {
@@ -9962,38 +9972,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/MobileMenu.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_mobilemenu",
-      "target": "src_components_layout_mobilemenu_mobilemenu"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/Navbar.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_navbar",
-      "target": "src_components_layout_mobilemenu"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/layout/Navbar.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_layout_navbar",
-      "target": "src_components_layout_mobilemenu_mobilemenu"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/layout/Navbar.tsx",
       "source_location": "L6",
       "weight": 1.0,
@@ -13564,5 +13542,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a2d30317de8db3444a17e66798de00ac872430d8"
+  "built_at_commit": "4613ffa644f267e958c9c31f7f5d1c382ba6ece4"
 }
