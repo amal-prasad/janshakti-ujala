@@ -360,8 +360,8 @@
     "semantic_hash": "7e38fa81c683e1e127054ce9a80b7267"
   },
   "next.config.mjs": {
-    "mtime": 1789822331.1260712,
-    "ast_hash": "ad134fe51d963136434513d2f0e87ba9",
+    "mtime": 1793022772.9487827,
+    "ast_hash": "61e6462f69c4478f3d0d1c0e04f79783",
     "semantic_hash": ""
   },
   "package.json": {
@@ -400,13 +400,13 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792078638.6673083,
-    "ast_hash": "30edfa998f547bf2ee3a82802e762d77",
+    "mtime": 1792316556.3522599,
+    "ast_hash": "3918d36e2a7ee463df3592b938043b48",
     "semantic_hash": ""
   },
   "src/app/samachar/[slug]/page.tsx": {
-    "mtime": 1792078656.3058307,
-    "ast_hash": "999bc19a32689e46b30c89529fe81f15",
+    "mtime": 1792316594.873581,
+    "ast_hash": "14af4261cab34e02af02f590b571cccf",
     "semantic_hash": ""
   },
   "src/app/samachar/page.tsx": {
@@ -505,8 +505,8 @@
     "semantic_hash": ""
   },
   "src/lib/categories.ts": {
-    "mtime": 1792079404.873616,
-    "ast_hash": "6e6819eabcc0b1e6c7c347be3df13f78",
+    "mtime": 1792316556.3512542,
+    "ast_hash": "f9da8cd766047d72651a4422847b08aa",
     "semantic_hash": ""
   },
   "src/lib/siteConfig.ts": {
@@ -525,8 +525,8 @@
     "semantic_hash": ""
   },
   "src/lib/supabase/types.ts": {
-    "mtime": 1792077720.2398508,
-    "ast_hash": "d6850dcce1356498f461c0716f1e1424",
+    "mtime": 1792316556.3507247,
+    "ast_hash": "715ab8bc354bd6d3a4a7d8917b11d8cd",
     "semantic_hash": ""
   },
   "src/lib/utils/format.ts": {
@@ -600,8 +600,8 @@
     "semantic_hash": ""
   },
   "supabase/setup.sql": {
-    "mtime": 1792077720.2408478,
-    "ast_hash": "b2092d6c7e46252a8cd357674752e516",
+    "mtime": 1792316556.3497233,
+    "ast_hash": "cebfdba71453af9e9f4655fa58a9de41",
     "semantic_hash": ""
   },
   "tailwind.config.ts": {
@@ -925,8 +925,8 @@
     "semantic_hash": "4f86c5a1a4705f66b5933185f6ed084f"
   },
   "src/components/newsroom/ArticleForm.tsx": {
-    "mtime": 1792078638.6673083,
-    "ast_hash": "ed80de27f377980b323bd8d7463df47c",
+    "mtime": 1792316594.8725853,
+    "ast_hash": "a2c3d2be3ae5fce247afb3a5fe6e7010",
     "semantic_hash": ""
   },
   "src/components/newsroom/useNewsroomProfile.ts": {
@@ -1025,8 +1025,8 @@
     "semantic_hash": ""
   },
   "src/app/rajya/page.tsx": {
-    "mtime": 1786907457.5466383,
-    "ast_hash": "da18c66f8ca70fedd7965e1a805fbc0f",
+    "mtime": 1793023742.4719014,
+    "ast_hash": "f026e9e9ee155de9b8240f6ba7896c20",
     "semantic_hash": ""
   },
   "src/app/sampadakiya-niti/page.tsx": {
@@ -1342,6 +1342,11 @@
   "supabase/migrations/020_article_categories.sql": {
     "mtime": 1792078638.6673083,
     "ast_hash": "0b11645208c9581aa04993beb5a6d18b",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/021_cover_caption.sql": {
+    "mtime": 1792316556.194167,
+    "ast_hash": "1cd9d468ef4dc952fdad086c88df8029",
     "semantic_hash": ""
   }
 }

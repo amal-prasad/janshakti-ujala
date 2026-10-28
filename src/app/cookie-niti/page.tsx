@@ -22,11 +22,11 @@ export default function CookiePolicyPage() {
     <div className="container-x py-8">
       <h1 className="section-header mb-6">कुकी नीति</h1>
       <div className="max-w-2xl space-y-6 text-sm leading-relaxed text-text">
-        <p className="text-xs text-muted">अंतिम अद्यतन: 1 अक्टूबर 2026</p>
+        <p className="text-xs text-muted">अंतिम अद्यतन: 26 अक्टूबर 2026</p>
 
         <p>
           {siteConfig.name} का सार्वजनिक वेबसाइट भाग (जो आप सामान्यतः पढ़ते
-          हैं) किसी भी ट्रैकिंग कुकी का उपयोग नहीं करता। इसके बजाय कुछ
+          हैं) केवल Google Analytics की कुकी का उपयोग करता है (नीचे देखें)। कुछ
           प्राथमिकताएं आपके ब्राउज़र के <strong>localStorage</strong> में
           संग्रहित होती हैं — यह कुकी नहीं है और न ही हमारे सर्वर तक भेजी
           जाती है, केवल आपके डिवाइस पर रहती है।
@@ -52,7 +52,7 @@ export default function CookiePolicyPage() {
             कुकी — केवल /newsroom (स्टाफ़) के लिए
           </h2>
           <p>
-            सामान्य पाठकों के लिए वेबसाइट पर कोई कुकी सेट नहीं होती। हमारे
+            Google Analytics के अलावा सामान्य पाठकों के लिए कोई कुकी सेट नहीं होती। हमारे
             संपादकीय स्टाफ़ के लॉगिन पेज (/newsroom) पर Supabase Auth का एक
             सत्र कुकी सेट होता है, ताकि स्टाफ़ लॉग-इन बना रहे। यह कुकी केवल
             लॉगिन किए हुए स्टाफ़ सदस्यों के लिए है, सामान्य पाठकों पर लागू
@@ -62,11 +62,17 @@ export default function CookiePolicyPage() {
 
         <section className="space-y-2">
           <h2 className="font-display text-lg font-bold">
-            तीसरे-पक्ष ट्रैकिंग नहीं
+            Google Analytics
           </h2>
           <p>
-            हम कोई विज्ञापन-ट्रैकिंग कुकी, एनालिटिक्स कुकी (जैसे Google
-            Analytics) या सोशल मीडिया ट्रैकिंग पिक्सेल उपयोग नहीं करते।
+            यह समझने के लिए कि कितने पाठक आते हैं और कौन-से लेख पढ़े जाते हैं,
+            हम Google Analytics का उपयोग करते हैं। यह आपके ब्राउज़र में _ga
+            नाम की कुकी सेट करता है और पेज-विज़िट, डिवाइस व अनुमानित स्थान
+            जैसी जानकारी Google को भेजता है। हम कोई विज्ञापन-ट्रैकिंग कुकी या
+            सोशल मीडिया ट्रैकिंग पिक्सेल उपयोग नहीं करते। Google Analytics से
+            बाहर रहने के लिए Google का ऑप्ट-आउट ब्राउज़र ऐड-ऑन
+            (tools.google.com/dlpage/gaoptout) या ब्राउज़र में कुकी ब्लॉक
+            करें।
           </p>
         </section>
 

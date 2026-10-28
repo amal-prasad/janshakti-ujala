@@ -9,6 +9,11 @@ import { Footer } from "@/components/layout/Footer";
 import { AdSlot } from "@/components/AdSlot";
 import { RefreshOnRestore } from "@/components/RefreshOnRestore";
 import { headers } from "next/headers";
+import Script from "next/script";
+
+// Google Analytics 4. If this is removed, /gopniyata-niti and /cookie-niti
+// must go back to saying no analytics is used.
+const GA_ID = "G-SP7S9C2CM1";
 
 // Halant site-wide: display, body and hind Tailwind families all resolve to this one
 // family, so it is declared ONCE. Three identical next/font calls used to emit three
@@ -94,6 +99,10 @@ export default async function RootLayout({
         )}
         <script dangerouslySetInnerHTML={{ __html: swScript }} />
         <script dangerouslySetInnerHTML={{ __html: noImageSaveScript }} />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );

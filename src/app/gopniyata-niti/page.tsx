@@ -15,14 +15,14 @@ const grievanceEmail = siteConfig.publisher.grievanceEmail || siteConfig.contact
 
 // ponytail: this page describes only what the code actually does — verified against
 // /newsletter, /polls, /contact (mailto links, no form) and the newsroom auth path
-// before writing a word of it. No analytics/ad trackers exist in the codebase, so
-// none are claimed here.
+// before writing a word of it. Google Analytics (layout.tsx) is the only tracker;
+// no ad trackers exist.
 export default function PrivacyPolicyPage() {
   return (
     <div className="container-x py-8">
       <h1 className="section-header mb-6">गोपनीयता नीति</h1>
       <div className="max-w-2xl space-y-6 text-sm leading-relaxed text-text">
-        <p className="text-xs text-muted">अंतिम अद्यतन: 1 अक्टूबर 2026</p>
+        <p className="text-xs text-muted">अंतिम अद्यतन: 26 अक्टूबर 2026</p>
 
         <p>
           {siteConfig.name} आपकी निजता का सम्मान करता है। यह नीति बताती है कि
@@ -65,8 +65,9 @@ export default function PrivacyPolicyPage() {
             </li>
           </ul>
           <p>
-            हम कोई विज्ञापन-ट्रैकर, तीसरे-पक्ष एनालिटिक्स (जैसे Google
-            Analytics) या कुकी-आधारित ट्रैकिंग स्क्रिप्ट उपयोग नहीं करते। हमारी
+            पाठक-संख्या समझने के लिए हम Google Analytics का उपयोग करते हैं, जो
+            पेज-विज़िट, डिवाइस और अनुमानित स्थान जैसी जानकारी Google को भेजता
+            है। हम कोई विज्ञापन-ट्रैकर उपयोग नहीं करते। हमारी
             साइट पर रीडिंग थीम, फ़ॉन्ट आकार और बुकमार्क जैसी प्राथमिकताएं
             केवल आपके ब्राउज़र के localStorage में, आपके डिवाइस पर ही संग्रहित
             होती हैं — वे हमारे सर्वर तक नहीं भेजी जातीं। विवरण हमारी{" "}
