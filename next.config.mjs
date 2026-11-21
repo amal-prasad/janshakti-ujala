@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [{ source: "/shreni/indore", destination: "/shreni/madhya-pradesh", permanent: true }];
+  },
   // Client-side Router Cache. Next 14.2 keeps a visited page's RSC payload for
   // 30s, so navigating back to "/" from an article served a stale homepage
   // (a reload was the only way to see a just-published article). A news front

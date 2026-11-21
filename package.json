@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "db:verify": "node scripts/verify-db.mjs",
-    "test:utils": "node scripts/test-utils.mts"
+    "test:utils": "node scripts/test-utils.mts",
+    "test:content": "node scripts/test-content.mts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

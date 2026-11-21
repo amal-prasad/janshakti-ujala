@@ -12,21 +12,17 @@ export const metadata: Metadata = {
 
 const grievanceEmail = siteConfig.publisher.grievanceEmail || siteConfig.contactEmail;
 
-// ponytail: truthful to what's actually in the code — public site has no cookies at
-// all (localStorage only); Supabase auth cookies exist only on the staff-only
-// /newsroom path. No third-party embeds (YouTube etc.) exist anywhere in the
-// codebase — the ePaper viewer iframe points at our own Supabase storage PDF, not a
-// third party — so nothing is claimed about them.
+// Keep this description aligned with analytics, reader preferences and embeds.
 export default function CookiePolicyPage() {
   return (
     <div className="container-x py-8">
       <h1 className="section-header mb-6">कुकी नीति</h1>
       <div className="max-w-2xl space-y-6 text-sm leading-relaxed text-text">
-        <p className="text-xs text-muted">अंतिम अद्यतन: 26 अक्टूबर 2026</p>
+        <p className="text-xs text-muted">अंतिम अद्यतन: 21 नवंबर 2026</p>
 
         <p>
           {siteConfig.name} का सार्वजनिक वेबसाइट भाग (जो आप सामान्यतः पढ़ते
-          हैं) केवल Google Analytics की कुकी का उपयोग करता है (नीचे देखें)। कुछ
+          हैं) Google Analytics और लेखों में शामिल सोशल मीडिया पोस्ट के माध्यम से कुकी का उपयोग कर सकता है (नीचे देखें)। कुछ
           प्राथमिकताएं आपके ब्राउज़र के <strong>localStorage</strong> में
           संग्रहित होती हैं — यह कुकी नहीं है और न ही हमारे सर्वर तक भेजी
           जाती है, केवल आपके डिवाइस पर रहती है।
@@ -49,11 +45,10 @@ export default function CookiePolicyPage() {
 
         <section className="space-y-2">
           <h2 className="font-display text-lg font-bold">
-            कुकी — केवल /newsroom (स्टाफ़) के लिए
+            स्टाफ़ लॉगिन की कुकी
           </h2>
           <p>
-            Google Analytics के अलावा सामान्य पाठकों के लिए कोई कुकी सेट नहीं होती। हमारे
-            संपादकीय स्टाफ़ के लॉगिन पेज (/newsroom) पर Supabase Auth का एक
+            हमारे संपादकीय स्टाफ़ के लॉगिन पेज (/newsroom) पर Supabase Auth का एक
             सत्र कुकी सेट होता है, ताकि स्टाफ़ लॉग-इन बना रहे। यह कुकी केवल
             लॉगिन किए हुए स्टाफ़ सदस्यों के लिए है, सामान्य पाठकों पर लागू
             नहीं होती।
@@ -73,6 +68,20 @@ export default function CookiePolicyPage() {
             बाहर रहने के लिए Google का ऑप्ट-आउट ब्राउज़र ऐड-ऑन
             (tools.google.com/dlpage/gaoptout) या ब्राउज़र में कुकी ब्लॉक
             करें।
+          </p>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="font-display text-lg font-bold">
+            सोशल मीडिया पोस्ट और वीडियो
+          </h2>
+          <p>
+            लेखों में Instagram, X/Twitter और YouTube की पोस्ट या वीडियो शामिल हो सकते हैं।
+            इनके लोड होने पर आपका ब्राउज़र संबंधित प्लेटफ़ॉर्म से जुड़ता है। वह प्लेटफ़ॉर्म
+            अपने नियमों के अनुसार IP पता, ब्राउज़र संबंधी जानकारी और कुकी का उपयोग कर सकता है।
+            YouTube वीडियो के लिए हम privacy-enhanced मोड उपयोग करते हैं।
+            आप ब्राउज़र में तीसरे पक्ष की कुकी या सामग्री ब्लॉक कर सकते हैं; ऐसी स्थिति में
+            पोस्ट यहाँ न दिखे तो उसके नीचे दिए गए मूल पोस्ट के लिंक से खोल सकते हैं।
           </p>
         </section>
 

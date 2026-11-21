@@ -1,6 +1,6 @@
 import { createServerClient } from "@/lib/supabase/server";
 import type { Article } from "@/lib/supabase/types";
-import { getCategory } from "@/lib/categories";
+import { categoryFilter, getCategory, normalizeArticleCategories } from "@/lib/categories";
 
 // Dateline default — the paper's home city. Rows from a hosted DB that hasn't
 // applied migrations/013_article_city.sql yet have no `city`; the fallback
@@ -49,6 +49,7 @@ async function selectCards(
   if (error) return null;
   return ((data ?? []) as CardRow[]).map((r) => ({
     ...r,
+    category: getCategory(r.category)?.slug ?? r.category,
     city: r.city ?? DEFAULT_CITY,
     state: r.state ?? null,
   }));
@@ -78,7 +79,7 @@ export async function getArticles(opts: ListOpts = {}): Promise<ArticlePage> {
         .order("published_at", { ascending: false })
         .limit(limit + 1);
       // Primary section, or listed as an extra section (020).
-      if (category) q = q.or(`category.eq.${category},categories.cs.{${category}}`);
+      if (category) q = q.or(categoryFilter(category)!);
       if (tag) q = q.contains("tags", [tag]);
       if (state) q = q.eq("state", state);
       if (cursor) q = q.lt("published_at", cursor);
@@ -106,7 +107,9 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
       .eq("slug", slug)
       .maybeSingle();
     if (error) return null;
-    return (data as Article | null) ?? null;
+    if (!data) return null;
+    const article = data as Article;
+    return { ...article, ...normalizeArticleCategories(article.category, article.categories) };
   } catch {
     return null;
   }
@@ -118,12 +121,14 @@ export async function getRelatedArticles(
   limit = 4,
 ): Promise<ArticleCard[]> {
   try {
+    const filter = categoryFilter(article.category);
+    if (!filter) return [];
     const supabase = createServerClient();
     const rows = await selectCards((cols) =>
       supabase
         .from("articles")
         .select(cols)
-        .eq("category", article.category)
+        .or(filter)
         .neq("id", article.id)
         .order("published_at", { ascending: false })
         .limit(limit),

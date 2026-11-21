@@ -14,19 +14,18 @@ import { CategorySection } from "@/components/news/CategorySection";
 import { PanchangStrip } from "@/components/news/PanchangStrip";
 import { Sidebar } from "@/components/news/Sidebar";
 import { AdSlot } from "@/components/AdSlot";
+import { categories } from "@/lib/categories";
+import { Fragment } from "react";
 
 export default async function Home() {
-  const [hero, featured, indore, madhyaPradesh, anyaPradesh, rashtriya, rajneeti, shikshaCareer, dharm, latest, trending, rashifal] =
+  const [hero, featured, sections, latest, trending, rashifal] =
     await Promise.all([
       getHeroArticle(),
       getFeaturedArticles(6),
-      getArticles({ category: "indore", limit: 4 }),
-      getArticles({ category: "madhya-pradesh", limit: 4 }),
-      getArticles({ category: "anya-pradesh", limit: 4 }),
-      getArticles({ category: "rashtriya", limit: 4 }),
-      getArticles({ category: "rajneeti", limit: 4 }),
-      getArticles({ category: "shiksha-career", limit: 4 }),
-      getArticles({ category: "dharm", limit: 4 }),
+      Promise.all(categories.map(async (category) => ({
+        category: category.slug,
+        page: await getArticles({ category: category.slug, limit: 4 }),
+      }))),
       getArticles({ limit: 6 }),
       getTrendingArticles(5),
       getRashifalTeaser(),
@@ -59,7 +58,7 @@ export default async function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdScript(buildWebSiteSchema()) }}
         />
-        <div className="flex flex-col gap-12 lg:col-span-8">
+        <div className="flex min-w-0 flex-col gap-12 lg:col-span-8">
           <EpaperStrip />
 
           <HeroCard article={hero} />
@@ -72,16 +71,12 @@ export default async function Home() {
             </div>
           )}
 
-          {/* Regional first — the paper's home turf leads the section blocks. */}
-          <CategorySection category="indore" articles={indore.items} />
-
-          <CategorySection category="madhya-pradesh" articles={madhyaPradesh.items} />
-
-          <CategorySection category="anya-pradesh" articles={anyaPradesh.items} />
-
-          <CategorySection category="rashtriya" articles={rashtriya.items} />
-
-          <AdSlot slot="infeed" />
+          {sections.map(({ category, page }, index) => (
+            <Fragment key={category}>
+              <CategorySection category={category} articles={page.items} />
+              {index === 3 && <AdSlot slot="infeed" />}
+            </Fragment>
+          ))}
 
           <section>
             <h2 className="section-header">अन्य खबरें</h2>
@@ -94,11 +89,6 @@ export default async function Home() {
             </div>
           </section>
 
-          <CategorySection category="rajneeti" articles={rajneeti.items} />
-
-          <CategorySection category="shiksha-career" articles={shikshaCareer.items} />
-
-          <CategorySection category="dharm" articles={dharm.items} />
         </div>
 
         <div className="lg:col-span-4">

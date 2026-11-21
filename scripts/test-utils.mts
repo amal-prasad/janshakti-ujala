@@ -51,6 +51,6 @@ assert.equal(readingTimeLabel(4), "4 मिनट पढ़ें");
 // shareLinks encodes url + title into each network target.
 const links = shareLinks("https://x.in/a", "शीर्षक");
 assert.ok(links.whatsapp.includes(encodeURIComponent("शीर्षक")));
-assert.ok(links.twitter.includes(encodeURIComponent("https://x.in/a")));
+assert.ok(links.x.includes(encodeURIComponent("https://x.in/a")));
 
 console.log("OK: utils self-check passed");

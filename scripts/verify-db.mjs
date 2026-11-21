@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { assertCategoryMigration } from "./assert-category-migration.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const migrationsDir = path.join(projectRoot, "supabase", "migrations");
@@ -34,7 +35,9 @@ await client.connect();
 try {
   const files = fs.readdirSync(migrationsDir).filter((f) => f.endsWith(".sql")).sort();
   for (const f of files) {
-    await client.query(fs.readFileSync(path.join(migrationsDir, f), "utf8"));
+    const sql = fs.readFileSync(path.join(migrationsDir, f), "utf8");
+    if (f.endsWith("_merge_indore_into_madhya_pradesh.sql")) await assertCategoryMigration(client, sql);
+    await client.query(sql);
     console.log("applied migration:", f);
   }
   await client.query(fs.readFileSync(seedFile, "utf8"));

@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getNewsroomClient } from "@/lib/supabase/newsroom";
 import { Markdown } from "@/components/news/Markdown";
-import { categories } from "@/lib/categories";
+import { categories, normalizeArticleCategories } from "@/lib/categories";
+import { insertSocialPost, parseSocialPost } from "@/lib/utils/socialPosts";
 import { states } from "@/lib/states";
 import { slugify, isValidSlug } from "@/lib/utils/format";
 import { type Article, type Profile } from "@/lib/supabase/types";
@@ -49,12 +50,16 @@ export function ArticleForm({
 
   const [title, setTitle] = useState(article?.title ?? "");
   const [dek, setDek] = useState(article?.dek ?? "");
-  const [category, setCategory] = useState(article?.category ?? categories[0].slug);
+  const initialSections = normalizeArticleCategories(article?.category ?? categories[0].slug, article?.categories);
+  const [category, setCategory] = useState(initialSections.category);
   // Extra sections the article also appears in (020); primary is added on save.
   const [extraCategories, setExtraCategories] = useState<string[]>(
-    (article?.categories ?? []).filter((c) => c !== article?.category),
+    initialSections.categories.filter((c) => c !== initialSections.category),
   );
   const [body, setBody] = useState(article?.body ?? "");
+  const bodyInput = useRef<HTMLTextAreaElement>(null);
+  const [socialUrl, setSocialUrl] = useState("");
+  const [socialError, setSocialError] = useState("");
   const [slug, setSlug] = useState(article?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(article));
   const [coverUrl, setCoverUrl] = useState(article?.cover_image_url ?? null);
@@ -64,7 +69,7 @@ export function ArticleForm({
   const [city, setCity] = useState(article?.city ?? "");
   // Byline. Defaults to the logged-in staffer; editable for agency/guest/desk bylines.
   const [author, setAuthor] = useState(article?.author ?? profile.display_name ?? "");
-  const [state, setState] = useState(article?.state ?? "");
+  const [state, setState] = useState(article?.category === "indore" ? "मध्य प्रदेश" : article?.state ?? (initialSections.category === "madhya-pradesh" ? "मध्य प्रदेश" : ""));
   const [published, setPublished] = useState(article?.is_published ?? false);
   const [isHero, setIsHero] = useState(article?.is_hero ?? false);
   const [isFeatured, setIsFeatured] = useState(article?.is_featured ?? false);
@@ -73,6 +78,19 @@ export function ArticleForm({
   const [status, setStatus] = useState<"idle" | "saving" | "uploading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [imageWarning, setImageWarning] = useState("");
+
+  function addSocialPost() {
+    if (!parseSocialPost(socialUrl)) {
+      setSocialError("Instagram पोस्ट/Reel, X/Twitter पोस्ट या YouTube वीडियो का पूरा https:// लिंक डालें।");
+      return;
+    }
+    const input = bodyInput.current;
+    const next = insertSocialPost(body, socialUrl, input?.selectionStart ?? body.length, input?.selectionEnd ?? body.length);
+    setBody(next.body);
+    setSocialUrl("");
+    setSocialError("");
+    requestAnimationFrame(() => { input?.focus(); input?.setSelectionRange(next.cursor, next.cursor); });
+  }
 
   function onTitleChange(next: string) {
     setTitle(next);
@@ -125,8 +143,7 @@ export function ArticleForm({
     const fields = {
       title,
       dek: dek.trim(),
-      category,
-      categories: [category, ...extraCategories.filter((c) => c !== category)],
+      ...normalizeArticleCategories(category, extraCategories),
       body,
       slug: finalSlug,
       cover_image_url: coverUrl,
@@ -327,9 +344,31 @@ export function ArticleForm({
           />
         </label>
 
+        <fieldset className="min-w-0 space-y-2 border border-border p-3">
+          <legend className="px-1 text-sm font-semibold">सोशल मीडिया पोस्ट जोड़ें</legend>
+          <label htmlFor="social-post-url" className="block text-sm">पोस्ट का लिंक</label>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <input id="social-post-url" type="text" inputMode="url" dir="ltr"
+              value={socialUrl} onChange={(e) => { setSocialUrl(e.target.value); setSocialError(""); }}
+              onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addSocialPost(); } }}
+              placeholder="https://www.instagram.com/p/…" className={`${inputCls} min-w-0`}
+              aria-describedby="social-post-help social-post-error" aria-invalid={Boolean(socialError)} />
+            <button type="button" onClick={addSocialPost} disabled={!socialUrl.trim()}
+              className="shrink-0 bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-dark disabled:opacity-50">
+              पोस्ट जोड़ें
+            </button>
+          </div>
+          <p id="social-post-help" className="text-sm text-muted">
+            लेख में जहाँ पोस्ट चाहिए, वहाँ कर्सर रखें और लिंक जोड़ें। Instagram, X/Twitter और YouTube के सार्वजनिक पोस्ट समर्थित हैं। सीधे लेख में लिंक डालें तो उसके पहले और बाद में खाली लाइन रखें।
+          </p>
+          <p className="text-sm text-muted">निजी, हटाई गई या एम्बेड बंद वाली पोस्ट नहीं दिखेंगी।</p>
+          <p id="social-post-error" role="status" className="text-sm text-primary">{socialError}</p>
+        </fieldset>
+
         <label className="flex flex-col gap-1 text-sm font-semibold">
           लेख (Markdown)
           <textarea
+            ref={bodyInput}
             required
             value={body}
             onChange={(e) => setBody(e.target.value)}
@@ -404,7 +443,7 @@ export function ArticleForm({
         </div>
       </div>
 
-      <div>
+      <div className="min-w-0">
         <h2 className="section-header text-lg">पूर्वावलोकन</h2>
         <div className="mt-4 border border-border p-4">
           {title && <h3 className="font-display text-2xl font-bold leading-tight">{title}</h3>}

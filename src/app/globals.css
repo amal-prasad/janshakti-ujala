@@ -130,3 +130,9 @@ body {
     overflow: hidden;
   }
 }
+.social-post iframe,
+.social-post .instagram-media,
+.social-post .twitter-tweet {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
