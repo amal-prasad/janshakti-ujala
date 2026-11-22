@@ -183,6 +183,28 @@ export async function getHeroArticle(): Promise<ArticleCard | null> {
   }
 }
 
+// Hero carousel: the is_hero pick(s) first, then featured, trending, newest —
+// deduped, cover-image articles ahead of cover-less ones within the filler.
+export async function getHeroArticles(limit = 5): Promise<ArticleCard[]> {
+  try {
+    const supabase = createServerClient();
+    const [picked, featured, trending, latest] = await Promise.all([
+      selectCards((cols) =>
+        supabase.from("articles").select(cols).eq("is_hero", true)
+          .order("published_at", { ascending: false }).limit(limit),
+      ),
+      getFeaturedArticles(limit),
+      getTrendingArticles(limit),
+      getArticles({ limit }),
+    ]);
+    const filler = dedupeById([...featured, ...trending, ...latest.items]);
+    const ranked = [...filler.filter((a) => a.cover_image_url), ...filler.filter((a) => !a.cover_image_url)];
+    return dedupeById([...(picked ?? []), ...ranked]).slice(0, limit);
+  } catch {
+    return [];
+  }
+}
+
 // Pinned (`is_trending`, published_at desc) first, then filled by view_count desc.
 export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
   try {

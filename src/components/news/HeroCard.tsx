@@ -6,7 +6,9 @@ import { formatDate, readingTimeLabel } from "@/lib/utils/format";
 
 // The lead story. Full-bleed image, commanding headline — the one place size
 // is allowed to shout (clamp ceiling still respected).
-export function HeroCard({ article }: { article: ArticleCardData }) {
+// `first` = the LCP slide: priority image + the page's single <h1>. Other carousel slides get lazy images and <h2>.
+export function HeroCard({ article, first = true }: { article: ArticleCardData; first?: boolean }) {
+  const Heading = first ? "h1" : "h2";
   return (
     <article>
       <Link href={`/samachar/${article.slug}`} className="block">
@@ -16,7 +18,7 @@ export function HeroCard({ article }: { article: ArticleCardData }) {
               src={article.cover_image_url}
               alt={article.title}
               fill
-              priority
+              priority={first}
               sizes="(max-width: 768px) 100vw, 66vw"
               className="object-fill"
             />
@@ -32,11 +34,11 @@ export function HeroCard({ article }: { article: ArticleCardData }) {
         <div className="flex items-center gap-2">
           <CategoryBadge slug={article.category} />
         </div>
-        <h1 className="mt-2 font-display text-[clamp(1.5rem,3.4vw,2.5rem)] font-bold leading-[1.25] tracking-[-0.02em] text-balance">
+        <Heading className="mt-2 font-display text-[clamp(1.5rem,3.4vw,2.5rem)] font-bold leading-[1.25] tracking-[-0.02em] text-balance">
           <Link href={`/samachar/${article.slug}`} className="hover:text-primary">
             {article.title}
           </Link>
-        </h1>
+        </Heading>
         {article.dek && (
           <p className="mt-3 text-balance text-lg text-muted">{article.dek}</p>
         )}

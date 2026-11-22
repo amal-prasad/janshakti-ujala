@@ -1,159 +1,84 @@
-# Graph Report - Janshakti ujala  (2026-10-28)
+# Graph Report - Janshakti ujala  (2026-11-21)
 
 ## Corpus Check
-- 134 files · ~422,287 words
+- 256 files · ~311,828 words
 - Verdict: corpus is large enough that graph structure adds value.
+- Unclassified: 20 file(s) not represented in the graph (top: .log 9, .toml 2, .ico 2)
 
 ## Summary
-- 559 nodes · 737 edges · 114 communities (24 shown, 90 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
+- 627 nodes · 967 edges · 115 communities (23 shown, 92 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e01d0788`
+- Built from commit: `8b54c372`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_srclib|src/lib]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_srclib|src/lib]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_package.json|package.json]]
-- [[_COMMUNITY_srccomponents|src/components]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_srcapp|src/app]]
-- [[_COMMUNITY_srccomponents|src/components]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_PROGRESS|PROGRESS.md]]
-- [[_COMMUNITY_tsconfig.json|tsconfig.json]]
-- [[_COMMUNITY_srcapp|src/app]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_srclib|src/lib]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_srcapp|src/app]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_PRODUCT|PRODUCT.md]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_page.tsx|page.tsx]]
-- [[_COMMUNITY_middleware.ts|middleware.ts]]
-- [[_COMMUNITY_ShareButtons.tsx|ShareButtons.tsx]]
-- [[_COMMUNITY_polls.ts|polls.ts]]
-- [[_COMMUNITY_page.tsx|page.tsx]]
-- [[_COMMUNITY_page.tsx|page.tsx]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_page.tsx|page.tsx]]
-- [[_COMMUNITY_.agentsskills|.agents/skills]]
-- [[_COMMUNITY_BreakingNewsTicker.tsx|BreakingNewsTicker.tsx]]
-- [[_COMMUNITY_share.ts|share.ts]]
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- formatDate
+- .agents/skills
+- gallery.ts
+- .agents/skills
+- verify-db.mjs
+- .agents/skills
+- categories.ts
+- siteConfig.ts
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- .agents/skills
+- sitemap.ts
+- .agents/skills
+- ArticleForm.tsx
+- middleware.ts
+- Social posts and consistent news categories
+- prakashak/page.tsx
+- hamare-bare-mein/page.tsx
+- niyam-evam-sharten/page.tsx
+- opengraph-image.tsx
+- cookie-niti/page.tsx
+- .agents/skills
+- page.tsx
+- .agents/skills
+- BreakingNewsTicker.tsx
+- app/page.tsx
 
 ## God Nodes (most connected - your core abstractions)
-1. `SiteConfig` - 18 edges
-2. `createServerClient()` - 18 edges
+1. `createServerClient()` - 29 edges
+2. `SiteConfig` - 20 edges
 3. `formatDate()` - 18 edges
-4. `compilerOptions` - 15 edges
-5. `getArticles()` - 11 edges
-6. `आपके लिए काम की सूची — TODO (owner actions)` - 11 edges
-7. `useNewsroomProfile()` - 9 edges
-8. `selectCards()` - 8 edges
-9. `createAdminClient()` - 8 edges
-10. `SEO Overhaul — progress log` - 8 edges
+4. `Home()` - 17 edges
+5. `getArticles()` - 16 edges
+6. `compilerOptions` - 15 edges
+7. `ArticleForm()` - 14 edges
+8. `आपके लिए काम की सूची — TODO (owner actions)` - 11 edges
+9. `getCategory()` - 10 edges
+10. `getNewsroomClient()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `addSocialPost()` --indirect_call--> `body()`  [INFERRED]
+  src/components/newsroom/ArticleForm.tsx → scripts/seed-demo.mjs
+- `onSubmit()` --indirect_call--> `body()`  [INFERRED]
+  src/components/newsroom/ArticleForm.tsx → scripts/seed-demo.mjs
 - `POST()` --calls--> `createServerClient()`  [INFERRED]
   src/app/api/revalidate/route.ts → src/lib/supabase/server.ts
-- `GET()` --calls--> `getArticles()`  [EXTRACTED]
-  src/app/api/articles/route.ts → src/lib/api/articles.ts
-- `SamacharPage()` --calls--> `getArticles()`  [EXTRACTED]
-  src/app/samachar/page.tsx → src/lib/api/articles.ts
-- `GET()` --calls--> `getRecentPublishedArticles()`  [EXTRACTED]
-  src/app/news-sitemap.xml/route.ts → src/lib/api/articles.ts
-- `CategorySection()` --calls--> `categoryName()`  [EXTRACTED]
-  src/components/news/CategorySection.tsx → src/lib/categories.ts
+- `Home()` --calls--> `EpaperStrip()`  [EXTRACTED]
+  src/app/page.tsx → src/components/home/EpaperStrip.tsx
+- `Home()` --calls--> `getArticles()`  [EXTRACTED]
+  src/app/page.tsx → src/lib/api/articles.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (114 total, 90 thin omitted)
+## Communities (115 total, 92 thin omitted)
 
 ### Community 0 - ".agents/skills"
 Cohesion: 0.11
@@ -165,95 +90,105 @@ Nodes (45): Baseline score, Codebase map, Corrections to the Phase 1 findings ta
 
 ### Community 3 - ".agents/skills"
 Cohesion: 0.06
-Nodes (32): dependencies, headroom-ai, mhah-panchang, next, react, react-dom, react-markdown, resend (+24 more)
+Nodes (47): dependencies, headroom-ai@^0.22.4, mhah-panchang@^1.2.0, react-dom@^18, react-markdown@^10.1.0, resend@^6.14.0, @supabase/ssr@^0.12.0, transliteration@^2.6.1 (+39 more)
+
+### Community 83 - "formatDate"
+Cohesion: 0.26
+Nodes (10): EpaperEditionPage(), generateMetadata(), EpaperPage(), metadata, EpaperStrip(), Topbar(), getEpaperEdition(), getEpaperEditions() (+2 more)
 
 ### Community 84 - ".agents/skills"
-Cohesion: 0.08
-Nodes (34): GET(), escapeXml(), GET(), GET(), generateMetadata(), Params, StatePage(), metadata (+26 more)
+Cohesion: 0.07
+Nodes (44): inserted, GET(), POST(), escapeXml(), GET(), GET(), generateMetadata(), Params (+36 more)
 
-### Community 85 - ".agents/skills"
-Cohesion: 0.11
-Nodes (17): GalleryPage(), metadata, GalleryDetailPage(), generateMetadata(), Params, MAIN_PAGES, metadata, POLICY_PAGES (+9 more)
+### Community 85 - "gallery.ts"
+Cohesion: 0.24
+Nodes (9): GalleryPage(), metadata, GalleryDetailPage(), generateMetadata(), Params, sitemap(), getGalleries(), getGalleryBySlug() (+1 more)
 
 ### Community 86 - ".agents/skills"
 Cohesion: 0.14
 Nodes (13): 🔴 1. Set `NEXT_PUBLIC_SITE_URL` in Vercel — 2 minutes, 🔴 2. Apply the two pending SQL files to the hosted database, 2a. `supabase/migrations/018_article_publish_default_off.sql`, 2b. `supabase/SEO_PHASE2.sql`, 🔴 3. Fill in the publisher identity block, 🟢 4. Brand icon files & tab icon (Done), 🟡 5. Answer three questions I still need, 🟡 6. Two performance decisions (reversible, one line each) (+5 more)
 
-### Community 87 - ".agents/skills"
-Cohesion: 0.33
-Nodes (4): db, ensureUser(), main(), USERS
+### Community 87 - "verify-db.mjs"
+Cohesion: 0.10
+Nodes (17): @supabase/supabase-js@^2.108.2, @supabase/supabase-js, assertCategoryMigration(), db, rows, body(), db, ensureUser() (+9 more)
 
 ### Community 88 - ".agents/skills"
 Cohesion: 0.18
 Nodes (11): HolidaysClientWidget(), TYPE_LABEL, HolidaysWidget(), CalendarificHoliday, FALLBACK_HOLIDAYS, fallbackUpcoming(), fetchYear(), getUpcomingHolidays() (+3 more)
 
-### Community 89 - ".agents/skills"
-Cohesion: 0.29
-Nodes (6): client, dataDir, migrationsDir, pg, projectRoot, seedFile
+### Community 89 - "categories.ts"
+Cohesion: 0.17
+Nodes (6): Params, MobileMenu(), bySlug, categories, Category, legacyNames
 
-### Community 90 - ".agents/skills"
-Cohesion: 0.06
-Nodes (15): metadata, metadata, siteHost, metadata, metadata, siteHost, Image(), loadDevanagariFonts() (+7 more)
+### Community 90 - "siteConfig.ts"
+Cohesion: 0.14
+Nodes (5): metadata, metadata, metadata, metadata, SiteConfig
 
 ### Community 92 - ".agents/skills"
 Cohesion: 0.50
-Nodes (3): Deploy on Vercel, Getting Started, Learn More
+Nodes (4): Deploy on Vercel, README.md (default create-next-app boilerplate), Getting Started, Learn More
 
 ### Community 98 - ".agents/skills"
-Cohesion: 0.16
-Nodes (13): authorized(), GET(), POST(), POST(), API_SIGN, fetchProkeralaRashifal(), getProkeralaToken(), translateToHindi() (+5 more)
+Cohesion: 0.09
+Nodes (23): authorized(), GET(), POST(), POST(), metadata, RashifalPage(), API_SIGN, fetchProkeralaRashifal() (+15 more)
 
-### Community 99 - ".agents/skills"
-Cohesion: 0.11
-Nodes (20): POST(), metadata, metadata, RashifalPage(), AdSlot(), NewsletterForm(), Sidebar(), AdSlotName (+12 more)
+### Community 99 - "sitemap.ts"
+Cohesion: 0.20
+Nodes (7): MAIN_PAGES, metadata, POLICY_PAGES, STATIC_ROUTES, bySlug, StateInfo, states
 
-### Community 101 - "page.tsx"
-Cohesion: 0.29
-Nodes (4): FONT_LABEL, FONT_ORDER, FontSize, Markdown()
+### Community 101 - "ArticleForm.tsx"
+Cohesion: 0.07
+Nodes (37): react@^18, react, links, long, longWithSuffix, s, t, FONT_LABEL (+29 more)
 
 ### Community 103 - "middleware.ts"
-Cohesion: 0.08
-Nodes (24): EditArticlePage(), NewsroomEpaperPage(), NewArticlePage(), Filter, NewsroomListPage(), Row, Params, MobileMenu() (+16 more)
+Cohesion: 0.11
+Nodes (21): EditArticlePage(), NewsroomEpaperPage(), NewArticlePage(), Filter, NewsroomListPage(), Row, metadata, PollsPage() (+13 more)
 
-### Community 104 - "ShareButtons.tsx"
-Cohesion: 0.38
-Nodes (4): ICONS, NAMES, ShareButtons(), shareLinks()
+### Community 104 - "Social posts and consistent news categories"
+Cohesion: 0.33
+Nodes (5): Category decision, Constraints, Social posts and consistent news categories, Verification and migration result, Work and checks
 
-### Community 105 - "polls.ts"
-Cohesion: 0.31
-Nodes (6): metadata, PollsPage(), PollWidget(), getActivePoll(), Poll, PollOption
+### Community 105 - "prakashak/page.tsx"
+Cohesion: 0.40
+Nodes (3): addressParts, metadata, rows
+
+### Community 108 - "opengraph-image.tsx"
+Cohesion: 0.67
+Nodes (3): Image(), loadDevanagariFonts(), size
+
+### Community 110 - "cookie-niti/page.tsx"
+Cohesion: 0.20
+Nodes (6): next@14.2.35, next, metadata, revalidate, metadata, revalidate
 
 ### Community 113 - ".agents/skills"
 Cohesion: 0.40
 Nodes (3): halant, metadata, viewport
 
 ### Community 119 - ".agents/skills"
-Cohesion: 0.14
-Nodes (15): PanchangStrip(), formatIstTime(), getTodayPanchang(), istToday(), KARANA_HI, MASA_HI, MhahPanchang, MhahPanchangInstance (+7 more)
+Cohesion: 0.15
+Nodes (14): formatIstTime(), getTodayPanchang(), istToday(), KARANA_HI, MASA_HI, MhahPanchang, MhahPanchangInstance, NAKSHATRA_HI (+6 more)
 
-### Community 182 - "share.ts"
-Cohesion: 0.13
-Nodes (21): EpaperEditionPage(), generateMetadata(), EpaperPage(), metadata, EpaperStrip(), Topbar(), ArticleCard(), ArticleCardSmall() (+13 more)
+### Community 182 - "app/page.tsx"
+Cohesion: 0.12
+Nodes (22): metadata, Home(), revalidate, AdSlot(), ArticleCard(), ArticleCardSmall(), CategorySection(), HeroCard() (+14 more)
 
 ## Knowledge Gaps
-- **188 isolated node(s):** `CardRow`, `CardResult`, `ListOpts`, `metadata`, `metadata` (+183 more)
-  These have ≤1 connection - possible missing edges or undocumented components.
-- **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **92 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SiteConfig` connect `.agents/skills` to `.agents/skills`, `.agents/skills`, `.agents/skills`, `middleware.ts`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `createServerClient()` connect `.agents/skills` to `.agents/skills`, `polls.ts`, `.agents/skills`, `.agents/skills`, `share.ts`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `formatDate()` connect `share.ts` to `.agents/skills`, `middleware.ts`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **What connects `CardRow`, `CardResult`, `ListOpts` to the rest of the system?**
-  _188 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `react` connect `ArticleForm.tsx` to `.agents/skills`, `app/page.tsx`?**
+  _High betweenness centrality (0.064) - this node is a cross-community bridge._
 - **Should `.agents/skills` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
+- **Why does `SiteConfig` connect `siteConfig.ts` to `.agents/skills`, `sitemap.ts`, `prakashak/page.tsx`, `hamare-bare-mein/page.tsx`, `niyam-evam-sharten/page.tsx`, `opengraph-image.tsx`, `cookie-niti/page.tsx`, `formatDate`, `.agents/skills`, `app/page.tsx`, `categories.ts`?**
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Should `.agents/skills` be split into smaller, more focused modules?**
   _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._
+- **Why does `next` connect `cookie-niti/page.tsx` to `.agents/skills`, `ArticleForm.tsx`?**
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
 - **Should `.agents/skills` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05673758865248227 - nodes in this community are weakly interconnected._
+- **Should `.agents/skills` be split into smaller, more focused modules?**
+  _Cohesion score 0.07199032062915911 - nodes in this community are weakly interconnected._

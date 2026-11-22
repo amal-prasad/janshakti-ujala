@@ -3,10 +3,10 @@
 // (SEO audit, issue F36). 60s gives a CDN hit for almost every reader; a newly
 // published article appears within a minute.
 export const revalidate = 60;
-import { getArticles, getFeaturedArticles, getHeroArticle, getTrendingArticles } from "@/lib/api/articles";
+import { getArticles, getFeaturedArticles, getHeroArticles, getTrendingArticles } from "@/lib/api/articles";
 import { buildOrganizationSchema, buildWebSiteSchema, jsonLdScript } from "@/lib/utils/structuredData";
 import { getRashifalTeaser } from "@/lib/api/rashifal";
-import { HeroCard } from "@/components/news/HeroCard";
+import { HeroCarousel } from "@/components/news/HeroCarousel";
 import { EpaperStrip } from "@/components/home/EpaperStrip";
 import { ArticleCard } from "@/components/news/ArticleCard";
 import { ArticleCardSmall } from "@/components/news/ArticleCardSmall";
@@ -18,9 +18,9 @@ import { categories } from "@/lib/categories";
 import { Fragment } from "react";
 
 export default async function Home() {
-  const [hero, featured, sections, latest, trending, rashifal] =
+  const [heroes, featured, sections, latest, trending, rashifal] =
     await Promise.all([
-      getHeroArticle(),
+      getHeroArticles(5),
       getFeaturedArticles(6),
       Promise.all(categories.map(async (category) => ({
         category: category.slug,
@@ -31,9 +31,10 @@ export default async function Home() {
       getRashifalTeaser(),
     ]);
 
-  const gridFour = featured.filter((a) => a.id !== hero?.id).slice(0, 4);
+  const heroIds = new Set(heroes.map((a) => a.id));
+  const gridFour = featured.filter((a) => !heroIds.has(a.id)).slice(0, 4);
 
-  if (!hero) {
+  if (heroes.length === 0) {
     return (
       <>
         <PanchangStrip />
@@ -61,7 +62,7 @@ export default async function Home() {
         <div className="flex min-w-0 flex-col gap-12 lg:col-span-8">
           <EpaperStrip />
 
-          <HeroCard article={hero} />
+          <HeroCarousel articles={heroes} />
 
           {gridFour.length > 0 && (
             <div className="grid grid-cols-2 gap-x-5 gap-y-8 md:grid-cols-4">

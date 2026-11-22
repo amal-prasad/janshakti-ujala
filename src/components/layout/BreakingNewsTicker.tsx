@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandName } from "./BrandName";
 
 type LiveNewsItem = { headline: string; href: string; published_at: string };
 
@@ -16,7 +17,7 @@ export function BreakingNewsTicker({ items }: { items: LiveNewsItem[] }) {
       >
         <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse-dot" aria-hidden />
         <span className="sm:hidden">ब्रेकिंग</span>
-        <span className="hidden sm:inline">जनशक्ति उजाला ब्रेकिंग</span>
+        <span className="hidden sm:inline"><BrandName /> ब्रेकिंग</span>
       </span>
 
       {/* Scroll area fills the rest of the row */}
