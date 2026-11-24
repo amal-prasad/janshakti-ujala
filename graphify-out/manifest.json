@@ -456,9 +456,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1795501058.5414643,
-    "seen": 1795501181.5549312,
-    "ast_hash": "76b7b03266ac6cd13f47f1e656bb13e8",
+    "mtime": 1795501397.4785852,
+    "seen": 1795501443.4476252,
+    "ast_hash": "b7c6d39fb3ddbb614354b1abdeffa724",
     "semantic_hash": ""
   },
   "src/app/samachar/[slug]/page.tsx": {
