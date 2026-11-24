@@ -172,78 +172,38 @@ export async function getHeroArticle(): Promise<ArticleCard | null> {
     );
     if (rows?.[0]) return rows[0];
 
-    // No explicit pick (or a pre-017 DB): newest featured, else newest article.
-    const featured = await getFeaturedArticles(1);
-    if (featured[0]) return featured[0];
-
-    const { items } = await getArticles({ limit: 1 });
-    return items[0] ?? null;
+    return null;
   } catch {
     return null;
   }
 }
 
-// Hero carousel: the is_hero pick(s) first, then featured, trending, newest —
-// deduped, cover-image articles ahead of cover-less ones within the filler.
+// Hero carousel: ONLY articles ticked is_hero (newest 5). No filler.
 export async function getHeroArticles(limit = 5): Promise<ArticleCard[]> {
   try {
     const supabase = createServerClient();
-    const [picked, featured, trending, latest] = await Promise.all([
-      selectCards((cols) =>
-        supabase.from("articles").select(cols).eq("is_hero", true)
-          .order("published_at", { ascending: false }).limit(limit),
-      ),
-      getFeaturedArticles(limit),
-      getTrendingArticles(limit),
-      getArticles({ limit }),
-    ]);
-    const filler = dedupeById([...featured, ...trending, ...latest.items]);
-    const ranked = [...filler.filter((a) => a.cover_image_url), ...filler.filter((a) => !a.cover_image_url)];
-    return dedupeById([...(picked ?? []), ...ranked]).slice(0, limit);
+    const rows = await selectCards((cols) =>
+      supabase.from("articles").select(cols).eq("is_hero", true)
+        .order("published_at", { ascending: false }).limit(limit),
+    );
+    return rows ?? [];
   } catch {
     return [];
   }
 }
 
-// Pinned (`is_trending`, published_at desc) first, then filled by view_count desc.
+// Trending sidebar: ONLY articles ticked is_trending (newest 5). No filler.
 export async function getTrendingArticles(limit = 5): Promise<ArticleCard[]> {
   try {
     const supabase = createServerClient();
-    const pinned =
-      (await selectCards((cols) =>
-        supabase
-          .from("articles")
-          .select(cols)
-          .eq("is_trending", true)
-          .order("published_at", { ascending: false })
-          .limit(limit),
-      )) ?? [];
-    if (pinned.length >= limit) return pinned.slice(0, limit);
-
-    const filler =
-      (await selectCards((cols) =>
-        supabase
-          .from("articles")
-          .select(cols)
-          .order("view_count", { ascending: false })
-          .limit(limit + pinned.length),
-      )) ?? [];
-
-    return dedupeById([...pinned, ...filler]).slice(0, limit);
+    const rows = await selectCards((cols) =>
+      supabase.from("articles").select(cols).eq("is_trending", true)
+        .order("published_at", { ascending: false }).limit(limit),
+    );
+    return rows ?? [];
   } catch {
     return [];
   }
-}
-
-function dedupeById<T extends { id: string }>(rows: T[]): T[] {
-  const seen = new Set<string>();
-  const out: T[] = [];
-  for (const row of rows) {
-    if (seen.has(row.id)) continue;
-    seen.add(row.id);
-    out.push(row);
-  }
-  return out;
 }
 
 export type BreakingItem = { headline: string; href: string; published_at: string };

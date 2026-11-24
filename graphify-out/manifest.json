@@ -456,9 +456,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1795263121.1351993,
-    "seen": 1795264055.3613875,
-    "ast_hash": "7cf748284fdda1729f1cf8f1c6b8727f",
+    "mtime": 1795332199.5024753,
+    "seen": 1795332651.1595821,
+    "ast_hash": "4436f520c296c72f1f5caf5d88e5fe7f",
     "semantic_hash": ""
   },
   "src/app/samachar/[slug]/page.tsx": {
@@ -474,15 +474,15 @@
     "semantic_hash": ""
   },
   "src/components/layout/BreakingNewsTicker.tsx": {
-    "mtime": 1790854558.4130177,
-    "seen": 1795264055.361403,
-    "ast_hash": "8efffc90fa03720d29561d324a172ee4",
+    "mtime": 1795332199.50623,
+    "seen": 1795332651.159664,
+    "ast_hash": "6769ae8eb975b317dcfde5bde8afc8d6",
     "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
-    "mtime": 1790855131.938743,
-    "seen": 1795264055.361404,
-    "ast_hash": "8f1dc83cfd4d8ab2edb201a20041a224",
+    "mtime": 1795332199.50623,
+    "seen": 1795332651.1596677,
+    "ast_hash": "a00b656feb6a4bde7db9717890d54518",
     "semantic_hash": ""
   },
   "src/components/layout/Header.tsx": {
@@ -528,9 +528,9 @@
     "semantic_hash": "7054af73321d21aabc7d58f6f30ff61e"
   },
   "src/components/news/HeroCard.tsx": {
-    "mtime": 1792078638.668885,
-    "seen": 1795264055.3614118,
-    "ast_hash": "72e3dd0192fbc8716b22b6415719a6f4",
+    "mtime": 1795332199.50623,
+    "seen": 1795332651.1597037,
+    "ast_hash": "c46beff087f457d413a7dd88dd52b309",
     "semantic_hash": ""
   },
   "src/components/news/LoadMoreArticles.tsx": {
@@ -564,9 +564,9 @@
     "semantic_hash": "2d7f39358978c1889df29fb54c5f3867"
   },
   "src/lib/api/articles.ts": {
-    "mtime": 1795263121.1362045,
-    "seen": 1795264055.3614259,
-    "ast_hash": "79538c9f9be6bd0cb8f5159340eeb959",
+    "mtime": 1795332199.5082393,
+    "seen": 1795332651.1597714,
+    "ast_hash": "1875debebe8a2af03a9a489bc54ddda8",
     "semantic_hash": ""
   },
   "src/lib/api/liveNews.ts": {
@@ -582,9 +582,9 @@
     "semantic_hash": ""
   },
   "src/lib/categories.ts": {
-    "mtime": 1795263238.9155395,
-    "seen": 1795264055.3614335,
-    "ast_hash": "5fb6a521594d5e13fb7e278fb422be8a",
+    "mtime": 1795332199.5082393,
+    "seen": 1795332651.159806,
+    "ast_hash": "258a71ca99e1240918f86df0054d2cad",
     "semantic_hash": ""
   },
   "src/lib/siteConfig.ts": {
@@ -696,8 +696,9 @@
     "semantic_hash": ""
   },
   "supabase/setup.sql": {
-    "mtime": 1792316556.3497233,
-    "ast_hash": "",
+    "mtime": 1795263330.3253543,
+    "seen": 1795332651.1599905,
+    "ast_hash": "ca102f93456a5c507332e52c1a5ba2db",
     "semantic_hash": ""
   },
   "tailwind.config.ts": {
@@ -1634,6 +1635,24 @@
     "mtime": 1795263834.2308538,
     "seen": 1795264055.3615377,
     "ast_hash": "a828cf92e71d332258826496245962db",
+    "semantic_hash": ""
+  },
+  "src/components/layout/BrandName.tsx": {
+    "mtime": 1795332131.7603433,
+    "seen": 1795332651.159659,
+    "ast_hash": "d5c00f0368e751364bf9cfd3ce0cd0db",
+    "semantic_hash": ""
+  },
+  "src/components/news/HeroCarousel.tsx": {
+    "mtime": 1795332141.779832,
+    "seen": 1795332651.1597073,
+    "ast_hash": "450473a68d2049a38ff6046c906cc17e",
+    "semantic_hash": ""
+  },
+  "supabase/migrations/20261121121326_merge_indore_into_madhya_pradesh.sql": {
+    "mtime": 1795263328.3900597,
+    "seen": 1795332651.1599748,
+    "ast_hash": "75e6d916e28dadfd8e4f81bcc7ffc166",
     "semantic_hash": ""
   },
   "package-lock.json": {

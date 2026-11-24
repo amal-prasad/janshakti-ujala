@@ -166,11 +166,6 @@ export function ArticleForm({
         : {}),
     };
 
-    if (isEditor && isHero) {
-      // ponytail: clear-then-set instead of a partial unique index; a failed second write leaves zero heroes, which getHeroArticle()'s fallback already covers.
-      await supabase.from("articles").update({ is_hero: false }).eq("is_hero", true);
-    }
-
     const save = (f: Partial<Article>) =>
       article
         ? supabase.from("articles").update(f).eq("id", article.id)

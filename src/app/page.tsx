@@ -21,7 +21,7 @@ export default async function Home() {
   const [heroes, featured, sections, latest, trending, rashifal] =
     await Promise.all([
       getHeroArticles(5),
-      getFeaturedArticles(6),
+      getFeaturedArticles(200), // grid: every ticked article (ponytail: 200 = "unlimited")
       Promise.all(categories.map(async (category) => ({
         category: category.slug,
         page: await getArticles({ category: category.slug, limit: 4 }),
@@ -31,10 +31,9 @@ export default async function Home() {
       getRashifalTeaser(),
     ]);
 
-  const heroIds = new Set(heroes.map((a) => a.id));
-  const gridFour = featured.filter((a) => !heroIds.has(a.id)).slice(0, 4);
+  const gridFour = featured;
 
-  if (heroes.length === 0) {
+  if (heroes.length === 0 && featured.length === 0 && latest.items.length === 0) {
     return (
       <>
         <PanchangStrip />
@@ -62,7 +61,7 @@ export default async function Home() {
         <div className="flex min-w-0 flex-col gap-12 lg:col-span-8">
           <EpaperStrip />
 
-          <HeroCarousel articles={heroes} />
+          {heroes.length > 0 && <HeroCarousel articles={heroes} />}
 
           {gridFour.length > 0 && (
             <div className="grid grid-cols-2 gap-x-5 gap-y-8 md:grid-cols-4">

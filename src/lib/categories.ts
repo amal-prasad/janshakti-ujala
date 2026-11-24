@@ -7,13 +7,13 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-  { slug: "madhya-pradesh", name: "मध्यप्रदेश" },
+  { slug: "antarrashtriya", name: "अन्तर्राष्ट्रीय" },
   { slug: "rashtriya", name: "राष्ट्रीय" },
+  { slug: "rajneeti", name: "राजनीति" },
+  { slug: "madhya-pradesh", name: "मध्यप्रदेश" },
   // States other than मध्य प्रदेश; the state itself is the `state` field.
   // राष्ट्रीय is kept for news of national importance.
   { slug: "anya-pradesh", name: "अन्य प्रदेश" },
-  { slug: "rajneeti", name: "राजनीति" },
-  { slug: "antarrashtriya", name: "अन्तर्राष्ट्रीय" },
   { slug: "vyapar", name: "व्यापार" },
   { slug: "khel", name: "खेल" },
   { slug: "manoranjan", name: "मनोरंजन" },
