@@ -21,7 +21,7 @@ export default async function Home() {
   const [heroes, featured, sections, latest, trending, rashifal] =
     await Promise.all([
       getHeroArticles(5),
-      getFeaturedArticles(200), // grid: every ticked article (ponytail: 200 = "unlimited")
+      getFeaturedArticles(6), // grid: latest 6 ticked articles
       Promise.all(categories.map(async (category) => ({
         category: category.slug,
         page: await getArticles({ category: category.slug, limit: 4 }),
